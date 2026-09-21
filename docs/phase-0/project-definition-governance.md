@@ -1,6 +1,6 @@
 # Phase 0 — Project Definition & Governance
 
-**Status:** IN PROGRESS. The decisions documented here are approved. Phase 0 closes only after its exit-gate conditions are met and the Project Owner explicitly approves closure. Completion does not authorize Phase 1.
+**Status:** COMPLETE. The decisions documented here are approved. The documentation and consistency review are complete, and the Project Owner explicitly approved the Phase 0 exit gate. Phase completion does not authorize Phase 1; next-phase authorization remains a separate Project Owner decision.
 
 ## 1. Purpose and problem statement
 
@@ -89,4 +89,4 @@ v0.1 does not require vector/embedding retrieval; a knowledge graph/database; an
 
 ## 18. Phase 0 exit gate
 
-Phase 0 may close only when all 18 items are documented; documentation accurately reflects approved decisions; purpose, scope, governance, authority, security, source boundaries, context principles, success criteria, and non-goals are internally consistent; no unresolved Phase 0 issue materially blocks requirements work; `AGENTS.md` establishes operating rules and Project Owner authority; the README communicates purpose and status; a roadmap identifies major phases without prematurely fixing implementation details; the checklist links completed items to governing documentation; documentation passes consistency review; and the Project Owner explicitly approves the exit gate. Phase completion and authorization of the next phase are separate decisions.
+Phase 0 may close only when all 18 items are documented; documentation accurately reflects approved decisions; purpose, scope, governance, authority, security, source boundaries, context principles, success criteria, and non-goals are internally consistent; no unresolved Phase 0 issue materially blocks requirements work; `AGENTS.md` establishes operating rules and Project Owner authority; the README communicates purpose and status; a roadmap identifies major phases without prematurely fixing implementation details; the checklist links completed items to governing documentation; documentation passes consistency review; and the Project Owner explicitly approves the exit gate. These conditions have been met: the Project Owner explicitly approved Phase 0. Phase completion and authorization of the next phase are separate decisions; Phase 1 remains NOT AUTHORIZED.

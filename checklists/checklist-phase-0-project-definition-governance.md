@@ -1,6 +1,6 @@
 # Phase 0 Checklist — Project Definition & Governance
 
-**Overall status:** IN PROGRESS. Individual decisions below are approved and documented. Phase 0 remains open pending documentation review, consistency review, and explicit Project Owner exit-gate approval. Phase 1 is NOT AUTHORIZED.
+**Overall status:** COMPLETE. All individual decisions below are approved and documented; the documentation and consistency review are complete; and the Project Owner explicitly approved the Phase 0 exit gate. Phase completion and authorization of the next phase are separate decisions. Phase 1 is NOT AUTHORIZED.
 
 | # | Objective | Status | Approved outcome | Governing documentation |
 | --- | --- | --- | --- | --- |
