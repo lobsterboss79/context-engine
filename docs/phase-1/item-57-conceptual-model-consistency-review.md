@@ -37,4 +37,4 @@ The 12 observations required no corrective action.
 
 ## Status boundary
 
-Item 57 is complete. It does not perform or authorize Item 58, Items 59–60, Phase 1 completion, or Phase 2. Phase 1 remains **AUTHORIZED / IN PROGRESS**; Items 58–60 remain **PENDING**; Phase 2 remains **NOT AUTHORIZED**.
+Item 57 is complete. It did not perform or authorize Item 58, Items 59–60, Phase 1 completion, or Phase 2. At its disposition, Items 58–60 remained pending. Current status is governed by the [Phase 1 index](README.md): Items 56–58 are complete, Items 59–60 remain pending, Phase 1 remains **AUTHORIZED / IN PROGRESS**, and Phase 2 remains **NOT AUTHORIZED**.

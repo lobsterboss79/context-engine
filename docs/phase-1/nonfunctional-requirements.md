@@ -40,3 +40,5 @@
 ## Approved validation interpretation (Item 56 resolution)
 
 Unless explicitly identified as informational guidance, approved nonfunctional requirements using **should** are normative quality expectations. Validation must evaluate them while recognizing that applicability may depend on task and context; **should** must not be silently interpreted as optional. The approved v0.1 acceptance interpretations in [the baseline and traceability record](v0.1-baseline-and-traceability.md#approved-v01-acceptance-interpretations) govern relevant qualitative validation without imposing arbitrary numerical targets.
+
+The stable requirements apply with the approved Item 58 semantic clarifications in the conceptual model: governed status has a non-circular, scope-bound, auditable Bootstrap; sufficiency is evidence-bound rather than inferred from an absence of discovered gaps; observed Git state is not silently promoted to verified currentness; package integrity includes material construction-state coherence and Consumer receipt; and protected explanation remains subordinate to security. These clarifications do not alter stable requirement wording or create new identifiers.
