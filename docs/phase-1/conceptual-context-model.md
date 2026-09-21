@@ -1,0 +1,76 @@
+# Approved Conceptual Context Model
+
+**Scope:** Items 6–50 of the approved Phase 1 baseline. These are conceptual semantics and behavioral requirements, not an implementation schema or architecture.
+
+## Core information concepts (Items 6–21)
+
+- **Project:** a governed context scope with stable identity, distinct from repositories and Sources; it may relate to multiple Sources/Projects. Membership does not grant access; authority and access are scoped; hierarchy is not currently required.
+- **Source:** an identifiable information origin/access domain with stable identity and extensible type/capabilities. Registration, accessibility, or trust does not establish Authority; access and disclosure authorization are distinct.
+- **Source identity and scope:** identity and eligible scope are distinct. Association does not expose an entire Source; effective scope intersects governed scope, relationships, Requester/Consumer authorization, and task scope.
+- **Source adapter:** separates source-specific from source-independent concerns; preserves identity, provenance, and native semantics; retrieves only governed/authorized scope; honestly reports unsupported/unavailable properties; is read-oriented in this baseline and does not establish Authority or disclosure authorization.
+- **Artifact:** identifiable unit within a Source, distinct from Source and Claim; may support multiple Claims, have containment/classification, and have historical existence distinct from current availability.
+- **Artifact identity and version:** locator differs from identity; rename/move does not inherently create an Artifact and locator reuse does not establish continuity. Preserve native versions or honest observed states; latest is not necessarily governing/current; uncertainty is explicit.
+- **Claim:** identifiable assertion, not established true merely by existence. It has semantic granularity and many-to-many Artifact/Source support, preserves provenance/scope, and may be direct, transformed, summarized, inferred, or proposed. Absence of evidence is not negation.
+- **Context Item:** task-specific selected information that may represent Claims, conflicts, relationships, constraints, gaps, uncertainty, availability, or authorization limitations. Selection does not elevate Authority; Required/Supporting is task-specific; consolidation preserves material distinctions.
+- **Transformation states:** direct/source-derived, normalized, summarized, inferred, and proposed. State differs from Authority; transformations preserve lineage, conflict, uncertainty, scope, and supersession; repetition does not elevate Authority.
+- **Classification:** semantic role differs from Authority, truth, provenance, and currentness. The extensible vocabulary includes Identity, Governance, Requirement, Decision, Constraint, State, Architecture, Implementation, Evidence, Risk, Assumption, Open Question, and History; multiple classifications are allowed.
+- **Relationships:** extensible, directed, scoped, provenance-bearing semantic connections (including derivation, support/contradiction, supersession/lifecycle, applicability/scope, dependency, implementation, satisfaction, and constraint). They do not automatically transfer Authority.
+- **Authority and scope:** governed basis for controlling/materially influencing interpretation/action, originating outside the engine and distinct from truth, confidence, evidence, and popularity. It may be scoped by Project, domain, component, phase, time, action, or governance boundary. Unknown scope is not unrestricted; precedence/delegation/propagation derive from governance.
+- **Approval and governance state:** distinct from Authority; Proposed, Pending, Approved, Rejected, Withdrawn, Superseded, and unknown state are representable. Approval applies to specific information/version; storage, documentation, or implementation is not approval; no universal workflow is assumed.
+- **Provenance:** traceable origin, support, transformations, and governed actions, distinct from Authority. Identify material Source/Artifact/version; support multiple upstream elements; preserve missingness honestly and allow compact, retrievable lineage.
+- **Provenance through transformation:** derived information remains linked to material inputs; identify material transformation nature; Authority/Governance State do not automatically transfer; lossy presentation must not require lossy provenance.
+
+## Time, applicability, and uncertainty (Items 22–29)
+
+- Distinguish event/assertion, effective, Source/Artifact version/modification, engine observation, and request/package construction time; unknown/coarse time is honest and one time does not silently substitute for another.
+- Freshness differs from currentness: neither recency nor age alone decides applicability. Evaluate governance, scope, supersession, and version; show uncertainty and Source unavailability.
+- Supersession is governed replacement of some/all applicability within scope. It may be partial, preserves history, and is distinct from amendment/version evolution; inferred supersession remains inferred/proposed.
+- Historical/superseded information remains eligible for relevant historical tasks, with contemporaneous and retrospective context distinguished. Incomplete reconstruction is explicit and authorization remains binding.
+- Conflict is materially incompatible applicable information in overlapping scope, not every difference. Evaluate scope, time, Authority, Governance State, and supersession; do not resolve by arbitrary recency, majority, or order. Governed resolution and detection differ; unresolved material conflict remains explicit and traceable.
+- Unknown differs from false, absent, rejected, and unauthorized. Distinguish missing, unavailable, ambiguity, and unresolved conflict; “not found” is scoped to the inspected universe; material uncertainty affects sufficiency.
+- Candidate/Proposal is potentially useful but not sufficiently validated/governed information. It remains intentionally non-authoritative and distinguishable through storage, retrieval, and transformation; inclusion does not imply approval.
+
+## Request, selection, and sufficiency (Items 30–35)
+
+- A **Context Request** is task-oriented, not merely a search query, and establishes task, Requester, Consumer, and scope. Constraints narrow but cannot override governance/security or change Authority/Governance State.
+- **Task Intent and Scope** distinguish purpose/activity from topic; activities may include explain, design, review, compare, decide, implement, validate/test, troubleshoot, audit, reconstruction, summarize, and explore. Execution requires applicable authorization; inferred intent preserves uncertainty.
+- **Context Selection** differs from retrieval and considers relevance, Authority, Governance State, scope, freshness/currentness, provenance, relationships, conflict, uncertainty, authorization, intent, sufficiency, and redundancy; semantic similarity alone is insufficient.
+- **Minimum Sufficient Context** is the smallest authorized and qualified body reasonably sufficient. Sufficiency precedes minimization; outcomes are Sufficient, Conditionally Sufficient, or Insufficient. Material governing/security constraints cannot be removed for token limits.
+- **Required** omission materially risks incorrect/improper task performance; **Supporting** materially improves understanding/validation but is not necessary for basic correctness. Both are task-specific; Consumer capacity cannot redefine Required as optional.
+- **Selection explainability** gives an authorized actor a meaningful account of material inclusion, exclusion, prioritization, qualification, necessity, relationships, and sufficiency using observable provenance, Authority, Governance State, scope, selection state, conflict, and uncertainty—not opaque scores alone. It is authorization-bound, not a disclosure channel, and does not require hidden chain-of-thought.
+
+## Context packages, renderings, and audit (Items 36–39)
+
+A **Context Package** is a logical, task-specific collection of selected Context Items and metadata for a defined Consumer and Context Request; it is independent of serialization, file, API, or prompt form. It may contain Required/Supporting/governing context, conflicts, uncertainty, gaps, Source limitations, provenance, and sufficiency. Inclusion creates no Authority. It records an execution state, may vary by execution/Consumer, preserves historical meaning, permits references/progressive disclosure, may be Sufficient/Conditionally Sufficient/Insufficient, is potentially sensitive, and may participate in downstream provenance.
+
+The package must represent identity/request association; intent/scope; Requester/Consumer; constraints; Required/Supporting context; Authority; Governance State; transformation state; currentness; Candidate; relationships; conflict; uncertainty; gaps; Source unavailability/incomplete inspection; authorization/freshness limitations; sufficiency; Source/provenance manifest; and selection/explanation. Unavailable Source, absent Source, and no relevant information differ; construction alone does not establish sufficiency.
+
+Rendering changes presentation, organization, density, or representation—not governed truth. Human, ChatGPT, Codex, and future renderings may differ, but cannot elevate/reinterpret governance or lose material meaning, qualifications, provenance, Candidate/historical/conflict/uncertainty state, authorization, or security. Compression/reference is allowed with retrievable provenance; assumed memory is not Required Context; rendered wording is derived information.
+
+Reproducibility/auditability is substantial, not necessarily byte-for-byte: preserve enough Requester, Consumer, intent, scope, Sources/states, selected information, versions/observations, qualifications, Authority, Governance State, freshness, conflict, uncertainty, authorization effects, logical/rendered package distinction, and actual Consumer receipt to explain a package. Historical packages are not silently rewritten. Audit is authorization/security/privacy/retention bound and has no indefinite-retention requirement.
+
+## Isolation and security behavior (Items 40–46)
+
+Projects isolate context by default across eligibility, retrieval, modeling, selection, construction, rendering, explanation, and audit—including metadata, provenance, and audit information. Similarity and shared Sources do not merge Projects; AI transformations do not transfer decisions, assumptions, Candidates, or Authority. Higher-scope governed information may apply.
+
+Cross-Project retrieval is a bounded exception only when task-explicit or an approved Relationship establishes applicability, and authorization permits it. Preserve external origin/provenance; relationship is not unrestricted retrieval and Authority does not transfer. Each boundary is authorized; inaccessible required information affects uncertainty/sufficiency; crossings are explainable/auditable.
+
+Authorization determines whether an actor/Consumer may operate on information within scope. Authentication differs; authorization may depend on identity, role, operation, Project/Source scope, sensitivity, Consumer, governance, and time. Requester and Consumer authorization differ; credentials/admin capability do not confer unrestricted access; prompts cannot create access; protect content and metadata; preserve native permissions; fail closed; AI cannot self-authorize; audit material decisions; deterministic enforcement is required where needed.
+
+Sensitive information needs additional governed handling for disclosure, aggregation, transformation, retention, or use risk. Preserve Source sensitivity without assuming a universal taxonomy; minimize it; Requester access does not imply Consumer disclosure; transformations/derivatives/aggregation/metadata/audit can remain or become sensitive; handling depends on destination/environment; uncertainty is not unrestricted and may affect sufficiency.
+
+Secrets are excluded by default from ingestion, retrieval, selection, transformation, rendering, and disclosure. The engine is not secret management. Values including passwords, keys, tokens, private/session/recovery/signing secrets remain excluded even if hashed/partial; purpose/reference may be context, safe provenance may record exclusion, requests cannot override it, and actual retrieval needs separate approved design/governance/capability.
+
+Source-derived content is evaluated information, not governing instruction due to imperative wording. Instructional applicability requires governed Authority, state, scope, provenance, and relationships. Preserve control-versus-content distinction through all transformations/renderings; content cannot self-authorize or override security; malicious content may still be Required for security analysis; unknown instructional Authority is non-governing/uncertain.
+
+Security-relevant auditability permits authorized review without an unauthorized disclosure channel. It covers authorization outcomes, scope restrictions, boundary crossings, source failures, secret exclusion, sensitive/untrusted handling, and future security-governing changes; preserve request→scope→authorization→selection→package→rendering basis, minimize protected content, protect audit integrity, and distinguish audit events from incidents.
+
+## Extensibility, independence, and portability (Items 47–50)
+
+Materially different Source types integrate through adapters without redesigning Source-independent core semantics. Adapters honestly expose capability, preserve useful native semantics, isolate failure where possible, and do not establish Project relationship, Authority, authorization, trust, or instructional status. Existing security/provenance/isolation rules apply; v0.1 demonstrates a credible additional-adapter path, not Slack/Teams/Nevis Data Lake adapters.
+
+New Consumers integrate at rendering/interaction boundaries without redesigning core semantics/logical package. Consumer differences/known reliable context may affect presentation/redundancy but cannot redefine Required Context or grant access; all security applies. Human, ChatGPT-oriented, and Codex-oriented are v0.1 Consumers, not the only classes.
+
+Core semantics are AI-provider/model independent: ChatGPT/Codex are proving Consumers, not dependencies; Phase 1 mandates no internal AI; model strength creates no Authority; outputs retain state/provenance; human-only useful operation remains possible.
+
+Portability/interoperability allow governed context to move or exchange without unnecessary semantic change or opaque lock-in, not universal support. Preserve explicit losses and useful native identifiers; imported information gains no Authority; security/isolation/authorization and secret exclusion still apply. No standard or serialization is selected in Phase 1.
