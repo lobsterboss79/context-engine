@@ -1,6 +1,6 @@
 # Project Roadmap
 
-**Current status:** Phase 0 is **COMPLETE**. Its exit gate was explicitly approved by the Project Owner. Phase 1 is **AUTHORIZED / IN PROGRESS**: Items 1–55 are approved and documented, while Items 56–60 remain pending. Phase 1 is not complete. Phase 2 and later phases are **NOT AUTHORIZED**. Phase completion and next-phase authorization are separate decisions; the Project Owner separately authorizes each phase.
+**Current status:** Phase 0 is **COMPLETE**. Its exit gate was explicitly approved by the Project Owner. Phase 1 is **AUTHORIZED / IN PROGRESS**: Items 1–56 are approved and documented, with Item 56 complete after approved finding resolution; Items 57–60 remain pending. Phase 1 is not complete. Phase 2 and later phases are **NOT AUTHORIZED**. Phase completion and next-phase authorization are separate decisions; the Project Owner separately authorizes each phase.
 
 | Phase | Planning focus | Status |
 | --- | --- | --- |

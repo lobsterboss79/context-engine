@@ -36,3 +36,7 @@
 | CE-NFR-030 | Source Failure Isolation | Failure or unavailability of one source should not unnecessarily invalidate unrelated accessible sources, while the resulting completeness limitations remain visible. |
 | CE-NFR-031 | Verifiability | Material functional and nonfunctional requirements should be expressible in a form that can eventually be objectively tested, inspected, or otherwise validated. |
 | CE-NFR-032 | Deterministic Behavior Where Required | Where governance, authorization, authority, or other safety-critical rules require deterministic behavior, implementation shall not rely solely upon nondeterministic inference. |
+
+## Approved validation interpretation (Item 56 resolution)
+
+Unless explicitly identified as informational guidance, approved nonfunctional requirements using **should** are normative quality expectations. Validation must evaluate them while recognizing that applicability may depend on task and context; **should** must not be silently interpreted as optional. The approved v0.1 acceptance interpretations in [the baseline and traceability record](v0.1-baseline-and-traceability.md#approved-v01-acceptance-interpretations) govern relevant qualitative validation without imposing arbitrary numerical targets.

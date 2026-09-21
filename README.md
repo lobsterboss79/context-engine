@@ -8,7 +8,7 @@ Project knowledge is often distributed across repositories, documents, decision 
 
 ## Status and governance
 
-**Phase 0 — Project Definition & Governance is COMPLETE.** Its documentation and consistency review are complete, and the Project Owner explicitly approved the Phase 0 exit gate. **Phase 1 — Requirements & Context Model is AUTHORIZED and IN PROGRESS.** Items 1–55 are approved and documented; Items 56–60 remain pending. This authorization permits Phase 1 work; it does not complete Phase 1. Phase completion and authorization of the next phase are separate Project Owner decisions. **Phase 2 and later phases are NOT AUTHORIZED.**
+**Phase 0 — Project Definition & Governance is COMPLETE.** Its documentation and consistency review are complete, and the Project Owner explicitly approved the Phase 0 exit gate. **Phase 1 — Requirements & Context Model is AUTHORIZED and IN PROGRESS.** Items 1–56 are approved and documented; Item 56 is complete after approved finding resolution, while Items 57–60 remain pending. This authorization permits Phase 1 work; it does not complete Phase 1. Phase completion and authorization of the next phase are separate Project Owner decisions. **Phase 2 and later phases are NOT AUTHORIZED.**
 
 The Project Owner has final authority for material decisions. ChatGPT analyzes, challenges, recommends, and reviews. Codex implements and documents approved decisions. See [AGENTS.md](AGENTS.md) for operating rules.
 

@@ -50,3 +50,13 @@
 | CE-FR-044 | Retain Package Construction Context | The system shall preserve enough information to substantially explain how a Context Package was constructed. |
 | CE-FR-045 | Associate Package with Request | A Context Package shall remain traceable to the Context Request that caused its construction. |
 | CE-FR-046 | Support Material Audit | The system shall make material source-selection, authority, provenance, conflict, and security decisions inspectable to an appropriately authorized actor. |
+
+## Approved normative semantic relationships (Item 56 resolution)
+
+The approved conceptual Items 6–55 are normative semantic definitions and behavioral qualifications applicable to this stable register; they are not merely explanatory prose. This section adds cross-references and does not alter any stable requirement wording or create identifiers.
+
+- Context Package, source-manifest, rendering, package-construction, and request-association requirements use the package, rendering, and audit semantics in Items 36–39.
+- Authority/currentness evaluation and explanation requirements use the distinct Authority, Governance State, temporal, currentness, and supersession semantics in Items 17–25. Neither approval, recency, storage, nor implementation alone substitutes for those distinctions.
+- The requirements preventing false sufficiency and selecting minimum sufficient context use the Sufficient, Conditionally Sufficient, and Insufficient semantics in Item 33 and the logical-package qualifications in Items 36–37.
+- Source access, authorization-before-packaging, and fail-closed requirements use Items 40–46. Information may enter Consumer-visible context only when applicable disclosure authorization permits that Consumer to receive it; a more-authorized Requester cannot transfer broader access to a less-authorized Consumer. If Required Context cannot be disclosed, that limitation participates in sufficiency.
+- Material-exclusion/deprioritization explanation is task-specific. Practicality/materiality considers whether omission of an explanation could materially impair an authorized actor’s understanding, validation, or audit of the package; every irrelevant candidate need not be explained.
