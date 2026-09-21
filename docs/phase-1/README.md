@@ -1,6 +1,6 @@
 # Phase 1 — Requirements & Context Model
 
-**Status:** AUTHORIZED / IN PROGRESS. Phase 0 is **COMPLETE**. Phase 1 Items 1–58 are **COMPLETE / APPROVED / DOCUMENTED** as applicable; Item 56 is **COMPLETE — PASS AFTER APPROVED FINDING RESOLUTION**, Item 57 is **COMPLETE — PASS WITH MINOR FINDING RESOLVED**, and Item 58 is **COMPLETE — PASS AFTER ADVERSARIAL FINDING RESOLUTION**. Items 59–60 are **PENDING**. Phase 2 is **NOT AUTHORIZED**.
+**Status:** AUTHORIZED / IN PROGRESS. Phase 0 is **COMPLETE**. Phase 1 Items 1–59 are **COMPLETE / APPROVED / DOCUMENTED** as applicable; Item 56 is **COMPLETE — PASS AFTER APPROVED FINDING RESOLUTION**, Item 57 is **COMPLETE — PASS WITH MINOR FINDING RESOLVED**, Item 58 is **COMPLETE — PASS AFTER ADVERSARIAL FINDING RESOLUTION**, and Item 59 is **COMPLETE — PASS — ALL MATERIAL FINDINGS RESOLVED**. Item 60 is **PENDING**. Phase 2 is **NOT AUTHORIZED**.
 
 This is the durable repository baseline for the approved Phase 1 handoff. It records requirements and conceptual semantics only. It does not select architecture, technology, schemas, algorithms, protocols, deployment, or implementation interfaces; those decisions remain deferred to Phase 2.
 
@@ -13,6 +13,7 @@ This is the durable repository baseline for the approved Phase 1 handoff. It rec
 - [Item 56 requirements-completeness review and disposition](item-56-requirements-completeness-review.md) — approved finding resolutions and final review disposition.
 - [Item 57 conceptual-model consistency review and disposition](item-57-conceptual-model-consistency-review.md) — approved MN-01 clarification and final review disposition.
 - [Item 58 adversarial review and disposition](item-58-adversarial-review-disposition.md) — approved finding resolutions, preserved review conclusions, and final disposition.
+- [Item 59 material-findings disposition audit](item-59-material-findings-disposition-audit.md) — audit of all Item 56/58 BLOCKER and MATERIAL finding dispositions.
 - [Phase 1 checklist](../../checklists/checklist-phase-1-requirements-context-model.md) — 60-item status record.
 
 ## Approved Phase 1 scope and roles
@@ -25,7 +26,6 @@ The approved functional and nonfunctional identifiers are stable. A material int
 
 ## Pending work
 
-1. Item 59 — Resolve or Explicitly Defer Material Findings
-2. Item 60 — Establish Phase 1 Exit Gate
+1. Item 60 — Establish Phase 1 Exit Gate
 
-No pending item has been performed or represented as complete by this documentation. Items 56–58 were completed after explicit Project Owner-approved finding resolution; this does not establish the Phase 1 exit gate or authorize a subsequent item or phase.
+No pending item has been performed or represented as complete by this documentation. Items 56–59 were completed after explicit Project Owner-approved finding resolution or disposition audit; this does not establish the Phase 1 exit gate or authorize a subsequent item or phase.
