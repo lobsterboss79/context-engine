@@ -1,0 +1,24 @@
+# Phase 0 Checklist — Project Definition & Governance
+
+**Overall status:** IN PROGRESS. Individual decisions below are approved and documented. Phase 0 remains open pending documentation review, consistency review, and explicit Project Owner exit-gate approval. Phase 1 is NOT AUTHORIZED.
+
+| # | Objective | Status | Approved outcome | Governing documentation |
+| --- | --- | --- | --- | --- |
+| 1 | Establish purpose and problem statement. | APPROVED / DOCUMENTED | General-purpose authoritative task-context system; does not make project decisions. | [§1](../docs/phase-0/project-definition-governance.md#1-purpose-and-problem-statement) |
+| 2 | Define initial users and consumers. | APPROVED / DOCUMENTED | Human, ChatGPT-oriented, and Codex-oriented consumers; provider-neutral. | [§2](../docs/phase-0/project-definition-governance.md#2-initial-users-and-consumers) |
+| 3 | Establish governance and authority. | APPROVED / DOCUMENTED | Owner approves material decisions; ChatGPT advises; Codex implements/documents. | [§3](../docs/phase-0/project-definition-governance.md#3-governance-and-decision-authority) |
+| 4 | Define context conceptually. | APPROVED / DOCUMENTED | Task-relevant information plus metadata and relationships; no implementation schema selected. | [§4](../docs/phase-0/project-definition-governance.md#4-definition-of-context) |
+| 5 | Define authoritative-source principles. | APPROVED / DOCUMENTED | Source-governed authority, surfaced conflicts, and no authority laundering. | [§5](../docs/phase-0/project-definition-governance.md#5-authoritative-source-principles) |
+| 6 | Define provenance requirements. | APPROVED / DOCUMENTED | Traceable material claims and durable distinction among direct, transformed, and inferred information. | [§6](../docs/phase-0/project-definition-governance.md#6-provenance-requirements) |
+| 7 | Define task-specific context. | APPROVED / DOCUMENTED | Minimum sufficient context; correctness over token efficiency. | [§7](../docs/phase-0/project-definition-governance.md#7-task-specific-context) |
+| 8 | Set initial source scope and extensibility. | APPROVED / DOCUMENTED | Local Git, Markdown, needed structured metadata; adapter-based source extensibility. | [§8](../docs/phase-0/project-definition-governance.md#8-initial-source-scope-and-extensibility) |
+| 9 | Define Context Package and outputs. | APPROVED / DOCUMENTED | First-class logical package with common meaning and consumer-specific renderings. | [§9](../docs/phase-0/project-definition-governance.md#9-context-packages-and-outputs) |
+| 10 | Define freshness and supersession. | APPROVED / DOCUMENTED | Retain history; honor explicit supersession; represent uncertainty. | [§10](../docs/phase-0/project-definition-governance.md#10-freshness-and-supersession) |
+| 11 | Define project isolation and cross-project context. | APPROVED / DOCUMENTED | Isolation by default; constrained authorized cross-project retrieval. | [§11](../docs/phase-0/project-definition-governance.md#11-project-isolation-and-cross-project-context) |
+| 12 | Define security and sensitive-information boundaries. | APPROVED / DOCUMENTED | Authorize before packaging, exclude secrets by default, fail closed on uncertainty. | [§12](../docs/phase-0/project-definition-governance.md#12-security-and-sensitive-information-boundaries) |
+| 13 | Define human control and AI autonomy. | APPROVED / DOCUMENTED | AI can propose, not approve, grant authority, or expand permissions. | [§13](../docs/phase-0/project-definition-governance.md#13-human-control-and-ai-autonomy) |
+| 14 | Define v0.1 success criteria. | APPROVED / DOCUMENTED | Functional proof-of-concept criteria documented; no token-reduction target. | [§14](../docs/phase-0/project-definition-governance.md#14-v01-success-criteria) |
+| 15 | Identify initial proving ground. | APPROVED / DOCUMENTED | Company AI Roadmap externally; Context Engine for dogfooding. | [§15](../docs/phase-0/project-definition-governance.md#15-initial-proving-ground) |
+| 16 | Define dogfooding principles. | APPROVED / DOCUMENTED | Same core mechanisms; no privileged self-knowledge; bootstrap may be manual. | [§16](../docs/phase-0/project-definition-governance.md#16-dogfooding) |
+| 17 | Record explicit v0.1 non-goals. | APPROVED / DOCUMENTED | Listed non-goals constrain scope while informing extensibility. | [§17](../docs/phase-0/project-definition-governance.md#17-explicit-v01-non-goals) |
+| 18 | Define Phase 0 exit gate. | APPROVED / DOCUMENTED | Closure requires review and explicit Owner approval; next-phase authorization remains separate. | [§18](../docs/phase-0/project-definition-governance.md#18-phase-0-exit-gate) |
