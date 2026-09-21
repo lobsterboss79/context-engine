@@ -1,6 +1,6 @@
 # Phase 0 Checklist — Project Definition & Governance
 
-**Overall status:** COMPLETE. All individual decisions below are approved and documented; the documentation and consistency review are complete; and the Project Owner explicitly approved the Phase 0 exit gate. Phase completion and authorization of the next phase are separate decisions. Phase 1 is NOT AUTHORIZED.
+**Overall status:** COMPLETE. All individual decisions below are approved and documented; the documentation and consistency review are complete; and the Project Owner explicitly approved the Phase 0 exit gate. Phase 1 — Requirements & Context Model is AUTHORIZED to begin requirements and context-model work, but is not complete. Phase completion and authorization of the next phase are separate Project Owner decisions. Phase 2 and later phases are NOT AUTHORIZED.
 
 | # | Objective | Status | Approved outcome | Governing documentation |
 | --- | --- | --- | --- | --- |
