@@ -1,6 +1,6 @@
 # Phase 2 Checklist — Architecture & Technology Design
 
-**Status:** **AUTHORIZED / IN PROGRESS.** The Project Owner explicitly authorized Phase 2 work governed by this approved checklist and formally adopted the Project Owner-approved pre-authorization Domain A baseline. Domain B has **NOT begun**; B1 is the next Phase 2 activity. This authorization does not authorize implementation, a next phase, or Codex material decision-making. Phase 0 and Phase 1 are complete; the Project Owner remains the final approving authority.
+**Status:** **AUTHORIZED / IN PROGRESS.** The Project Owner explicitly authorized Phase 2 work governed by this approved checklist and formally adopted the Project Owner-approved pre-authorization Domain A baseline. Domain B is **COMPLETE — PROJECT OWNER APPROVED — PASS**. Domain C has **NOT begun**; C1 is the next Phase 2 activity. This authorization does not authorize implementation, a next phase, or Codex material decision-making. Phase 0 and Phase 1 are complete; the Project Owner remains the final approving authority.
 
 ## Mission and completion condition
 
@@ -61,28 +61,30 @@ The detailed wording of the approved pre-authorization Domain A registers and de
 
 ## Proposed checklist
 
-All items below are **PENDING**. Domain B has **NOT begun**; B1 is the next Phase 2 activity. `[PO]` and `[GATE]` labels retain their stated approval/disposition requirements.
+Domains C–I remain **PENDING**. Domain B is complete; Domain C has **NOT begun** and C1 is the next Phase 2 activity. `[PO]` and `[GATE]` labels retain their stated approval/disposition requirements.
 
 ### Domain B — Governance, Trust & Security Architecture
 
 | ID | Objective | Classification |
 | --- | --- | --- |
-| B1 | Derive Domain B architectural requirements and constraints. | [DG] |
-| B2 | Define governance establishment, interpretation, and enforcement boundaries. | [DG] |
-| B3 | Establish Governance Bootstrap capability and non-circular trust requirements. | [DG] |
-| B4 | Develop and compare Governance Bootstrap alternatives. | [DG] |
-| B5 | Select v0.1 Governance Bootstrap architecture. | [PO][GATE] |
-| B6 | Define Authority, Authority Scope, Governance State, and applicable-governance evaluation architecture. | [DG] |
-| B7 | Define Requester/Consumer authorization architecture and enforcement points. | [DG] |
-| B8 | Define Project isolation and governed cross-Project security boundaries. | [DG] |
-| B9 | Define sensitive-information handling architecture. | [DG] |
-| B10 | Define secret-exclusion architecture. | [DG] |
-| B11 | Define untrusted-content/governing-instruction separation. | [DG] |
-| B12 | Define deterministic-enforcement boundaries. | [DG] |
-| B13 | Define security-relevant audit and explanation requirements. | [DG] |
-| B14 | Define security/governance failure and degraded-operation behavior. | [DG] |
-| B15 | Perform Domain B traceability and consistency review. | [VAL] |
-| B16 | Perform Domain B security/governance architecture review and resolve findings. | [VAL][GATE] |
+| B1 | Derive Domain B architectural requirements and constraints. | **COMPLETE** [DG] |
+| B2 | Define governance establishment, interpretation, and enforcement boundaries. | **COMPLETE** [DG] |
+| B3 | Establish Governance Bootstrap capability and non-circular trust requirements. | **COMPLETE** [DG] |
+| B4 | Develop and compare Governance Bootstrap alternatives. | **COMPLETE** [DG] |
+| B5 | Select v0.1 Governance Bootstrap architecture. | **COMPLETE — PROJECT OWNER APPROVED** [PO][GATE] |
+| B6 | Define Authority, Authority Scope, Governance State, and applicable-governance evaluation architecture. | **COMPLETE** [DG] |
+| B7 | Define Requester/Consumer authorization architecture and enforcement points. | **COMPLETE** [DG] |
+| B8 | Define Project isolation and governed cross-Project security boundaries. | **COMPLETE** [DG] |
+| B9 | Define sensitive-information handling architecture. | **COMPLETE** [DG] |
+| B10 | Define secret-exclusion architecture. | **COMPLETE** [DG] |
+| B11 | Define untrusted-content/governing-instruction separation. | **COMPLETE** [DG] |
+| B12 | Define deterministic-enforcement boundaries. | **COMPLETE** [DG] |
+| B13 | Define security-relevant audit and explanation requirements. | **COMPLETE** [DG] |
+| B14 | Define security/governance failure and degraded-operation behavior. | **COMPLETE** [DG] |
+| B15 | Perform Domain B traceability and consistency review. | **COMPLETE — PASS** [VAL] |
+| B16 | Perform Domain B security/governance architecture review and resolve findings. | **COMPLETE — PASS — PROJECT OWNER APPROVED** [VAL][GATE] |
+
+The durable detailed record is [Phase 2 Domain B — Governance, Trust & Security Architecture](../docs/phase-2/governance-trust-security-architecture.md). The checklist preserves approved identifiers and completion status; it is not a substitute for the detailed baseline.
 
 ### Domain C — Source & Observation Architecture
 
@@ -262,4 +264,4 @@ The proving plans in I10–I12 are designs only; they do not execute the Company
 
 Future Phase 2 documentation must trace each material design decision and validation result to the approved Phase 0/1 baseline, including all 46 CE-FRs, all 32 CE-NFRs, the 12 Phase 0 success criteria, the 23 Phase 0 non-goal categories, and material conceptual/adversarial semantics (including Governance Bootstrap, Applicable Source Universe, Observed Source State, and Construction-State Coherence). Traceability may explain approved decisions; it does not create authority or silently change governed semantics.
 
-The Phase 2 exit record must state the unresolved BLOCKER and MATERIAL totals, record Project Owner dispositions, and keep phase closure separate from next-phase authorization. Phase 2 is **AUTHORIZED / IN PROGRESS**. Domain A is **FORMALLY ADOPTED / COMPLETE**; Domains B–I remain pending and must proceed only under this checklist's governance, approval, and scope controls. Phase 2 completion does not authorize the next phase.
+The Phase 2 exit record must state the unresolved BLOCKER and MATERIAL totals, record Project Owner dispositions, and keep phase closure separate from next-phase authorization. Phase 2 is **AUTHORIZED / IN PROGRESS**. Domain A is **FORMALLY ADOPTED / COMPLETE**; Domain B is **COMPLETE — PROJECT OWNER APPROVED — PASS**; Domains C–I remain pending and must proceed only under this checklist's governance, approval, and scope controls. Domain C has **NOT begun**; C1 is the next Phase 2 activity. Phase 2 completion does not authorize the next phase.
