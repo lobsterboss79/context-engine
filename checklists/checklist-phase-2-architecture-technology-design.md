@@ -1,6 +1,6 @@
 # Phase 2 Checklist — Architecture & Technology Design
 
-**Status:** **AUTHORIZED / IN PROGRESS.** The Project Owner explicitly authorized Phase 2 work governed by this approved checklist and formally adopted the Project Owner-approved pre-authorization Domain A baseline. Domains B/C are **COMPLETE — PROJECT OWNER APPROVED — PASS**. Domain D has **NOT begun**; D1 is the next Phase 2 activity. Domains D–I remain pending. This authorization does not authorize implementation, a next phase, or Codex material decision-making. Phase 0 and Phase 1 are complete; the Project Owner remains the final approving authority.
+**Status:** **AUTHORIZED / IN PROGRESS.** The Project Owner explicitly authorized Phase 2 work governed by this approved checklist and formally adopted the Project Owner-approved pre-authorization Domain A baseline. Domains B–D are **COMPLETE — PROJECT OWNER APPROVED — PASS**. Domain E has **NOT begun**; E1 is the next Phase 2 activity. Domains E–I remain pending. This authorization does not authorize implementation, a next phase, or Codex material decision-making. Phase 0 and Phase 1 are complete; the Project Owner remains the final approving authority.
 
 ## Mission and completion condition
 
@@ -61,7 +61,7 @@ The detailed wording of the approved pre-authorization Domain A registers and de
 
 ## Proposed checklist
 
-Domains D–I remain **PENDING**. Domains A–C are complete as applicable; Domain D has **NOT begun** and D1 is the next Phase 2 activity. `[PO]` and `[GATE]` labels retain their stated approval/disposition requirements.
+Domains E–I remain **PENDING**. Domains A–D are complete as applicable; Domain E has **NOT begun** and E1 is the next Phase 2 activity. Implementation remains **NOT AUTHORIZED**. `[PO]` and `[GATE]` labels retain their stated approval/disposition requirements.
 
 ### Domain B — Governance, Trust & Security Architecture
 
@@ -117,25 +117,27 @@ No Domain D item creates a database schema, ORM model, DDL, migration, or physic
 
 | ID | Objective | Classification |
 | --- | --- | --- |
-| D1 | Derive Domain D requirements. | [DG] |
-| D2 | Define logical identity principles. | [DG] |
-| D3 | Define Project representation. | [DG] |
-| D4 | Define Source and Source Scope representation. | [DG] |
-| D5 | Define Artifact and Artifact Version/Observed State representation. | [DG] |
-| D6 | Define Claim representation. | [DG] |
-| D7 | Define Context Item representation. | [DG] |
-| D8 | Define Classification representation. | [DG] |
-| D9 | Define Relationship representation. | [DG] |
-| D10 | Define Authority and Authority Scope representation. | [DG] |
-| D11 | Define Governance State and Candidate/Proposal lifecycle representation. | [DG] |
-| D12 | Define Provenance and transformation lineage representation. | [DG] |
-| D13 | Define temporal and currentness representation. | [DG] |
-| D14 | Define supersession and historical-context representation. | [DG] |
-| D15 | Define Conflict representation. | [DG] |
-| D16 | Define Uncertainty, Unknown, missingness, and epistemic-state representation. | [DG] |
-| D17 | Conduct integrated logical-representation review and obtain Project Owner approval. | [PO][GATE] |
-| D18 | Perform requirements/conceptual-model traceability review. | [VAL] |
-| D19 | Perform adversarial semantic-representation review. | [VAL][GATE] |
+| D1 | Derive Domain D requirements. | **COMPLETE** [DG] |
+| D2 | Define logical identity principles. | **COMPLETE** [DG] |
+| D3 | Define Project representation. | **COMPLETE** [DG] |
+| D4 | Define Source and Source Scope representation. | **COMPLETE** [DG] |
+| D5 | Define Artifact and Artifact Version/Observed State representation. | **COMPLETE** [DG] |
+| D6 | Define Claim representation. | **COMPLETE** [DG] |
+| D7 | Define Context Item representation. | **COMPLETE** [DG] |
+| D8 | Define Classification representation. | **COMPLETE** [DG] |
+| D9 | Define Relationship representation. | **COMPLETE** [DG] |
+| D10 | Define Authority and Authority Scope representation. | **COMPLETE** [DG] |
+| D11 | Define Governance State and Candidate/Proposal lifecycle representation. | **COMPLETE** [DG] |
+| D12 | Define Provenance and transformation lineage representation. | **COMPLETE** [DG] |
+| D13 | Define temporal and currentness representation. | **COMPLETE** [DG] |
+| D14 | Define supersession and historical-context representation. | **COMPLETE** [DG] |
+| D15 | Define Conflict representation. | **COMPLETE** [DG] |
+| D16 | Define Uncertainty, Unknown, missingness, and epistemic-state representation. | **COMPLETE** [DG] |
+| D17 | Conduct integrated logical-representation review and obtain Project Owner approval. | **COMPLETE — PASS — PROJECT OWNER APPROVED** [PO][GATE] |
+| D18 | Perform requirements/conceptual-model traceability review. | **COMPLETE — PASS** [VAL] |
+| D19 | Perform adversarial semantic-representation review. | **COMPLETE — PASS — PROJECT OWNER APPROVED** [VAL][GATE] |
+
+The durable detailed record is [Phase 2 Domain D — Context Knowledge Representation](../docs/phase-2/context-knowledge-representation.md). The checklist preserves approved identifiers and completion status; it is not a substitute for the detailed baseline.
 
 ### Domain E — Discovery, Selection & Sufficiency
 
@@ -266,4 +268,4 @@ The proving plans in I10–I12 are designs only; they do not execute the Company
 
 Future Phase 2 documentation must trace each material design decision and validation result to the approved Phase 0/1 baseline, including all 46 CE-FRs, all 32 CE-NFRs, the 12 Phase 0 success criteria, the 23 Phase 0 non-goal categories, and material conceptual/adversarial semantics (including Governance Bootstrap, Applicable Source Universe, Observed Source State, and Construction-State Coherence). Traceability may explain approved decisions; it does not create authority or silently change governed semantics.
 
-The Phase 2 exit record must state the unresolved BLOCKER and MATERIAL totals, record Project Owner dispositions, and keep phase closure separate from next-phase authorization. Phase 2 is **AUTHORIZED / IN PROGRESS**. Domain A is **FORMALLY ADOPTED / COMPLETE**; Domains B/C are **COMPLETE — PROJECT OWNER APPROVED — PASS**; Domains D–I remain pending and must proceed only under this checklist's governance, approval, and scope controls. Domain D has **NOT begun**; D1 is the next Phase 2 activity. Phase 2 completion does not authorize the next phase.
+The Phase 2 exit record must state the unresolved BLOCKER and MATERIAL totals, record Project Owner dispositions, and keep phase closure separate from next-phase authorization. Phase 2 is **AUTHORIZED / IN PROGRESS**. Domain A is **FORMALLY ADOPTED / COMPLETE**; Domains B–D are **COMPLETE — PROJECT OWNER APPROVED — PASS**; Domains E–I remain pending and must proceed only under this checklist's governance, approval, and scope controls. Domain E has **NOT begun**; E1 is the next Phase 2 activity. Phase 2 completion does not authorize the next phase.
