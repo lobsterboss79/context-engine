@@ -1,6 +1,6 @@
 # Phase 2 Checklist — Architecture & Technology Design
 
-**Status:** **AUTHORIZED / IN PROGRESS.** The Project Owner explicitly authorized Phase 2 work governed by this approved checklist and formally adopted the Project Owner-approved pre-authorization Domain A baseline. Domain B is **COMPLETE — PROJECT OWNER APPROVED — PASS**. Domain C has **NOT begun**; C1 is the next Phase 2 activity. This authorization does not authorize implementation, a next phase, or Codex material decision-making. Phase 0 and Phase 1 are complete; the Project Owner remains the final approving authority.
+**Status:** **AUTHORIZED / IN PROGRESS.** The Project Owner explicitly authorized Phase 2 work governed by this approved checklist and formally adopted the Project Owner-approved pre-authorization Domain A baseline. Domains B/C are **COMPLETE — PROJECT OWNER APPROVED — PASS**. Domain D has **NOT begun**; D1 is the next Phase 2 activity. Domains D–I remain pending. This authorization does not authorize implementation, a next phase, or Codex material decision-making. Phase 0 and Phase 1 are complete; the Project Owner remains the final approving authority.
 
 ## Mission and completion condition
 
@@ -61,7 +61,7 @@ The detailed wording of the approved pre-authorization Domain A registers and de
 
 ## Proposed checklist
 
-Domains C–I remain **PENDING**. Domain B is complete; Domain C has **NOT begun** and C1 is the next Phase 2 activity. `[PO]` and `[GATE]` labels retain their stated approval/disposition requirements.
+Domains D–I remain **PENDING**. Domains A–C are complete as applicable; Domain D has **NOT begun** and D1 is the next Phase 2 activity. `[PO]` and `[GATE]` labels retain their stated approval/disposition requirements.
 
 ### Domain B — Governance, Trust & Security Architecture
 
@@ -92,22 +92,24 @@ The durable detailed record is [Phase 2 Domain B — Governance, Trust & Securit
 
 | ID | Objective | Classification |
 | --- | --- | --- |
-| C1 | Derive Domain C requirements and constraints. | [DG] |
-| C2 | Define Project registration. | [DG] |
-| C3 | Define Source registration, identity, Source Scope, and Project association. | [DG] |
-| C4 | Define governance and authorization interaction. | [DG] |
-| C5 | Define Applicable Source Universe and evidence-boundary interaction. | [DG] |
-| C6 | Define the general Source Adapter contract. | [DG] |
-| C7 | Obtain Project Owner approval of the Source Adapter architecture. | [PO][GATE] |
-| C8 | Define local Git Source behavior, including identity and material Git-native state. | [DG] |
-| C9 | Define Observed Source State and its epistemic-strength boundary. | [DG] |
-| C10 | Define Markdown Artifact handling. | [DG] |
-| C11 | Define structured-metadata necessity requirements without selecting format or storage. | [DG] |
-| C12 | Define Source observation temporal, availability, failure, and last-known-state behavior. | [DG] |
-| C13 | Preserve security, sensitivity, secret-exclusion, and untrusted-content boundaries. | [DG] |
-| C14 | Define Source extensibility proof criteria. | [DG] |
-| C15 | Perform traceability and consistency review. | [VAL] |
-| C16 | Perform adversarial v0.1 Source-boundary validation. | [VAL][GATE] |
+| C1 | Derive Domain C requirements and constraints. | **COMPLETE** [DG] |
+| C2 | Define Project registration. | **COMPLETE** [DG] |
+| C3 | Define Source registration, identity, Source Scope, and Project association. | **COMPLETE** [DG] |
+| C4 | Define governance and authorization interaction. | **COMPLETE** [DG] |
+| C5 | Define Applicable Source Universe and evidence-boundary interaction. | **COMPLETE** [DG] |
+| C6 | Define the general Source Adapter contract. | **COMPLETE** [DG] |
+| C7 | Obtain Project Owner approval of the Source Adapter architecture. | **COMPLETE — PROJECT OWNER APPROVED** [PO][GATE] |
+| C8 | Define local Git Source behavior, including identity and material Git-native state. | **COMPLETE** [DG] |
+| C9 | Define Observed Source State and its epistemic-strength boundary. | **COMPLETE** [DG] |
+| C10 | Define Markdown Artifact handling. | **COMPLETE** [DG] |
+| C11 | Define structured-metadata necessity requirements without selecting format or storage. | **COMPLETE** [DG] |
+| C12 | Define Source observation temporal, availability, failure, and last-known-state behavior. | **COMPLETE** [DG] |
+| C13 | Preserve security, sensitivity, secret-exclusion, and untrusted-content boundaries. | **COMPLETE** [DG] |
+| C14 | Define Source extensibility proof criteria. | **COMPLETE** [DG] |
+| C15 | Perform traceability and consistency review. | **COMPLETE — PASS** [VAL] |
+| C16 | Perform adversarial v0.1 Source-boundary validation. | **COMPLETE — PASS — PROJECT OWNER APPROVED** [VAL][GATE] |
+
+The durable detailed record is [Phase 2 Domain C — Source & Observation Architecture](../docs/phase-2/source-observation-architecture.md). The checklist preserves approved identifiers and completion status; it is not a substitute for the detailed baseline.
 
 ### Domain D — Context Knowledge Representation
 
@@ -264,4 +266,4 @@ The proving plans in I10–I12 are designs only; they do not execute the Company
 
 Future Phase 2 documentation must trace each material design decision and validation result to the approved Phase 0/1 baseline, including all 46 CE-FRs, all 32 CE-NFRs, the 12 Phase 0 success criteria, the 23 Phase 0 non-goal categories, and material conceptual/adversarial semantics (including Governance Bootstrap, Applicable Source Universe, Observed Source State, and Construction-State Coherence). Traceability may explain approved decisions; it does not create authority or silently change governed semantics.
 
-The Phase 2 exit record must state the unresolved BLOCKER and MATERIAL totals, record Project Owner dispositions, and keep phase closure separate from next-phase authorization. Phase 2 is **AUTHORIZED / IN PROGRESS**. Domain A is **FORMALLY ADOPTED / COMPLETE**; Domain B is **COMPLETE — PROJECT OWNER APPROVED — PASS**; Domains C–I remain pending and must proceed only under this checklist's governance, approval, and scope controls. Domain C has **NOT begun**; C1 is the next Phase 2 activity. Phase 2 completion does not authorize the next phase.
+The Phase 2 exit record must state the unresolved BLOCKER and MATERIAL totals, record Project Owner dispositions, and keep phase closure separate from next-phase authorization. Phase 2 is **AUTHORIZED / IN PROGRESS**. Domain A is **FORMALLY ADOPTED / COMPLETE**; Domains B/C are **COMPLETE — PROJECT OWNER APPROVED — PASS**; Domains D–I remain pending and must proceed only under this checklist's governance, approval, and scope controls. Domain D has **NOT begun**; D1 is the next Phase 2 activity. Phase 2 completion does not authorize the next phase.
