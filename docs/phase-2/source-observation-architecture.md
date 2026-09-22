@@ -12,15 +12,17 @@
 
 **Domain E status:** **COMPLETE — PROJECT OWNER APPROVED — PASS.**
 
-**Domain F status:** **NOT BEGUN.**
+**Domain F status:** **COMPLETE — PROJECT OWNER APPROVED — PASS.**
 
-**Next activity:** **F1.**
+**Domain G status:** **NOT BEGUN.**
+
+**Next activity:** **G1.**
 
 **Implementation:** **NOT AUTHORIZED.**
 
 ## Governance record
 
-This record durably documents the Project Owner-approved C1–C16 Source & Observation Architecture baseline. It records already-approved architecture and does not introduce new material architecture, technology, security, governance, scope, persistence, logical-representation, Source, Consumer, or implementation decisions. Domains D–E are **COMPLETE — PROJECT OWNER APPROVED — PASS**; Domain F has not begun and F1 is the next Phase 2 activity. Phase 3 and later phases remain **NOT AUTHORIZED**.
+This record durably documents the Project Owner-approved C1–C16 Source & Observation Architecture baseline. It records already-approved architecture and does not introduce new material architecture, technology, security, governance, scope, persistence, logical-representation, Source, Consumer, or implementation decisions. Domains D–F are **COMPLETE — PROJECT OWNER APPROVED — PASS**; Domain G has not begun and G1 is the next Phase 2 activity. Phase 3 and later phases remain **NOT AUTHORIZED**.
 
 ## C1 — Domain C requirements and constraints
 

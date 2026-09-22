@@ -1,6 +1,6 @@
 # Phase 2 Checklist — Architecture & Technology Design
 
-**Status:** **AUTHORIZED / IN PROGRESS.** The Project Owner explicitly authorized Phase 2 work governed by this approved checklist and formally adopted the Project Owner-approved pre-authorization Domain A baseline. Domains B–E are **COMPLETE — PROJECT OWNER APPROVED — PASS**. Domain F has **NOT begun**; F1 is the next Phase 2 activity. Domains F–I remain pending. This authorization does not authorize implementation, a next phase, or Codex material decision-making. Phase 0 and Phase 1 are complete; the Project Owner remains the final approving authority.
+**Status:** **AUTHORIZED / IN PROGRESS.** The Project Owner explicitly authorized Phase 2 work governed by this approved checklist and formally adopted the Project Owner-approved pre-authorization Domain A baseline. Domains B–F are **COMPLETE — PROJECT OWNER APPROVED — PASS**. Domain G has **NOT begun**; G1 is the next Phase 2 activity. Domains G–I remain pending. This authorization does not authorize implementation, a next phase, or Codex material decision-making. Phase 0 and Phase 1 are complete; the Project Owner remains the final approving authority.
 
 ## Mission and completion condition
 
@@ -61,7 +61,7 @@ The detailed wording of the approved pre-authorization Domain A registers and de
 
 ## Proposed checklist
 
-Domains F–I remain **PENDING**. Domains A–E are complete as applicable; Domain F has **NOT begun** and F1 is the next Phase 2 activity. Implementation remains **NOT AUTHORIZED**. `[PO]` and `[GATE]` labels retain their stated approval/disposition requirements.
+Domains G–I remain **PENDING**. Domains A–F are complete as applicable; Domain G has **NOT begun** and G1 is the next Phase 2 activity. Implementation remains **NOT AUTHORIZED**. `[PO]` and `[GATE]` labels retain their stated approval/disposition requirements.
 
 ### Domain B — Governance, Trust & Security Architecture
 
@@ -171,22 +171,24 @@ No serialization, prompt template, API, package storage, or file format is selec
 
 | ID | Objective | Classification |
 | --- | --- | --- |
-| F1 | Derive Domain F requirements. | [DG] |
-| F2 | Define logical Context Package identity and request, project, and task association. | [DG] |
-| F3 | Define Required/Supporting package structure. | [DG] |
-| F4 | Define Source manifest and provenance. | [DG] |
-| F5 | Define package representation of material Authority, Governance, currentness, Conflict, Uncertainty, gap, and sufficiency qualifications. | [DG] |
-| F6 | Define Construction-State Coherence evaluation and incoherence behavior. | [DG] |
-| F7 | Define package-construction record for explanation, audit, and reproducibility. | [DG] |
-| F8 | Define Consumer contract. | [DG] |
-| F9 | Define Human rendering. | [DG] |
-| F10 | Define ChatGPT rendering. | [DG] |
-| F11 | Define Codex rendering. | [DG] |
-| F12 | Define logical-package, rendering, delivery, receipt, and use distinction. | [DG] |
-| F13 | Define Consumer-capacity and rendering-limitation behavior. | [DG] |
-| F14 | Conduct integrated Project Owner review. | [PO][GATE] |
-| F15 | Perform traceability and semantic-consistency review. | [VAL] |
-| F16 | Perform adversarial coherence, rendering, provenance, and receipt review. | [VAL][GATE] |
+| F1 | Derive Domain F requirements. | **COMPLETE** [DG] |
+| F2 | Define logical Context Package identity and request, project, and task association. | **COMPLETE** [DG] |
+| F3 | Define Required/Supporting package structure. | **COMPLETE** [DG] |
+| F4 | Define Source manifest and provenance. | **COMPLETE** [DG] |
+| F5 | Define package representation of material Authority, Governance, currentness, Conflict, Uncertainty, gap, and sufficiency qualifications. | **COMPLETE** [DG] |
+| F6 | Define Construction-State Coherence evaluation and incoherence behavior. | **COMPLETE** [DG] |
+| F7 | Define package-construction record for explanation, audit, and reproducibility. | **COMPLETE** [DG] |
+| F8 | Define Consumer contract. | **COMPLETE** [DG] |
+| F9 | Define Human rendering. | **COMPLETE** [DG] |
+| F10 | Define ChatGPT rendering. | **COMPLETE** [DG] |
+| F11 | Define Codex rendering. | **COMPLETE** [DG] |
+| F12 | Define logical-package, rendering, delivery, receipt, and use distinction. | **COMPLETE** [DG] |
+| F13 | Define Consumer-capacity and rendering-limitation behavior. | **COMPLETE** [DG] |
+| F14 | Conduct integrated Project Owner review. | **COMPLETE — PASS — PROJECT OWNER APPROVED** [PO][GATE] |
+| F15 | Perform traceability and semantic-consistency review. | **COMPLETE — PASS** [VAL] |
+| F16 | Perform adversarial coherence, rendering, provenance, and receipt review. | **COMPLETE — PASS — PROJECT OWNER APPROVED** [VAL][GATE] |
+
+The durable detailed record is [Phase 2 Domain F — Context Package & Consumer Architecture](../docs/phase-2/context-package-consumer-architecture.md). The checklist preserves approved identifiers and completion status; it is not a substitute for the detailed baseline.
 
 ### Domain G — State, Persistence & Operational Architecture
 
@@ -270,4 +272,4 @@ The proving plans in I10–I12 are designs only; they do not execute the Company
 
 Future Phase 2 documentation must trace each material design decision and validation result to the approved Phase 0/1 baseline, including all 46 CE-FRs, all 32 CE-NFRs, the 12 Phase 0 success criteria, the 23 Phase 0 non-goal categories, and material conceptual/adversarial semantics (including Governance Bootstrap, Applicable Source Universe, Observed Source State, and Construction-State Coherence). Traceability may explain approved decisions; it does not create authority or silently change governed semantics.
 
-The Phase 2 exit record must state the unresolved BLOCKER and MATERIAL totals, record Project Owner dispositions, and keep phase closure separate from next-phase authorization. Phase 2 is **AUTHORIZED / IN PROGRESS**. Domain A is **FORMALLY ADOPTED / COMPLETE**; Domains B–E are **COMPLETE — PROJECT OWNER APPROVED — PASS**; Domains F–I remain pending and must proceed only under this checklist's governance, approval, and scope controls. Domain F has **NOT begun**; F1 is the next Phase 2 activity. Phase 2 completion does not authorize the next phase.
+The Phase 2 exit record must state the unresolved BLOCKER and MATERIAL totals, record Project Owner dispositions, and keep phase closure separate from next-phase authorization. Phase 2 is **AUTHORIZED / IN PROGRESS**. Domain A is **FORMALLY ADOPTED / COMPLETE**; Domains B–F are **COMPLETE — PROJECT OWNER APPROVED — PASS**; Domains G–I remain pending and must proceed only under this checklist's governance, approval, and scope controls. Domain G has **NOT begun**; G1 is the next Phase 2 activity. Phase 2 completion does not authorize the next phase.
