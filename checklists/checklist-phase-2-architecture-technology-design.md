@@ -1,6 +1,6 @@
 # Phase 2 Checklist — Architecture & Technology Design
 
-**Status:** **AUTHORIZED / IN PROGRESS.** The Project Owner explicitly authorized Phase 2 work governed by this approved checklist and formally adopted the Project Owner-approved pre-authorization Domain A baseline. Domains B–D are **COMPLETE — PROJECT OWNER APPROVED — PASS**. Domain E has **NOT begun**; E1 is the next Phase 2 activity. Domains E–I remain pending. This authorization does not authorize implementation, a next phase, or Codex material decision-making. Phase 0 and Phase 1 are complete; the Project Owner remains the final approving authority.
+**Status:** **AUTHORIZED / IN PROGRESS.** The Project Owner explicitly authorized Phase 2 work governed by this approved checklist and formally adopted the Project Owner-approved pre-authorization Domain A baseline. Domains B–E are **COMPLETE — PROJECT OWNER APPROVED — PASS**. Domain F has **NOT begun**; F1 is the next Phase 2 activity. Domains F–I remain pending. This authorization does not authorize implementation, a next phase, or Codex material decision-making. Phase 0 and Phase 1 are complete; the Project Owner remains the final approving authority.
 
 ## Mission and completion condition
 
@@ -61,7 +61,7 @@ The detailed wording of the approved pre-authorization Domain A registers and de
 
 ## Proposed checklist
 
-Domains E–I remain **PENDING**. Domains A–D are complete as applicable; Domain E has **NOT begun** and E1 is the next Phase 2 activity. Implementation remains **NOT AUTHORIZED**. `[PO]` and `[GATE]` labels retain their stated approval/disposition requirements.
+Domains F–I remain **PENDING**. Domains A–E are complete as applicable; Domain F has **NOT begun** and F1 is the next Phase 2 activity. Implementation remains **NOT AUTHORIZED**. `[PO]` and `[GATE]` labels retain their stated approval/disposition requirements.
 
 ### Domain B — Governance, Trust & Security Architecture
 
@@ -145,23 +145,25 @@ No retrieval technology may be selected before capability criteria are approved.
 
 | ID | Objective | Classification |
 | --- | --- | --- |
-| E1 | Derive Domain E requirements. | [DG] |
-| E2 | Operationalize Context Request, Task Intent, and Task Scope. | [DG] |
-| E3 | Define discovery responsibility boundaries. | [DG] |
-| E4 | Define discovery/retrieval capability requirements and evaluation criteria. | [DG] |
-| E5 | Develop candidate discovery/retrieval alternatives. | [DG] |
-| E6 | Select v0.1 discovery/retrieval architecture. | [PO][GATE] |
-| E7 | Define candidate-context representation. | [DG] |
-| E8 | Define applicability evaluation: relevance, Authority, Governance State, currentness, relationships, Conflict, Uncertainty, provenance, and authorization. | [DG] |
-| E9 | Define Required versus Supporting Context. | [DG] |
-| E10 | Define Context Selection and material explanation. | [DG] |
-| E11 | Define sufficiency-state architecture. | [DG] |
-| E12 | Define Applicable Source Universe/evidence-boundary interaction. | [DG] |
-| E13 | Define bounded iteration and termination. | [DG] |
-| E14 | Define inaccessible or undisclosable Required Context behavior. | [DG] |
-| E15 | Conduct integrated Project Owner review. | [PO][GATE] |
-| E16 | Perform traceability and consistency review. | [VAL] |
-| E17 | Perform adversarial discovery, negative-result, and sufficiency review. | [VAL][GATE] |
+| E1 | Derive Domain E requirements. | **COMPLETE** [DG] |
+| E2 | Operationalize Context Request, Task Intent, and Task Scope. | **COMPLETE** [DG] |
+| E3 | Define discovery responsibility boundaries. | **COMPLETE** [DG] |
+| E4 | Define discovery/retrieval capability requirements and evaluation criteria. | **COMPLETE** [DG] |
+| E5 | Develop candidate discovery/retrieval alternatives. | **COMPLETE** [DG] |
+| E6 | Select v0.1 discovery/retrieval architecture. | **COMPLETE — PROJECT OWNER APPROVED** [PO][GATE] |
+| E7 | Define candidate-context representation. | **COMPLETE** [DG] |
+| E8 | Define applicability evaluation: relevance, Authority, Governance State, currentness, relationships, Conflict, Uncertainty, provenance, and authorization. | **COMPLETE** [DG] |
+| E9 | Define Required versus Supporting Context. | **COMPLETE** [DG] |
+| E10 | Define Context Selection and material explanation. | **COMPLETE** [DG] |
+| E11 | Define sufficiency-state architecture. | **COMPLETE** [DG] |
+| E12 | Define Applicable Source Universe/evidence-boundary interaction. | **COMPLETE** [DG] |
+| E13 | Define bounded iteration and termination. | **COMPLETE** [DG] |
+| E14 | Define inaccessible or undisclosable Required Context behavior. | **COMPLETE** [DG] |
+| E15 | Conduct integrated Project Owner review. | **COMPLETE — PASS — PROJECT OWNER APPROVED** [PO][GATE] |
+| E16 | Perform traceability and consistency review. | **COMPLETE — PASS** [VAL] |
+| E17 | Perform adversarial discovery, negative-result, and sufficiency review. | **COMPLETE — PASS — PROJECT OWNER APPROVED** [VAL][GATE] |
+
+The durable detailed record is [Phase 2 Domain E — Discovery, Selection & Sufficiency Architecture](../docs/phase-2/discovery-selection-sufficiency-architecture.md). The checklist preserves approved identifiers and completion status; it is not a substitute for the detailed baseline.
 
 ### Domain F — Context Package & Consumer Architecture
 
@@ -268,4 +270,4 @@ The proving plans in I10–I12 are designs only; they do not execute the Company
 
 Future Phase 2 documentation must trace each material design decision and validation result to the approved Phase 0/1 baseline, including all 46 CE-FRs, all 32 CE-NFRs, the 12 Phase 0 success criteria, the 23 Phase 0 non-goal categories, and material conceptual/adversarial semantics (including Governance Bootstrap, Applicable Source Universe, Observed Source State, and Construction-State Coherence). Traceability may explain approved decisions; it does not create authority or silently change governed semantics.
 
-The Phase 2 exit record must state the unresolved BLOCKER and MATERIAL totals, record Project Owner dispositions, and keep phase closure separate from next-phase authorization. Phase 2 is **AUTHORIZED / IN PROGRESS**. Domain A is **FORMALLY ADOPTED / COMPLETE**; Domains B–D are **COMPLETE — PROJECT OWNER APPROVED — PASS**; Domains E–I remain pending and must proceed only under this checklist's governance, approval, and scope controls. Domain E has **NOT begun**; E1 is the next Phase 2 activity. Phase 2 completion does not authorize the next phase.
+The Phase 2 exit record must state the unresolved BLOCKER and MATERIAL totals, record Project Owner dispositions, and keep phase closure separate from next-phase authorization. Phase 2 is **AUTHORIZED / IN PROGRESS**. Domain A is **FORMALLY ADOPTED / COMPLETE**; Domains B–E are **COMPLETE — PROJECT OWNER APPROVED — PASS**; Domains F–I remain pending and must proceed only under this checklist's governance, approval, and scope controls. Domain F has **NOT begun**; F1 is the next Phase 2 activity. Phase 2 completion does not authorize the next phase.

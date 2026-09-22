@@ -10,15 +10,17 @@
 
 **Domain D status:** **COMPLETE — PROJECT OWNER APPROVED — PASS.**
 
-**Domain E status:** **NOT BEGUN.**
+**Domain E status:** **COMPLETE — PROJECT OWNER APPROVED — PASS.**
 
-**Next activity:** **E1.**
+**Domain F status:** **NOT BEGUN.**
+
+**Next activity:** **F1.**
 
 **Implementation:** **NOT AUTHORIZED.**
 
 ## Governance record
 
-This record durably documents the Project Owner-approved C1–C16 Source & Observation Architecture baseline. It records already-approved architecture and does not introduce new material architecture, technology, security, governance, scope, persistence, logical-representation, Source, Consumer, or implementation decisions. Domain D is **COMPLETE — PROJECT OWNER APPROVED — PASS**; Domain E has not begun and E1 is the next Phase 2 activity. Phase 3 and later phases remain **NOT AUTHORIZED**.
+This record durably documents the Project Owner-approved C1–C16 Source & Observation Architecture baseline. It records already-approved architecture and does not introduce new material architecture, technology, security, governance, scope, persistence, logical-representation, Source, Consumer, or implementation decisions. Domains D–E are **COMPLETE — PROJECT OWNER APPROVED — PASS**; Domain F has not begun and F1 is the next Phase 2 activity. Phase 3 and later phases remain **NOT AUTHORIZED**.
 
 ## C1 — Domain C requirements and constraints
 
@@ -207,4 +209,4 @@ Domain C — Source & Observation Architecture is internally consistent with the
 
 No BLOCKER or MATERIAL findings remain. The following downstream decisions remain intentionally unresolved and are not Domain C defects: logical identity representation; exact Artifact/version and observation-state representation; structured-metadata physical form; Git CLI versus library/API; Markdown parser/mechanism; persistence of observations; and exact observation-coherence mechanism.
 
-Domain D is **COMPLETE — PROJECT OWNER APPROVED — PASS**. Domain E has **NOT begun**; E1 is the next Phase 2 activity. This result does not authorize E1, implementation, Phase 3, or a later phase.
+Domains D–E are **COMPLETE — PROJECT OWNER APPROVED — PASS**. Domain F has **NOT begun**; F1 is the next Phase 2 activity. This result does not authorize F1, implementation, Phase 3, or a later phase.
