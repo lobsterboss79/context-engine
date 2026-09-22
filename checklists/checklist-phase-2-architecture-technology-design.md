@@ -1,6 +1,6 @@
 # Phase 2 Checklist — Architecture & Technology Design
 
-**Status:** **PROPOSED / NOT AUTHORIZED.** This is a pre-authorization planning artifact. Its existence does not authorize Phase 2 work, implementation, a next phase, or any material decision. Phase 0 and Phase 1 are complete; the Project Owner remains the final approving authority. Codex is not a material decision authority.
+**Status:** **AUTHORIZED / IN PROGRESS.** The Project Owner explicitly authorized Phase 2 work governed by this approved checklist and formally adopted the Project Owner-approved pre-authorization Domain A baseline. Domain B has **NOT begun**; B1 is the next Phase 2 activity. This authorization does not authorize implementation, a next phase, or Codex material decision-making. Phase 0 and Phase 1 are complete; the Project Owner remains the final approving authority.
 
 ## Mission and completion condition
 
@@ -36,32 +36,32 @@ Phase 2 will not:
 - redefine or weaken Phase 0/1 semantics, delegate material decisions to Codex, automatically modify authoritative Sources, or retrieve, store, expose, or manage secrets as Context Engine content;
 - treat observed local Git state as inherently verified remote/shared/governing/current state, infer sufficiency merely because registered Sources were searched, or silently combine materially incompatible observations during package construction.
 
-## Pre-authorization Domain A baseline
+## Domain A baseline
 
-**PRE-AUTHORIZATION PLANNING BASELINE — PROJECT OWNER APPROVED — PENDING FORMAL ADOPTION UPON PHASE 2 AUTHORIZATION.** A1–A14 are not ordinary Phase 2 work already completed. The first governance action after any future Phase 2 authorization must formally adopt this approved Domain A baseline into the governed Phase 2 baseline. Do not redo Domain A merely because it preceded authorization.
+**FORMALLY ADOPTED / COMPLETE — GOVERNED PHASE 2 BASELINE.** Domain A was developed and explicitly approved by the Project Owner during pre-authorization planning and is now formally adopted into the governed Phase 2 baseline. Formal adoption does not reopen or redo these decisions and introduces no new material decision. The durable detailed record is [Phase 2 Domain A — Architecture Foundation & System Boundary](../docs/phase-2/architecture-foundation-system-boundary.md).
 
 | ID | Approved planning objective/outcome | Status |
 | --- | --- | --- |
-| A1 | Establish architectural design principles, preserving AP-01 through AP-12. | Approved pre-authorization baseline; pending formal adoption |
-| A2 | Define the Context Engine system boundary. | Approved pre-authorization baseline; pending formal adoption |
-| A3 | Identify external actors, systems, and trust relationships. | Approved pre-authorization baseline; pending formal adoption |
-| A4 | Define major system responsibilities. | Approved pre-authorization baseline; pending formal adoption |
-| A5 | Define major responsibility separations, preserving SEP-01 through SEP-07. | Approved pre-authorization baseline; pending formal adoption |
-| A6 | Establish the Phase 0/1 Architecture Constraint Register, AC-01 through AC-19. | Approved pre-authorization baseline; pending formal adoption |
-| A7 | Develop candidate architectural styles: AS-1 Modular Single-Process; AS-2 Layered Modular; AS-3 Ports-and-Adapters / Hexagonal; AS-4 Process-Separated Components. | Approved pre-authorization baseline; pending formal adoption |
-| A8 | Evaluate architectural styles against CR-01 through CR-12 approved criteria. | Approved pre-authorization baseline; pending formal adoption |
-| A9 | Select the approved v0.1 direction: modular single-process ports-and-adapters architecture. | Approved pre-authorization baseline; pending formal adoption |
-| A10 | Define conceptual component boundaries, CC-01 through CC-07. | Approved pre-authorization baseline; pending formal adoption |
-| A11 | Define high-level processing, control, and data flows, including the governed iterative context-construction cycle. | Approved pre-authorization baseline; pending formal adoption |
-| A12 | Define architectural extension boundaries, EB-01 through EB-04, including XC-01 Identity/Provenance/Lineage and XC-02 Audit/Explanation/Failure State. | Approved pre-authorization baseline; pending formal adoption |
-| A13 | Define portability/deployment constraints, PD-01 through PD-06. | Approved pre-authorization baseline; pending formal adoption |
-| A14 | Validate Domain A against Phase 0/1 and approved Phase 2 planning constraints. | **PASS**; pending formal adoption |
+| A1 | Establish architectural design principles, preserving AP-01 through AP-12. | FORMALLY ADOPTED / COMPLETE |
+| A2 | Define the Context Engine system boundary. | FORMALLY ADOPTED / COMPLETE |
+| A3 | Identify external actors, systems, and trust relationships. | FORMALLY ADOPTED / COMPLETE |
+| A4 | Define major system responsibilities. | FORMALLY ADOPTED / COMPLETE |
+| A5 | Define major responsibility separations, preserving SEP-01 through SEP-07. | FORMALLY ADOPTED / COMPLETE |
+| A6 | Establish the Phase 0/1 Architecture Constraint Register, AC-01 through AC-19. | FORMALLY ADOPTED / COMPLETE |
+| A7 | Develop candidate architectural styles: AS-1 Modular Single-Process; AS-2 Layered Modular; AS-3 Ports-and-Adapters / Hexagonal; AS-4 Process-Separated Components. | FORMALLY ADOPTED / COMPLETE |
+| A8 | Evaluate architectural styles against CR-01 through CR-12 approved criteria. | FORMALLY ADOPTED / COMPLETE |
+| A9 | Select the approved v0.1 direction: modular single-process ports-and-adapters architecture. | FORMALLY ADOPTED / COMPLETE |
+| A10 | Define conceptual component boundaries, CC-01 through CC-07. | FORMALLY ADOPTED / COMPLETE |
+| A11 | Define high-level processing, control, and data flows, including the governed iterative context-construction cycle. | FORMALLY ADOPTED / COMPLETE |
+| A12 | Define architectural extension boundaries, EB-01 through EB-04, including XC-01 Identity/Provenance/Lineage and XC-02 Audit/Explanation/Failure State. | FORMALLY ADOPTED / COMPLETE |
+| A13 | Define portability/deployment constraints, PD-01 through PD-06. | FORMALLY ADOPTED / COMPLETE |
+| A14 | Validate Domain A against Phase 0/1 and approved Phase 2 planning constraints. | **FORMALLY ADOPTED / COMPLETE — PASS** |
 
-The detailed wording of the approved pre-authorization Domain A registers and decisions must be documented in governed Phase 2 architecture records during formal adoption. The checklist preserves their approved identifiers and outcomes and must not be treated as a substitute for those detailed records. Formal adoption must preserve the Project Owner-approved planning baseline without introducing new material decisions.
+The detailed wording of the approved pre-authorization Domain A registers and decisions is documented in the governed Phase 2 architecture record above. The checklist preserves their approved identifiers and outcomes and is not a substitute for those detailed records.
 
 ## Proposed checklist
 
-All items below are **PENDING — PHASE 2 NOT AUTHORIZED** unless and until separately authorized. `[PO]` and `[GATE]` labels retain their stated approval/disposition requirements after authorization.
+All items below are **PENDING**. Domain B has **NOT begun**; B1 is the next Phase 2 activity. `[PO]` and `[GATE]` labels retain their stated approval/disposition requirements.
 
 ### Domain B — Governance, Trust & Security Architecture
 
@@ -262,4 +262,4 @@ The proving plans in I10–I12 are designs only; they do not execute the Company
 
 Future Phase 2 documentation must trace each material design decision and validation result to the approved Phase 0/1 baseline, including all 46 CE-FRs, all 32 CE-NFRs, the 12 Phase 0 success criteria, the 23 Phase 0 non-goal categories, and material conceptual/adversarial semantics (including Governance Bootstrap, Applicable Source Universe, Observed Source State, and Construction-State Coherence). Traceability may explain approved decisions; it does not create authority or silently change governed semantics.
 
-The Phase 2 exit record must state the unresolved BLOCKER and MATERIAL totals, record Project Owner dispositions, and keep phase closure separate from next-phase authorization. Until explicit Project Owner authorization, every proposed item above remains pending and Phase 2 remains **NOT AUTHORIZED**.
+The Phase 2 exit record must state the unresolved BLOCKER and MATERIAL totals, record Project Owner dispositions, and keep phase closure separate from next-phase authorization. Phase 2 is **AUTHORIZED / IN PROGRESS**. Domain A is **FORMALLY ADOPTED / COMPLETE**; Domains B–I remain pending and must proceed only under this checklist's governance, approval, and scope controls. Phase 2 completion does not authorize the next phase.

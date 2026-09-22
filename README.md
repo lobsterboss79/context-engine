@@ -8,7 +8,7 @@ Project knowledge is often distributed across repositories, documents, decision 
 
 ## Status and governance
 
-**Phase 0 — Project Definition & Governance is COMPLETE.** Its documentation and consistency review are complete, and the Project Owner explicitly approved the Phase 0 exit gate. **Phase 1 — Requirements & Context Model is COMPLETE.** All Items 1–60 are complete, approved, or documented as applicable; Item 60 is **COMPLETE — PASS — PROJECT OWNER APPROVED** following its original PASS exit-gate recommendation. Phase completion and authorization of the next phase are separate Project Owner decisions. **Phase 2 and later phases are NOT AUTHORIZED.**
+**Phase 0 — Project Definition & Governance is COMPLETE.** Its documentation and consistency review are complete, and the Project Owner explicitly approved the Phase 0 exit gate. **Phase 1 — Requirements & Context Model is COMPLETE.** All Items 1–60 are complete, approved, or documented as applicable; Item 60 is **COMPLETE — PASS — PROJECT OWNER APPROVED** following its original PASS exit-gate recommendation. **Phase 2 — Architecture & Technology Design is AUTHORIZED / IN PROGRESS.** Its Project Owner-approved pre-authorization Domain A baseline is formally adopted; the next Phase 2 activity is B1. Phase 3 and later phases are **NOT AUTHORIZED**. Phase completion and authorization of the next phase are separate Project Owner decisions.
 
 The Project Owner has final authority for material decisions. ChatGPT analyzes, challenges, recommends, and reviews. Codex implements and documents approved decisions. See [AGENTS.md](AGENTS.md) for operating rules.
 
@@ -19,3 +19,5 @@ The Project Owner has final authority for material decisions. ChatGPT analyzes, 
 - [Phase 0 exit checklist](checklists/checklist-phase-0-project-definition-governance.md)
 - [Phase 1 approved baseline](docs/phase-1/README.md)
 - [Phase 1 checklist](checklists/checklist-phase-1-requirements-context-model.md)
+- [Phase 2 Domain A architecture foundation](docs/phase-2/architecture-foundation-system-boundary.md)
+- [Phase 2 checklist](checklists/checklist-phase-2-architecture-technology-design.md)
