@@ -1,6 +1,6 @@
 # Phase 3 Master Checklist — v0.1 Implementation
 
-**Status:** **AUTHORIZED — IMPLEMENTATION PLAN PROJECT OWNER APPROVED; WORKSTREAM 1 COMPLETE — PROJECT OWNER APPROVED; WORKSTREAMS 2–10 NOT AUTHORIZED.** The Project Owner approved this Phase 3 master implementation checklist, separately authorized Workstream 1 items 1.1–1.7, and reviewed and approved Workstream 1 completion. H3-WS1-01 is resolved following the Project Owner’s manual installation of the previously approved `python3.14-venv` prerequisite and clean-environment validation. It is the approved controlling implementation plan for Phase 3, subordinate to the approved Phase 0–2 record, including the Phase 2 closure decision in commit `ac22ed1`. No other implementation workstream is authorized. Phase 4 — Validation & Integration remains **NOT AUTHORIZED**.
+**Status:** **AUTHORIZED — IMPLEMENTATION PLAN PROJECT OWNER APPROVED; WORKSTREAMS 1–2 COMPLETE — PROJECT OWNER APPROVED; GATE 3A — SEMANTIC FOUNDATION APPROVED; WORKSTREAMS 3–10 NOT AUTHORIZED.** The Project Owner reviewed and approved Workstream 2 completion and Gate 3A after separately authorizing Workstream 2 items 2.1–2.7. H3-WS1-01 remains resolved. This is the approved controlling implementation plan for Phase 3, subordinate to the approved Phase 0–2 record, including the Phase 2 closure decision in commit `ac22ed1`. Workstream 3 is not yet authorized. Phase 4 — Validation & Integration remains **NOT AUTHORIZED**.
 
 ## Purpose, authority, and boundaries
 
@@ -71,13 +71,15 @@ Expected completion evidence generally includes: implemented boundary/behavior; 
 
 **Dependencies:** Workstream 1.
 
-- [ ] 2.1 [IMP] Implement core representations and validation for Project; Source/Source Scope; Artifact and Artifact Version/Observed State; Claim; Classification; Relationship; Authority/Authority Scope; Governance State; Candidate/Proposal; Provenance/transformation lineage; temporal/currentness; supersession/history; Conflict; and Uncertainty/Unknown/missingness.
-- [ ] 2.2 [IMP] Implement Context Request, Task Intent/Scope, Requester/Consumer distinctions, represented information, Candidate Context, selected Context Item, Required/Supporting state, sufficiency outcomes, logical Context Package, Source Manifest, and Package-Construction Record as distinct semantic concepts.
-- [ ] 2.3 [IMP] Establish core ports/contracts for governance, persistence, Source observation, representation, discovery, authorization/disclosure, package construction, rendering, diagnostics, backup/recovery, and clock/identity seams as applicable.
-- [ ] 2.4 [IMP] Encode invariant-preserving construction and validation so physical identifiers, parser tokens, observations, transformations, and persistence restoration cannot elevate Authority, Governance State, currentness, or selection status.
-- [ ] 2.5 [VAL] Add unit and semantic/invariant tests for scoped Authority, Authority != Governance State, Claim identity, Candidate/Proposal separation, historical/current separation, Provenance lineage, Conflict/Uncertainty preservation, and Project isolation.
-- [ ] 2.6 [VAL] Add negative tests that reject semantic collapse: represented information becoming Context Item without selection; discovery becoming applicability/selection; a newer/local/restored item becoming current/authoritative; or Source content becoming governance/instruction.
-- [ ] 2.7 [DOC] Trace kernel concepts to Phase 1 model and Phase 2 Domains A, B, and D; record deliberate deferred physical choices.
+- [x] 2.1 [IMP] Implement core representations and validation for Project; Source/Source Scope; Artifact and Artifact Version/Observed State; Claim; Classification; Relationship; Authority/Authority Scope; Governance State; Candidate/Proposal; Provenance/transformation lineage; temporal/currentness; supersession/history; Conflict; and Uncertainty/Unknown/missingness.
+- [x] 2.2 [IMP] Implement Context Request, Task Intent/Scope, Requester/Consumer distinctions, represented information, Candidate Context, selected Context Item, Required/Supporting state, sufficiency outcomes, logical Context Package, Source Manifest, and Package-Construction Record as distinct semantic concepts.
+- [x] 2.3 [IMP] Establish core ports/contracts for governance, persistence, Source observation, representation, discovery, authorization/disclosure, package construction, rendering, diagnostics, backup/recovery, and clock/identity seams as applicable.
+- [x] 2.4 [IMP] Encode invariant-preserving construction and validation so physical identifiers, parser tokens, observations, transformations, and persistence restoration cannot elevate Authority, Governance State, currentness, or selection status.
+- [x] 2.5 [VAL] Add unit and semantic/invariant tests for scoped Authority, Authority != Governance State, Claim identity, Candidate/Proposal separation, historical/current separation, Provenance lineage, Conflict/Uncertainty preservation, and Project isolation.
+- [x] 2.6 [VAL] Add negative tests that reject semantic collapse: represented information becoming Context Item without selection; discovery becoming applicability/selection; a newer/local/restored item becoming current/authoritative; or Source content becoming governance/instruction.
+- [x] 2.7 [DOC] Trace kernel concepts to Phase 1 model and Phase 2 Domains A, B, and D; record deliberate deferred physical choices.
+
+**Implementation status:** **COMPLETE — PROJECT OWNER APPROVED.** See [Workstream 2 kernel record](../docs/phase-3/workstream-2-governed-semantic-kernel.md). Gate 3A is approved; Workstream 3 remains not authorized.
 
 **H3 points:** A core semantic inconsistency, a data-model change that alters governed meaning, or a missing material representation.
 
@@ -89,7 +91,7 @@ Expected completion evidence generally includes: implemented boundary/behavior; 
 
 **Project Owner review:** Confirm that approved Phase 1–2 semantics map faithfully into code, core/adapter separation is intact, and no material semantic or architecture decision was invented.
 
-**Disposition:** Approve the next defined increment, request correction, or hold/escalate findings. Gate approval is not Phase 3 closure and does not authorize Phase 4.
+**Disposition:** **APPROVED — PROJECT OWNER.** The Project Owner accepts the implemented Workstream 2 semantic foundation as the basis for subsequent authorized Phase 3 implementation: Phase 1–2 semantics map acceptably into the kernel; core/adapter separation is intact; identity is not physically defined; Authority and Governance State remain distinct; pipeline, authorization/disclosure, temporal/currentness, package/rendering/delivery/receipt/use, Provenance, Conflict, Uncertainty, limitations, sufficiency, and coherence distinctions remain representable; and no material semantic or architecture decision was invented. This disposition does not claim later behavior is implemented, authorize Workstream 3, close Phase 3, or authorize Phase 4.
 
 ### Workstream 3 — Bootstrap, Configuration, and Persistence Foundation
 

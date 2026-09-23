@@ -22,9 +22,9 @@ def test_core_has_no_concrete_mechanism_imports() -> None:
     assert not imports & FORBIDDEN_CORE_IMPORTS
 
 
-def test_workstream_one_does_not_define_governed_semantic_models() -> None:
+def test_workstream_two_core_defines_semantics_without_concrete_mechanisms() -> None:
     core_root = Path(__file__).parents[1] / "src" / "context_engine" / "core"
     source = "\n".join(path.read_text(encoding="utf-8") for path in core_root.glob("*.py"))
-    assert "class Authority" not in source
-    assert "class GovernanceState" not in source
-    assert "class Currentness" not in source
+    assert "class Authority" in source
+    assert "class GovernanceState" in source
+    assert "class Currentness" in source
