@@ -88,6 +88,8 @@ class ObservedState:
     observed_reference: str | None = None
     observed_versions: tuple[SemanticIdentity, ...] = ()
     observation_time: str | None = None
+    provenance: "Provenance | None" = None
+    limitations: tuple["Uncertainty", ...] = ()
 
 
 class TransformationKind(str, Enum):
@@ -109,6 +111,9 @@ class Provenance:
     upstream: tuple[SemanticIdentity, ...] = ()
     transformation: TransformationKind = TransformationKind.DIRECT
     missing_material_basis: bool = False
+    location_reference: str | None = None
+    transformation_reference: str | None = None
+    limitations: tuple["Uncertainty", ...] = ()
 
 
 @dataclass(frozen=True)

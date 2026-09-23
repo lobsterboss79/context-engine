@@ -1,6 +1,6 @@
 # Phase 3 Master Checklist — v0.1 Implementation
 
-**Status:** **AUTHORIZED — IMPLEMENTATION PLAN PROJECT OWNER APPROVED; WORKSTREAMS 1–4 COMPLETE — PROJECT OWNER APPROVED; GATE 3A — SEMANTIC FOUNDATION APPROVED; WORKSTREAMS 5–10 NOT AUTHORIZED.** H3-WS1-01 remains resolved. This is the approved controlling implementation plan for Phase 3, subordinate to the approved Phase 0–2 record, including the Phase 2 closure decision in commit `ac22ed1`. Gate 3B is not reached or approved. Phase 4 — Validation & Integration remains **NOT AUTHORIZED**.
+**Status:** **AUTHORIZED — IMPLEMENTATION PLAN PROJECT OWNER APPROVED; WORKSTREAMS 1–5 COMPLETE — PROJECT OWNER APPROVED; GATE 3A — SEMANTIC FOUNDATION APPROVED; GATE 3B — EVIDENCE PIPELINE APPROVED; WORKSTREAM 6 NOT YET AUTHORIZED; WORKSTREAMS 7–10 NOT AUTHORIZED; GATE 3C NOT YET REACHED.** H3-WS1-01 remains resolved. This is the approved controlling implementation plan for Phase 3, subordinate to the approved Phase 0–2 record, including the Phase 2 closure decision in commit `ac22ed1`. Phase 4 — Validation & Integration remains **NOT AUTHORIZED**.
 
 ## Purpose, authority, and boundaries
 
@@ -138,18 +138,20 @@ Expected completion evidence generally includes: implemented boundary/behavior; 
 
 **Dependencies:** Workstream 4; SQLite/configuration foundation.
 
-- [ ] 5.1 [IMP] Implement the general read-oriented Source Adapter contract and local Git adapter using native Git CLI with shell-free `subprocess` argument vectors, controlled environment, bounded output, and explicit failure handling.
-- [ ] 5.2 [IMP] Implement governed local Git observation for repository identity, revision/HEAD, branch/equivalent state, relevant working-tree state, relevant history, and material limitations (including detached/unborn/shallow/partial/unavailable/divergent/path ambiguity states as applicable).
-- [ ] 5.3 [IMP] Preserve Observed Source State and time/provenance separately from assertions of remote/shared/governing/current state; observe local state only and introduce no network/provider integration.
-- [ ] 5.4 [IMP] Implement Markdown Artifact observation and deterministic `markdown-it-py` transformation with CommonMark plus approved table support, original-content preservation, hierarchy/block-line provenance, inert parsing, and explicit unsupported/failure states.
-- [ ] 5.5 [IMP] Implement provenance-bearing represented information and transformation lineage from observation/Artifact state while keeping parser output, normalization, and Source text distinct from Claims and governance conclusions.
-- [ ] 5.6 [IMP] Persist material observations, versions, transformation outcomes, limitations, and historical evidence without claiming stable/current Source state after later change or recovery.
-- [ ] 5.7 [VAL] Add adapter tests using controlled Git fixtures: clean/dirty, staged/untracked, detached/unborn, history limitation, mutation during observation, unavailable Git/path, unusual/NUL-safe path handling, and hostile/untrusted repository conditions within approved scope.
-- [ ] 5.8 [VAL] Add Markdown tests for headings, paragraphs, lists, code, links, tables, Unicode, malformed/unsupported cases, raw/instruction-like content, original-to-derived provenance, and parser configuration repeatability.
-- [ ] 5.9 [VAL] Add provenance/representation tests proving observation != interpretation; original evidence survives; transformations preserve limitations; and local Git facts do not establish remote/current/governing truth.
-- [ ] 5.10 [DOC] Record supported observation inventory, Git/Markdown version/configuration evidence, transformation rules, unsupported capability behavior, and provenance traceability.
+- [x] 5.1 [IMP] Implement the general read-oriented Source Adapter contract and local Git adapter using native Git CLI with shell-free `subprocess` argument vectors, controlled environment, bounded output, and explicit failure handling.
+- [x] 5.2 [IMP] Implement governed local Git observation for repository identity, revision/HEAD, branch/equivalent state, relevant working-tree state, relevant history, and material limitations (including detached/unborn/shallow/partial/unavailable/divergent/path ambiguity states as applicable).
+- [x] 5.3 [IMP] Preserve Observed Source State and time/provenance separately from assertions of remote/shared/governing/current state; observe local state only and introduce no network/provider integration.
+- [x] 5.4 [IMP] Implement Markdown Artifact observation and deterministic `markdown-it-py` transformation with CommonMark plus approved table support, original-content preservation, hierarchy/block-line provenance, inert parsing, and explicit unsupported/failure states.
+- [x] 5.5 [IMP] Implement provenance-bearing represented information and transformation lineage from observation/Artifact state while keeping parser output, normalization, and Source text distinct from Claims and governance conclusions.
+- [x] 5.6 [IMP] Persist material observations, versions, transformation outcomes, limitations, and historical evidence without claiming stable/current Source state after later change or recovery.
+- [x] 5.7 [VAL] Add adapter tests using controlled Git fixtures: clean/dirty, staged/untracked, detached/unborn, history limitation, mutation during observation, unavailable Git/path, unusual/NUL-safe path handling, and hostile/untrusted repository conditions within approved scope.
+- [x] 5.8 [VAL] Add Markdown tests for headings, paragraphs, lists, code, links, tables, Unicode, malformed/unsupported cases, raw/instruction-like content, original-to-derived provenance, and parser configuration repeatability.
+- [x] 5.9 [VAL] Add provenance/representation tests proving observation != interpretation; original evidence survives; transformations preserve limitations; and local Git facts do not establish remote/current/governing truth.
+- [x] 5.10 [DOC] Record supported observation inventory, Git/Markdown version/configuration evidence, transformation rules, unsupported capability behavior, and provenance traceability.
 
 **H3 points:** Git capability requiring a library/network/provider, a Markdown feature/plugin/dependency, an interpretation rule that establishes Claim/governance, or material Source contract expansion.
+
+**Implementation status:** **COMPLETE — PROJECT OWNER APPROVED.** See [Workstream 5 record](../docs/phase-3/workstream-5-source-observation-representation.md). Gate 3B is approved; Workstream 6 has not been authorized or begun; Workstreams 7–10 remain unauthorized; Gate 3C has not been reached; Phase 4 remains unauthorized.
 
 ### Gate 3B — Evidence Pipeline [GATE]
 
@@ -157,7 +159,7 @@ Expected completion evidence generally includes: implemented boundary/behavior; 
 
 **Project Owner review:** Confirm evidence honesty, Bootstrap/root legitimacy, Source/Project isolation, parser/Git boundaries, persistence integrity, and that observation/representation has not been promoted into governance or selection.
 
-**Disposition:** Approve the next defined increment, request correction, or hold/escalate findings.
+**Disposition:** **APPROVED — PROJECT OWNER.** For the implemented Workstreams 1–5 scope, the Project Owner accepts the tested controlled evidence path from explicit Bootstrap through governed Project, registered Source, authorized Source observation, transformation, represented information, and durable Provenance. The approval accepts the recorded Bootstrap/root-legitimacy, Project-isolation, Source-registration/observation, local read-oriented shell-free bounded non-mutating Git, local-evidence limitation, original-Markdown, inert-parser, Source-content/instruction, representation-stage separation, Provenance/limitation, historical-reload, and semantic-identity evidence. It establishes no discovery, applicability, selection, sufficiency, Context Package construction, Workstream 6 authorization, Gate 3C disposition, or Phase 4 authorization.
 
 ## Stage III — Context Decision Pipeline
 

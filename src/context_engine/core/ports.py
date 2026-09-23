@@ -20,6 +20,13 @@ class PersistencePort(Protocol):
 
 
 class SourceObservationPort(Protocol):
+    """Read-oriented observation boundary.
+
+    Implementations receive an already registered, scoped, and authorized
+    Source.  They return evidence only; they do not establish governance,
+    currentness, relevance, or selection.
+    """
+
     def observe(self, source: Source, request: ContextRequest) -> tuple[Provenance, ...]: ...
 
 

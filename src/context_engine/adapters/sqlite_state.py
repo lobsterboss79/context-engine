@@ -12,7 +12,7 @@ class SecretValueError(ValueError):
     """Raised when a normal state/audit value resembles a secret."""
 
 
-CURRENT_SCHEMA_VERSION = 2
+CURRENT_SCHEMA_VERSION = 3
 
 @dataclass(frozen=True)
 class PersistedEvidence:
@@ -33,6 +33,48 @@ class PersistedSourceRegistration:
     scope: str
     availability: str
     locator: str | None = None
+
+
+@dataclass(frozen=True)
+class PersistedObservation:
+    project_identity: str
+    observation_identity: str
+    source_identity: str
+    observed_at: str
+    outcome: str
+    evidence: str
+
+
+@dataclass(frozen=True)
+class PersistedArtifactEvidence:
+    project_identity: str
+    artifact_identity: str
+    artifact_version_identity: str
+    source_identity: str
+    locator: str
+    original_content: str
+    observation_identity: str
+
+
+@dataclass(frozen=True)
+class PersistedTransformation:
+    project_identity: str
+    transformation_identity: str
+    artifact_version_identity: str
+    parser: str
+    configuration: str
+    outcome: str
+    evidence: str
+
+
+@dataclass(frozen=True)
+class PersistedRepresentation:
+    project_identity: str
+    representation_identity: str
+    artifact_version_identity: str
+    provenance_identity: str
+    location_reference: str
+    evidence: str
 
 def _reject_secret(value: str) -> None:
     if any(marker in value.lower() for marker in ("secret=", "password=", "token=", "api_key=")):
@@ -65,6 +107,9 @@ class SQLiteStateStore:
                 if version == 1:
                     self._migrate_one_to_two(connection)
                     version = 2
+                elif version == 2:
+                    self._migrate_two_to_three(connection)
+                    version = 3
                 else:
                     raise StateCompatibilityError("unsupported or malformed schema version")
 
@@ -91,6 +136,43 @@ class SQLiteStateStore:
             "locator TEXT, UNIQUE(project_identity, source_identity))"
         )
         connection.execute("UPDATE schema_version SET version = 2")
+
+    @staticmethod
+    def _migrate_two_to_three(connection: sqlite3.Connection) -> None:
+        """Add append-only Workstream 5 evidence tables.
+
+        SQLite row IDs remain private implementation details.  Caller supplied
+        semantic identities and explicit Project association form every public
+        lookup key; reload never asserts currentness or Authority.
+        """
+        connection.execute(
+            "CREATE TABLE source_observation (row_id INTEGER PRIMARY KEY, "
+            "project_identity TEXT NOT NULL, observation_identity TEXT NOT NULL, "
+            "source_identity TEXT NOT NULL, observed_at TEXT NOT NULL, outcome TEXT NOT NULL, "
+            "evidence TEXT NOT NULL, UNIQUE(project_identity, observation_identity))"
+        )
+        connection.execute(
+            "CREATE TABLE artifact_evidence (row_id INTEGER PRIMARY KEY, "
+            "project_identity TEXT NOT NULL, artifact_identity TEXT NOT NULL, "
+            "artifact_version_identity TEXT NOT NULL, source_identity TEXT NOT NULL, "
+            "locator TEXT NOT NULL, original_content TEXT NOT NULL, observation_identity TEXT NOT NULL, "
+            "UNIQUE(project_identity, artifact_version_identity))"
+        )
+        connection.execute(
+            "CREATE TABLE transformation_evidence (row_id INTEGER PRIMARY KEY, "
+            "project_identity TEXT NOT NULL, transformation_identity TEXT NOT NULL, "
+            "artifact_version_identity TEXT NOT NULL, parser TEXT NOT NULL, configuration TEXT NOT NULL, "
+            "outcome TEXT NOT NULL, evidence TEXT NOT NULL, "
+            "UNIQUE(project_identity, transformation_identity))"
+        )
+        connection.execute(
+            "CREATE TABLE representation_evidence (row_id INTEGER PRIMARY KEY, "
+            "project_identity TEXT NOT NULL, representation_identity TEXT NOT NULL, "
+            "artifact_version_identity TEXT NOT NULL, provenance_identity TEXT NOT NULL, "
+            "location_reference TEXT NOT NULL, evidence TEXT NOT NULL, "
+            "UNIQUE(project_identity, representation_identity))"
+        )
+        connection.execute("UPDATE schema_version SET version = 3")
 
     def save_evidence(self, evidence: PersistedEvidence) -> None:
         _reject_secret(evidence.historical_reference)
@@ -148,3 +230,60 @@ class SQLiteStateStore:
                     "SELECT outcome, detail FROM audit WHERE project_identity=?", (project_identity,)
                 ).fetchall()
             )
+
+    def save_observation(self, observation: PersistedObservation) -> None:
+        self._reject_evidence_values(observation.project_identity, observation.observation_identity, observation.source_identity, observation.evidence)
+        with self._connect() as connection:
+            connection.execute(
+                "INSERT INTO source_observation(project_identity, observation_identity, source_identity, observed_at, outcome, evidence) VALUES (?, ?, ?, ?, ?, ?)",
+                (observation.project_identity, observation.observation_identity, observation.source_identity, observation.observed_at, observation.outcome, observation.evidence),
+            )
+
+    def save_artifact_evidence(self, artifact: PersistedArtifactEvidence) -> None:
+        self._reject_evidence_values(artifact.project_identity, artifact.artifact_identity, artifact.artifact_version_identity, artifact.locator, artifact.original_content)
+        with self._connect() as connection:
+            connection.execute(
+                "INSERT INTO artifact_evidence(project_identity, artifact_identity, artifact_version_identity, source_identity, locator, original_content, observation_identity) VALUES (?, ?, ?, ?, ?, ?, ?)",
+                (artifact.project_identity, artifact.artifact_identity, artifact.artifact_version_identity, artifact.source_identity, artifact.locator, artifact.original_content, artifact.observation_identity),
+            )
+
+    def save_transformation(self, transformation: PersistedTransformation) -> None:
+        self._reject_evidence_values(transformation.project_identity, transformation.transformation_identity, transformation.evidence)
+        with self._connect() as connection:
+            connection.execute(
+                "INSERT INTO transformation_evidence(project_identity, transformation_identity, artifact_version_identity, parser, configuration, outcome, evidence) VALUES (?, ?, ?, ?, ?, ?, ?)",
+                (transformation.project_identity, transformation.transformation_identity, transformation.artifact_version_identity, transformation.parser, transformation.configuration, transformation.outcome, transformation.evidence),
+            )
+
+    def save_representation(self, representation: PersistedRepresentation) -> None:
+        self._reject_evidence_values(representation.project_identity, representation.representation_identity, representation.evidence)
+        with self._connect() as connection:
+            connection.execute(
+                "INSERT INTO representation_evidence(project_identity, representation_identity, artifact_version_identity, provenance_identity, location_reference, evidence) VALUES (?, ?, ?, ?, ?, ?)",
+                (representation.project_identity, representation.representation_identity, representation.artifact_version_identity, representation.provenance_identity, representation.location_reference, representation.evidence),
+            )
+
+    @staticmethod
+    def _reject_evidence_values(*values: str) -> None:
+        for value in values:
+            _reject_secret(value)
+
+    def observations_for_project(self, project_identity: str) -> tuple[PersistedObservation, ...]:
+        with self._connect() as connection:
+            rows = connection.execute("SELECT project_identity, observation_identity, source_identity, observed_at, outcome, evidence FROM source_observation WHERE project_identity=? ORDER BY row_id", (project_identity,)).fetchall()
+        return tuple(PersistedObservation(*row) for row in rows)
+
+    def artifact_evidence_for_project(self, project_identity: str) -> tuple[PersistedArtifactEvidence, ...]:
+        with self._connect() as connection:
+            rows = connection.execute("SELECT project_identity, artifact_identity, artifact_version_identity, source_identity, locator, original_content, observation_identity FROM artifact_evidence WHERE project_identity=? ORDER BY row_id", (project_identity,)).fetchall()
+        return tuple(PersistedArtifactEvidence(*row) for row in rows)
+
+    def transformations_for_project(self, project_identity: str) -> tuple[PersistedTransformation, ...]:
+        with self._connect() as connection:
+            rows = connection.execute("SELECT project_identity, transformation_identity, artifact_version_identity, parser, configuration, outcome, evidence FROM transformation_evidence WHERE project_identity=? ORDER BY row_id", (project_identity,)).fetchall()
+        return tuple(PersistedTransformation(*row) for row in rows)
+
+    def representations_for_project(self, project_identity: str) -> tuple[PersistedRepresentation, ...]:
+        with self._connect() as connection:
+            rows = connection.execute("SELECT project_identity, representation_identity, artifact_version_identity, provenance_identity, location_reference, evidence FROM representation_evidence WHERE project_identity=? ORDER BY row_id", (project_identity,)).fetchall()
+        return tuple(PersistedRepresentation(*row) for row in rows)
