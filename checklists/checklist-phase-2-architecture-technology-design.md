@@ -1,6 +1,6 @@
 # Phase 2 Checklist — Architecture & Technology Design
 
-**Status:** **AUTHORIZED / IN PROGRESS.** The Project Owner explicitly authorized Phase 2 work governed by this approved checklist and formally adopted the Project Owner-approved pre-authorization Domain A baseline. Domains B–H are **COMPLETE — PROJECT OWNER APPROVED — PASS**. Domain I has **NOT BEGUN**; I1 — Reconcile complete Phase 2 decision inventory is the next Phase 2 activity. This authorization does not authorize implementation, a next phase, or Codex material decision-making. Phase 0 and Phase 1 are complete; the Project Owner remains the final approving authority.
+**Status:** **COMPLETE — PASS — PROJECT OWNER APPROVED.** Domains A–I and I1–I18 are complete. Final unresolved findings are BLOCKER **0**, MATERIAL **0**, and MINOR **0**. Phase 3 — v0.1 Implementation is **AUTHORIZED — NOT YET BEGUN**; Phase 4 is **NOT AUTHORIZED**. No implementation or proving exercise occurred during Phase 2. Phase 2 completion does not automatically authorize Phase 3: the Project Owner made a separate explicit I18 authorization decision.
 
 ## Mission and completion condition
 
@@ -61,7 +61,7 @@ The detailed wording of the approved pre-authorization Domain A registers and de
 
 ## Proposed checklist
 
-Domain I remains **PENDING**. Domains A–H are complete as applicable; Domain H is **COMPLETE — PROJECT OWNER APPROVED — PASS** and I1 — Reconcile complete Phase 2 decision inventory is the next Phase 2 activity. Implementation remains **NOT AUTHORIZED**. `[PO]` and `[GATE]` labels retain their stated approval/disposition requirements.
+Domains A–I are complete. Domain I is **COMPLETE — PASS — PROJECT OWNER APPROVED**; its detailed evidence is in [Domain I](../docs/phase-2/validation-proving-architecture-exit-gate.md). Phase 3 is **AUTHORIZED — NOT YET BEGUN**. `[PO]` and `[GATE]` labels retain their stated approval/disposition requirements.
 
 ### Domain B — Governance, Trust & Security Architecture
 
@@ -251,27 +251,27 @@ The proving plans in I10–I12 are designs only; they do not execute the Company
 
 | ID | Objective | Classification |
 | --- | --- | --- |
-| I1 | Reconcile complete Phase 2 decision inventory. | [VAL] |
-| I2 | Complete traceability for all 46 CE-FRs and 32 CE-NFRs. | [VAL] |
-| I3 | Trace material Phase 1 conceptual/adversarial semantics into Phase 2. | [VAL] |
-| I4 | Validate all 12 Phase 0 success criteria. | [VAL] |
-| I5 | Audit all 23 Phase 0 non-goal categories for leakage. | [VAL] |
-| I6 | Perform integrated architecture consistency review. | [VAL] |
-| I7 | Perform integrated security/governance review. | [VAL] |
-| I8 | Perform integrated failure/degraded-operation review. | [VAL] |
-| I9 | Perform auditability/provenance/historical-reconstruction/reproducibility review. | [VAL] |
-| I10 | Design Company AI Roadmap proving-ground implementation/acceptance plan without executing it. | [DG] |
-| I11 | Design Context Engine dogfooding implementation/acceptance plan without executing it. | [DG] |
-| I12 | Validate proving plans for fresh Consumers, meaningful continuation, and no project-specific core behavior. | [VAL] |
-| I13 | Perform implementation-readiness review, specifically whether Codex/implementers would still need to invent material decisions. | [VAL] |
-| I14 | Conduct formal `/grill-me` adversarial review. | [VAL][GATE] |
-| I15 | Resolve/disposition adversarial findings under Project Owner governance. | [PO][GATE] |
-| I16 | Perform focused material-findings disposition audit. | [VAL] |
-| I17 | Perform formal Phase 2 exit-gate audit and issue PASS/FAIL recommendation. | [VAL][GATE] |
-| I18 | Project Owner separately decides whether to close Phase 2 and whether to authorize the next phase. | [PO][GATE] |
+| I1 | Reconcile complete Phase 2 decision inventory. | **COMPLETE — PASS** [VAL] |
+| I2 | Complete traceability for all 46 CE-FRs and 32 CE-NFRs. | **COMPLETE — PASS** [VAL] |
+| I3 | Trace material Phase 1 conceptual/adversarial semantics into Phase 2. | **COMPLETE — PASS** [VAL] |
+| I4 | Validate all 12 Phase 0 success criteria. | **COMPLETE — PASS** [VAL] |
+| I5 | Audit all 23 Phase 0 non-goal categories for leakage. | **COMPLETE — PASS** [VAL] |
+| I6 | Perform integrated architecture consistency review. | **COMPLETE — PASS** [VAL] |
+| I7 | Perform integrated security/governance review. | **COMPLETE — PASS** [VAL] |
+| I8 | Perform integrated failure/degraded-operation review. | **COMPLETE — PASS** [VAL] |
+| I9 | Perform auditability/provenance/historical-reconstruction/reproducibility review. | **COMPLETE — PASS** [VAL] |
+| I10 | Design Company AI Roadmap proving-ground implementation/acceptance plan without executing it. | **COMPLETE — PLAN DESIGNED / NOT EXECUTED** [DG] |
+| I11 | Design Context Engine dogfooding implementation/acceptance plan without executing it. | **COMPLETE — PLAN DESIGNED / NOT EXECUTED** [DG] |
+| I12 | Validate proving plans for fresh Consumers, meaningful continuation, and no project-specific core behavior. | **COMPLETE — PASS** [VAL] |
+| I13 | Perform implementation-readiness review, specifically whether Codex/implementers would still need to invent material decisions. | **COMPLETE — PASS** [VAL] |
+| I14 | Conduct formal `/grill-me` adversarial review. | **COMPLETE — FORMAL ADVERSARIAL REVIEW PERFORMED; INITIAL FINDINGS: BLOCKER 0 / MATERIAL 1 / MINOR 2** [VAL][GATE] |
+| I15 | Resolve/disposition adversarial findings under Project Owner governance. | **COMPLETE — PASS — PROJECT OWNER APPROVED; ALL I14 FINDINGS RESOLVED** [PO][GATE] |
+| I16 | Perform focused material-findings disposition audit. | **COMPLETE — PASS; ALL PHASE 2 MATERIAL FINDINGS RESOLVED** [VAL] |
+| I17 | Perform formal Phase 2 exit-gate audit and issue PASS/FAIL recommendation. | **COMPLETE — PASS; READY FOR PROJECT OWNER PHASE 2 CLOSURE DECISION** [VAL][GATE] |
+| I18 | Project Owner separately decides whether to close Phase 2 and whether to authorize the next phase. | **COMPLETE — PROJECT OWNER APPROVED; PHASE 2 CLOSURE APPROVED; PHASE 3 AUTHORIZED SEPARATELY** [PO][GATE] |
 
 ## Traceability and exit record
 
 Future Phase 2 documentation must trace each material design decision and validation result to the approved Phase 0/1 baseline, including all 46 CE-FRs, all 32 CE-NFRs, the 12 Phase 0 success criteria, the 23 Phase 0 non-goal categories, and material conceptual/adversarial semantics (including Governance Bootstrap, Applicable Source Universe, Observed Source State, and Construction-State Coherence). Traceability may explain approved decisions; it does not create authority or silently change governed semantics.
 
-The Phase 2 exit record must state the unresolved BLOCKER and MATERIAL totals, record Project Owner dispositions, and keep phase closure separate from next-phase authorization. Phase 2 is **AUTHORIZED / IN PROGRESS**. Domain A is **FORMALLY ADOPTED / COMPLETE**; Domains B–H are **COMPLETE — PROJECT OWNER APPROVED — PASS**; Domain I remains pending and must proceed only under this checklist's governance, approval, and scope controls. Domain I has **NOT BEGUN**; I1 — Reconcile complete Phase 2 decision inventory is the next Phase 2 activity. Phase 2 completion does not authorize the next phase.
+The [Phase 2 exit-gate record](../docs/phase-2/phase-2-exit-gate.md) records final finding totals and Project Owner dispositions. Phase 2 is **COMPLETE — PASS — PROJECT OWNER APPROVED**. Domain A is **FORMALLY ADOPTED / COMPLETE**; Domains B–I are **COMPLETE — PROJECT OWNER APPROVED — PASS**. I1–I18 are complete; unresolved BLOCKER, MATERIAL, and MINOR findings are **0**. Phase 3 is **AUTHORIZED — NOT YET BEGUN** because the Project Owner made a separate I18 decision. Phase 4 is **NOT AUTHORIZED**.

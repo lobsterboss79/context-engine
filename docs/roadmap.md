@@ -1,13 +1,13 @@
 # Project Roadmap
 
-**Current status:** Phase 0 is **COMPLETE**. Its exit gate was explicitly approved by the Project Owner. Phase 1 is **COMPLETE**: Items 1–60 are complete, approved, or documented as applicable, and Item 60 is **COMPLETE — PASS — PROJECT OWNER APPROVED** following its original PASS exit-gate recommendation. Phase 2 is **AUTHORIZED / IN PROGRESS**; Domain A is formally adopted and Domains B–H are **COMPLETE — PROJECT OWNER APPROVED — PASS**. Domain I has **NOT BEGUN**; I1 — Reconcile complete Phase 2 decision inventory is the next activity. Implementation, Phase 3, and later phases are **NOT AUTHORIZED**. Phase completion and next-phase authorization are separate decisions; the Project Owner separately authorizes each phase.
+**Current status:** Phase 0 and Phase 1 are **COMPLETE**. Phase 2 — Architecture & Technology Design is **COMPLETE — PASS — PROJECT OWNER APPROVED**; Domains A–I and I1–I18 are complete, with unresolved BLOCKER, MATERIAL, and MINOR findings all **0**. Phase 3 — v0.1 Implementation is **AUTHORIZED — NOT YET BEGUN**. Phase 4 — Validation & Integration is **NOT AUTHORIZED**. Phase 2 closure and Phase 3 authorization are separate explicit Project Owner decisions. No implementation or proving exercise occurred during Phase 2.
 
 | Phase | Planning focus | Status |
 | --- | --- | --- |
 | Phase 0 — Project Definition & Governance | Document approved purpose, boundaries, governance, and exit criteria. | COMPLETE |
 | Phase 1 — Requirements & Context Model | Approved requirements and conceptual baseline documented; all Items 1–60 complete, including Item 60 Project Owner-approved exit-gate closure. | COMPLETE |
-| Phase 2 — Architecture & Technology Design | Authorized architecture and technology design work; Domain A formally adopted and Domains B–H complete/Project Owner approved/PASS; Domain I has not begun; next activity I1 — Reconcile complete Phase 2 decision inventory. | AUTHORIZED / IN PROGRESS |
-| Phase 3 — v0.1 Implementation | Provisional future phase. | NOT AUTHORIZED |
+| Phase 2 — Architecture & Technology Design | Domains A–I and I1–I18 complete; formal exit gate PASS and Project Owner closure approval. | COMPLETE — PASS — PROJECT OWNER APPROVED |
+| Phase 3 — v0.1 Implementation | Separately authorized by the Project Owner; implementation has not begun. | AUTHORIZED — NOT YET BEGUN |
 | Phase 4 — Validation & Integration | Provisional future phase. | NOT AUTHORIZED |
 
-Phase 3 and later phase scope and implementation details have not been fixed by this roadmap. No implementation phase is authorized.
+Phase 3 implementation details remain governed by its applicable future checklist/design work. Authorization does not mean Phase 3 is in progress; no implementation work was performed by this documentation checkpoint.

@@ -1,6 +1,6 @@
 # Phase 2 Domain C — Source & Observation Architecture
 
-**Phase status:** **AUTHORIZED / IN PROGRESS.**
+**Current Phase status:** **COMPLETE — PASS — PROJECT OWNER APPROVED.**
 
 **Domain C status:** **COMPLETE — PROJECT OWNER APPROVED — PASS.**
 
@@ -18,15 +18,15 @@
 
 **Domain H status:** **COMPLETE — PROJECT OWNER APPROVED — PASS.**
 
-**Domain I status:** **NOT BEGUN.**
+**Domain I status:** **COMPLETE — PASS — PROJECT OWNER APPROVED.**
 
-**Next activity:** **I1 — Reconcile complete Phase 2 decision inventory.**
+**Phase 3:** **AUTHORIZED — NOT YET BEGUN.**
 
-**Implementation:** **NOT AUTHORIZED.**
+**Phase 4:** **NOT AUTHORIZED.**
 
 ## Governance record
 
-This record durably documents the Project Owner-approved C1–C16 Source & Observation Architecture baseline. It records already-approved architecture and does not introduce new material architecture, technology, security, governance, scope, persistence, logical-representation, Source, Consumer, or implementation decisions. Domains D–H are **COMPLETE — PROJECT OWNER APPROVED — PASS**; Domain I has not begun and I1 is the next Phase 2 activity. Phase 3 and later phases remain **NOT AUTHORIZED**.
+This record durably documents the Project Owner-approved C1–C16 Source & Observation Architecture baseline. It records already-approved architecture and does not introduce new material architecture, technology, security, governance, scope, persistence, logical-representation, Source, Consumer, or implementation decisions. Domains D–I are **COMPLETE — PROJECT OWNER APPROVED — PASS**; Phase 3 is **AUTHORIZED — NOT YET BEGUN** and Phase 4 is **NOT AUTHORIZED**.
 
 ## C1 — Domain C requirements and constraints
 
@@ -215,4 +215,4 @@ Domain C — Source & Observation Architecture is internally consistent with the
 
 No BLOCKER or MATERIAL findings remain. The following downstream decisions remain intentionally unresolved and are not Domain C defects: logical identity representation; exact Artifact/version and observation-state representation; structured-metadata physical form; Git CLI versus library/API; Markdown parser/mechanism; persistence of observations; and exact observation-coherence mechanism.
 
-Domains D–H are **COMPLETE — PROJECT OWNER APPROVED — PASS**. Domain I has **NOT BEGUN**; I1 is the next Phase 2 activity. This result does not authorize Domain I work, implementation, Phase 3, or a later phase.
+Domains D–I are **COMPLETE — PROJECT OWNER APPROVED — PASS**. Phase 3 is **AUTHORIZED — NOT YET BEGUN**; Phase 4 is **NOT AUTHORIZED**. This current-status update does not alter the historical Domain C result.

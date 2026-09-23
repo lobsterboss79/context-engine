@@ -8,7 +8,7 @@ Project knowledge is often distributed across repositories, documents, decision 
 
 ## Status and governance
 
-**Phase 0 — Project Definition & Governance is COMPLETE.** Its documentation and consistency review are complete, and the Project Owner explicitly approved the Phase 0 exit gate. **Phase 1 — Requirements & Context Model is COMPLETE.** All Items 1–60 are complete, approved, or documented as applicable; Item 60 is **COMPLETE — PASS — PROJECT OWNER APPROVED** following its original PASS exit-gate recommendation. **Phase 2 — Architecture & Technology Design is AUTHORIZED / IN PROGRESS.** Domain A is formally adopted and complete; Domains B–H are **COMPLETE — PROJECT OWNER APPROVED — PASS**. Domain I has **NOT BEGUN**; the next Phase 2 activity is **I1 — Reconcile complete Phase 2 decision inventory**. Implementation, Phase 3, and later phases are **NOT AUTHORIZED**. Phase completion and authorization of the next phase are separate Project Owner decisions.
+**Phase 0 — Project Definition & Governance is COMPLETE.** **Phase 1 — Requirements & Context Model is COMPLETE.** **Phase 2 — Architecture & Technology Design is COMPLETE — PASS — PROJECT OWNER APPROVED.** Domains A–I and I1–I18 are complete; final unresolved findings are BLOCKER **0**, MATERIAL **0**, and MINOR **0**. **Phase 3 — v0.1 Implementation is AUTHORIZED — NOT YET BEGUN.** **Phase 4 — Validation & Integration is NOT AUTHORIZED.** No implementation or proving exercise occurred during Phase 2. Phase 2 closure and Phase 3 authorization are separate explicit Project Owner decisions.
 
 The Project Owner has final authority for material decisions. ChatGPT analyzes, challenges, recommends, and reviews. Codex implements and documents approved decisions. See [AGENTS.md](AGENTS.md) for operating rules.
 
@@ -27,4 +27,6 @@ The Project Owner has final authority for material decisions. ChatGPT analyzes, 
 - [Phase 2 Domain F context package and Consumer architecture](docs/phase-2/context-package-consumer-architecture.md)
 - [Phase 2 Domain G state, persistence, and operational architecture](docs/phase-2/state-persistence-operational-architecture.md)
 - [Phase 2 Domain H technology selection and physical architecture](docs/phase-2/technology-selection-physical-architecture.md)
+- [Phase 2 Domain I validation, proving architecture, and exit gate](docs/phase-2/validation-proving-architecture-exit-gate.md)
+- [Phase 2 exit-gate audit and closure record](docs/phase-2/phase-2-exit-gate.md)
 - [Phase 2 checklist](checklists/checklist-phase-2-architecture-technology-design.md)

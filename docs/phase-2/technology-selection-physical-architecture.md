@@ -1,12 +1,12 @@
 # Phase 2 Domain H — Technology Selection & v0.1 Physical Architecture
 
-**Phase status:** **AUTHORIZED / IN PROGRESS.**  
+**Current Phase status:** **COMPLETE — PASS — PROJECT OWNER APPROVED.**
 **Domain H status:** **COMPLETE — PROJECT OWNER APPROVED — PASS.**  
 **H1–H22:** **COMPLETE.**  
 **Unresolved findings:** BLOCKER **0**; MATERIAL **0**; MINOR **0**.  
 **MT-H19-01:** **RESOLVED / CLOSED.**  
-**Domain I:** **NOT BEGUN.** **Next activity:** **I1 — Reconcile complete Phase 2 decision inventory.**  
-**Implementation:** **NOT AUTHORIZED.** Phase 3 and later phases are **NOT AUTHORIZED**.
+**Domain I:** **COMPLETE — PASS — PROJECT OWNER APPROVED.**
+**Phase 3:** **AUTHORIZED — NOT YET BEGUN.** **Phase 4:** **NOT AUTHORIZED.**
 
 ## Governance record
 
@@ -182,4 +182,4 @@ Final findings: BLOCKER 0; MATERIAL 0; MINOR 0; unresolved prior findings 0; unr
 
 ## Corrected closing result
 
-**Domain H closes after H22, not H20.** Domain H — Technology Selection & v0.1 Physical Design is **COMPLETE — PROJECT OWNER APPROVED — PASS**. H1–H22 are complete; MT-H19-01 is resolved/closed; Domain I is not begun and I1 is next. The approved baseline is proportional, boundary-preserving, provider-independent, locally operable without mandatory runtime network, and consistent with Phase 0/1 and Domains A–G.
+**Domain H closes after H22, not H20.** Domain H — Technology Selection & v0.1 Physical Design is **COMPLETE — PROJECT OWNER APPROVED — PASS**. H1–H22 are complete; MT-H19-01 is resolved/closed. Domain I subsequently completed and, in I15, clarified the final combined Bootstrap trust rule: explicit CLI/application reference with no implicit discovery, the independently authorized operator’s deliberate supply as the root legitimacy event, then deterministic Bootstrap validation. This later clarification does not retroactively place M-I14-01 in Domain H. Phase 3 is **AUTHORIZED — NOT YET BEGUN**; Phase 4 is **NOT AUTHORIZED**.
