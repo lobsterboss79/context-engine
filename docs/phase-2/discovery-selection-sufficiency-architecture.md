@@ -14,15 +14,17 @@
 
 **Domain G status:** **COMPLETE — PROJECT OWNER APPROVED — PASS.**
 
-**Domain H status:** **NOT BEGUN.**
+**Domain H status:** **COMPLETE — PROJECT OWNER APPROVED — PASS.**
 
-**Next activity:** **H1 — Establish technology-selection standard.**
+**Domain I status:** **NOT BEGUN.**
+
+**Next activity:** **I1 — Reconcile complete Phase 2 decision inventory.**
 
 **Implementation:** **NOT AUTHORIZED.**
 
 ## Governance record
 
-This record durably documents the Project Owner-approved E1–E17 Discovery, Selection & Sufficiency architecture baseline. It records already-approved architecture and introduces no new material architecture, technology, security, governance, scope, persistence, retrieval, selection, sufficiency, Consumer, or implementation decision. Domains F–G are **COMPLETE — PROJECT OWNER APPROVED — PASS**. Domain H has not begun. Phase 3 and later phases remain **NOT AUTHORIZED**.
+This record durably documents the Project Owner-approved E1–E17 Discovery, Selection & Sufficiency architecture baseline. It records already-approved architecture and introduces no new material architecture, technology, security, governance, scope, persistence, retrieval, selection, sufficiency, Consumer, or implementation decision. Domains F–H are **COMPLETE — PROJECT OWNER APPROVED — PASS**. Domain I has not begun. Phase 3 and later phases remain **NOT AUTHORIZED**.
 
 ## E1 — Domain E requirements and constraints
 
@@ -303,4 +305,4 @@ Final unresolved findings: **BLOCKER: 0; MATERIAL: 0; MINOR: 0.**
 
 Domain E is internally consistent with the Phase 0/1 baseline and approved Domains A–D. E1–E15 establish task-relative Context Requests; Task Intent and Task Scope; strict separation of discovery, applicability, selection, and sufficiency; the approved Deterministic Foundation + Bounded Semantic Assistance pattern; Candidate Context; multidimensional applicability; task-relative Required/Supporting determination; sufficiency-oriented selection; evidence-boundary-aware sufficiency; bounded iteration; and non-waivable inaccessible Required Context. E16 and E17 confirm traceability, cross-domain consistency, adversarial safety, technology independence, and the resolved Conditional Sufficiency anti-waiver rule.
 
-Domains F–G are **COMPLETE — PROJECT OWNER APPROVED — PASS**. Domain H has **NOT begun**. **H1** is the next Phase 2 activity. This result does not authorize Domain H work, implementation, Phase 3, or any later phase.
+Domains F–H are **COMPLETE — PROJECT OWNER APPROVED — PASS**. Domain I has **NOT BEGUN**. **I1** is the next Phase 2 activity. This result does not authorize Domain I work, implementation, Phase 3, or any later phase.

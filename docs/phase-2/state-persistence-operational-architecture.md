@@ -3,8 +3,9 @@
 **Phase status:** **AUTHORIZED / IN PROGRESS**  
 **Domain G status:** **COMPLETE — PROJECT OWNER APPROVED — PASS**  
 **Unresolved findings:** BLOCKER **0**; MATERIAL **0**; MINOR **0**  
-**Domain H:** **NOT BEGUN**  
-**Next activity:** **H1 — Establish technology-selection standard**  
+**Domain H:** **COMPLETE — PROJECT OWNER APPROVED — PASS**
+**Domain I:** **NOT BEGUN**
+**Next activity:** **I1 — Reconcile complete Phase 2 decision inventory**
 **Implementation:** **NOT AUTHORIZED**
 
 This record durably documents the already-approved G1–G17 State, Persistence & Operational Architecture baseline. It introduces no new material architecture, technology, security, governance, scope, persistence, runtime, deployment, testing, backup, observability, or implementation decision. Phase 3 and later phases remain **NOT AUTHORIZED**.
@@ -158,4 +159,4 @@ G1–G15 select none of the storage, schema, identifier, transaction/concurrency
 
 G1–G15 establish technology-independent logical state; ST-01–ST-15; multidimensional state classification; evidence-based Persistent/Transient/Reconstructable semantics; lifecycle/history; isolation/sensitivity/secret exclusion; logical coupled integrity; mechanism-neutral concurrency/retry/idempotency; failure/recovery; proportional backup; observability/audit/testability; PC-01–PC-30 and PR-01–PR-12; the approved G14 gate and MN-G14-01; and RO-01–RO-30. G16 confirms consistency; G17 finds no unresolved BLOCKER, MATERIAL, or MINOR findings. Persistence, storage, schema, transaction, concurrency, backup, observability, testing, runtime, host, process-management, and deployment technologies remain intentionally undecided.
 
-Domain H has **NOT begun**. **H1 — Establish technology-selection standard** is the next Phase 2 activity. Implementation, Phase 3, and later phases remain **NOT AUTHORIZED**.
+Domain H is **COMPLETE — PROJECT OWNER APPROVED — PASS**. Domain I has **NOT BEGUN**. **I1 — Reconcile complete Phase 2 decision inventory** is the next Phase 2 activity. Implementation, Phase 3, and later phases remain **NOT AUTHORIZED**.

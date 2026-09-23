@@ -1,6 +1,6 @@
 # Phase 2 Checklist — Architecture & Technology Design
 
-**Status:** **AUTHORIZED / IN PROGRESS.** The Project Owner explicitly authorized Phase 2 work governed by this approved checklist and formally adopted the Project Owner-approved pre-authorization Domain A baseline. Domains B–G are **COMPLETE — PROJECT OWNER APPROVED — PASS**. Domain H has **NOT begun**; H1 — Establish technology-selection standard is the next Phase 2 activity. Domains H–I remain pending. This authorization does not authorize implementation, a next phase, or Codex material decision-making. Phase 0 and Phase 1 are complete; the Project Owner remains the final approving authority.
+**Status:** **AUTHORIZED / IN PROGRESS.** The Project Owner explicitly authorized Phase 2 work governed by this approved checklist and formally adopted the Project Owner-approved pre-authorization Domain A baseline. Domains B–H are **COMPLETE — PROJECT OWNER APPROVED — PASS**. Domain I has **NOT BEGUN**; I1 — Reconcile complete Phase 2 decision inventory is the next Phase 2 activity. This authorization does not authorize implementation, a next phase, or Codex material decision-making. Phase 0 and Phase 1 are complete; the Project Owner remains the final approving authority.
 
 ## Mission and completion condition
 
@@ -61,7 +61,7 @@ The detailed wording of the approved pre-authorization Domain A registers and de
 
 ## Proposed checklist
 
-Domains H–I remain **PENDING**. Domains A–G are complete as applicable; Domain H has **NOT begun** and H1 — Establish technology-selection standard is the next Phase 2 activity. Implementation remains **NOT AUTHORIZED**. `[PO]` and `[GATE]` labels retain their stated approval/disposition requirements.
+Domain I remains **PENDING**. Domains A–H are complete as applicable; Domain H is **COMPLETE — PROJECT OWNER APPROVED — PASS** and I1 — Reconcile complete Phase 2 decision inventory is the next Phase 2 activity. Implementation remains **NOT AUTHORIZED**. `[PO]` and `[GATE]` labels retain their stated approval/disposition requirements.
 
 ### Domain B — Governance, Trust & Security Architecture
 
@@ -222,28 +222,28 @@ No selected technology may be installed, initialized, scaffolded, or deployed in
 
 | ID | Objective | Classification |
 | --- | --- | --- |
-| H1 | Establish technology-selection standard. | [DG] |
-| H2 | Create technology decision inventory. | [DG] |
-| H3 | Classify decisions by materiality and approval requirement. | [DG] |
-| H4 | Derive language/runtime requirements and criteria. | [DG] |
-| H5 | Compare/select language/runtime. | [PO][GATE] |
-| H6 | Derive persistence/storage technology requirements from approved G baseline. | [DG] |
-| H7 | Compare/select persistence/storage mechanism(s). | [PO][GATE] |
-| H8 | Derive structured-metadata/interchange/serialization requirements. | [DG] |
-| H9 | Compare/select required metadata/serialization mechanisms. | [PO][GATE] |
-| H10 | Derive local Git interaction requirements. | [DG] |
-| H11 | Compare/select Git interaction mechanism. | [PO][GATE] |
-| H12 | Derive Markdown-processing requirements. | [DG] |
-| H13 | Compare/select Markdown-processing mechanism. | [PO][GATE] |
-| H14 | Identify additional libraries, frameworks, infrastructure, and testing technologies actually required. | [DG] |
-| H15 | Evaluate/approve material additional dependencies individually. | [PO][GATE] |
-| H16 | Select application packaging/execution mechanism. | [PO][GATE] |
-| H17 | Select least-sufficient v0.1 deployment mechanism/environment. | [PO][GATE] |
-| H18 | Produce integrated v0.1 physical architecture. | [DG] |
-| H19 | Perform dependency-direction and semantic-leakage review. | [VAL] |
-| H20 | Perform technology-specific security/dependency review. | [VAL] |
-| H21 | Perform technology-to-requirement/architecture traceability. | [VAL] |
-| H22 | Perform integrated physical-architecture review and resolve material findings. | [VAL][GATE] |
+| H1 | Establish technology-selection standard. | **COMPLETE** [DG] |
+| H2 | Create technology decision inventory. | **COMPLETE** [DG] |
+| H3 | Classify decisions by materiality and approval requirement. | **COMPLETE** [DG] |
+| H4 | Derive language/runtime requirements and criteria. | **COMPLETE** [DG] |
+| H5 | Compare/select language/runtime. | **COMPLETE — PROJECT OWNER APPROVED** [PO][GATE] |
+| H6 | Derive persistence/storage technology requirements from approved G baseline. | **COMPLETE** [DG] |
+| H7 | Compare/select persistence/storage mechanism(s). | **COMPLETE — PROJECT OWNER APPROVED** [PO][GATE] |
+| H8 | Derive structured-metadata/interchange/serialization requirements. | **COMPLETE** [DG] |
+| H9 | Compare/select required metadata/serialization mechanisms. | **COMPLETE — PROJECT OWNER APPROVED** [PO][GATE] |
+| H10 | Derive local Git interaction requirements. | **COMPLETE** [DG] |
+| H11 | Compare/select Git interaction mechanism. | **COMPLETE — PROJECT OWNER APPROVED** [PO][GATE] |
+| H12 | Derive Markdown-processing requirements. | **COMPLETE** [DG] |
+| H13 | Compare/select Markdown-processing mechanism. | **COMPLETE — PROJECT OWNER APPROVED** [PO][GATE] |
+| H14 | Identify additional libraries, frameworks, infrastructure, and testing technologies actually required. | **COMPLETE** [DG] |
+| H15 | Evaluate/approve material additional dependencies individually. | **COMPLETE — PROJECT OWNER APPROVED** [PO][GATE] |
+| H16 | Select application packaging/execution mechanism. | **COMPLETE — PROJECT OWNER APPROVED** [PO][GATE] |
+| H17 | Select least-sufficient v0.1 deployment mechanism/environment. | **COMPLETE — PROJECT OWNER APPROVED** [PO][GATE] |
+| H18 | Produce integrated v0.1 physical architecture. | **COMPLETE — PROJECT OWNER APPROVED** [DG] |
+| H19 | Perform dependency-direction and semantic-leakage review. | **COMPLETE — PASS** [VAL] |
+| H20 | Perform technology-specific security/dependency review. | **COMPLETE — PASS — PROJECT OWNER APPROVED** [VAL] |
+| H21 | Perform technology-to-requirement/architecture traceability. | **COMPLETE — PASS** [VAL] |
+| H22 | Perform integrated physical-architecture review and resolve material findings. | **COMPLETE — PASS — PROJECT OWNER APPROVED** [VAL][GATE] |
 
 ### Domain I — Validation, Proving Architecture & Exit Gate
 
@@ -274,4 +274,4 @@ The proving plans in I10–I12 are designs only; they do not execute the Company
 
 Future Phase 2 documentation must trace each material design decision and validation result to the approved Phase 0/1 baseline, including all 46 CE-FRs, all 32 CE-NFRs, the 12 Phase 0 success criteria, the 23 Phase 0 non-goal categories, and material conceptual/adversarial semantics (including Governance Bootstrap, Applicable Source Universe, Observed Source State, and Construction-State Coherence). Traceability may explain approved decisions; it does not create authority or silently change governed semantics.
 
-The Phase 2 exit record must state the unresolved BLOCKER and MATERIAL totals, record Project Owner dispositions, and keep phase closure separate from next-phase authorization. Phase 2 is **AUTHORIZED / IN PROGRESS**. Domain A is **FORMALLY ADOPTED / COMPLETE**; Domains B–G are **COMPLETE — PROJECT OWNER APPROVED — PASS**; Domains H–I remain pending and must proceed only under this checklist's governance, approval, and scope controls. Domain H has **NOT begun**; H1 — Establish technology-selection standard is the next Phase 2 activity. Phase 2 completion does not authorize the next phase.
+The Phase 2 exit record must state the unresolved BLOCKER and MATERIAL totals, record Project Owner dispositions, and keep phase closure separate from next-phase authorization. Phase 2 is **AUTHORIZED / IN PROGRESS**. Domain A is **FORMALLY ADOPTED / COMPLETE**; Domains B–H are **COMPLETE — PROJECT OWNER APPROVED — PASS**; Domain I remains pending and must proceed only under this checklist's governance, approval, and scope controls. Domain I has **NOT BEGUN**; I1 — Reconcile complete Phase 2 decision inventory is the next Phase 2 activity. Phase 2 completion does not authorize the next phase.

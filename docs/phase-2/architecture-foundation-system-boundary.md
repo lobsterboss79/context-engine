@@ -8,7 +8,7 @@
 
 The Project Owner explicitly authorized Phase 2 — Architecture & Technology Design after Phase 1 closure, Project Owner approval of the proposed Phase 2 master checklist, and commit `dad65bb` — *Add proposed Context Engine Phase 2 checklist*. This authorization permits only work governed by that approved checklist. It does not authorize Phase 3, implementation, proving-ground execution, or Codex material decision-making, and it does not weaken any Phase 0/1 requirement, semantic, non-goal, or security boundary.
 
-Domain A was developed and explicitly approved by the Project Owner during pre-authorization planning. This record formally adopts that approved baseline into the governed Phase 2 baseline. Formal adoption does not reopen or redo its decisions and introduces no new material decision. Domains B–G are **COMPLETE — PROJECT OWNER APPROVED — PASS**. Domain H has **NOT begun**; H1 — Establish technology-selection standard is the next Phase 2 activity. Implementation remains **NOT AUTHORIZED**.
+Domain A was developed and explicitly approved by the Project Owner during pre-authorization planning. This record formally adopts that approved baseline into the governed Phase 2 baseline. Formal adoption does not reopen or redo its decisions and introduces no new material decision. Domains B–H are **COMPLETE — PROJECT OWNER APPROVED — PASS**. Domain I has **NOT BEGUN**; I1 — Reconcile complete Phase 2 decision inventory is the next Phase 2 activity. Implementation remains **NOT AUTHORIZED**.
 
 ## A1 — Architectural design principles
 
