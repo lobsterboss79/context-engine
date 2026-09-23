@@ -14,15 +14,17 @@
 
 **Domain F status:** **COMPLETE — PROJECT OWNER APPROVED — PASS.**
 
-**Domain G status:** **NOT BEGUN.**
+**Domain G status:** **COMPLETE — PROJECT OWNER APPROVED — PASS.**
 
-**Next activity:** **G1.**
+**Domain H status:** **NOT BEGUN.**
+
+**Next activity:** **H1 — Establish technology-selection standard.**
 
 **Implementation:** **NOT AUTHORIZED.**
 
 ## Governance record
 
-This record durably documents the Project Owner-approved D1–D19 Context Knowledge Representation baseline. It records already-approved logical representation architecture and introduces no new material architecture, technology, security, governance, scope, persistence, logical-representation, discovery/retrieval, selection, Consumer, or implementation decision. Domains E–F are **COMPLETE — PROJECT OWNER APPROVED — PASS**. Domain G has not begun. Phase 3 and later phases remain **NOT AUTHORIZED**.
+This record durably documents the Project Owner-approved D1–D19 Context Knowledge Representation baseline. It records already-approved logical representation architecture and introduces no new material architecture, technology, security, governance, scope, persistence, logical-representation, discovery/retrieval, selection, Consumer, or implementation decision. Domains E–G are **COMPLETE — PROJECT OWNER APPROVED — PASS**. Domain H has not begun. Phase 3 and later phases remain **NOT AUTHORIZED**.
 
 ## D1 — Domain D representation constraints
 
@@ -232,4 +234,4 @@ Domain D selects no database, relational/physical schema, graph database, ORM, U
 
 Domain D is internally consistent with the Phase 0/1 baseline and approved Domains A–C. D1–D17 establish technology-independent logical identity; Project representation; Source and Source Scope representation; Artifact, Artifact Version/State, and observation separation; Claim semantic identity; task-relative Context Items; extensible Classification; explicit directed/scoped/provenance-bearing Relationships; scoped Authority and Authority Scope; Governance State and Candidate/Proposal lifecycle; Provenance and transformation lineage; temporal/currentness representation; historical and scoped supersession semantics; explicit Conflict; and structured Uncertainty/Unknown/missingness/epistemic state. D18 confirms requirements/conceptual-model traceability. D19 adversarial validation identifies no unresolved BLOCKER, MATERIAL, or MINOR finding.
 
-Physical identifiers, schemas, persistence mechanisms, semantic-equivalence algorithms, and other implementation technologies remain intentionally undecided. Domains E–F are **COMPLETE — PROJECT OWNER APPROVED — PASS**. Domain G has **NOT BEGUN**; **G1** is the next Phase 2 activity; implementation remains **NOT AUTHORIZED**.
+Physical identifiers, schemas, persistence mechanisms, semantic-equivalence algorithms, and other implementation technologies remain intentionally undecided. Domains E–G are **COMPLETE — PROJECT OWNER APPROVED — PASS**. Domain H has **NOT BEGUN**; **H1** is the next Phase 2 activity; implementation remains **NOT AUTHORIZED**.

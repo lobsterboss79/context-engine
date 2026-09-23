@@ -10,15 +10,17 @@
 
 **Unresolved MINOR:** **0.**
 
-**Domain G:** **NOT BEGUN.**
+**Domain G:** **COMPLETE — PROJECT OWNER APPROVED — PASS.**
 
-**Next activity:** **G1 — Derive Domain G requirements.**
+**Domain H:** **NOT BEGUN.**
+
+**Next activity:** **H1 — Establish technology-selection standard.**
 
 **Implementation:** **NOT AUTHORIZED.**
 
 ## Governance record
 
-This record durably documents the Project Owner-approved F1–F16 Context Package & Consumer Architecture baseline. It records already-approved architecture and introduces no new material architecture, technology, security, governance, scope, persistence, package, Consumer, rendering, delivery, receipt, or implementation decision. Domain G has not begun. Phase 3 and later phases remain **NOT AUTHORIZED**.
+This record durably documents the Project Owner-approved F1–F16 Context Package & Consumer Architecture baseline. It records already-approved architecture and introduces no new material architecture, technology, security, governance, scope, persistence, package, Consumer, rendering, delivery, receipt, or implementation decision. Domain G is **COMPLETE — PROJECT OWNER APPROVED — PASS**. Domain H has not begun. Phase 3 and later phases remain **NOT AUTHORIZED**.
 
 ## F1 — Domain F requirements and constraints
 
@@ -274,4 +276,4 @@ Findings: unresolved BLOCKER **0**; unresolved MATERIAL **0**; new MINOR **0**; 
 
 Domain F is internally consistent with the Phase 0/1 baseline and approved Domains A–E. F1–F14 establish logical task-specific Consumer-associated packages distinct from request/rendering identity; Required/Supporting semantics; evidence-boundary-aware manifests and Provenance; preservation of Authority/Scope, Governance State, currentness/history, Conflict, Uncertainty/gaps, limitations, sufficiency, and coherence; Coherent/Coherent With Qualification/Coherence Uncertain/Incoherent outcomes; meaningful construction records; Consumer Contracts; Human/ChatGPT/Codex boundaries; package/rendering/delivery/receipt/use separation; capacity-aware faithful rendering; non-waivable Required Context; governed progressive disclosure; and MN-F14-01 reference-satisfaction semantics. F15 confirms consistency; F16 identifies no unresolved finding.
 
-Physical package, serialization, rendering, transport, receipt, storage, provider, and Consumer-specific implementation technologies remain intentionally undecided. Domain G has **NOT begun**; **G1** is the next Phase 2 activity. Implementation and Phase 3 and later phases remain **NOT AUTHORIZED**.
+Physical package, serialization, rendering, transport, receipt, storage, provider, and Consumer-specific implementation technologies remain intentionally undecided. Domain G is **COMPLETE — PROJECT OWNER APPROVED — PASS**; Domain H has **NOT begun**; **H1** is the next Phase 2 activity. Implementation and Phase 3 and later phases remain **NOT AUTHORIZED**.

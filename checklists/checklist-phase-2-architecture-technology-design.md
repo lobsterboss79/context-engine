@@ -1,6 +1,6 @@
 # Phase 2 Checklist — Architecture & Technology Design
 
-**Status:** **AUTHORIZED / IN PROGRESS.** The Project Owner explicitly authorized Phase 2 work governed by this approved checklist and formally adopted the Project Owner-approved pre-authorization Domain A baseline. Domains B–F are **COMPLETE — PROJECT OWNER APPROVED — PASS**. Domain G has **NOT begun**; G1 is the next Phase 2 activity. Domains G–I remain pending. This authorization does not authorize implementation, a next phase, or Codex material decision-making. Phase 0 and Phase 1 are complete; the Project Owner remains the final approving authority.
+**Status:** **AUTHORIZED / IN PROGRESS.** The Project Owner explicitly authorized Phase 2 work governed by this approved checklist and formally adopted the Project Owner-approved pre-authorization Domain A baseline. Domains B–G are **COMPLETE — PROJECT OWNER APPROVED — PASS**. Domain H has **NOT begun**; H1 — Establish technology-selection standard is the next Phase 2 activity. Domains H–I remain pending. This authorization does not authorize implementation, a next phase, or Codex material decision-making. Phase 0 and Phase 1 are complete; the Project Owner remains the final approving authority.
 
 ## Mission and completion condition
 
@@ -61,7 +61,7 @@ The detailed wording of the approved pre-authorization Domain A registers and de
 
 ## Proposed checklist
 
-Domains G–I remain **PENDING**. Domains A–F are complete as applicable; Domain G has **NOT begun** and G1 is the next Phase 2 activity. Implementation remains **NOT AUTHORIZED**. `[PO]` and `[GATE]` labels retain their stated approval/disposition requirements.
+Domains H–I remain **PENDING**. Domains A–G are complete as applicable; Domain H has **NOT begun** and H1 — Establish technology-selection standard is the next Phase 2 activity. Implementation remains **NOT AUTHORIZED**. `[PO]` and `[GATE]` labels retain their stated approval/disposition requirements.
 
 ### Domain B — Governance, Trust & Security Architecture
 
@@ -196,23 +196,25 @@ Requirements and capability baselines are approved before persistence technology
 
 | ID | Objective | Classification |
 | --- | --- | --- |
-| G1 | Derive Domain G requirements. | [DG] |
-| G2 | Define logical-state inventory and classification. | [DG] |
-| G3 | Define persistent versus transient/reconstructable state. | [DG] |
-| G4 | Define lifecycle, retention, and history requirements. | [DG] |
-| G5 | Define persistence security, isolation, and sensitive-information requirements. | [DG] |
-| G6 | Define consistency, integrity, and atomicity requirements. | [DG] |
-| G7 | Define concurrency, retry, and idempotency requirements. | [DG] |
-| G8 | Define failure-state preservation and recovery. | [DG] |
-| G9 | Define backup/recovery capability requirements where justified. | [DG] |
-| G10 | Define observability and measurability requirements. | [DG] |
-| G11 | Define audit-state persistence requirements. | [DG] |
-| G12 | Define v0.1 testability/validation architecture: test seams, controllable Source observations, failure simulation/injection needs, reproducible fixtures, and unit/component/integration/proving distinctions. | [DG] |
-| G13 | Derive persistence capability requirements. | [DG] |
-| G14 | Obtain Project Owner approval of the persistence/state capability baseline. | [PO][GATE] |
-| G15 | Define v0.1 runtime/deployment operational requirements. | [DG] |
-| G16 | Perform traceability and consistency review. | [VAL] |
-| G17 | Perform failure, recovery, and persistence adversarial review. | [VAL][GATE] |
+| G1 | Derive Domain G requirements. | **COMPLETE** [DG] |
+| G2 | Define logical-state inventory and classification. | **COMPLETE** [DG] |
+| G3 | Define persistent versus transient/reconstructable state. | **COMPLETE** [DG] |
+| G4 | Define lifecycle, retention, and history requirements. | **COMPLETE** [DG] |
+| G5 | Define persistence security, isolation, and sensitive-information requirements. | **COMPLETE** [DG] |
+| G6 | Define consistency, integrity, and atomicity requirements. | **COMPLETE** [DG] |
+| G7 | Define concurrency, retry, and idempotency requirements. | **COMPLETE** [DG] |
+| G8 | Define failure-state preservation and recovery. | **COMPLETE** [DG] |
+| G9 | Define backup/recovery capability requirements where justified. | **COMPLETE** [DG] |
+| G10 | Define observability and measurability requirements. | **COMPLETE** [DG] |
+| G11 | Define audit-state persistence requirements. | **COMPLETE** [DG] |
+| G12 | Define v0.1 testability/validation architecture: test seams, controllable Source observations, failure simulation/injection needs, reproducible fixtures, and unit/component/integration/proving distinctions. | **COMPLETE** [DG] |
+| G13 | Derive persistence capability requirements. | **COMPLETE** [DG] |
+| G14 | Obtain Project Owner approval of the persistence/state capability baseline. | **COMPLETE — PASS — PROJECT OWNER APPROVED** [PO][GATE] |
+| G15 | Define v0.1 runtime/deployment operational requirements. | **COMPLETE** [DG] |
+| G16 | Perform traceability and consistency review. | **COMPLETE — PASS** [VAL] |
+| G17 | Perform failure, recovery, and persistence adversarial review. | **COMPLETE — PASS — PROJECT OWNER APPROVED** [VAL][GATE] |
+
+The durable detailed record is [Phase 2 Domain G — State, Persistence & Operational Architecture](../docs/phase-2/state-persistence-operational-architecture.md). The checklist preserves approved identifiers and completion status; it is not a substitute for the detailed baseline.
 
 ### Domain H — Technology Selection & v0.1 Physical Design
 
@@ -272,4 +274,4 @@ The proving plans in I10–I12 are designs only; they do not execute the Company
 
 Future Phase 2 documentation must trace each material design decision and validation result to the approved Phase 0/1 baseline, including all 46 CE-FRs, all 32 CE-NFRs, the 12 Phase 0 success criteria, the 23 Phase 0 non-goal categories, and material conceptual/adversarial semantics (including Governance Bootstrap, Applicable Source Universe, Observed Source State, and Construction-State Coherence). Traceability may explain approved decisions; it does not create authority or silently change governed semantics.
 
-The Phase 2 exit record must state the unresolved BLOCKER and MATERIAL totals, record Project Owner dispositions, and keep phase closure separate from next-phase authorization. Phase 2 is **AUTHORIZED / IN PROGRESS**. Domain A is **FORMALLY ADOPTED / COMPLETE**; Domains B–F are **COMPLETE — PROJECT OWNER APPROVED — PASS**; Domains G–I remain pending and must proceed only under this checklist's governance, approval, and scope controls. Domain G has **NOT begun**; G1 is the next Phase 2 activity. Phase 2 completion does not authorize the next phase.
+The Phase 2 exit record must state the unresolved BLOCKER and MATERIAL totals, record Project Owner dispositions, and keep phase closure separate from next-phase authorization. Phase 2 is **AUTHORIZED / IN PROGRESS**. Domain A is **FORMALLY ADOPTED / COMPLETE**; Domains B–G are **COMPLETE — PROJECT OWNER APPROVED — PASS**; Domains H–I remain pending and must proceed only under this checklist's governance, approval, and scope controls. Domain H has **NOT begun**; H1 — Establish technology-selection standard is the next Phase 2 activity. Phase 2 completion does not authorize the next phase.

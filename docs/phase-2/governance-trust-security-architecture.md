@@ -12,9 +12,11 @@
 
 **Domain F status:** **COMPLETE — PROJECT OWNER APPROVED — PASS.**
 
-**Domain G status:** **NOT BEGUN.**
+**Domain G status:** **COMPLETE — PROJECT OWNER APPROVED — PASS.**
 
-**Next activity:** **G1.**
+**Domain H status:** **NOT BEGUN.**
+
+**Next activity:** **H1 — Establish technology-selection standard.**
 
 **Implementation:** **NOT AUTHORIZED.**
 
@@ -234,4 +236,4 @@ The architecture is consistent with the approved Phase 0/1 baseline and Domain A
 | BLOCKER | 0 |
 | MATERIAL | 0 |
 
-Domain B — Governance, Trust & Security Architecture is internally consistent with the Phase 0/1 baseline and Domain A architecture. B1–B16 are complete. Domains C–F are **COMPLETE — PROJECT OWNER APPROVED — PASS**. Domain G has **NOT begun**; G1 is the next Phase 2 activity. This result does not authorize implementation, Phase 3, or any later phase.
+Domain B — Governance, Trust & Security Architecture is internally consistent with the Phase 0/1 baseline and Domain A architecture. B1–B16 are complete. Domains C–G are **COMPLETE — PROJECT OWNER APPROVED — PASS**. Domain H has **NOT begun**; H1 is the next Phase 2 activity. This result does not authorize implementation, Phase 3, or any later phase.
