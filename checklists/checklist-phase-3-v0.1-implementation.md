@@ -1,6 +1,6 @@
 # Phase 3 Master Checklist — v0.1 Implementation
 
-**Status:** **AUTHORIZED — IMPLEMENTATION PLAN PROJECT OWNER APPROVED; NO WORKSTREAM AUTHORIZED; IMPLEMENTATION NOT YET BEGUN.** The Project Owner approved this Phase 3 master implementation checklist. It is the approved controlling implementation plan for Phase 3, subordinate to the approved Phase 0–2 record, including the Phase 2 closure decision in commit `ac22ed1`. This planning approval does not authorize Workstream 1 or any other implementation workstream. Phase 4 — Validation & Integration remains **NOT AUTHORIZED**.
+**Status:** **AUTHORIZED — IMPLEMENTATION PLAN PROJECT OWNER APPROVED; WORKSTREAM 1 COMPLETE — PROJECT OWNER APPROVED; WORKSTREAMS 2–10 NOT AUTHORIZED.** The Project Owner approved this Phase 3 master implementation checklist, separately authorized Workstream 1 items 1.1–1.7, and reviewed and approved Workstream 1 completion. H3-WS1-01 is resolved following the Project Owner’s manual installation of the previously approved `python3.14-venv` prerequisite and clean-environment validation. It is the approved controlling implementation plan for Phase 3, subordinate to the approved Phase 0–2 record, including the Phase 2 closure decision in commit `ac22ed1`. No other implementation workstream is authorized. Phase 4 — Validation & Integration remains **NOT AUTHORIZED**.
 
 ## Purpose, authority, and boundaries
 
@@ -51,13 +51,15 @@ Expected completion evidence generally includes: implemented boundary/behavior; 
 
 **Dependencies:** Project Owner authorization of this workstream/increment; Phase 0–2 baseline.
 
-- [ ] 1.1 [IMP] Create the approved standard installable Python package structure, `pyproject.toml`, `src/context_engine/`, test layout, and console entry point using only approved dependencies and packaging boundaries.
-- [ ] 1.2 [IMP] Establish a minimal CLI/application invocation path with explicit arguments, prerequisite/readiness reporting, clean termination, and safe diagnostics; do not select a CLI framework.
-- [ ] 1.3 [IMP] Establish dependency-direction rules and ports/adapters seams so core code does not import or depend on concrete CLI, SQLite, Git, TOML, Markdown, or host mechanisms.
-- [ ] 1.4 [IMP] Establish test execution, deterministic fixtures, temporary-state isolation, and development/runtime dependency separation using pytest 9.x; do not introduce plugins without governance review.
-- [ ] 1.5 [VAL] Test package installation, console invocation, ordinary non-root operation, clean unavailable-prerequisite behavior, and direct-host assumptions without creating a runtime service or network dependency.
-- [ ] 1.6 [VAL] Test boundary dependency direction and that no installation/configuration path establishes governance, Authority, or currentness.
-- [ ] 1.7 [DOC] Record exact non-material package/build choices, supported prerequisite assumptions, and Workstream 1 test evidence.
+**Implementation status:** **COMPLETE — VALIDATED.** The clean CPython 3.14 environment install, installed console entry point, readiness/unavailable-prerequisite behavior, ordinary non-root direct-host assumptions, dependency-direction checks, and complete pytest suite pass. H3-WS1-01 is resolved. The approved `markdown-it-py` declaration remains unused pending authorized Markdown work. See [Workstream 1 implementation record](../docs/phase-3/workstream-1-repository-package-executable-skeleton.md).
+
+- [x] 1.1 [IMP] Create the approved standard installable Python package structure, `pyproject.toml`, `src/context_engine/`, test layout, and console entry point using only approved dependencies and packaging boundaries.
+- [x] 1.2 [IMP] Establish a minimal CLI/application invocation path with explicit arguments, prerequisite/readiness reporting, clean termination, and safe diagnostics; do not select a CLI framework.
+- [x] 1.3 [IMP] Establish dependency-direction rules and ports/adapters seams so core code does not import or depend on concrete CLI, SQLite, Git, TOML, Markdown, or host mechanisms.
+- [x] 1.4 [IMP] Establish test execution, deterministic fixtures, temporary-state isolation, and development/runtime dependency separation using pytest 9.x; do not introduce plugins without governance review.
+- [x] 1.5 [VAL] Test package installation, console invocation, ordinary non-root operation, clean unavailable-prerequisite behavior, and direct-host assumptions without creating a runtime service or network dependency.
+- [x] 1.6 [VAL] Test boundary dependency direction and that no installation/configuration path establishes governance, Authority, or currentness.
+- [x] 1.7 [DOC] Record exact non-material package/build choices, supported prerequisite assumptions, and Workstream 1 test evidence.
 
 **H3 points:** Any packaging/build backend, dependency, CLI framework, host/runtime expansion, or deployment mechanism beyond approved boundaries.
 
