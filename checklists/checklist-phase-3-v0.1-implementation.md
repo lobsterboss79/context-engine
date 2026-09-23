@@ -1,6 +1,6 @@
 # Phase 3 Master Checklist — v0.1 Implementation
 
-**Status:** **AUTHORIZED — IMPLEMENTATION PLAN PROJECT OWNER APPROVED; WORKSTREAMS 1–3 COMPLETE — PROJECT OWNER APPROVED; GATE 3A — SEMANTIC FOUNDATION APPROVED; WORKSTREAMS 4–10 NOT AUTHORIZED.** H3-WS1-01 remains resolved. This is the approved controlling implementation plan for Phase 3, subordinate to the approved Phase 0–2 record, including the Phase 2 closure decision in commit `ac22ed1`. Gate 3B is not reached or approved. Phase 4 — Validation & Integration remains **NOT AUTHORIZED**.
+**Status:** **AUTHORIZED — IMPLEMENTATION PLAN PROJECT OWNER APPROVED; WORKSTREAMS 1–4 COMPLETE — PROJECT OWNER APPROVED; GATE 3A — SEMANTIC FOUNDATION APPROVED; WORKSTREAMS 5–10 NOT AUTHORIZED.** H3-WS1-01 remains resolved. This is the approved controlling implementation plan for Phase 3, subordinate to the approved Phase 0–2 record, including the Phase 2 closure decision in commit `ac22ed1`. Gate 3B is not reached or approved. Phase 4 — Validation & Integration remains **NOT AUTHORIZED**.
 
 ## Purpose, authority, and boundaries
 
@@ -122,13 +122,15 @@ Expected completion evidence generally includes: implemented boundary/behavior; 
 
 **Dependencies:** Workstream 3 and applicable Gate 3A disposition.
 
-- [ ] 4.1 [IMP] Implement Project identity/lifecycle and Source registration identity, type/capabilities, association, Source Scope, governed relationships, and status/history without equating registration/access with Authority or disclosure authorization.
-- [ ] 4.2 [IMP] Implement governed effective-scope calculation from Project/Source scope, relationships, task scope, and Requester/Consumer authorization; default to isolation and bounded explicitly governed cross-Project traversal.
-- [ ] 4.3 [IMP] Implement ASU representation and establishment basis, distinct from registered Source set and observed Source set; represent adequate, known-incomplete, and indeterminate evidence boundaries.
-- [ ] 4.4 [IMP] Implement lifecycle failure/availability states that preserve unavailable, inaccessible, unauthorized, unsupported, partial, and absent distinctions.
-- [ ] 4.5 [VAL] Add component tests for multi-Project isolation, scoped Authority, cross-Project denial/allowed governed relationship, Source scope narrowing, and authorization versus Consumer disclosure distinction.
-- [ ] 4.6 [VAL] Add negative tests that reject registration/access as Authority, global traversal by default, and a registered-only search as proof of ASU adequacy.
-- [ ] 4.7 [DOC] Trace Source lifecycle and ASU behavior to Domains B/C/E and record supported v0.1 limits.
+- [x] 4.1 [IMP] Implement Project identity/lifecycle and Source registration identity, type/capabilities, association, Source Scope, governed relationships, and status/history without equating registration/access with Authority or disclosure authorization.
+- [x] 4.2 [IMP] Implement governed effective-scope calculation from Project/Source scope, relationships, task scope, and Requester/Consumer authorization; default to isolation and bounded explicitly governed cross-Project traversal.
+- [x] 4.3 [IMP] Implement ASU representation and establishment basis, distinct from registered Source set and observed Source set; represent adequate, known-incomplete, and indeterminate evidence boundaries.
+- [x] 4.4 [IMP] Implement lifecycle failure/availability states that preserve unavailable, inaccessible, unauthorized, unsupported, partial, and absent distinctions.
+- [x] 4.5 [VAL] Add component tests for multi-Project isolation, scoped Authority, cross-Project denial/allowed governed relationship, Source scope narrowing, and authorization versus Consumer disclosure distinction.
+- [x] 4.6 [VAL] Add negative tests that reject registration/access as Authority, global traversal by default, and a registered-only search as proof of ASU adequacy.
+- [x] 4.7 [DOC] Trace Source lifecycle and ASU behavior to Domains B/C/E and record supported v0.1 limits.
+
+**Implementation status:** **COMPLETE — PROJECT OWNER APPROVED.** Workstream 4 supplies the Project/Source lifecycle and ASU foundation only. Gate 3B remains pending and unapproved. Workstream 5 and later remain unauthorized. See [Workstream 4 record](../docs/phase-3/workstream-4-project-source-lifecycle.md).
 
 ### Workstream 5 — Source Observation, Transformation, Representation, and Provenance
 
