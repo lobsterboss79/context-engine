@@ -1,6 +1,6 @@
 # Phase 3 Master Checklist — v0.1 Implementation
 
-**Status:** **AUTHORIZED — IMPLEMENTATION PLAN PROJECT OWNER APPROVED; WORKSTREAMS 1–2 COMPLETE — PROJECT OWNER APPROVED; GATE 3A — SEMANTIC FOUNDATION APPROVED; WORKSTREAMS 3–10 NOT AUTHORIZED.** The Project Owner reviewed and approved Workstream 2 completion and Gate 3A after separately authorizing Workstream 2 items 2.1–2.7. H3-WS1-01 remains resolved. This is the approved controlling implementation plan for Phase 3, subordinate to the approved Phase 0–2 record, including the Phase 2 closure decision in commit `ac22ed1`. Workstream 3 is not yet authorized. Phase 4 — Validation & Integration remains **NOT AUTHORIZED**.
+**Status:** **AUTHORIZED — IMPLEMENTATION PLAN PROJECT OWNER APPROVED; WORKSTREAMS 1–3 COMPLETE — PROJECT OWNER APPROVED; GATE 3A — SEMANTIC FOUNDATION APPROVED; WORKSTREAMS 4–10 NOT AUTHORIZED.** H3-WS1-01 remains resolved. This is the approved controlling implementation plan for Phase 3, subordinate to the approved Phase 0–2 record, including the Phase 2 closure decision in commit `ac22ed1`. Gate 3B is not reached or approved. Phase 4 — Validation & Integration remains **NOT AUTHORIZED**.
 
 ## Purpose, authority, and boundaries
 
@@ -99,16 +99,18 @@ Expected completion evidence generally includes: implemented boundary/behavior; 
 
 **Dependencies:** Gate 3A approval; Workstreams 1–2.
 
-- [ ] 3.1 [IMP] Implement explicit Bootstrap-reference intake at the CLI/application boundary and deterministic Bootstrap parsing/validation through TOML/`tomllib`: supported version, structure, internal consistency, scope, and downstream governance semantics.
-- [ ] 3.2 [IMP] Implement root-legitimacy handling: authorized operator + deliberate explicit reference is the root event; no implicit discovery/default/redirect from location or ordinary Source content; fail closed when governance establishment is required but invalid/unavailable/unauthorized.
-- [ ] 3.3 [IMP] Implement separately scoped Project configuration loading/validation and provenance without merging Project configuration trust with Bootstrap trust or treating valid TOML as valid governance.
-- [ ] 3.4 [IMP] Implement EB-03 SQLite adapter, deterministic application-owned schema evolution/migrations, startup compatibility checks, and semantic transaction boundaries for coupled governed state.
-- [ ] 3.5 [IMP] Implement durable state/audit records, with audit distinct from diagnostic logs; preserve failed/denied/interrupted/partial outcomes and avoid secret values in normal state, logs, audit, or backups.
-- [ ] 3.6 [IMP] Implement Project isolation at persistence boundaries and controlled paths for governed cross-Project relationships/traversal.
-- [ ] 3.7 [VAL] Add Bootstrap and configuration negative tests: missing/invalid/unsupported/malformed reference, unauthorized operator, scope/consistency failure, implicit-discovery attempt, and untrusted Source-content instruction.
-- [ ] 3.8 [VAL] Add SQLite component and migration tests: fresh initialization, ordered upgrade, incompatible schema/failure behavior, transaction rollback/partial-state visibility, persistence/restart, Project isolation, and audit-write failure consequence.
-- [ ] 3.9 [VAL] Test that restoration preserves historical evidence without asserting currentness or Authority; test secret exclusion and authorization-bound protected metadata/audit access.
-- [ ] 3.10 [DOC] Record schema-evolution policy, migration evidence, config/Bootstrap boundary, durable-state classification, and known recovery limitations.
+- [x] 3.1 [IMP] Implement explicit Bootstrap-reference intake at the CLI/application boundary and deterministic Bootstrap parsing/validation through TOML/`tomllib`: supported version, structure, internal consistency, scope, and downstream governance semantics.
+- [x] 3.2 [IMP] Implement root-legitimacy handling: authorized operator + deliberate explicit reference is the root event; no implicit discovery/default/redirect from location or ordinary Source content; fail closed when governance establishment is required but invalid/unavailable/unauthorized.
+- [x] 3.3 [IMP] Implement separately scoped Project configuration loading/validation and provenance without merging Project configuration trust with Bootstrap trust or treating valid TOML as valid governance.
+- [x] 3.4 [IMP] Implement EB-03 SQLite adapter, deterministic application-owned schema evolution/migrations, startup compatibility checks, and semantic transaction boundaries for coupled governed state.
+- [x] 3.5 [IMP] Implement durable state/audit records, with audit distinct from diagnostic logs; preserve failed/denied/interrupted/partial outcomes and avoid secret values in normal state, logs, audit, or backups.
+- [x] 3.6 [IMP] Implement Project isolation at persistence boundaries and controlled paths for governed cross-Project relationships/traversal.
+- [x] 3.7 [VAL] Add Bootstrap and configuration negative tests: missing/invalid/unsupported/malformed reference, unauthorized operator, scope/consistency failure, implicit-discovery attempt, and untrusted Source-content instruction.
+- [x] 3.8 [VAL] Add SQLite component and migration tests: fresh initialization, ordered upgrade, incompatible schema/failure behavior, transaction rollback/partial-state visibility, persistence/restart, Project isolation, and audit-write failure consequence.
+- [x] 3.9 [VAL] Test that restoration preserves historical evidence without asserting currentness or Authority; test secret exclusion and authorization-bound protected metadata/audit access.
+- [x] 3.10 [DOC] Record schema-evolution policy, migration evidence, config/Bootstrap boundary, durable-state classification, and known recovery limitations.
+
+**Implementation status:** **COMPLETE — PROJECT OWNER APPROVED.** See [Workstream 3 record](../docs/phase-3/workstream-3-bootstrap-configuration-persistence.md). Gate 3B remains pending and unapproved; Workstream 4 is not authorized.
 
 **H3 points:** Any change to Bootstrap legitimacy/security semantics, persistence technology, migration/recovery behavior that changes governed meaning, new crypto/auth/IAM need, or need for a new dependency.
 
