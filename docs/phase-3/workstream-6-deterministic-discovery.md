@@ -1,6 +1,6 @@
 # Phase 3 Workstream 6 — Deterministic Discovery
 
-**Status:** **COMPLETE — PROJECT OWNER APPROVED.** Items 6.1–6.6 are accepted. Gate 3B remains approved. Workstream 7 is not authorized and has not begun; Workstreams 8–10 remain unauthorized; Gate 3C has not been reached or approved; Phase 4 remains **NOT AUTHORIZED**.
+**Status:** **COMPLETE — PROJECT OWNER APPROVED.** Items 6.1–6.6 are accepted. Gate 3B remains approved. Workstream 7 is complete and Project Owner approved; Workstream 8 remains unauthorized and unbegun; Workstreams 9–10 remain unauthorized; Gate 3C has not been reached or approved; Phase 4 remains **NOT AUTHORIZED**.
 
 ## Implemented boundary
 

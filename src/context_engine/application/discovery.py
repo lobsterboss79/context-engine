@@ -8,7 +8,6 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 from enum import Enum
-import re
 
 from context_engine.application.lifecycle import (
     ApplicableSourceUniverse, Availability, RegisteredSource, ScopeInputs,

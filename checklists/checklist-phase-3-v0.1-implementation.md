@@ -1,6 +1,6 @@
 # Phase 3 Master Checklist — v0.1 Implementation
 
-**Status:** **AUTHORIZED — IMPLEMENTATION PLAN PROJECT OWNER APPROVED; WORKSTREAMS 1–6 COMPLETE — PROJECT OWNER APPROVED; GATE 3A — SEMANTIC FOUNDATION APPROVED; GATE 3B — EVIDENCE PIPELINE APPROVED; WORKSTREAM 7 NOT AUTHORIZED; WORKSTREAMS 8–10 NOT AUTHORIZED; GATE 3C NOT YET REACHED / NOT APPROVED.** H3-WS1-01 remains resolved. This is the approved controlling implementation plan for Phase 3, subordinate to the approved Phase 0–2 record, including the Phase 2 closure decision in commit `ac22ed1`. Phase 4 — Validation & Integration remains **NOT AUTHORIZED**.
+**Status:** **AUTHORIZED — IMPLEMENTATION PLAN PROJECT OWNER APPROVED; WORKSTREAMS 1–7 COMPLETE — PROJECT OWNER APPROVED; GATE 3A — SEMANTIC FOUNDATION APPROVED; GATE 3B — EVIDENCE PIPELINE APPROVED; WORKSTREAM 8 NOT AUTHORIZED; WORKSTREAMS 9–10 NOT AUTHORIZED; GATE 3C NOT YET REACHED / NOT APPROVED.** H3-WS1-01 remains resolved. This is the approved controlling implementation plan for Phase 3, subordinate to the approved Phase 0–2 record, including the Phase 2 closure decision in commit `ac22ed1`. Phase 4 — Validation & Integration remains **NOT AUTHORIZED**.
 
 ## Purpose, authority, and boundaries
 
@@ -178,7 +178,7 @@ Expected completion evidence generally includes: implemented boundary/behavior; 
 
 **H3 points:** Relevant authorized in-scope Required information is materially or repeatedly undiscoverable through approved deterministic mechanisms, causing incorrect/insufficient context or material harm to meaningful continuation. Record evidence and reopen TD-14; do not add AI/vector technology.
 
-**Implementation status:** **COMPLETE — PROJECT OWNER APPROVED.** Items 6.1–6.6 are complete. Gate 3B remains approved. Workstream 7 is not authorized and has not begun; Workstreams 8–10 remain unauthorized; Gate 3C has not been reached or approved; Phase 4 remains unauthorized. TD-14 remains **CLOSED / NOT REOPENED**: Workstream 6 testing produced no evidence meeting its approved material reopening threshold. See [Workstream 6 record](../docs/phase-3/workstream-6-deterministic-discovery.md).
+**Implementation status:** **COMPLETE — PROJECT OWNER APPROVED.** Items 6.1–6.6 are complete. Gate 3B remains approved. Workstream 7 is complete and Project Owner approved; Workstream 8 remains unauthorized and unbegun; Workstreams 9–10 remain unauthorized; Gate 3C has not been reached or approved; Phase 4 remains unauthorized. TD-14 remains **CLOSED / NOT REOPENED**: Workstream 6 testing produced no evidence meeting its approved material reopening threshold. See [Workstream 6 record](../docs/phase-3/workstream-6-deterministic-discovery.md).
 
 ### Workstream 7 — Applicability, Governance/Security Enforcement, and Selection
 
@@ -186,16 +186,18 @@ Expected completion evidence generally includes: implemented boundary/behavior; 
 
 **Dependencies:** Workstream 6 and Gate 3B.
 
-- [ ] 7.1 [IMP] Implement applicability evaluation that considers task intent/scope, relevance, scoped Authority, Governance State, currentness, Relationships, Conflict, Uncertainty, Provenance, Requester authorization, and Consumer disclosure authorization where applicable.
-- [ ] 7.2 [IMP] Implement deterministic governance/security enforcement at Bootstrap, Project/Source scope, discovery, retrieval, selection, package construction, rendering, audit, and cross-Project boundaries; fail closed where required.
-- [ ] 7.3 [IMP] Implement task-relative Required/Supporting determination using the counterfactual omission principle; Consumer capacity, rendering limitations, convenience, and relevance alone cannot alter Required status.
-- [ ] 7.4 [IMP] Implement sufficiency-oriented selection and material explanation for inclusion, exclusion, prioritization, qualifications, Conflict/Uncertainty, and authorization effects without hidden chain-of-thought or disclosure bypass.
-- [ ] 7.5 [VAL] Add semantic and security-negative tests for scoped Authority, Authority/Governance separation, currentness/supersession, unresolved Conflict, Candidate/Proposal handling, source instruction inertness, authorization denial, protected metadata, and default Project isolation.
-- [ ] 7.6 [VAL] Add fail-closed tests for unknown/invalid governance, unresolved authorization, unauthorized cross-Project access, disclosure denial after retrieval, missing deterministic enforcement, and unavailable protected Required context.
-- [ ] 7.7 [VAL] Add selection tests for Required/Supporting behavior, required constraint preservation, material explanation, no Authority multiplication through repetition, and no selection solely from parser/ranking/recency.
-- [ ] 7.8 [DOC] Trace enforcement points and selection behavior to Domains B, D, and E; record all qualification/denial behavior.
+- [x] 7.1 [IMP] Implement applicability evaluation that considers task intent/scope, relevance, scoped Authority, Governance State, currentness, Relationships, Conflict, Uncertainty, Provenance, Requester authorization, and Consumer disclosure authorization where applicable.
+- [x] 7.2 [IMP] Implement deterministic governance/security enforcement at Bootstrap, Project/Source scope, discovery, retrieval, selection, package construction, rendering, audit, and cross-Project boundaries; fail closed where required.
+- [x] 7.3 [IMP] Implement task-relative Required/Supporting determination using the counterfactual omission principle; Consumer capacity, rendering limitations, convenience, and relevance alone cannot alter Required status.
+- [x] 7.4 [IMP] Implement sufficiency-oriented selection and material explanation for inclusion, exclusion, prioritization, qualifications, Conflict/Uncertainty, and authorization effects without hidden chain-of-thought or disclosure bypass.
+- [x] 7.5 [VAL] Add semantic and security-negative tests for scoped Authority, Authority/Governance separation, currentness/supersession, unresolved Conflict, Candidate/Proposal handling, source instruction inertness, authorization denial, protected metadata, and default Project isolation.
+- [x] 7.6 [VAL] Add fail-closed tests for unknown/invalid governance, unresolved authorization, unauthorized cross-Project access, disclosure denial after retrieval, missing deterministic enforcement, and unavailable protected Required context.
+- [x] 7.7 [VAL] Add selection tests for Required/Supporting behavior, required constraint preservation, material explanation, no Authority multiplication through repetition, and no selection solely from parser/ranking/recency.
+- [x] 7.8 [DOC] Trace enforcement points and selection behavior to Domains B, D, and E; record all qualification/denial behavior.
 
 **H3 points:** A safety-critical rule cannot be deterministically enforced; a material authorization/disclosure ambiguity; or a required new security/crypto/identity technology.
+
+**Implementation status:** **COMPLETE — PROJECT OWNER APPROVED.** Items 7.1–7.8 are complete. Gate 3A and Gate 3B remain approved; TD-14 remains **CLOSED / NOT REOPENED**. Workstream 8 is not authorized and has not begun; Workstreams 9–10 remain unauthorized; Gate 3C has not been reached or approved; Phase 4 remains unauthorized. This work implements no sufficiency or logical Context Package construction.
 
 ### Workstream 8 — Sufficiency and Logical Context Package Construction
 
