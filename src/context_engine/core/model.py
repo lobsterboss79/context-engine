@@ -309,9 +309,24 @@ class RepresentedInformation:
 
 @dataclass(frozen=True)
 class CandidateContext:
+    """Task-relative discovery output, deliberately prior to evaluation.
+
+    The optional fields preserve already represented governed facts and the
+    inspected-boundary explanation.  They are evidence only: their presence
+    has no construction path to applicability, selection, Authority,
+    Governance State, or currentness conclusions.
+    """
+
     request: SemanticIdentity
     represented: RepresentedInformation
     discovery_basis: str
+    source_scope: str | None = None
+    relationships: tuple[Relationship, ...] = ()
+    authorities: tuple[Authority, ...] = ()
+    governance: tuple[GovernanceAssessment, ...] = ()
+    currentness: tuple[CurrentnessAssessment, ...] = ()
+    conflicts: tuple[Conflict, ...] = ()
+    limitations: tuple[Uncertainty, ...] = ()
 
 
 class ContextRole(str, Enum):

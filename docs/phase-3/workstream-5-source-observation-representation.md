@@ -1,6 +1,6 @@
 # Phase 3 Workstream 5 — Source Observation, Transformation, Representation, and Provenance
 
-**Status:** **COMPLETE — PROJECT OWNER APPROVED.** Items 5.1–5.10 are complete within the authorized evidence-pipeline boundary. Gate 3B — Evidence Pipeline is **APPROVED — PROJECT OWNER**. Workstream 6 has not been authorized or begun; Workstreams 7–10 remain unauthorized; Gate 3C has not been reached; Phase 4 remains **NOT AUTHORIZED**.
+**Status:** **COMPLETE — PROJECT OWNER APPROVED.** Items 5.1–5.10 are complete within the authorized evidence-pipeline boundary. Gate 3B — Evidence Pipeline is **APPROVED — PROJECT OWNER**. Workstream 6 is complete and Project Owner approved; Workstream 7 remains unauthorized and unbegun; Workstreams 8–10 remain unauthorized; Gate 3C has not been reached or approved; Phase 4 remains **NOT AUTHORIZED**.
 
 ## Implemented controlled path
 

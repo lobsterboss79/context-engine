@@ -1,6 +1,6 @@
 # Phase 3 Master Checklist — v0.1 Implementation
 
-**Status:** **AUTHORIZED — IMPLEMENTATION PLAN PROJECT OWNER APPROVED; WORKSTREAMS 1–5 COMPLETE — PROJECT OWNER APPROVED; GATE 3A — SEMANTIC FOUNDATION APPROVED; GATE 3B — EVIDENCE PIPELINE APPROVED; WORKSTREAM 6 NOT YET AUTHORIZED; WORKSTREAMS 7–10 NOT AUTHORIZED; GATE 3C NOT YET REACHED.** H3-WS1-01 remains resolved. This is the approved controlling implementation plan for Phase 3, subordinate to the approved Phase 0–2 record, including the Phase 2 closure decision in commit `ac22ed1`. Phase 4 — Validation & Integration remains **NOT AUTHORIZED**.
+**Status:** **AUTHORIZED — IMPLEMENTATION PLAN PROJECT OWNER APPROVED; WORKSTREAMS 1–6 COMPLETE — PROJECT OWNER APPROVED; GATE 3A — SEMANTIC FOUNDATION APPROVED; GATE 3B — EVIDENCE PIPELINE APPROVED; WORKSTREAM 7 NOT AUTHORIZED; WORKSTREAMS 8–10 NOT AUTHORIZED; GATE 3C NOT YET REACHED / NOT APPROVED.** H3-WS1-01 remains resolved. This is the approved controlling implementation plan for Phase 3, subordinate to the approved Phase 0–2 record, including the Phase 2 closure decision in commit `ac22ed1`. Phase 4 — Validation & Integration remains **NOT AUTHORIZED**.
 
 ## Purpose, authority, and boundaries
 
@@ -151,7 +151,7 @@ Expected completion evidence generally includes: implemented boundary/behavior; 
 
 **H3 points:** Git capability requiring a library/network/provider, a Markdown feature/plugin/dependency, an interpretation rule that establishes Claim/governance, or material Source contract expansion.
 
-**Implementation status:** **COMPLETE — PROJECT OWNER APPROVED.** See [Workstream 5 record](../docs/phase-3/workstream-5-source-observation-representation.md). Gate 3B is approved; Workstream 6 has not been authorized or begun; Workstreams 7–10 remain unauthorized; Gate 3C has not been reached; Phase 4 remains unauthorized.
+**Implementation status:** **COMPLETE — PROJECT OWNER APPROVED.** See [Workstream 5 record](../docs/phase-3/workstream-5-source-observation-representation.md). Gate 3B is approved; Workstream 6 is complete and Project Owner approved; Workstream 7 remains unauthorized and unbegun; Workstreams 8–10 remain unauthorized; Gate 3C has not been reached or approved; Phase 4 remains unauthorized.
 
 ### Gate 3B — Evidence Pipeline [GATE]
 
@@ -169,14 +169,16 @@ Expected completion evidence generally includes: implemented boundary/behavior; 
 
 **Dependencies:** Gate 3B approval; Workstreams 1–5.
 
-- [ ] 6.1 [IMP] Implement deterministic discovery over approved represented information, governed metadata/identity, Classification/Relationships, SQLite, literal/text evidence, Markdown structure, and bounded Git history where task-relevant and authorized.
-- [ ] 6.2 [IMP] Implement Candidate Context with discovery basis, underlying Provenance, classification, Authority/Governance/currentness data where available, scope, Conflict/Uncertainty, and handling limitations; keep it distinct from governance Candidate/Proposal state.
-- [ ] 6.3 [IMP] Implement bounded, explainable expansion only when authorized evidence indicates a material resolvable deficiency; preserve inspected universe, negative-result scope, failures, and termination basis.
-- [ ] 6.4 [VAL] Add deterministic-repeatability tests for fixed governed fixture state and request; test literal/metadata/relationship/history paths, scoped negative results, unavailable/partial Sources, and bounded expansion/termination.
-- [ ] 6.5 [VAL] Add negative tests proving discovery/ranking does not establish relevance, applicability, Authority, Governance State, selection, sufficiency, or universal absence.
-- [ ] 6.6 [DOC] Record discovery capability boundary, deterministic inputs/outputs, evidence-boundary behavior, and TD-14 reopening evidence procedure.
+- [x] 6.1 [IMP] Implement deterministic discovery over approved represented information, governed metadata/identity, Classification/Relationships, SQLite, literal/text evidence, Markdown structure, and bounded Git history where task-relevant and authorized.
+- [x] 6.2 [IMP] Implement Candidate Context with discovery basis, underlying Provenance, classification, Authority/Governance/currentness data where available, scope, Conflict/Uncertainty, and handling limitations; keep it distinct from governance Candidate/Proposal state.
+- [x] 6.3 [IMP] Implement bounded, explainable expansion only when authorized evidence indicates a material resolvable deficiency; preserve inspected universe, negative-result scope, failures, and termination basis.
+- [x] 6.4 [VAL] Add deterministic-repeatability tests for fixed governed fixture state and request; test literal/metadata/relationship/history paths, scoped negative results, unavailable/partial Sources, and bounded expansion/termination.
+- [x] 6.5 [VAL] Add negative tests proving discovery/ranking does not establish relevance, applicability, Authority, Governance State, selection, sufficiency, or universal absence.
+- [x] 6.6 [DOC] Record discovery capability boundary, deterministic inputs/outputs, evidence-boundary behavior, and TD-14 reopening evidence procedure.
 
 **H3 points:** Relevant authorized in-scope Required information is materially or repeatedly undiscoverable through approved deterministic mechanisms, causing incorrect/insufficient context or material harm to meaningful continuation. Record evidence and reopen TD-14; do not add AI/vector technology.
+
+**Implementation status:** **COMPLETE — PROJECT OWNER APPROVED.** Items 6.1–6.6 are complete. Gate 3B remains approved. Workstream 7 is not authorized and has not begun; Workstreams 8–10 remain unauthorized; Gate 3C has not been reached or approved; Phase 4 remains unauthorized. TD-14 remains **CLOSED / NOT REOPENED**: Workstream 6 testing produced no evidence meeting its approved material reopening threshold. See [Workstream 6 record](../docs/phase-3/workstream-6-deterministic-discovery.md).
 
 ### Workstream 7 — Applicability, Governance/Security Enforcement, and Selection
 

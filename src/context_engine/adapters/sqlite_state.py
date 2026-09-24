@@ -212,7 +212,7 @@ class SQLiteStateStore:
         with self._connect() as connection:
             rows = connection.execute(
                 "SELECT project_identity, source_identity, source_type, scope, availability, locator "
-                "FROM source_registration WHERE project_identity=? ORDER BY row_id",
+                "FROM source_registration WHERE project_identity=? ORDER BY source_identity",
                 (project_identity,),
             ).fetchall()
         return tuple(PersistedSourceRegistration(*row) for row in rows)
@@ -270,20 +270,20 @@ class SQLiteStateStore:
 
     def observations_for_project(self, project_identity: str) -> tuple[PersistedObservation, ...]:
         with self._connect() as connection:
-            rows = connection.execute("SELECT project_identity, observation_identity, source_identity, observed_at, outcome, evidence FROM source_observation WHERE project_identity=? ORDER BY row_id", (project_identity,)).fetchall()
+            rows = connection.execute("SELECT project_identity, observation_identity, source_identity, observed_at, outcome, evidence FROM source_observation WHERE project_identity=? ORDER BY observation_identity", (project_identity,)).fetchall()
         return tuple(PersistedObservation(*row) for row in rows)
 
     def artifact_evidence_for_project(self, project_identity: str) -> tuple[PersistedArtifactEvidence, ...]:
         with self._connect() as connection:
-            rows = connection.execute("SELECT project_identity, artifact_identity, artifact_version_identity, source_identity, locator, original_content, observation_identity FROM artifact_evidence WHERE project_identity=? ORDER BY row_id", (project_identity,)).fetchall()
+            rows = connection.execute("SELECT project_identity, artifact_identity, artifact_version_identity, source_identity, locator, original_content, observation_identity FROM artifact_evidence WHERE project_identity=? ORDER BY artifact_version_identity", (project_identity,)).fetchall()
         return tuple(PersistedArtifactEvidence(*row) for row in rows)
 
     def transformations_for_project(self, project_identity: str) -> tuple[PersistedTransformation, ...]:
         with self._connect() as connection:
-            rows = connection.execute("SELECT project_identity, transformation_identity, artifact_version_identity, parser, configuration, outcome, evidence FROM transformation_evidence WHERE project_identity=? ORDER BY row_id", (project_identity,)).fetchall()
+            rows = connection.execute("SELECT project_identity, transformation_identity, artifact_version_identity, parser, configuration, outcome, evidence FROM transformation_evidence WHERE project_identity=? ORDER BY transformation_identity", (project_identity,)).fetchall()
         return tuple(PersistedTransformation(*row) for row in rows)
 
     def representations_for_project(self, project_identity: str) -> tuple[PersistedRepresentation, ...]:
         with self._connect() as connection:
-            rows = connection.execute("SELECT project_identity, representation_identity, artifact_version_identity, provenance_identity, location_reference, evidence FROM representation_evidence WHERE project_identity=? ORDER BY row_id", (project_identity,)).fetchall()
+            rows = connection.execute("SELECT project_identity, representation_identity, artifact_version_identity, provenance_identity, location_reference, evidence FROM representation_evidence WHERE project_identity=? ORDER BY representation_identity", (project_identity,)).fetchall()
         return tuple(PersistedRepresentation(*row) for row in rows)
