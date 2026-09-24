@@ -1,6 +1,6 @@
 # Phase 3 Master Checklist — v0.1 Implementation
 
-**Status:** **AUTHORIZED — IMPLEMENTATION PLAN PROJECT OWNER APPROVED; WORKSTREAMS 1–8 COMPLETE — PROJECT OWNER APPROVED; GATES 3A — SEMANTIC FOUNDATION, 3B — EVIDENCE PIPELINE, AND 3C — GOVERNED CONTEXT PIPELINE APPROVED; TD-14 CLOSED / NOT REOPENED; WORKSTREAM 9 NOT AUTHORIZED; WORKSTREAM 10 NOT AUTHORIZED; GATE 3D NOT YET REACHED.** H3-WS1-01 remains resolved. This is the approved controlling implementation plan for Phase 3, subordinate to the approved Phase 0–2 record, including the Phase 2 closure decision in commit `ac22ed1`. Phase 4 — Validation & Integration remains **NOT AUTHORIZED**.
+**Status:** **PHASE 3 IN PROGRESS — IMPLEMENTATION PLAN PROJECT OWNER APPROVED; WORKSTREAMS 1–9 COMPLETE — PROJECT OWNER APPROVED; GATES 3A — SEMANTIC FOUNDATION, 3B — EVIDENCE PIPELINE, AND 3C — GOVERNED CONTEXT PIPELINE APPROVED; TD-14 CLOSED / NOT REOPENED; WORKSTREAM 10 NOT AUTHORIZED; GATE 3D NOT YET REACHED.** H3-WS1-01 remains resolved. This is the approved controlling implementation plan for Phase 3, subordinate to the approved Phase 0–2 record, including the Phase 2 closure decision in commit `ac22ed1`. Phase 4 — Validation & Integration remains **NOT AUTHORIZED**.
 
 ## Purpose, authority, and boundaries
 
@@ -234,13 +234,15 @@ Expected completion evidence generally includes: implemented boundary/behavior; 
 
 **Dependencies:** Gate 3C approval; Workstreams 1–8.
 
-- [ ] 9.1 [IMP] Implement Consumer Contracts and faithful renderers for Human, ChatGPT, and Codex from one logical Context Package; rendering is derived presentation, not governance reinterpretation.
-- [ ] 9.2 [IMP] Preserve/retrievably reference material Required/Supporting status, Authority/Governance/currentness, Provenance, Conflict, Uncertainty, gaps, limitations, sufficiency, and coherence; do not make references materially inaccessible or use prior Consumer memory as Required Context.
-- [ ] 9.3 [IMP] Implement CLI/application orchestration for explicit Bootstrap, request handling, governed startup/readiness, Project/Source lifecycle, observation, decision pipeline, package construction, rendering, durable outcome/audit handling, safe diagnostics, and controlled failure termination.
-- [ ] 9.4 [IMP] Preserve logical-package != rendering != delivery != receipt != use in state and CLI results; do not implement automated Consumer action or claim receipt/use without evidence.
-- [ ] 9.5 [VAL] Add renderer/component tests for semantic fidelity across Consumers, authorization-sensitive non-disclosure, Required capacity pressure, progressive disclosure/reference integrity, rendering failure/truncation, and no semantic elevation by wording.
-- [ ] 9.6 [VAL] Add implementation-oriented integration tests from explicit Bootstrap through rendered output using controlled fixtures, including successful qualified/insufficient/denied outcomes and audit/diagnostic distinctions.
-- [ ] 9.7 [DOC] Document supported operations, Consumer Contract/rendering limits, CLI behavior, prerequisite/failure behavior, and user/operator evidence boundaries.
+- [x] 9.1 [IMP] Implement Consumer Contracts and faithful renderers for Human, ChatGPT, and Codex from one logical Context Package; rendering is derived presentation, not governance reinterpretation.
+- [x] 9.2 [IMP] Preserve/retrievably reference material Required/Supporting status, Authority/Governance/currentness, Provenance, Conflict, Uncertainty, gaps, limitations, sufficiency, and coherence; do not make references materially inaccessible or use prior Consumer memory as Required Context.
+- [x] 9.3 [IMP] Implement CLI/application orchestration for explicit Bootstrap, request handling, governed startup/readiness, Project/Source lifecycle, observation, decision pipeline, package construction, rendering, durable outcome/audit handling, safe diagnostics, and controlled failure termination.
+- [x] 9.4 [IMP] Preserve logical-package != rendering != delivery != receipt != use in state and CLI results; do not implement automated Consumer action or claim receipt/use without evidence.
+- [x] 9.5 [VAL] Add renderer/component tests for semantic fidelity across Consumers, authorization-sensitive non-disclosure, Required capacity pressure, progressive disclosure/reference integrity, rendering failure/truncation, and no semantic elevation by wording.
+- [x] 9.6 [VAL] Add implementation-oriented integration tests from explicit Bootstrap through rendered output using controlled fixtures, including successful qualified/insufficient/denied outcomes and audit/diagnostic distinctions.
+- [x] 9.7 [DOC] Document supported operations, Consumer Contract/rendering limits, CLI behavior, prerequisite/failure behavior, and user/operator evidence boundaries.
+
+**Implementation status:** **COMPLETE — PROJECT OWNER APPROVED.** Items 9.1–9.7 are complete. Gates 3A, 3B, and 3C remain approved; TD-14 remains **CLOSED / NOT REOPENED**. Workstream 10 has not been authorized or begun; Gate 3D has not been reached; Phase 3 remains in progress; Phase 4 remains unauthorized. This work implements rendering and controlled local composition only: it does not implement delivery, receipt, use, automated Consumer action, operational hardening, backup/recovery, proving, or Phase 4 behavior.
 
 ### Workstream 10 — Operational Hardening, Recovery, and Implementation Closure
 

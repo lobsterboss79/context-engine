@@ -6,8 +6,10 @@ import argparse
 import json
 import sys
 from collections.abc import Sequence
+from pathlib import Path
 
 from context_engine.application.readiness import ReadinessReport, assess_readiness
+from context_engine.application.bootstrap import GovernanceEstablishmentError, establish_bootstrap, load_project_configuration
 from context_engine.adapters.environment import HostPrerequisiteProbe
 
 
@@ -29,6 +31,12 @@ def build_parser() -> argparse.ArgumentParser:
         default="text",
         help="diagnostic output format",
     )
+    bootstrap = subparsers.add_parser(
+        "bootstrap-validate",
+        help="validate an explicit Bootstrap and its governed Project configuration",
+    )
+    bootstrap.add_argument("--bootstrap", required=True, help="explicit Bootstrap TOML reference")
+    bootstrap.add_argument("--project-configuration", required=True, help="Bootstrap-established Project configuration TOML reference")
     return parser
 
 
@@ -54,7 +62,16 @@ def _render_json(report: ReadinessReport) -> str:
 def main(argv: Sequence[str] | None = None) -> int:
     """Run a non-governed CLI operation with safe prerequisite diagnostics."""
     args = build_parser().parse_args(argv)
-    if args.operation != "readiness":  # Defensive until later operations are authorized.
+    if args.operation == "bootstrap-validate":
+        try:
+            bootstrap = establish_bootstrap(Path(args.bootstrap), operator_authorized=True)
+            configuration = load_project_configuration(bootstrap, Path(args.project_configuration))
+        except GovernanceEstablishmentError as error:
+            print("bootstrap validation failed: " + str(error), file=sys.stderr)
+            return 2
+        print(json.dumps({"bootstrap": str(bootstrap.reference), "project": configuration.project_identity, "status": "validated"}, sort_keys=True))
+        return 0
+    if args.operation != "readiness":
         return 2
 
     report = assess_readiness(HostPrerequisiteProbe())
