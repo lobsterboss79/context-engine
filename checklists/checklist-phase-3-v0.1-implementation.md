@@ -1,6 +1,6 @@
 # Phase 3 Master Checklist — v0.1 Implementation
 
-**Status:** **AUTHORIZED — IMPLEMENTATION PLAN PROJECT OWNER APPROVED; WORKSTREAMS 1–7 COMPLETE — PROJECT OWNER APPROVED; GATE 3A — SEMANTIC FOUNDATION APPROVED; GATE 3B — EVIDENCE PIPELINE APPROVED; WORKSTREAM 8 NOT AUTHORIZED; WORKSTREAMS 9–10 NOT AUTHORIZED; GATE 3C NOT YET REACHED / NOT APPROVED.** H3-WS1-01 remains resolved. This is the approved controlling implementation plan for Phase 3, subordinate to the approved Phase 0–2 record, including the Phase 2 closure decision in commit `ac22ed1`. Phase 4 — Validation & Integration remains **NOT AUTHORIZED**.
+**Status:** **AUTHORIZED — IMPLEMENTATION PLAN PROJECT OWNER APPROVED; WORKSTREAMS 1–8 COMPLETE — PROJECT OWNER APPROVED; GATES 3A — SEMANTIC FOUNDATION, 3B — EVIDENCE PIPELINE, AND 3C — GOVERNED CONTEXT PIPELINE APPROVED; TD-14 CLOSED / NOT REOPENED; WORKSTREAM 9 NOT AUTHORIZED; WORKSTREAM 10 NOT AUTHORIZED; GATE 3D NOT YET REACHED.** H3-WS1-01 remains resolved. This is the approved controlling implementation plan for Phase 3, subordinate to the approved Phase 0–2 record, including the Phase 2 closure decision in commit `ac22ed1`. Phase 4 — Validation & Integration remains **NOT AUTHORIZED**.
 
 ## Purpose, authority, and boundaries
 
@@ -197,7 +197,7 @@ Expected completion evidence generally includes: implemented boundary/behavior; 
 
 **H3 points:** A safety-critical rule cannot be deterministically enforced; a material authorization/disclosure ambiguity; or a required new security/crypto/identity technology.
 
-**Implementation status:** **COMPLETE — PROJECT OWNER APPROVED.** Items 7.1–7.8 are complete. Gate 3A and Gate 3B remain approved; TD-14 remains **CLOSED / NOT REOPENED**. Workstream 8 is not authorized and has not begun; Workstreams 9–10 remain unauthorized; Gate 3C has not been reached or approved; Phase 4 remains unauthorized. This work implements no sufficiency or logical Context Package construction.
+**Implementation status:** **COMPLETE — PROJECT OWNER APPROVED.** Items 7.1–7.8 are complete. Gates 3A, 3B, and 3C remain approved; TD-14 remains **CLOSED / NOT REOPENED**. Workstream 8 is complete and Project Owner approved; Workstream 9 remains unauthorized and unbegun; Workstream 10 remains unauthorized; Gate 3D has not been reached; Phase 4 remains unauthorized. This work implements no sufficiency or logical Context Package construction.
 
 ### Workstream 8 — Sufficiency and Logical Context Package Construction
 
@@ -205,16 +205,18 @@ Expected completion evidence generally includes: implemented boundary/behavior; 
 
 **Dependencies:** Workstream 7; Gate 3B.
 
-- [ ] 8.1 [IMP] Implement ASU/evidence-boundary-aware sufficiency evaluation with explicit Sufficient, Conditionally Sufficient, Insufficient, and Denied behavior as applicable; a package existing does not establish sufficiency.
-- [ ] 8.2 [IMP] Implement bounded iteration from material deficiency to justified additional authorized discovery; preserve the final inspection boundary, negative results, unavailable/inaccessible/unsupported/partial sources, and termination reason.
-- [ ] 8.3 [IMP] Enforce the anti-waiver rule: Required Context remains Required. Conditional Sufficiency is available only for a materially bounded task that can proceed without assuming, reconstructing, overriding, or acting on the unavailable Required context; otherwise return Insufficient or Denied.
-- [ ] 8.4 [IMP] Construct logical Context Packages with request/Consumer association, selected Required/Supporting items, material Authority/Governance/currentness, Source Manifest/Provenance, Conflict/Uncertainty/gaps, authorization/freshness/source limitations, sufficiency, and Construction-State Coherence.
-- [ ] 8.5 [IMP] Implement Construction-State Coherence evaluation and durable Package-Construction Records; distinguish construction, logical package, rendering, delivery, receipt, use, partial/failure states, and historical package meaning.
-- [ ] 8.6 [VAL] Add semantic/integration tests for ASU adequacy, known credible Source gap, scoped negative discovery, material Conflict, required omission, Consumer-capacity pressure, inaccessible/undisclosable Required context, bounded iteration, and all sufficiency outcomes.
-- [ ] 8.7 [VAL] Add coherence/persistence tests for source/governance/authorization change during construction, incomplete package records, crash/retry, provenance and qualification retention, historical reconstruction, and restored state not becoming current.
-- [ ] 8.8 [DOC] Record package/construction traceability, sufficiency/coherence decision evidence, and limitations/reconstruction behavior.
+- [x] 8.1 [IMP] Implement ASU/evidence-boundary-aware sufficiency evaluation with explicit Sufficient, Conditionally Sufficient, Insufficient, and Denied behavior as applicable; a package existing does not establish sufficiency.
+- [x] 8.2 [IMP] Implement bounded iteration from material deficiency to justified additional authorized discovery; preserve the final inspection boundary, negative results, unavailable/inaccessible/unsupported/partial sources, and termination reason.
+- [x] 8.3 [IMP] Enforce the anti-waiver rule: Required Context remains Required. Conditional Sufficiency is available only for a materially bounded task that can proceed without assuming, reconstructing, overriding, or acting on the unavailable Required context; otherwise return Insufficient or Denied.
+- [x] 8.4 [IMP] Construct logical Context Packages with request/Consumer association, selected Required/Supporting items, material Authority/Governance/currentness, Source Manifest/Provenance, Conflict/Uncertainty/gaps, authorization/freshness/source limitations, sufficiency, and Construction-State Coherence.
+- [x] 8.5 [IMP] Implement Construction-State Coherence evaluation and durable Package-Construction Records; distinguish construction, logical package, rendering, delivery, receipt, use, partial/failure states, and historical package meaning.
+- [x] 8.6 [VAL] Add semantic/integration tests for ASU adequacy, known credible Source gap, scoped negative discovery, material Conflict, required omission, Consumer-capacity pressure, inaccessible/undisclosable Required context, bounded iteration, and all sufficiency outcomes.
+- [x] 8.7 [VAL] Add coherence/persistence tests for source/governance/authorization change during construction, incomplete package records, crash/retry, provenance and qualification retention, historical reconstruction, and restored state not becoming current.
+- [x] 8.8 [DOC] Record package/construction traceability, sufficiency/coherence decision evidence, and limitations/reconstruction behavior.
 
 **H3 points:** A needed sufficiency/coherence behavior contradicts approved semantics; an ASU policy expands scope; or package persistence requires material architectural/technology change.
+
+**Implementation status:** **COMPLETE — PROJECT OWNER APPROVED.** Items 8.1–8.8 are complete. Gate 3C is approved; TD-14 remains **CLOSED / NOT REOPENED**. Workstream 9 is not authorized and has not begun; Workstream 10 remains unauthorized; Gate 3D has not been reached; Phase 4 remains unauthorized. No rendering, delivery, receipt, use, proving, or Phase 4 behavior is implemented.
 
 ### Gate 3C — Governed Context Pipeline [GATE]
 
@@ -222,7 +224,7 @@ Expected completion evidence generally includes: implemented boundary/behavior; 
 
 **Project Owner review:** Confirm strict stage separation, deterministic safety enforcement, ASU-aware sufficiency, non-waivable Required Context, material semantic preservation, durable construction evidence, and no unapproved semantic-assistance technology.
 
-**Disposition:** Approve the next defined increment, request correction, or hold/escalate findings.
+**Disposition:** **APPROVED — PROJECT OWNER.** For implemented Workstreams 1–8, the Project Owner accepts the governed Stage III path: deterministic discovery -> applicability -> deterministic governance/security enforcement -> selection -> ASU/evidence-boundary-aware sufficiency -> logical Context Package. The accepted evidence preserves stage separation; Candidate Context != selected Context Item; scoped Authority != Governance State; Requester authorization != Consumer disclosure authorization; fail-closed Project/cross-Project, protected-metadata, and Source-instruction boundaries; Required Context anti-waiver; Conditional Sufficiency anti-waiver; ASU and bounded-negative-result qualifications; deterministic authorized bounded iteration; preserved Source Manifest/Provenance/Conflict/Uncertainty/limitations; coherence downgrade-only behavior; and Project-scoped historical Package-Construction Records. Package construction creates no Authority, Governance State, or currentness and remains distinct from rendering, delivery, receipt, and use. This disposition establishes no Workstream 9/10 behavior, Gate 3D, Phase 3 closure, or Phase 4 authorization.
 
 ## Stage IV — Operational Completion
 

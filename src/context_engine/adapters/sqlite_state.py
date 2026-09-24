@@ -12,7 +12,7 @@ class SecretValueError(ValueError):
     """Raised when a normal state/audit value resembles a secret."""
 
 
-CURRENT_SCHEMA_VERSION = 3
+CURRENT_SCHEMA_VERSION = 4
 
 @dataclass(frozen=True)
 class PersistedEvidence:
@@ -76,6 +76,18 @@ class PersistedRepresentation:
     location_reference: str
     evidence: str
 
+
+@dataclass(frozen=True)
+class PersistedPackageConstruction:
+    project_identity: str
+    record_identity: str
+    request_identity: str
+    package_identity: str | None
+    status: str
+    sufficiency: str | None
+    coherence: str | None
+    evidence: str
+
 def _reject_secret(value: str) -> None:
     if any(marker in value.lower() for marker in ("secret=", "password=", "token=", "api_key=")):
         raise SecretValueError("secret values are excluded from durable state and audit")
@@ -110,6 +122,9 @@ class SQLiteStateStore:
                 elif version == 2:
                     self._migrate_two_to_three(connection)
                     version = 3
+                elif version == 3:
+                    self._migrate_three_to_four(connection)
+                    version = 4
                 else:
                     raise StateCompatibilityError("unsupported or malformed schema version")
 
@@ -173,6 +188,21 @@ class SQLiteStateStore:
             "UNIQUE(project_identity, representation_identity))"
         )
         connection.execute("UPDATE schema_version SET version = 3")
+
+    @staticmethod
+    def _migrate_three_to_four(connection: sqlite3.Connection) -> None:
+        """Add Project-scoped historical package-construction evidence.
+
+        This table records a construction attempt, not Consumer rendering,
+        delivery, receipt, use, Authority, or currentness.
+        """
+        connection.execute(
+            "CREATE TABLE package_construction (row_id INTEGER PRIMARY KEY, "
+            "project_identity TEXT NOT NULL, record_identity TEXT NOT NULL, request_identity TEXT NOT NULL, "
+            "package_identity TEXT, status TEXT NOT NULL, sufficiency TEXT, coherence TEXT, evidence TEXT NOT NULL, "
+            "UNIQUE(project_identity, record_identity))"
+        )
+        connection.execute("UPDATE schema_version SET version = 4")
 
     def save_evidence(self, evidence: PersistedEvidence) -> None:
         _reject_secret(evidence.historical_reference)
@@ -263,6 +293,14 @@ class SQLiteStateStore:
                 (representation.project_identity, representation.representation_identity, representation.artifact_version_identity, representation.provenance_identity, representation.location_reference, representation.evidence),
             )
 
+    def save_package_construction(self, record: PersistedPackageConstruction) -> None:
+        self._reject_evidence_values(record.project_identity, record.record_identity, record.request_identity, record.evidence)
+        with self._connect() as connection:
+            connection.execute(
+                "INSERT INTO package_construction(project_identity, record_identity, request_identity, package_identity, status, sufficiency, coherence, evidence) VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
+                (record.project_identity, record.record_identity, record.request_identity, record.package_identity, record.status, record.sufficiency, record.coherence, record.evidence),
+            )
+
     @staticmethod
     def _reject_evidence_values(*values: str) -> None:
         for value in values:
@@ -287,3 +325,8 @@ class SQLiteStateStore:
         with self._connect() as connection:
             rows = connection.execute("SELECT project_identity, representation_identity, artifact_version_identity, provenance_identity, location_reference, evidence FROM representation_evidence WHERE project_identity=? ORDER BY representation_identity", (project_identity,)).fetchall()
         return tuple(PersistedRepresentation(*row) for row in rows)
+
+    def package_constructions_for_project(self, project_identity: str) -> tuple[PersistedPackageConstruction, ...]:
+        with self._connect() as connection:
+            rows = connection.execute("SELECT project_identity, record_identity, request_identity, package_identity, status, sufficiency, coherence, evidence FROM package_construction WHERE project_identity=? ORDER BY record_identity", (project_identity,)).fetchall()
+        return tuple(PersistedPackageConstruction(*row) for row in rows)

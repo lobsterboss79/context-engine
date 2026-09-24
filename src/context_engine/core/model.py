@@ -346,6 +346,11 @@ class ContextItem:
     represented: RepresentedInformation
     selection_basis: str
     role: ContextRole
+    authorities: tuple[Authority, ...]
+    governance: tuple[GovernanceAssessment, ...]
+    currentness: tuple[CurrentnessAssessment, ...]
+    conflicts: tuple[Conflict, ...]
+    limitations: tuple[Uncertainty, ...]
 
     def __init__(self, seal: _SelectionSeal, role: ContextRole) -> None:
         if not isinstance(seal, _SelectionSeal):
@@ -354,6 +359,11 @@ class ContextItem:
         object.__setattr__(self, "represented", seal.candidate.represented)
         object.__setattr__(self, "selection_basis", seal.basis)
         object.__setattr__(self, "role", role)
+        object.__setattr__(self, "authorities", seal.candidate.authorities)
+        object.__setattr__(self, "governance", seal.candidate.governance)
+        object.__setattr__(self, "currentness", seal.candidate.currentness)
+        object.__setattr__(self, "conflicts", seal.candidate.conflicts)
+        object.__setattr__(self, "limitations", seal.candidate.limitations)
 
     @classmethod
     def select(cls, candidate: CandidateContext, *, basis: str, role: ContextRole) -> "ContextItem":
@@ -366,6 +376,7 @@ class SufficiencyOutcome(str, Enum):
     SUFFICIENT = "sufficient"
     CONDITIONALLY_SUFFICIENT = "conditionally_sufficient"
     INSUFFICIENT = "insufficient"
+    DENIED = "denied"
 
 
 @dataclass(frozen=True)
@@ -407,7 +418,7 @@ class ContextPackage:
     def __post_init__(self) -> None:
         if any(item.request != self.request for item in self.items):
             raise SemanticInvariantError("Context Package items must belong to its Context Request")
-        if self.sufficiency is SufficiencyOutcome.SUFFICIENT and self.coherence.outcome in {"incoherent", "uncertain"}:
+        if self.sufficiency is SufficiencyOutcome.SUFFICIENT and self.coherence.outcome in {"incoherent", "uncertain", "coherent_with_qualification"}:
             raise SemanticInvariantError("material incoherence precludes unqualified sufficiency")
 
 
@@ -421,6 +432,8 @@ class PackageConstructionRecord:
     outcome: SufficiencyOutcome | None
     coherence: ConstructionState | None
     limitations: tuple[Uncertainty, ...] = ()
+    status: str = "completed"
+    termination_basis: str | None = None
 
 
 @dataclass(frozen=True)
