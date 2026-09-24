@@ -24,7 +24,7 @@ Logical packages preserve request association, selected Required/Supporting item
 
 Coherence is deterministically evaluated from explicit material Source/governance/authorization/scope/evidence-boundary change facts. It produces `coherent`, `coherent_with_qualification`, `uncertain`, or `incoherent`. Coherence can downgrade Sufficient to Conditional or Insufficient; it never upgrades insufficiency or repairs missing Required Context. Denied construction produces no fake empty package.
 
-EB-03 schema version 4 adds a Project-scoped `package_construction` historical record. It stores public semantic identifiers, status, sufficiency/coherence state, and non-secret structured evidence. Public reload is semantically ordered and preserves historical construction meaning only; it creates neither Authority/currentness nor rendering/delivery/receipt/use. One SQLite insertion is the semantic transaction boundary for a construction attempt.
+EB-03 schema version 4 added a Project-scoped `package_construction` historical record. Workstream 10 advances the application-owned schema to version 5 for controlled restore qualification; it does not alter construction meaning. The record stores public semantic identifiers, status, sufficiency/coherence state, and non-secret structured evidence. Public reload is semantically ordered and preserves historical construction meaning only; it creates neither Authority/currentness nor rendering/delivery/receipt/use. One SQLite insertion is the semantic transaction boundary for a construction attempt.
 
 ## Deferred behavior, validation, and findings
 

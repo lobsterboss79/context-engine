@@ -82,8 +82,16 @@ def run_governed_render(inputs: GovernedRenderInputs, *, store: SQLiteStateStore
         termination_basis=inputs.termination_basis)
     if store is not None:
         persist_construction(store, project_identity=inputs.request.project.value, construction=construction)
-    rendering = (render_package(construction.package, inputs.contract) if construction.package is not None else
-                 RenderingResult("denied", None, None, ("logical-package-construction-denied",)))
+    try:
+        rendering = (render_package(construction.package, inputs.contract) if construction.package is not None else
+                     RenderingResult("denied", None, None, ("logical-package-construction-denied",)))
+    except Exception:
+        # Rendering is downstream of logical construction.  Record only the
+        # failure category; protected package content must not enter diagnostics
+        # or audit detail.  A failed audit write deliberately propagates too.
+        if store is not None:
+            store.write_audit(inputs.request.project.value, "rendering-failed", "rendering failed")
+        raise
     if store is not None:
         store.write_audit(inputs.request.project.value, "rendering-" + rendering.status,
                           "package=" + inputs.package_identity.value + "; reasons=" + ",".join(rendering.reason_codes))

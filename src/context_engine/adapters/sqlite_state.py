@@ -1,8 +1,12 @@
 """Narrow SQLite EB-03 adapter; rows never define semantic identity."""
 from __future__ import annotations
 from dataclasses import dataclass
+from datetime import UTC, datetime
 from pathlib import Path
+import os
 import sqlite3
+import tempfile
+import uuid
 
 class StateCompatibilityError(RuntimeError):
     """Raised when an application-owned schema cannot be safely used."""
@@ -12,7 +16,15 @@ class SecretValueError(ValueError):
     """Raised when a normal state/audit value resembles a secret."""
 
 
-CURRENT_SCHEMA_VERSION = 4
+class BackupValidationError(RuntimeError):
+    """Raised when a supplied backup is not a safe Context Engine backup."""
+
+
+class RestoreError(RuntimeError):
+    """Raised when controlled recovery cannot safely replace its target."""
+
+
+CURRENT_SCHEMA_VERSION = 5
 
 @dataclass(frozen=True)
 class PersistedEvidence:
@@ -88,6 +100,26 @@ class PersistedPackageConstruction:
     coherence: str | None
     evidence: str
 
+
+@dataclass(frozen=True)
+class BackupMetadata:
+    """Non-governing evidence carried with one SQLite-consistent backup."""
+
+    backup_identity: str
+    created_at: str
+    purpose: str
+    retention_basis: str
+    schema_version: int
+
+
+@dataclass(frozen=True)
+class RecoveryQualification:
+    """Qualification applied to a database obtained through restore."""
+
+    backup_identity: str
+    restored_at: str
+    qualification: str = "historical-only; currentness, Authority, Governance State, and present authorization require independent re-establishment"
+
 def _reject_secret(value: str) -> None:
     if any(marker in value.lower() for marker in ("secret=", "password=", "token=", "api_key=")):
         raise SecretValueError("secret values are excluded from durable state and audit")
@@ -125,6 +157,9 @@ class SQLiteStateStore:
                 elif version == 3:
                     self._migrate_three_to_four(connection)
                     version = 4
+                elif version == 4:
+                    self._migrate_four_to_five(connection)
+                    version = 5
                 else:
                     raise StateCompatibilityError("unsupported or malformed schema version")
 
@@ -203,6 +238,20 @@ class SQLiteStateStore:
             "UNIQUE(project_identity, record_identity))"
         )
         connection.execute("UPDATE schema_version SET version = 4")
+
+    @staticmethod
+    def _migrate_four_to_five(connection: sqlite3.Connection) -> None:
+        """Add only local recovery qualification state.
+
+        A row is written only after a validated backup has been restored into a
+        staged database.  It qualifies the restored deployment; it does not
+        revise historic evidence or grant any present-tense semantic status.
+        """
+        connection.execute(
+            "CREATE TABLE recovery_qualification (row_id INTEGER PRIMARY KEY, "
+            "backup_identity TEXT NOT NULL, restored_at TEXT NOT NULL, qualification TEXT NOT NULL)"
+        )
+        connection.execute("UPDATE schema_version SET version = 5")
 
     def save_evidence(self, evidence: PersistedEvidence) -> None:
         _reject_secret(evidence.historical_reference)
@@ -330,3 +379,152 @@ class SQLiteStateStore:
         with self._connect() as connection:
             rows = connection.execute("SELECT project_identity, record_identity, request_identity, package_identity, status, sufficiency, coherence, evidence FROM package_construction WHERE project_identity=? ORDER BY record_identity", (project_identity,)).fetchall()
         return tuple(PersistedPackageConstruction(*row) for row in rows)
+
+    def create_backup(
+        self,
+        destination: Path,
+        *,
+        operator_authorized: bool,
+        purpose: str,
+        retention_basis: str,
+        backup_identity: str | None = None,
+    ) -> BackupMetadata:
+        """Create one consistent SQLite backup with bounded, non-secret metadata.
+
+        The caller deliberately supplies the destination and the governance
+        purpose/retention basis.  This adapter has no scheduler, storage
+        service, or authority-creation behavior.  SQLite's backup API copies a
+        consistent database image; metadata is then committed in that image so
+        a later restore can validate what it is handling.
+        """
+        if not operator_authorized:
+            raise PermissionError("backup requires established operator authorization")
+        if not purpose or not retention_basis:
+            raise ValueError("backup requires explicit purpose and retention basis")
+        if self._database.resolve() == destination.resolve():
+            raise ValueError("backup destination must differ from operational state")
+        if destination.exists():
+            raise FileExistsError("backup destination must be a new explicit path")
+        self._reject_evidence_values(purpose, retention_basis)
+        destination.parent.mkdir(parents=True, exist_ok=True)
+        metadata = BackupMetadata(
+            backup_identity or f"backup-{uuid.uuid4()}",
+            datetime.now(UTC).isoformat(), purpose, retention_basis, CURRENT_SCHEMA_VERSION,
+        )
+        self._reject_evidence_values(metadata.backup_identity, metadata.created_at)
+        # Schema/readiness is checked before any destination is created.
+        self._validate_operational_database()
+        try:
+            with self._connect() as source, sqlite3.connect(destination) as target:
+                source.backup(target)
+                target.execute(
+                    "CREATE TABLE context_engine_backup_metadata (backup_identity TEXT NOT NULL, "
+                    "created_at TEXT NOT NULL, purpose TEXT NOT NULL, retention_basis TEXT NOT NULL, "
+                    "schema_version INTEGER NOT NULL)"
+                )
+                target.execute(
+                    "INSERT INTO context_engine_backup_metadata VALUES (?, ?, ?, ?, ?)",
+                    (metadata.backup_identity, metadata.created_at, metadata.purpose,
+                     metadata.retention_basis, metadata.schema_version),
+                )
+        except sqlite3.Error as error:
+            raise RestoreError("consistent backup was not completed") from error
+        self.validate_backup(destination)
+        return metadata
+
+    @staticmethod
+    def _schema_version(connection: sqlite3.Connection) -> int:
+        row = connection.execute("SELECT version FROM schema_version").fetchone()
+        if row is None or not isinstance(row[0], int):
+            raise BackupValidationError("backup has malformed schema version")
+        return row[0]
+
+    def _validate_operational_database(self) -> None:
+        try:
+            with self._connect() as connection:
+                if connection.execute("PRAGMA integrity_check").fetchone()[0] != "ok":
+                    raise StateCompatibilityError("operational database failed integrity check")
+                if self._schema_version(connection) != CURRENT_SCHEMA_VERSION:
+                    raise StateCompatibilityError("operational database is not at the supported schema version")
+        except sqlite3.Error as error:
+            raise StateCompatibilityError("operational database is unavailable or malformed") from error
+
+    @classmethod
+    def validate_backup(cls, backup: Path) -> BackupMetadata:
+        """Validate format, integrity, compatibility, and secret-safe metadata."""
+        if not backup.is_file():
+            raise BackupValidationError("backup is unavailable")
+        try:
+            with sqlite3.connect(f"file:{backup}?mode=ro", uri=True) as connection:
+                integrity = connection.execute("PRAGMA integrity_check").fetchone()
+                if integrity is None or integrity[0] != "ok":
+                    raise BackupValidationError("backup integrity check failed")
+                if cls._schema_version(connection) != CURRENT_SCHEMA_VERSION:
+                    raise BackupValidationError("backup schema is incompatible")
+                row = connection.execute(
+                    "SELECT backup_identity, created_at, purpose, retention_basis, schema_version "
+                    "FROM context_engine_backup_metadata"
+                ).fetchone()
+                count = connection.execute("SELECT COUNT(*) FROM context_engine_backup_metadata").fetchone()[0]
+        except BackupValidationError:
+            raise
+        except sqlite3.Error as error:
+            raise BackupValidationError("backup is malformed or incomplete") from error
+        if row is None or count != 1:
+            raise BackupValidationError("backup metadata is missing or ambiguous")
+        metadata = BackupMetadata(*row)
+        if metadata.schema_version != CURRENT_SCHEMA_VERSION:
+            raise BackupValidationError("backup metadata schema is incompatible")
+        try:
+            _reject_secret(metadata.backup_identity)
+            _reject_secret(metadata.created_at)
+            _reject_secret(metadata.purpose)
+            _reject_secret(metadata.retention_basis)
+        except SecretValueError as error:
+            raise BackupValidationError("backup metadata contains excluded secret-like content") from error
+        return metadata
+
+    def restore_backup(self, backup: Path, *, operator_authorized: bool) -> RecoveryQualification:
+        """Validate then atomically replace state from a backup in the same directory.
+
+        The valid target is untouched until the staged copy has passed SQLite
+        validation and received its recovery qualification.  This intentionally
+        restores history only: it is not a restart of present authorization,
+        Authority, Governance State, or currentness.
+        """
+        if not operator_authorized:
+            raise PermissionError("restore requires established operator authorization")
+        metadata = self.validate_backup(backup)
+        self._database.parent.mkdir(parents=True, exist_ok=True)
+        descriptor, staging_name = tempfile.mkstemp(prefix=".context-engine-restore-", suffix=".sqlite", dir=self._database.parent)
+        os.close(descriptor)
+        staging = Path(staging_name)
+        qualification = RecoveryQualification(metadata.backup_identity, datetime.now(UTC).isoformat())
+        try:
+            with sqlite3.connect(f"file:{backup}?mode=ro", uri=True) as source, sqlite3.connect(staging) as target:
+                source.backup(target)
+                target.execute(
+                    "INSERT INTO recovery_qualification(backup_identity, restored_at, qualification) VALUES (?, ?, ?)",
+                    (qualification.backup_identity, qualification.restored_at, qualification.qualification),
+                )
+            self.validate_backup(staging)
+            with sqlite3.connect(staging) as check:
+                if check.execute("PRAGMA integrity_check").fetchone()[0] != "ok":
+                    raise BackupValidationError("staged restore integrity check failed")
+            os.replace(staging, self._database)
+        except (sqlite3.Error, OSError, BackupValidationError) as error:
+            staging.unlink(missing_ok=True)
+            raise RestoreError("restore failed before operational state was replaced") from error
+        return qualification
+
+    def recovery_qualification(self) -> RecoveryQualification | None:
+        """Return the latest restore qualification without claiming currentness."""
+        try:
+            with self._connect() as connection:
+                row = connection.execute(
+                    "SELECT backup_identity, restored_at, qualification FROM recovery_qualification "
+                    "ORDER BY row_id DESC LIMIT 1"
+                ).fetchone()
+        except sqlite3.OperationalError:
+            return None
+        return RecoveryQualification(*row) if row else None
