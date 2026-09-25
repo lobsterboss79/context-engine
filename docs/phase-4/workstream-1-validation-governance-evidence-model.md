@@ -1,10 +1,10 @@
 # Phase 4 Workstream 1 — Validation Governance & Evidence Model
 
-**Status:** **ITEMS 1.1–1.4 COMPLETE — PROJECT OWNER-APPROVED DECISIONS DOCUMENTED.** Workstream 1 planning/documentation remains in progress. This record establishes no validation, proving, remediation, fresh-Consumer, or production-use authority. Gate 4A is **NOT APPROVED**; Phase 4 validation/proving execution is **NOT AUTHORIZED**. H3 remains controlling.
+**Status:** **ITEMS 1.1–1.8 COMPLETE — PROJECT OWNER-APPROVED DECISIONS DOCUMENTED.** Workstream 1 planning/documentation remains in progress. This record establishes no validation, proving, remediation, fresh-Consumer, or production-use authority. Gate 4A is **NOT APPROVED**; Phase 4 validation/proving execution is **NOT AUTHORIZED**. H3 remains controlling.
 
 ## Purpose, authority, and governing basis
 
-This pre-results governance record documents the Project Owner-approved decisions for Workstream 1 Items 1.1–1.4. It is subordinate to the approved Phase 0–3 baseline and the [Phase 4 master plan and checklist](../../checklists/checklist-phase-4-validation-integration.md). It creates neither a result nor an authority to execute a planned validation or proving activity.
+This pre-results governance record documents the Project Owner-approved decisions for Workstream 1 Items 1.1–1.8. It is subordinate to the approved Phase 0–3 baseline and the [Phase 4 master plan and checklist](../../checklists/checklist-phase-4-validation-integration.md). It creates neither a result nor an authority to execute a planned validation or proving activity.
 
 The governed semantic/design baseline comprises the applicable approved Phase 0–2 records, including:
 
@@ -133,6 +133,113 @@ When governance legitimately changes an expected result, version it rather than 
 - `ER-017 v2 — later governed revision`
 
 The later version records its approving authority, reason, date/version, and affected evidence. The original expectation is never rewritten merely because execution produced a different result.
+
+## 1.5 — Validation result states
+
+Each validation exercise has one result state, linked to its preserved evidence and predetermined expected-result record.
+
+| Result state | Meaning |
+| --- | --- |
+| **PASS** | The preserved evidence satisfies the predetermined expected result and acceptance criteria, with no unresolved discrepancy that invalidates the result. |
+| **FAIL** | The preserved evidence demonstrates that one or more predetermined acceptance criteria were not satisfied, or that a defined failure condition occurred. |
+| **INDETERMINATE** | The available evidence is insufficient to establish either **PASS** or **FAIL**. |
+
+Evidence may be **INDETERMINATE**, for example, when it is incomplete, contradictory, materially contaminated, not reproducible where reproducibility is required, insufficient to evaluate the established expectation, or dependent on a genuinely ambiguous approved expectation or governing record.
+
+The following rules control interpretation:
+
+1. **INDETERMINATE** is not **PASS**.
+2. **INDETERMINATE** cannot be silently treated as an absence of a finding or as successful validation.
+3. **FAIL** describes the result of the exercise; it does not by itself establish root cause.
+4. A **FAIL** therefore does not automatically establish an implementation defect.
+5. Root cause, finding type, severity, and disposition are separate governed determinations.
+6. Result states must remain linked to their preserved evidence and predetermined expected-result record.
+
+## 1.6 — Finding severity model
+
+Severity describes **impact**.
+
+| Severity | Meaning and required treatment |
+| --- | --- |
+| **BLOCKER** | Continuing the affected activity would make subsequent evidence unsafe, invalid, materially misleading, or impossible to interpret reliably, or otherwise prevents safe/valid continuation. The affected activity stops pending governed disposition. |
+| **MATERIAL** | The finding materially affects approved semantics; governance/security; validation/proving validity; an asserted material capability; approved scope; or another material Project decision or claim. H3 applies; the material decision requires Project Owner disposition. |
+| **MINOR** | A bounded non-material defect, inconsistency, or discrepancy that does not materially invalidate the affected capability or evidence, but requires documented disposition. |
+| **OBSERVATION** | Relevant evidence, lesson, condition, or potential future consideration that does not presently demonstrate a defect and does not presently require remediation. |
+
+Severity does **not** describe implementation effort, remediation difficulty, code-change size, urgency by itself, or finding type. A one-line implementation defect may be **MATERIAL**; a complicated possible improvement may be only an **OBSERVATION**. Finding labels never reduce actual impact: H3 remains controlling where the real impact is material even if an initial label was lower.
+
+## 1.7 — Finding type model
+
+Each finding identifies one primary type. Secondary types may be recorded only where genuinely necessary to represent a cross-cutting finding; they do not eliminate the requirement for a primary type.
+
+| Finding type | Meaning |
+| --- | --- |
+| **IMPLEMENTATION** | The implementation does not conform to already-approved behavior. |
+| **INTEGRATION** | Individually functioning components fail to interact according to approved integrated behavior. |
+| **SECURITY/GOVERNANCE** | Approved authorization, disclosure, isolation, Authority, Governance State, Provenance, or related security/governance controls are violated or inadequately preserved. |
+| **OPERATIONAL** | Approved failure, recovery, persistence, backup, restore, diagnostic, or other in-scope operational behavior is deficient. |
+| **DESIGN** | The implementation may correctly implement the approved design, but evidence indicates that the design itself may be inadequate, contradictory, incomplete, or incapable of satisfying an approved requirement or governed objective. |
+| **PROVING-PROTOCOL** | Freshness, protocol design/execution, evidence integrity, uncontrolled intervention, procedure, or another proving control makes a proving result invalid or unreliable. |
+| **CONSUMER-USABILITY** | The governed result may be technically correct, but evidence identifies a material or noteworthy difficulty for the intended Consumer in understanding, using, or meaningfully continuing from it. |
+
+Severity and type are independent dimensions. For example, a finding may be **MATERIAL / DESIGN**, **MINOR / IMPLEMENTATION**, or **OBSERVATION / CONSUMER-USABILITY**. Do not infer severity from finding type or type from severity. Finding type may be revised through governed review as evidence develops, while preserving classification history and lineage rather than rewriting the historical record.
+
+## 1.8 — Finding ownership, lifecycle, and disposition
+
+The finding model separates who records or investigates a finding from who possesses authority to decide its material meaning or disposition. A finding record contains, as applicable:
+
+- stable Finding ID;
+- linked evidence/result IDs;
+- concise finding statement;
+- result state that exposed the issue;
+- severity;
+- primary finding type and secondary finding types where applicable;
+- owner/investigator;
+- cause analysis;
+- current status;
+- governed disposition and disposition authority;
+- linked remediation authorization where applicable;
+- remediation evidence and retest evidence where applicable;
+- residual limitation where applicable;
+- closure evidence; and
+- lineage to superseded, duplicate, or related findings.
+
+The lifecycle supports, as applicable:
+
+`OPEN -> UNDER REVIEW -> DISPOSITIONED -> REMEDIATION AUTHORIZED -> RETEST PENDING -> CLOSED`
+
+Not every finding must pass through every intermediate state. Findings may remain **OPEN** or otherwise unresolved when their governed disposition has not been completed.
+
+### Governed disposition categories
+
+| Disposition | Meaning |
+| --- | --- |
+| **NO CHANGE REQUIRED** | Evidence establishes that remediation is not required. Preserve rationale and authority. |
+| **REMEDIATION AUTHORIZED** | A bounded corrective change has been authorized by the appropriate authority. This does not itself prove successful remediation; required retest and closure evidence remain necessary. |
+| **DESIGN/GOVERNANCE REVIEW REQUIRED** | The finding requires a material or otherwise governed design/governance decision before corrective action may proceed. |
+| **PROTOCOL/RUN INVALID — DISCARD/RESTART** | The validation/proving evidence basis is invalid for the applicable claim. The affected run must not be converted into **PASS** through repair or reinterpretation. |
+| **ACCEPTED LIMITATION** | The appropriate authority explicitly accepts the condition as a bounded limitation. Preserve scope, rationale, impact, and any effect on claims. |
+| **FUTURE-WORK CANDIDATE** | The evidence identifies potentially useful later work but does not authorize that work or expand current Phase 4 scope. |
+| **DUPLICATE/SUPERSEDED** | Another governed finding or later record represents the finding. Preserve lineage; do not erase the historical finding. |
+
+The following rules control ownership, disposition, and closure:
+
+1. **Cause analysis is not disposition.** Codex or another investigator may gather evidence and identify a likely cause within approved boundaries. That does not grant authority to make a material architecture, technology, security, governance, semantic, scope, proving, or phase decision.
+2. **Finding discovery is not remediation authorization.** A finding does not independently authorize application changes, design changes, expected-result changes, technology additions, or other remediation.
+3. **Closure requires evidence.** A finding is not closed merely because code or documentation changed. Closure requires satisfaction of the governed disposition and the required closure/retest evidence.
+4. **Preserve original evidence and classification history.** Later cause analysis, reclassification, remediation, or closure must not rewrite the original result or evidence.
+5. **Materiality controls authority.** Where a finding is **MATERIAL**, **BLOCKER**, genuinely ambiguous, or otherwise triggers H3, Codex stops at the appropriate decision boundary and obtains Project Owner review.
+
+### Distinguishing result, severity, type, and disposition
+
+These dimensions must not be collapsed:
+
+- **Result state** tells what happened in the exercise.
+- **Severity** tells how much a finding matters.
+- **Type** tells what kind of problem the evidence indicates.
+- **Disposition** tells what governed action or status follows.
+
+For example, a validation exercise may **FAIL**; that **FAIL** may create a finding classified **MATERIAL / DESIGN**; its governed disposition may be **DESIGN/GOVERNANCE REVIEW REQUIRED**. None of those facts independently authorizes remediation.
 
 ## Retained execution boundary
 
