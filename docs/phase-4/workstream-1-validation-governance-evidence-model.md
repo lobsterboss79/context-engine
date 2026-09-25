@@ -1,10 +1,10 @@
 # Phase 4 Workstream 1 — Validation Governance & Evidence Model
 
-**Status:** **ITEMS 1.1–1.8 COMPLETE — PROJECT OWNER-APPROVED DECISIONS DOCUMENTED.** Workstream 1 planning/documentation remains in progress. This record establishes no validation, proving, remediation, fresh-Consumer, or production-use authority. Gate 4A is **NOT APPROVED**; Phase 4 validation/proving execution is **NOT AUTHORIZED**. H3 remains controlling.
+**Status:** **ITEMS 1.1–1.11 COMPLETE — PROJECT OWNER-APPROVED DECISIONS DOCUMENTED.** Workstream 1 planning/documentation remains in progress. This record establishes no validation, proving, remediation, fresh-Consumer, or production-use authority. Gate 4A is **NOT APPROVED**; Phase 4 validation/proving execution is **NOT AUTHORIZED**. H3 remains controlling.
 
 ## Purpose, authority, and governing basis
 
-This pre-results governance record documents the Project Owner-approved decisions for Workstream 1 Items 1.1–1.8. It is subordinate to the approved Phase 0–3 baseline and the [Phase 4 master plan and checklist](../../checklists/checklist-phase-4-validation-integration.md). It creates neither a result nor an authority to execute a planned validation or proving activity.
+This pre-results governance record documents the Project Owner-approved decisions for Workstream 1 Items 1.1–1.11. It is subordinate to the approved Phase 0–3 baseline and the [Phase 4 master plan and checklist](../../checklists/checklist-phase-4-validation-integration.md). It creates neither a result nor an authority to execute a planned validation or proving activity.
 
 The governed semantic/design baseline comprises the applicable approved Phase 0–2 records, including:
 
@@ -240,6 +240,105 @@ These dimensions must not be collapsed:
 - **Disposition** tells what governed action or status follows.
 
 For example, a validation exercise may **FAIL**; that **FAIL** may create a finding classified **MATERIAL / DESIGN**; its governed disposition may be **DESIGN/GOVERNANCE REVIEW REQUIRED**. None of those facts independently authorizes remediation.
+
+## 1.9 — H3 escalation and Codex remediation boundaries
+
+Codex may correct an unambiguous implementation defect only when the approved behavior and permitted solution boundary are already established. Codex may not decide what the system ought to do when that answer requires a material or genuinely ambiguous judgment.
+
+Within an authorized Phase 4 remediation context, Codex may perform ordinary remediation only when **all** applicable conditions are satisfied:
+
+- the issue is an implementation or integration defect, or another bounded defect whose approved correction is already unambiguous;
+- the approved expected behavior is clear from the governing record;
+- the correction does not materially change architecture, approved semantics, security/governance policy, Authority/disclosure rules, technology/dependencies, persistent data-model behavior, Consumer/proving protocol, or Phase 4 scope;
+- the correction introduces no new material tradeoff and remains within already-approved implementation boundaries;
+- applicable remediation authority exists; and
+- required evidence and retesting are performed.
+
+For example, correcting an ordinary code defect that violates an already-approved deterministic ordering rule may be ordinary remediation. Deciding what that ordering rule should be is not ordinary remediation.
+
+Codex must stop and escalate under H3 when remediation would require deciding, changing, or materially affecting requirements; approved semantics; architecture; technology or dependencies; material persistent data-model behavior; security/governance behavior; Authority; disclosure/authorization rules; Project isolation; Phase 4 scope; Consumer/proving protocol; an expected result that the governing record leaves genuinely ambiguous; TD-14; production-readiness criteria; another phase boundary; or another material Project decision.
+
+The following controls are explicit:
+
+- Finding discovery does not create remediation authority.
+- **BLOCKER** or **MATERIAL** classification does not grant Codex additional remediation authority; materiality strengthens the escalation requirement.
+- H3 controls actual impact regardless of an initial finding label.
+- Project Owner approval is required before material remediation.
+- Codex may investigate and cause-analyze within approved boundaries without that investigation becoming authority to make a material decision.
+
+The concise boundary is: **Codex can repair an already-decided rule. Codex cannot invent the rule in order to repair the failure.**
+
+## 1.10 — Remediation evidence and retest requirements
+
+Each remediation is recorded in a stable **Remediation Record** linked to its applicable finding or findings. Before remediation, the record captures, as applicable:
+
+- stable remediation identity and linked finding/evidence IDs;
+- causal hypothesis/cause analysis;
+- approved expected behavior and authorized change boundary;
+- approving authority where required;
+- originating validation baseline;
+- affected components/semantics and anticipated regression surface; and
+- required retest plan.
+
+After remediation, it captures, as applicable:
+
+- exact derived validation baseline, commit, or version;
+- actual change boundary;
+- focused retest evidence, affected-suite retest evidence, and relevant end-to-end regression-validation evidence;
+- remaining/residual limitations;
+- impact on earlier evidence and, where applicable, proving validity; and
+- closure recommendation/disposition.
+
+An implementation change creates a traceable derived validation baseline under Section 1.1. It does not rewrite the originating baseline or any original **FAIL**/**INDETERMINATE** evidence. Findings close only when the governed disposition and required evidence are satisfied.
+
+### Impact-based retest levels
+
+Retesting is impact-based; a small bounded remediation need not rerun every Phase 4 exercise merely for procedural completeness.
+
+| Level | Question | Required treatment |
+| --- | --- | --- |
+| **LEVEL 1 — FOCUSED RETEST** | Did the remediation correct the exact behavior that exposed the finding? | Establish focused evidence for the corrected behavior. |
+| **LEVEL 2 — AFFECTED-SUITE RETEST** | Did the remediation preserve related behavior and avoid regression in the reasonably affected area? | Establish evidence across the reasonably affected related behavior. |
+| **LEVEL 3 — RELEVANT END-TO-END REGRESSION VALIDATION** | Does the integrated governed pipeline still behave correctly across the material boundaries through which the remediation could propagate? | Establish integrated evidence where those material boundaries are applicable. |
+
+**MATERIAL** remediation presumptively requires every applicable retest level unless a governed record explicitly establishes why a level is not applicable. **BLOCKER** remediation requires evidence adequate to establish that the blocking condition is actually removed before affected continuation. Security/governance remediation requires testing adequate to evaluate both the corrected path and reasonably related enforcement paths.
+
+If remediation affects behavior already used in proving, do not simply rerun an old proving procedure and declare the original result corrected. Explicitly assess whether the earlier proving evidence remains valid, whether its supported claims must be narrowed or invalidated, whether the Consumer is contaminated, and whether another genuinely fresh proving run is required. Any decision requiring material judgment remains governed by H3.
+
+The required chain is:
+
+`Finding -> governed cause/disposition -> authorized change boundary -> remediation -> focused retest -> affected-suite retest -> relevant end-to-end regression where applicable -> proving-validity assessment where applicable -> evidence-based closure`
+
+## 1.11 — Anti-overfitting controls
+
+The governing test for a proposed remediation is:
+
+> Would the proposed remediation still be considered correct if the Company AI Roadmap and Context Engine proving cases did not exist?
+
+A negative or materially uncertain answer warns that the remediation may be fitting a proving case rather than correcting a general governed mechanism.
+
+Remediation must not depend on Project-name checks; privileged handling for Company AI Roadmap or Context Engine; Consumer identity; filenames specially treated merely because they occur in proving; expected-answer strings; proving-specific keywords; special ranking/selection rules invented to make a proving result pass; special semantic paths for a proving case; changing an expected result merely to match observed behavior; hidden self-knowledge; or an equivalent case-specific workaround absent an independently approved general requirement.
+
+A legitimate remediation must trace:
+
+`approved requirement / invariant -> general mechanism -> correction -> validation evidence`
+
+not:
+
+`proving failed -> special case -> proving passes`
+
+A proving case may legitimately discover a general deficiency. Discovery through Company AI Roadmap or Context Engine dogfooding does not prevent remediation, but the correction must repair the general governed mechanism/invariant rather than encode the proving Project's identity or expected answer.
+
+For material remediation discovered through proving, the Remediation Record requires a **Generalization Review** addressing:
+
+1. What approved requirement/invariant was violated?
+2. Can the proposed correction be stated without reference to the particular proving Project's identity?
+3. Would the same mechanism apply to another Project presenting the same semantic/governance condition?
+4. Is there at least one controlled non-proving regression case that demonstrates the general mechanism?
+
+Where practical and within approved scope, a real proving exercise that reveals a general defect must convert the relevant general semantic condition into a deterministic controlled regression case. That case must model the general condition rather than unnecessarily copy Project-specific content. Future correctness must not depend solely on rerunning the original real-world proving case.
+
+If the proposed remediation cannot satisfy the Generalization Review, or satisfaction would require a material design, semantic, or scope decision, Codex must stop under H3 for Project Owner review.
 
 ## Retained execution boundary
 
