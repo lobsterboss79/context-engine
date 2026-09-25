@@ -32,6 +32,7 @@ The Project Owner has final authority for material decisions. ChatGPT analyzes, 
 - [Phase 2 checklist](checklists/checklist-phase-2-architecture-technology-design.md)
 - [Phase 3 approved master implementation checklist](checklists/checklist-phase-3-v0.1-implementation.md)
 - [Phase 4 approved master plan & checklist (execution not authorized)](checklists/checklist-phase-4-validation-integration.md)
+- [Phase 4 Workstream 1 validation governance and evidence model](docs/phase-4/workstream-1-validation-governance-evidence-model.md)
 - [Phase 3 Workstream 1 implementation record](docs/phase-3/workstream-1-repository-package-executable-skeleton.md)
 - [Phase 3 Workstream 2 implementation record](docs/phase-3/workstream-2-governed-semantic-kernel.md)
 - [Phase 3 Workstream 3 implementation record](docs/phase-3/workstream-3-bootstrap-configuration-persistence.md)
