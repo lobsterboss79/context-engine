@@ -1,10 +1,10 @@
 # Phase 4 Workstream 1 — Validation Governance & Evidence Model
 
-**Status:** **ITEMS 1.1–1.11 COMPLETE — PROJECT OWNER-APPROVED DECISIONS DOCUMENTED.** Workstream 1 planning/documentation remains in progress. This record establishes no validation, proving, remediation, fresh-Consumer, or production-use authority. Gate 4A is **NOT APPROVED**; Phase 4 validation/proving execution is **NOT AUTHORIZED**. H3 remains controlling.
+**Status:** **ITEMS 1.1–1.14 COMPLETE — PROJECT OWNER-APPROVED DECISIONS DOCUMENTED.** Workstream 1 planning/documentation remains in progress. This record establishes no validation, proving, remediation, fresh-Consumer, or production-use authority. Gate 4A is **NOT APPROVED**; Gate 4B is **NOT APPROVED**; Phase 4 validation/proving execution is **NOT AUTHORIZED**. H3 remains controlling.
 
 ## Purpose, authority, and governing basis
 
-This pre-results governance record documents the Project Owner-approved decisions for Workstream 1 Items 1.1–1.11. It is subordinate to the approved Phase 0–3 baseline and the [Phase 4 master plan and checklist](../../checklists/checklist-phase-4-validation-integration.md). It creates neither a result nor an authority to execute a planned validation or proving activity.
+This pre-results governance record documents the Project Owner-approved decisions for Workstream 1 Items 1.1–1.14. It is subordinate to the approved Phase 0–3 baseline and the [Phase 4 master plan and checklist](../../checklists/checklist-phase-4-validation-integration.md). It creates neither a result nor an authority to execute a planned validation or proving activity.
 
 The governed semantic/design baseline comprises the applicable approved Phase 0–2 records, including:
 
@@ -340,6 +340,104 @@ Where practical and within approved scope, a real proving exercise that reveals 
 
 If the proposed remediation cannot satisfy the Generalization Review, or satisfaction would require a material design, semantic, or scope decision, Codex must stop under H3 for Project Owner review.
 
+## 1.12 — Proving evidence preservation and independent evaluation
+
+The controlling principle for every future proving run is:
+
+> Preserve what the Consumer actually received and did before anyone attempts to explain, repair, improve, or reinterpret the result.
+
+Proving evidence is stronger than ordinary routine validation preservation because it must establish the evidence boundary for a material proving claim. Each future proving run preserves the following four layers as applicable.
+
+### Pre-run state
+
+Before Consumer interaction, preserve the exact validation/implementation baseline; proving task/request; controlled or permitted Sources; frozen proving protocol; permitted Consumer inputs; predetermined success/failure criteria; known limitations; Consumer/session identity boundary to the degree required for evidence; exact freshness/preflight result; applicable authorization; and environment/configuration information necessary to reconstruct the run.
+
+### Constructed evidence
+
+Preserve the exact logical Context Package; Source Manifest and construction evidence; material Provenance, Conflict, Uncertainty, limitations, sufficiency state, and Construction-State Coherence where applicable; exact Consumer-facing rendering; and delivery boundary.
+
+The following distinct states must not be collapsed:
+
+`logical Context Package != rendering != delivery != receipt != use`
+
+### Consumer interaction evidence
+
+Preserve, as applicable, what was actually delivered; Consumer response/output; Consumer questions and clarification requests; interventions; additional information supplied after initial delivery; who or what supplied it; resulting Consumer outcome; evidence of meaningful continuation or inability to continue; material omissions noticed; inappropriate inclusions; and reconstruction burden where applicable.
+
+Any post-delivery intervention remains distinguishable from the original Context Package and rendering. Later assistance must not be silently folded into the original proving result.
+
+### Evaluation evidence
+
+Preserve evaluator identity/role as appropriate; frozen criteria used; evaluation of the frozen original evidence; supported and unsupported conclusions; qualifications; findings; result state; and disposition/recommendation where appropriate. Evaluation occurs before remediation. No remediation, briefing, package correction, or system change may be treated as though it were part of the original run evidence.
+
+### Independent evaluation
+
+For Phase 4, independent evaluation does not inherently require an external commercial auditor or unrelated organization. It requires separation of evaluation from interactive alteration of the result under review. The evaluator may know the governing requirements, approved expected criteria, validation/proving protocol, and applicable semantic/governance rules, but evaluates the frozen evidence.
+
+The evaluator must not simultaneously alter the Context Package; add missing context; repair the system; rewrite the Consumer rendering; coach the Consumer toward an expected answer; or modify success criteria after observing the result, then grade that altered result as though it were the original run. Where practicable, use a reviewer not responsible for changing the result under review.
+
+Independent evaluation is evidence review, not authority to approve material Project decisions. Material proving conclusions remain subject to Project Owner review and acceptance or rejection at Gate 4C.
+
+## 1.13 — Fresh-Consumer contamination protocol
+
+A Consumer is fresh **for a particular proving run** when it does not possess material prior Project knowledge that would allow it to compensate for omissions, errors, ambiguity, insufficient context, or other deficiencies in the Context Package being proved. Freshness is run-specific, task-specific, and evidence-based. It is not an absolute metaphysical claim that the Consumer has never heard the Project name or has no general knowledge.
+
+General, pretraining, or world knowledge is not automatically contamination. It is relevant when prior knowledge is sufficiently Project-specific and task-relevant that it could materially compensate for what the Context Engine was supposed to supply.
+
+### Future preflight scope and evidence
+
+The future actual preflight, when separately authorized, assesses as reasonably applicable: persistent/model memory; current conversation/context; Project/workspace context; connected files/Sources; prior sessions; prior Context Packages; prior proving runs/results; manual briefing; hidden/system/developer context where reasonably knowable; tool/connector state that may expose Project knowledge; and other plausible channels of material Project-specific/task-relevant knowledge.
+
+For every relevant category, preserve the assessment basis, known exposure, unknown or uncertain exposure, whether the exposure is materially task-relevant, and evidence supporting the conclusion. This documentation does not perform a preflight, identify or test a Consumer, reserve a Consumer, or expose a Consumer to Project information.
+
+### Freshness states and controls
+
+| State | Meaning and control |
+| --- | --- |
+| **PASS** | There is reasonable evidence that the Consumer lacks material prior Project-specific/task-relevant knowledge that would undermine the proving objective. |
+| **FAIL** | Material contamination is known to exist. The Consumer is unsuitable for the proving run. |
+| **INDETERMINATE** | Freshness cannot reasonably be established because relevant exposure is unknown, contradictory, unverifiable, or otherwise insufficiently evidenced. The Consumer is unsuitable for the proving run. |
+
+**INDETERMINATE is not PASS.** The standard is reasonable evidence of absence of material task-relevant Project knowledge, not impossible proof of absolute ignorance. Freshness must not be weakened because obtaining a fresh Consumer is inconvenient. Preserve the preflight evidence and decision.
+
+The purpose of freshness is to prevent the Consumer from silently supplying material Project knowledge that should have come from the governed Context Package.
+
+### AI Consumer control
+
+An AI Consumer such as ChatGPT may potentially serve as a fresh Consumer only when the exact proving session/configuration can reasonably satisfy this approved protocol. Opening a new chat alone does not establish freshness. Potential contamination through memory, Project context, connected files/Sources, prior-session context, or other context channels must still be assessed. No actual ChatGPT/AI Consumer is identified, tested, reserved, or exposed by this documentation; that can occur only in the later authorized proving-readiness stage after the required gate.
+
+## 1.14 — Reserved-Consumer protection and run-discard criteria
+
+Treat a reserved candidate Consumer as an unused proving resource. Before the authorized preflight/proving run, do not expose that Consumer to material information including Project files for the proving Project; expected answer/outcome; intended Context Package; success/failure analysis; prior proving results; Project architecture, state, or decisions unnecessary for the authorized preflight; this planning conversation or equivalent material briefing; or other information that would materially contaminate the intended proving objective.
+
+The reservation record, if later authorized, identifies the Consumer/session sufficiently to establish continuity and evidence lineage while avoiding unnecessary Project exposure. This documentation does not create an actual reservation.
+
+### Automatic invalidation and distinction from valid failure
+
+A proving run is **INVALID** for its intended proving claim and must be discarded/restarted, as applicable, when freshness is **FAIL** or **INDETERMINATE**; a material protocol breach occurs; the proving protocol materially changes after the run begins without governed restart; unauthorized Sources/context become available to the Consumer; the Consumer receives material manual assistance not permitted by the frozen protocol; original Context Package/rendering evidence is not adequately preserved; evaluator/interviewer intervention materially changes Consumer inputs before the original outcome is frozen; the wrong implementation/validation baseline, material configuration, or Bootstrap is used; a material uncontrolled event prevents reliable attribution or interpretation; or another condition invalidates the established evidence basis for the intended claim.
+
+Preserve this distinction:
+
+`VALID FAIL != INVALID RUN`
+
+A valid **FAIL** can provide evidence about Context Engine. An invalid run does not establish the intended proving conclusion because its evidence basis is compromised.
+
+### Invalid-run handling
+
+When a run becomes invalid:
+
+`preserve original evidence -> mark the run INVALID -> record the invalidation reason -> preserve relevant finding/protocol evidence -> exclude the run from proving-success claims -> restart under a valid frozen protocol with a fresh suitable Consumer when later authorized`
+
+Do not clean up a contaminated Consumer and continue the same run; retroactively alter the protocol to make the run valid; remove unauthorized assistance from the record and pretend it did not occur; convert an invalid run into **FAIL** or **PASS** for convenience; or discard the historical evidence explaining invalidation. A protocol failure may itself create a **PROVING-PROTOCOL** finding even though the intended proving claim remains unestablished.
+
+### Overall proving-integrity sequence
+
+The intended future sequence is:
+
+`freeze proving protocol and criteria -> establish exact-run Consumer freshness -> freeze/preserve package and rendering -> Consumer interaction -> freeze/preserve original outcome -> independent evaluation of frozen evidence -> Gate 4C evidence acceptance/rejection -> only then governed remediation where applicable`
+
+No part of this sequence is executed by this documentation record. These controls preserve Items 1.1–1.11: original evidence remains immutable; **PASS**, **FAIL**, and **INDETERMINATE** remain distinct; finding severity/type/disposition remain independent; finding discovery does not authorize remediation; H3 and anti-overfitting controls remain controlling; and later remediation cannot retroactively convert an original proving run into a different result.
+
 ## Retained execution boundary
 
-This record documents planning controls only. It does not execute Phase 4 validation or proving; create or run fixtures; perform a fresh-Consumer contamination preflight; reserve or expose a fresh Consumer; modify application behavior; remediate implementation behavior; reopen TD-14; approve Gate 4A; or establish production readiness. Material conflict, ambiguity, infeasibility, or need for a new material decision remains subject to H3 escalation and Project Owner review.
+This record documents planning controls only. It does not execute Phase 4 validation or proving; create or run fixtures; perform a fresh-Consumer contamination preflight; reserve, test, or expose a fresh Consumer; modify application behavior; remediate implementation behavior; reopen TD-14; approve Gate 4A or Gate 4B; or establish production readiness. Material conflict, ambiguity, infeasibility, or need for a new material decision remains subject to H3 escalation and Project Owner review.
