@@ -1,10 +1,10 @@
 # Phase 4 Workstream 1 — Validation Governance & Evidence Model
 
-**Status:** **ITEMS 1.1–1.14 COMPLETE — PROJECT OWNER-APPROVED DECISIONS DOCUMENTED.** Workstream 1 planning/documentation remains in progress. This record establishes no validation, proving, remediation, fresh-Consumer, or production-use authority. Gate 4A is **NOT APPROVED**; Gate 4B is **NOT APPROVED**; Phase 4 validation/proving execution is **NOT AUTHORIZED**. H3 remains controlling.
+**Status:** **ITEMS 1.1–1.16 COMPLETE — PROJECT OWNER-APPROVED DECISIONS DOCUMENTED.** Workstream 1 planning/documentation remains in progress; Item 1.17 is not complete. This record establishes no validation, proving, remediation, fresh-Consumer, or production-use authority. TD-14 remains **CLOSED / NOT REOPENED**. Gate 4A is **NOT APPROVED**; Gate 4B is **NOT APPROVED**; Phase 4 validation/proving execution is **NOT AUTHORIZED**. H3 remains controlling.
 
 ## Purpose, authority, and governing basis
 
-This pre-results governance record documents the Project Owner-approved decisions for Workstream 1 Items 1.1–1.14. It is subordinate to the approved Phase 0–3 baseline and the [Phase 4 master plan and checklist](../../checklists/checklist-phase-4-validation-integration.md). It creates neither a result nor an authority to execute a planned validation or proving activity.
+This pre-results governance record documents the Project Owner-approved decisions for Workstream 1 Items 1.1–1.16. It is subordinate to the approved Phase 0–3 baseline and the [Phase 4 master plan and checklist](../../checklists/checklist-phase-4-validation-integration.md). It creates neither a result nor an authority to execute a planned validation or proving activity.
 
 The governed semantic/design baseline comprises the applicable approved Phase 0–2 records, including:
 
@@ -438,6 +438,133 @@ The intended future sequence is:
 
 No part of this sequence is executed by this documentation record. These controls preserve Items 1.1–1.11: original evidence remains immutable; **PASS**, **FAIL**, and **INDETERMINATE** remain distinct; finding severity/type/disposition remain independent; finding discovery does not authorize remediation; H3 and anti-overfitting controls remain controlling; and later remediation cannot retroactively convert an original proving run into a different result.
 
+## 1.15 — TD-14 stop/reopening procedure
+
+**TD-14 remains CLOSED / NOT REOPENED.** This procedure does not reopen TD-14, change the approved deterministic-discovery boundary, authorize a technology evaluation or selection, or authorize implementation. It documents the approved governed route by which future Phase 4 evidence may require the Project Owner to consider reopening TD-14.
+
+### Reopening-candidate threshold
+
+TD-14 becomes a **REOPENING CANDIDATE** only when preserved Phase 4 evidence demonstrates that relevant, authorized, in-scope information necessary to Required Context or an approved success criterion is materially or repeatedly undiscoverable through the approved deterministic discovery mechanisms, **and** that deficiency causes one or more of:
+
+- incorrect context;
+- insufficient context;
+- material information loss; or
+- inability to continue meaningfully.
+
+The threshold is evidence-based. A single surprising result does not automatically establish it. This procedure retains the approved Phase 2 TD-14 materiality rule in [MN-I14-02](../phase-2/validation-proving-architecture-exit-gate.md#mn-i14-02--td-14-reopening-trigger), the approved initial deterministic foundation and semantic-assistance reopening seam in [TD-14/H14](../phase-2/technology-selection-physical-architecture.md#h14h15--additional-technology), and the Phase 3 closure disposition that TD-14 is closed.
+
+### Non-triggers and stage distinction
+
+TD-14 must **not** be treated as meeting the reopening threshold merely because:
+
+- one poorly designed or invalid fixture fails;
+- a Source was not actually within the Applicable Source Universe (ASU);
+- information was unavailable, inaccessible, unauthorized, or unsupported by the controlled Sources;
+- applicability correctly rejected a discovered Candidate Context item;
+- selection correctly excluded an item;
+- sufficiency correctly reported missing or inadequate Required Context;
+- a configuration or Bootstrap error prevented correct discovery;
+- an ordinary implementation defect caused the discovery failure, or the approved deterministic mechanism needs an ordinary already-governed implementation correction;
+- a proving protocol or run is invalid;
+- an LLM, vector, or semantic approach appears easier, more elegant, more powerful, or more convenient; or
+- a useful future capability is desired.
+
+Do not collapse the governed stages:
+
+`discovery != applicability != selection != sufficiency`
+
+Before identifying a reopening candidate, distinguish a genuine deterministic-discovery deficiency from a failure in another governed stage. In particular, a correct downstream rejection, exclusion, or inadequacy report does not establish that discovery failed; nor may a genuine discovery deficiency be relabeled as another stage merely to avoid TD-14 governance.
+
+### TD-14 Reopening Evidence Record
+
+Before the Project Owner is asked to reopen TD-14, create a reviewable **TD-14 Reopening Evidence Record** containing, as applicable:
+
+- stable record/finding identity;
+- exact request/task;
+- exact validation baseline;
+- exact configuration/Bootstrap;
+- exact controlled Sources;
+- ASU and its basis;
+- relevant information that should have been discoverable, why it is relevant, and why it is authorized and in scope;
+- why the information is necessary to Required Context or the applicable approved success criterion;
+- deterministic discovery mechanisms exercised;
+- predetermined expected discovery result and actual discovery result;
+- preserved raw and derived evidence;
+- repeat/reproduction evidence where applicable;
+- downstream material consequence;
+- linked finding or findings, including severity and type;
+- analysis excluding ordinary implementation, configuration, and protocol causes;
+- analysis distinguishing discovery from applicability, selection, and sufficiency;
+- why the deficiency cannot be adequately resolved through existing approved deterministic mechanisms within the approved boundary;
+- reviewer assessment; and
+- Project Owner disposition.
+
+When the approved reopening threshold is asserted, the applicable finding must be **MATERIAL** at minimum. If the evidence warrants **BLOCKER** treatment under the existing severity model, preserve that higher actual severity. Do not lower actual impact merely to fit this procedure.
+
+### Stop behavior and authority boundary
+
+When evidence appears to meet the threshold:
+
+`STOP affected work -> preserve the original evidence -> create/register the applicable MATERIAL-or-higher finding -> identify potential TD-14 reopening -> assemble the TD-14 Reopening Evidence Record -> obtain Project Owner review`
+
+Do **not** silently introduce AI-assisted discovery; embeddings; semantic search; vector indexing or database technology; model-based reranking; or altered deterministic-discovery semantics to avoid the governance decision. Do not treat the threshold as authorization to implement a new technology.
+
+Meeting the threshold authorizes only **governed reconsideration** of TD-14. It does not reopen TD-14 automatically, select a replacement or additional technology, authorize AI-assisted discovery, authorize implementation, or authorize Phase 4 scope expansion. The Project Owner must explicitly decide whether TD-14 is reopened. If it is later reopened, technology evaluation and selection remain separate governed decisions.
+
+## 1.16 — Material Phase 4 scope-change procedure
+
+Evidence may create a reason to **consider** expanding or changing Phase 4 scope. Evidence does **not** itself expand or change Phase 4 scope. A useful, desirable, production-relevant, or technically attractive capability is insufficient by itself to add that capability to Phase 4. There must be a material relationship to the approved Phase 4 validation/integration/proving objective, and the required Project Owner decision must occur before the change enters Phase 4 scope.
+
+The concise controlling rule is: **Evidence can force us to CONSIDER changing Phase 4. Evidence cannot silently CHANGE Phase 4.**
+
+### Scope-Change Candidate Record
+
+Before any material Phase 4 scope change, create a reviewable **Scope-Change Candidate Record** containing, as applicable:
+
+| Record area | Required content |
+| --- | --- |
+| **Proposed change** | What exactly is proposed to enter, leave, or change in Phase 4? |
+| **Triggering evidence** | What evidence caused consideration of the change? Link the applicable validation, proving, or finding evidence. |
+| **Current boundary** | What approved boundary currently excludes or limits the proposed work, and why is it not already authorized? |
+| **Material relationship to Phase 4** | Why is the change materially related to the approved validation/integration/proving objective? Is it actually required for Phase 4, or merely useful for future production or later work? |
+| **Impact** | Assess the impacts listed below. |
+| **Alternatives** | Assess the relevant evidence-supported alternatives listed below. |
+| **Urgency/dependency** | State whether Phase 4 actually requires a decision now or whether the matter can be deferred without invalidating the approved Phase 4 objective. |
+| **Recommendation** | Analysis may recommend a disposition, but recommendation is not authorization. |
+| **Project Owner decision** | Record the explicit governed disposition. |
+
+The impact assessment covers, as applicable: requirements; semantics; conceptual model; architecture; security/governance; Authority/disclosure; technology/dependencies; persistent data model; infrastructure/environment; validation methodology; expected results; existing validation evidence; proving protocol; Consumer freshness/proving validity; baseline; findings; gates; exit criteria; schedule/sequence; production-readiness disposition; and future phase boundaries.
+
+Relevant alternatives include, where viable: continue Phase 4 without the change; defer the change to future work; use an already-approved mechanism; narrow the affected claim; accept a bounded limitation through proper governance; and other evidence-supported alternatives.
+
+### Scope-change dispositions
+
+| Disposition | Governed meaning |
+| --- | --- |
+| **APPROVE INTO PHASE 4** | The Project Owner explicitly approves a bounded amendment to Phase 4 scope. The record identifies the exact authorized boundary. |
+| **DEFER TO FUTURE WORK** | Preserve the candidate and evidence without changing Phase 4 scope or authorizing implementation. |
+| **REJECT** | The evidence does not justify the proposed Phase 4 scope change, or the Project Owner otherwise rejects it. |
+
+A rejected or deferred candidate remains historical evidence where appropriate. Neither a candidate record nor an analysis/recommendation changes scope or authorizes implementation.
+
+### Consequences of an approved scope change
+
+If the Project Owner approves a material change into Phase 4, explicitly assess whether the amendment invalidates or requires revision/reapproval of the validation baseline; expected-result records; validation methodology; previous validation evidence; finding classifications/dispositions; remediation/retest requirements; proving protocol; Consumer freshness assumptions; prior proving evidence; Gate 4A, 4B, or 4C status; Phase 4 exit criteria; or another governed record.
+
+Do not silently preserve a prior **PASS**, gate decision, or proving conclusion when the approved scope change materially invalidates its evidence basis. Any required amendment, revalidation, or reapproval must be explicit and traceable.
+
+### Anti-scope-creep control
+
+A capability being useful, desirable, production-relevant, or a reasonable future enhancement does not establish Phase 4 scope. This applies particularly to already identified future topics: backup scheduling; retention duration; deletion workflow; RPO/RTO; HA; daemon/service deployment; containers; cloud infrastructure; additional integration environments; broader deployment/infrastructure; automated Consumer action; and other production-readiness capabilities.
+
+If Phase 4 evidence shows that any such topic is materially necessary to the approved Phase 4 objective, create a Scope-Change Candidate Record and stop at the applicable governance boundary. Do not silently add it.
+
+### Relationship to TD-14
+
+TD-14 reopening and a Phase 4 scope change are related but distinct governance questions. A TD-14 reopening candidate does not automatically reopen TD-14, change Phase 4 scope, authorize AI-assisted discovery, or select technology. A Phase 4 scope-change candidate does not automatically change Phase 4 scope, reopen TD-14, or authorize implementation.
+
+If evidence implicates both TD-14 and Phase 4 scope, preserve both decision boundaries and obtain the applicable explicit Project Owner decisions. Do not collapse them into one authorization.
+
 ## Retained execution boundary
 
-This record documents planning controls only. It does not execute Phase 4 validation or proving; create or run fixtures; perform a fresh-Consumer contamination preflight; reserve, test, or expose a fresh Consumer; modify application behavior; remediate implementation behavior; reopen TD-14; approve Gate 4A or Gate 4B; or establish production readiness. Material conflict, ambiguity, infeasibility, or need for a new material decision remains subject to H3 escalation and Project Owner review.
+This record documents planning controls only. It does not execute Phase 4 validation or proving; create or run fixtures; perform a fresh-Consumer contamination preflight; reserve, test, or expose a fresh Consumer; modify application behavior; remediate implementation behavior; reopen TD-14; change Phase 4 scope; approve Gate 4A or Gate 4B; or establish production readiness. Material conflict, ambiguity, infeasibility, or need for a new material decision remains subject to H3 escalation and Project Owner review.
