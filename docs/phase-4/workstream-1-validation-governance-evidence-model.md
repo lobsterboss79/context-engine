@@ -1,6 +1,6 @@
 # Phase 4 Workstream 1 — Validation Governance & Evidence Model
 
-**Status:** **ITEMS 1.1–1.16 COMPLETE — PROJECT OWNER-APPROVED DECISIONS DOCUMENTED.** Workstream 1 planning/documentation remains in progress; Item 1.17 is not complete. This record establishes no validation, proving, remediation, fresh-Consumer, or production-use authority. TD-14 remains **CLOSED / NOT REOPENED**. Gate 4A is **NOT APPROVED**; Gate 4B is **NOT APPROVED**; Phase 4 validation/proving execution is **NOT AUTHORIZED**. H3 remains controlling.
+**Status:** **ITEMS 1.1–1.17 COMPLETE — WORKSTREAM 1 COMPLETE / READY FOR GATE 4A REVIEW.** Items 1.1–1.16 document Project Owner-approved decisions; Item 1.17 assembles their [pre-results validation-governance package](validation-governance-package/README.md). This record establishes no validation, proving, remediation, fresh-Consumer, or production-use authority. TD-14 remains **CLOSED / NOT REOPENED**. Gate 4A is **NOT APPROVED**; Gate 4B is **NOT APPROVED**; Phase 4 validation/proving execution is **NOT AUTHORIZED**. H3 remains controlling.
 
 ## Purpose, authority, and governing basis
 

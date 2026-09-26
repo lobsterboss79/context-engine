@@ -8,7 +8,7 @@ Project knowledge is often distributed across repositories, documents, decision 
 
 ## Status and governance
 
-**Phase 0 — Project Definition & Governance is COMPLETE.** **Phase 1 — Requirements & Context Model is COMPLETE.** **Phase 2 — Architecture & Technology Design is COMPLETE — PASS — PROJECT OWNER APPROVED.** **Phase 3 — v0.1 Implementation is COMPLETE — PROJECT OWNER APPROVED; Workstreams 1–10 and Gates 3A–3D are complete/approved.** Final unresolved findings are BLOCKER **0**, MATERIAL **0**, and MINOR **0**; WS10-OBS-01 is **ACCEPTED — NON-BLOCKING**. **Phase 4 — Validation & Integration master-plan/checklist design is PROJECT OWNER APPROVED; Gate 4A is NOT APPROVED and Phase 4 execution is NOT AUTHORIZED.** Phase 3 closure establishes implementation-level validation only; it does not authorize proving, fresh-Consumer validation, Phase 4 execution, or broader deployment/scope.
+**Phase 0 — Project Definition & Governance is COMPLETE.** **Phase 1 — Requirements & Context Model is COMPLETE.** **Phase 2 — Architecture & Technology Design is COMPLETE — PASS — PROJECT OWNER APPROVED.** **Phase 3 — v0.1 Implementation is COMPLETE — PROJECT OWNER APPROVED; Workstreams 1–10 and Gates 3A–3D are complete/approved.** Final unresolved findings are BLOCKER **0**, MATERIAL **0**, and MINOR **0**; WS10-OBS-01 is **ACCEPTED — NON-BLOCKING**. **Phase 4 — Validation & Integration master-plan/checklist design is PROJECT OWNER APPROVED; Workstream 1 is COMPLETE / READY FOR GATE 4A REVIEW, but Gate 4A is NOT APPROVED and Phase 4 execution is NOT AUTHORIZED.** Phase 3 closure establishes implementation-level validation only; it does not authorize proving, fresh-Consumer validation, Phase 4 execution, or broader deployment/scope.
 
 The Project Owner has final authority for material decisions. ChatGPT analyzes, challenges, recommends, and reviews. Codex implements and documents approved decisions. See [AGENTS.md](AGENTS.md) for operating rules.
 
@@ -33,6 +33,7 @@ The Project Owner has final authority for material decisions. ChatGPT analyzes, 
 - [Phase 3 approved master implementation checklist](checklists/checklist-phase-3-v0.1-implementation.md)
 - [Phase 4 approved master plan & checklist (execution not authorized)](checklists/checklist-phase-4-validation-integration.md)
 - [Phase 4 Workstream 1 validation governance and evidence model](docs/phase-4/workstream-1-validation-governance-evidence-model.md)
+- [Phase 4 validation-governance package (pre-results; ready for Gate 4A review)](docs/phase-4/validation-governance-package/README.md)
 - [Phase 3 Workstream 1 implementation record](docs/phase-3/workstream-1-repository-package-executable-skeleton.md)
 - [Phase 3 Workstream 2 implementation record](docs/phase-3/workstream-2-governed-semantic-kernel.md)
 - [Phase 3 Workstream 3 implementation record](docs/phase-3/workstream-3-bootstrap-configuration-persistence.md)
