@@ -1,0 +1,16 @@
+df31ae0c13f2188714576aa3a00f1cd45b6967bd102e822272bb4f6e6175fbe8  docs/phase-4/validation-evidence/VE-F4-D-001/raw/controlled-input-sha256.txt
+525817db672f91ed75042f3d626daf629d8dadf4c8a77a73270983d5b6e7e63c  docs/phase-4/validation-evidence/VE-F4-D-001/raw/f4-d-bootstrap-initial-invalid-command.stderr
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  docs/phase-4/validation-evidence/VE-F4-D-001/raw/f4-d-bootstrap-initial-invalid-command.stdout
+c8db6d1bdf9bfa0dc77ff81696ae5e42dfeb092d544ee406cb65c462049851c5  docs/phase-4/validation-evidence/VE-F4-D-001/raw/f4-d-bootstrap-missing-arguments.stderr
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  docs/phase-4/validation-evidence/VE-F4-D-001/raw/f4-d-bootstrap-missing-arguments.stdout
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  docs/phase-4/validation-evidence/VE-F4-D-001/raw/f4-d-bootstrap.stderr
+4fb3289e434e7147d0ef1df81f571b0ceca5c134471a0f72f91ae5e28c3c42c8  docs/phase-4/validation-evidence/VE-F4-D-001/raw/f4-d-bootstrap.stdout
+91a5369ff5b4c109606a9c6ca86f6839727543980a3c5c86dae4680f21447d69  docs/phase-4/validation-evidence/VE-F4-D-001/raw/f4-d-execution.py
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  docs/phase-4/validation-evidence/VE-F4-D-001/raw/f4-d-execution.stderr
+7c021d0c220efc489f9c9a4e0bef36c97362ea42e127e940e8fb1020d68886b8  docs/phase-4/validation-evidence/VE-F4-D-001/raw/f4-d-execution.stdout
+e3e44b0d732d77311b11d410a2a45065c599a715c8ce5b8b34abaad8b7764a06  docs/phase-4/validation-evidence/VE-F4-D-001/raw/f4-d-state.sqlite
+0ba8fd0ff95542709fb1aa229fe945d62d1799beedef922b1b160602f0353cba  docs/phase-4/validation-evidence/VE-F4-D-001/raw/raw-result.json
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  docs/phase-4/validation-evidence/VE-F4-D-001/raw/rendering-chatgpt.md
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  docs/phase-4/validation-evidence/VE-F4-D-001/raw/rendering-codex.md
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  docs/phase-4/validation-evidence/VE-F4-D-001/raw/rendering-human.md
+358c6ac9584c282df35a7fb183109df3ebe9c950174f9a941b5b525bb31730fa  docs/phase-4/validation-evidence/VE-F4-D-001/derived/logical-package.json

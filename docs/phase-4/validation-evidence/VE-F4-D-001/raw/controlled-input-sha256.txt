@@ -1,0 +1,5 @@
+1de419e408a20311c0560aeb252e69b1e70af745e3c473e7e655b0b20284e040  docs/phase-4/ws2-item-2.1-fixtures/F4-D/bootstrap.toml
+65aee1971e72b7a095b0a21749a256c2f36096173cae34a694e84b6181925893  docs/phase-4/ws2-item-2.1-fixtures/F4-D/project.toml
+8ed3fa3e923d2d385e7ac4c878f6097fa93ed84e7f83351409e04998bc92bcdf  docs/phase-4/ws2-item-2.1-fixtures/F4-D/sources/release-decision.md
+23520e1cd7997668bad33ca3eb595db8600865c288a4e81acdd858481fe17f86  docs/phase-4/ws2-item-2.1-fixtures/fixture-records.md
+6538707ee1b5b765defa7dadaddc6ab431abde02586f69508d607d98f021773d  docs/phase-4/ws2-item-2.1-fixtures/expected-results.md

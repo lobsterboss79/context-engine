@@ -1,0 +1,168 @@
+{
+  "coherence": {
+    "basis": "explicit construction-state comparison",
+    "outcome": "coherent"
+  },
+  "identity": {
+    "kind": "package",
+    "value": "PKG-F4-D-001"
+  },
+  "items": [
+    {
+      "authorities": [],
+      "conflicts": [],
+      "currentness": [
+        {
+          "basis": [],
+          "currentness": "current",
+          "subject": {
+            "kind": "claim",
+            "value": "RI-F4-REQUIRED-DECISION"
+          },
+          "temporal": {
+            "construction_time": null,
+            "effective_time": null,
+            "event_time": null,
+            "observation_time": null,
+            "version_time": null
+          }
+        }
+      ],
+      "governance": [
+        {
+          "provenance": {
+            "artifact": {
+              "kind": "artifact",
+              "value": "ART-F4D-DECISION"
+            },
+            "artifact_version": {
+              "kind": "artifact_version",
+              "value": "ARTV-F4D-DECISION"
+            },
+            "identity": {
+              "kind": "provenance",
+              "value": "PROV-F4D-DECISION"
+            },
+            "limitations": [],
+            "location_reference": "sources/release-decision.md",
+            "missing_material_basis": false,
+            "observation": {
+              "kind": "observation",
+              "value": "OBS-F4D-DECISION"
+            },
+            "origin_projects": [
+              {
+                "kind": "project",
+                "value": "fixture-atlas-f4"
+              }
+            ],
+            "source": {
+              "kind": "source",
+              "value": "SRC-F4D-DECISION"
+            },
+            "transformation": "normalized",
+            "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+            "upstream": [
+              {
+                "kind": "provenance",
+                "value": "PROV-OBS-F4D-DECISION"
+              }
+            ]
+          },
+          "state": "approved",
+          "subject": {
+            "kind": "claim",
+            "value": "RI-F4-REQUIRED-DECISION"
+          }
+        }
+      ],
+      "limitations": [],
+      "represented": {
+        "classifications": [],
+        "identity": {
+          "kind": "represented_information",
+          "value": "RI-F4-REQUIRED-DECISION"
+        },
+        "provenance": {
+          "artifact": {
+            "kind": "artifact",
+            "value": "ART-F4D-DECISION"
+          },
+          "artifact_version": {
+            "kind": "artifact_version",
+            "value": "ARTV-F4D-DECISION"
+          },
+          "identity": {
+            "kind": "provenance",
+            "value": "PROV-F4D-DECISION"
+          },
+          "limitations": [],
+          "location_reference": "sources/release-decision.md",
+          "missing_material_basis": false,
+          "observation": {
+            "kind": "observation",
+            "value": "OBS-F4D-DECISION"
+          },
+          "origin_projects": [
+            {
+              "kind": "project",
+              "value": "fixture-atlas-f4"
+            }
+          ],
+          "source": {
+            "kind": "source",
+            "value": "SRC-F4D-DECISION"
+          },
+          "transformation": "normalized",
+          "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+          "upstream": [
+            {
+              "kind": "provenance",
+              "value": "PROV-OBS-F4D-DECISION"
+            }
+          ]
+        },
+        "subject": {
+          "kind": "claim",
+          "value": "RI-F4-REQUIRED-DECISION"
+        },
+        "uncertainty": []
+      },
+      "request": {
+        "kind": "request",
+        "value": "REQ-F4-RELEASE-CHECKLIST"
+      },
+      "role": "required",
+      "selection_basis": "FX-F4-D frozen governed selection of the available required decision"
+    }
+  ],
+  "limitations": [
+    {
+      "detail": "ASU adequacy=adequate",
+      "evidence_boundary": "FX-F4-D frozen adequate ASU: available required decision is the controlled applicable Source",
+      "state": "unknown"
+    }
+  ],
+  "manifest": {
+    "entries": [
+      {
+        "contributed": true,
+        "limitations": [],
+        "observation": {
+          "kind": "observation",
+          "value": "OBS-F4D-DECISION"
+        },
+        "scope": null,
+        "source": {
+          "kind": "source",
+          "value": "SRC-F4D-DECISION"
+        }
+      }
+    ]
+  },
+  "request": {
+    "kind": "request",
+    "value": "REQ-F4-RELEASE-CHECKLIST"
+  },
+  "sufficiency": "sufficient"
+}
