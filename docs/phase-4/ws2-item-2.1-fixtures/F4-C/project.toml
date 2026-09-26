@@ -1,0 +1,5 @@
+version = 1
+
+[project]
+identity = "fixture-atlas-f4"
+governance_reference = "FX-F4 synthetic fixture family; no production authority"

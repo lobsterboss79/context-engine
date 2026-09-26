@@ -87,7 +87,7 @@ Phase 4 does not silently add LLM discovery, embeddings, semantic search, vector
 
 **Dependencies:** Gate 4A PASS; authorized execution; approved WS1 expected-result/evidence controls.
 
-- [ ] 2.1 [VAL] Establish controlled deterministic fixtures and known inputs with explicit Bootstrap/configuration, Project/Source scope, ASU basis, authorization/disclosure conditions, expected represented information, expected candidates, and expected package/rendering results. Fixture content has no production authority.
+- [x] 2.1 [VAL] Establish controlled deterministic fixtures and known inputs with explicit Bootstrap/configuration, Project/Source scope, ASU basis, authorization/disclosure conditions, expected represented information, expected candidates, and expected package/rendering results. Fixture content has no production authority. See the [WS2 Item 2.1 fixture-preparation record](../docs/phase-4/workstream-2-item-2.1-fixture-preparation.md). **COMPLETE — fixture/expected-result preparation only; no validation execution or result is recorded.**
 - [ ] 2.2 [VAL] Validate normal end-to-end construction from explicit Bootstrap through each pipeline boundary to a logical Context Package and all approved renderings; preserve the construction record and evidence of every material transition.
 - [ ] 2.3 [VAL] Validate multiple Sources and multiple represented-information items without Source observation becoming interpretation, representation becoming selection, or Source count becoming ASU adequacy.
 - [ ] 2.4 [VAL] Validate competing Candidate Context, applicable versus non-applicable context, and Required versus Supporting determinations; preserve the reasons/evidence for inclusion, exclusion, and qualification.

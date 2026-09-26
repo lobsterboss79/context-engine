@@ -1,0 +1,7 @@
+version = 1
+
+[bootstrap]
+project = "fixture-atlas-f5"
+scope = "controlled-validation-fixture"
+governance_basis = "project-owner-approved-ws2-item-2.1-synthetic-fixture"
+project_configuration = "project.toml"
