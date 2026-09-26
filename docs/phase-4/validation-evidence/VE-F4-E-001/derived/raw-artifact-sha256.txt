@@ -1,0 +1,11 @@
+028e01c8ba61e1e8921d02426bfe416a033bcb17fc946f3f3c2443a6a854f4a1  docs/phase-4/validation-evidence/VE-F4-E-001/raw/raw-result.json
+0e017c2514574af93f70367523dc5c33215bff9c21607836fc941c5eadad5c56  docs/phase-4/validation-evidence/VE-F4-E-001/raw/rendering-chatgpt.md
+11be1e6474d41f05cdeae3916a5e9f5bbc0437afe90d0e9948c14d0effadb246  docs/phase-4/validation-evidence/VE-F4-E-001/raw/rendering-human.md
+2ac13e60cef282172a4ba1fea3f649d0782552f558da9ffb640bb2f0636e0c87  docs/phase-4/validation-evidence/VE-F4-E-001/raw/controlled-input-sha256.txt
+2fb3549e30f651a161a4805b2cdc5cfa5091b73510809e9d30a6e6f7024d401f  docs/phase-4/validation-evidence/VE-F4-E-001/raw/f4-e-state.sqlite
+45f67de67805ff79f218594208fd4bc54a8c31cf89de914fd7c684c00c59951b  docs/phase-4/validation-evidence/VE-F4-E-001/raw/rendering-codex.md
+6180f991efabfc46ead34d041c44d183b4ea8bdc43252e0423d448d30effaa3e  docs/phase-4/validation-evidence/VE-F4-E-001/raw/ve-f4-e-execution.stdout
+72332da3f083705e37aac5da5038512423e75e23c1b60e25a9435a19e963fc68  docs/phase-4/validation-evidence/VE-F4-E-001/raw/ve-f4-e-bootstrap.stdout
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  docs/phase-4/validation-evidence/VE-F4-E-001/raw/ve-f4-e-bootstrap.stderr
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  docs/phase-4/validation-evidence/VE-F4-E-001/raw/ve-f4-e-execution.stderr
+e486024814bdfafec34113985de9f989826726d8453d57db3246c3005a3ca301  docs/phase-4/validation-evidence/VE-F4-E-001/raw/f4-e-execution.py

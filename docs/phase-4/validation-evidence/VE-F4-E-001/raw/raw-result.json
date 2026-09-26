@@ -1,0 +1,2433 @@
+{
+  "applicability_and_selection": [
+    {
+      "applicability": {
+        "candidate": {
+          "authorities": [],
+          "conflicts": [],
+          "currentness": [
+            {
+              "basis": [],
+              "currentness": "current",
+              "subject": {
+                "kind": "claim",
+                "value": "RI-F4E-INVENTORY-READINESS"
+              },
+              "temporal": {
+                "construction_time": null,
+                "effective_time": null,
+                "event_time": null,
+                "observation_time": null,
+                "version_time": null
+              }
+            }
+          ],
+          "discovery_basis": "deterministic:literal",
+          "governance": [
+            {
+              "provenance": {
+                "artifact": {
+                  "kind": "artifact",
+                  "value": "ART-F4E-INVENTORY"
+                },
+                "artifact_version": {
+                  "kind": "artifact_version",
+                  "value": "ARTV-F4E-INVENTORY"
+                },
+                "identity": {
+                  "kind": "provenance",
+                  "value": "PROV-F4E-INVENTORY"
+                },
+                "limitations": [],
+                "location_reference": "sources/inventory-register.md",
+                "missing_material_basis": false,
+                "observation": {
+                  "kind": "observation",
+                  "value": "OBS-F4E-INVENTORY"
+                },
+                "origin_projects": [
+                  {
+                    "kind": "project",
+                    "value": "fixture-atlas-f4e"
+                  }
+                ],
+                "source": {
+                  "kind": "source",
+                  "value": "SRC-F4E-INVENTORY-REGISTER"
+                },
+                "transformation": "normalized",
+                "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+                "upstream": [
+                  {
+                    "kind": "provenance",
+                    "value": "PROV-OBS-F4E-INVENTORY"
+                  }
+                ]
+              },
+              "state": "approved",
+              "subject": {
+                "kind": "claim",
+                "value": "RI-F4E-INVENTORY-READINESS"
+              }
+            }
+          ],
+          "limitations": [],
+          "relationships": [],
+          "represented": {
+            "classifications": [],
+            "identity": {
+              "kind": "represented_information",
+              "value": "RI-F4E-INVENTORY-READINESS"
+            },
+            "provenance": {
+              "artifact": {
+                "kind": "artifact",
+                "value": "ART-F4E-INVENTORY"
+              },
+              "artifact_version": {
+                "kind": "artifact_version",
+                "value": "ARTV-F4E-INVENTORY"
+              },
+              "identity": {
+                "kind": "provenance",
+                "value": "PROV-F4E-INVENTORY"
+              },
+              "limitations": [],
+              "location_reference": "sources/inventory-register.md",
+              "missing_material_basis": false,
+              "observation": {
+                "kind": "observation",
+                "value": "OBS-F4E-INVENTORY"
+              },
+              "origin_projects": [
+                {
+                  "kind": "project",
+                  "value": "fixture-atlas-f4e"
+                }
+              ],
+              "source": {
+                "kind": "source",
+                "value": "SRC-F4E-INVENTORY-REGISTER"
+              },
+              "transformation": "normalized",
+              "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+              "upstream": [
+                {
+                  "kind": "provenance",
+                  "value": "PROV-OBS-F4E-INVENTORY"
+                }
+              ]
+            },
+            "subject": {
+              "kind": "claim",
+              "value": "RI-F4E-INVENTORY-READINESS"
+            },
+            "uncertainty": []
+          },
+          "request": {
+            "kind": "request",
+            "value": "REQ-F4E-INVENTORY-READINESS"
+          },
+          "source_scope": "verified inventory count, packing-material availability, and checklist-preparation readiness only"
+        },
+        "outcome": "applicable",
+        "qualifications": [],
+        "reason_codes": [
+          "deterministic-task-relevance-established"
+        ]
+      },
+      "represented_information": "RI-F4E-INVENTORY-READINESS",
+      "selection": {
+        "applicability": {
+          "candidate": {
+            "authorities": [],
+            "conflicts": [],
+            "currentness": [
+              {
+                "basis": [],
+                "currentness": "current",
+                "subject": {
+                  "kind": "claim",
+                  "value": "RI-F4E-INVENTORY-READINESS"
+                },
+                "temporal": {
+                  "construction_time": null,
+                  "effective_time": null,
+                  "event_time": null,
+                  "observation_time": null,
+                  "version_time": null
+                }
+              }
+            ],
+            "discovery_basis": "deterministic:literal",
+            "governance": [
+              {
+                "provenance": {
+                  "artifact": {
+                    "kind": "artifact",
+                    "value": "ART-F4E-INVENTORY"
+                  },
+                  "artifact_version": {
+                    "kind": "artifact_version",
+                    "value": "ARTV-F4E-INVENTORY"
+                  },
+                  "identity": {
+                    "kind": "provenance",
+                    "value": "PROV-F4E-INVENTORY"
+                  },
+                  "limitations": [],
+                  "location_reference": "sources/inventory-register.md",
+                  "missing_material_basis": false,
+                  "observation": {
+                    "kind": "observation",
+                    "value": "OBS-F4E-INVENTORY"
+                  },
+                  "origin_projects": [
+                    {
+                      "kind": "project",
+                      "value": "fixture-atlas-f4e"
+                    }
+                  ],
+                  "source": {
+                    "kind": "source",
+                    "value": "SRC-F4E-INVENTORY-REGISTER"
+                  },
+                  "transformation": "normalized",
+                  "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+                  "upstream": [
+                    {
+                      "kind": "provenance",
+                      "value": "PROV-OBS-F4E-INVENTORY"
+                    }
+                  ]
+                },
+                "state": "approved",
+                "subject": {
+                  "kind": "claim",
+                  "value": "RI-F4E-INVENTORY-READINESS"
+                }
+              }
+            ],
+            "limitations": [],
+            "relationships": [],
+            "represented": {
+              "classifications": [],
+              "identity": {
+                "kind": "represented_information",
+                "value": "RI-F4E-INVENTORY-READINESS"
+              },
+              "provenance": {
+                "artifact": {
+                  "kind": "artifact",
+                  "value": "ART-F4E-INVENTORY"
+                },
+                "artifact_version": {
+                  "kind": "artifact_version",
+                  "value": "ARTV-F4E-INVENTORY"
+                },
+                "identity": {
+                  "kind": "provenance",
+                  "value": "PROV-F4E-INVENTORY"
+                },
+                "limitations": [],
+                "location_reference": "sources/inventory-register.md",
+                "missing_material_basis": false,
+                "observation": {
+                  "kind": "observation",
+                  "value": "OBS-F4E-INVENTORY"
+                },
+                "origin_projects": [
+                  {
+                    "kind": "project",
+                    "value": "fixture-atlas-f4e"
+                  }
+                ],
+                "source": {
+                  "kind": "source",
+                  "value": "SRC-F4E-INVENTORY-REGISTER"
+                },
+                "transformation": "normalized",
+                "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+                "upstream": [
+                  {
+                    "kind": "provenance",
+                    "value": "PROV-OBS-F4E-INVENTORY"
+                  }
+                ]
+              },
+              "subject": {
+                "kind": "claim",
+                "value": "RI-F4E-INVENTORY-READINESS"
+              },
+              "uncertainty": []
+            },
+            "request": {
+              "kind": "request",
+              "value": "REQ-F4E-INVENTORY-READINESS"
+            },
+            "source_scope": "verified inventory count, packing-material availability, and checklist-preparation readiness only"
+          },
+          "outcome": "applicable",
+          "qualifications": [],
+          "reason_codes": [
+            "deterministic-task-relevance-established"
+          ]
+        },
+        "qualifications": [],
+        "reason_codes": [
+          "selected-explicit-material-basis",
+          "counterfactual-omission-material-risk"
+        ],
+        "role": "required",
+        "selected": {
+          "authorities": [],
+          "conflicts": [],
+          "currentness": [
+            {
+              "basis": [],
+              "currentness": "current",
+              "subject": {
+                "kind": "claim",
+                "value": "RI-F4E-INVENTORY-READINESS"
+              },
+              "temporal": {
+                "construction_time": null,
+                "effective_time": null,
+                "event_time": null,
+                "observation_time": null,
+                "version_time": null
+              }
+            }
+          ],
+          "governance": [
+            {
+              "provenance": {
+                "artifact": {
+                  "kind": "artifact",
+                  "value": "ART-F4E-INVENTORY"
+                },
+                "artifact_version": {
+                  "kind": "artifact_version",
+                  "value": "ARTV-F4E-INVENTORY"
+                },
+                "identity": {
+                  "kind": "provenance",
+                  "value": "PROV-F4E-INVENTORY"
+                },
+                "limitations": [],
+                "location_reference": "sources/inventory-register.md",
+                "missing_material_basis": false,
+                "observation": {
+                  "kind": "observation",
+                  "value": "OBS-F4E-INVENTORY"
+                },
+                "origin_projects": [
+                  {
+                    "kind": "project",
+                    "value": "fixture-atlas-f4e"
+                  }
+                ],
+                "source": {
+                  "kind": "source",
+                  "value": "SRC-F4E-INVENTORY-REGISTER"
+                },
+                "transformation": "normalized",
+                "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+                "upstream": [
+                  {
+                    "kind": "provenance",
+                    "value": "PROV-OBS-F4E-INVENTORY"
+                  }
+                ]
+              },
+              "state": "approved",
+              "subject": {
+                "kind": "claim",
+                "value": "RI-F4E-INVENTORY-READINESS"
+              }
+            }
+          ],
+          "limitations": [],
+          "represented": {
+            "classifications": [],
+            "identity": {
+              "kind": "represented_information",
+              "value": "RI-F4E-INVENTORY-READINESS"
+            },
+            "provenance": {
+              "artifact": {
+                "kind": "artifact",
+                "value": "ART-F4E-INVENTORY"
+              },
+              "artifact_version": {
+                "kind": "artifact_version",
+                "value": "ARTV-F4E-INVENTORY"
+              },
+              "identity": {
+                "kind": "provenance",
+                "value": "PROV-F4E-INVENTORY"
+              },
+              "limitations": [],
+              "location_reference": "sources/inventory-register.md",
+              "missing_material_basis": false,
+              "observation": {
+                "kind": "observation",
+                "value": "OBS-F4E-INVENTORY"
+              },
+              "origin_projects": [
+                {
+                  "kind": "project",
+                  "value": "fixture-atlas-f4e"
+                }
+              ],
+              "source": {
+                "kind": "source",
+                "value": "SRC-F4E-INVENTORY-REGISTER"
+              },
+              "transformation": "normalized",
+              "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+              "upstream": [
+                {
+                  "kind": "provenance",
+                  "value": "PROV-OBS-F4E-INVENTORY"
+                }
+              ]
+            },
+            "subject": {
+              "kind": "claim",
+              "value": "RI-F4E-INVENTORY-READINESS"
+            },
+            "uncertainty": []
+          },
+          "request": {
+            "kind": "request",
+            "value": "REQ-F4E-INVENTORY-READINESS"
+          },
+          "role": "required",
+          "selection_basis": "FX-F4-E frozen bounded governed selection: both available readiness items are Required only for REQ-F4E-INVENTORY-READINESS; neither substitutes for the broad final-release decision."
+        }
+      }
+    },
+    {
+      "applicability": {
+        "candidate": {
+          "authorities": [],
+          "conflicts": [],
+          "currentness": [
+            {
+              "basis": [],
+              "currentness": "current",
+              "subject": {
+                "kind": "claim",
+                "value": "RI-F4E-PACKING-READINESS"
+              },
+              "temporal": {
+                "construction_time": null,
+                "effective_time": null,
+                "event_time": null,
+                "observation_time": null,
+                "version_time": null
+              }
+            }
+          ],
+          "discovery_basis": "deterministic:literal",
+          "governance": [
+            {
+              "provenance": {
+                "artifact": {
+                  "kind": "artifact",
+                  "value": "ART-F4E-PACKING"
+                },
+                "artifact_version": {
+                  "kind": "artifact_version",
+                  "value": "ARTV-F4E-PACKING"
+                },
+                "identity": {
+                  "kind": "provenance",
+                  "value": "PROV-F4E-PACKING"
+                },
+                "limitations": [],
+                "location_reference": "sources/packing-checklist.md",
+                "missing_material_basis": false,
+                "observation": {
+                  "kind": "observation",
+                  "value": "OBS-F4E-PACKING"
+                },
+                "origin_projects": [
+                  {
+                    "kind": "project",
+                    "value": "fixture-atlas-f4e"
+                  }
+                ],
+                "source": {
+                  "kind": "source",
+                  "value": "SRC-F4E-PACKING-CHECKLIST"
+                },
+                "transformation": "normalized",
+                "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+                "upstream": [
+                  {
+                    "kind": "provenance",
+                    "value": "PROV-OBS-F4E-PACKING"
+                  }
+                ]
+              },
+              "state": "approved",
+              "subject": {
+                "kind": "claim",
+                "value": "RI-F4E-PACKING-READINESS"
+              }
+            }
+          ],
+          "limitations": [],
+          "relationships": [],
+          "represented": {
+            "classifications": [],
+            "identity": {
+              "kind": "represented_information",
+              "value": "RI-F4E-PACKING-READINESS"
+            },
+            "provenance": {
+              "artifact": {
+                "kind": "artifact",
+                "value": "ART-F4E-PACKING"
+              },
+              "artifact_version": {
+                "kind": "artifact_version",
+                "value": "ARTV-F4E-PACKING"
+              },
+              "identity": {
+                "kind": "provenance",
+                "value": "PROV-F4E-PACKING"
+              },
+              "limitations": [],
+              "location_reference": "sources/packing-checklist.md",
+              "missing_material_basis": false,
+              "observation": {
+                "kind": "observation",
+                "value": "OBS-F4E-PACKING"
+              },
+              "origin_projects": [
+                {
+                  "kind": "project",
+                  "value": "fixture-atlas-f4e"
+                }
+              ],
+              "source": {
+                "kind": "source",
+                "value": "SRC-F4E-PACKING-CHECKLIST"
+              },
+              "transformation": "normalized",
+              "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+              "upstream": [
+                {
+                  "kind": "provenance",
+                  "value": "PROV-OBS-F4E-PACKING"
+                }
+              ]
+            },
+            "subject": {
+              "kind": "claim",
+              "value": "RI-F4E-PACKING-READINESS"
+            },
+            "uncertainty": []
+          },
+          "request": {
+            "kind": "request",
+            "value": "REQ-F4E-INVENTORY-READINESS"
+          },
+          "source_scope": "verified inventory count, packing-material availability, and checklist-preparation readiness only"
+        },
+        "outcome": "applicable",
+        "qualifications": [],
+        "reason_codes": [
+          "deterministic-task-relevance-established"
+        ]
+      },
+      "represented_information": "RI-F4E-PACKING-READINESS",
+      "selection": {
+        "applicability": {
+          "candidate": {
+            "authorities": [],
+            "conflicts": [],
+            "currentness": [
+              {
+                "basis": [],
+                "currentness": "current",
+                "subject": {
+                  "kind": "claim",
+                  "value": "RI-F4E-PACKING-READINESS"
+                },
+                "temporal": {
+                  "construction_time": null,
+                  "effective_time": null,
+                  "event_time": null,
+                  "observation_time": null,
+                  "version_time": null
+                }
+              }
+            ],
+            "discovery_basis": "deterministic:literal",
+            "governance": [
+              {
+                "provenance": {
+                  "artifact": {
+                    "kind": "artifact",
+                    "value": "ART-F4E-PACKING"
+                  },
+                  "artifact_version": {
+                    "kind": "artifact_version",
+                    "value": "ARTV-F4E-PACKING"
+                  },
+                  "identity": {
+                    "kind": "provenance",
+                    "value": "PROV-F4E-PACKING"
+                  },
+                  "limitations": [],
+                  "location_reference": "sources/packing-checklist.md",
+                  "missing_material_basis": false,
+                  "observation": {
+                    "kind": "observation",
+                    "value": "OBS-F4E-PACKING"
+                  },
+                  "origin_projects": [
+                    {
+                      "kind": "project",
+                      "value": "fixture-atlas-f4e"
+                    }
+                  ],
+                  "source": {
+                    "kind": "source",
+                    "value": "SRC-F4E-PACKING-CHECKLIST"
+                  },
+                  "transformation": "normalized",
+                  "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+                  "upstream": [
+                    {
+                      "kind": "provenance",
+                      "value": "PROV-OBS-F4E-PACKING"
+                    }
+                  ]
+                },
+                "state": "approved",
+                "subject": {
+                  "kind": "claim",
+                  "value": "RI-F4E-PACKING-READINESS"
+                }
+              }
+            ],
+            "limitations": [],
+            "relationships": [],
+            "represented": {
+              "classifications": [],
+              "identity": {
+                "kind": "represented_information",
+                "value": "RI-F4E-PACKING-READINESS"
+              },
+              "provenance": {
+                "artifact": {
+                  "kind": "artifact",
+                  "value": "ART-F4E-PACKING"
+                },
+                "artifact_version": {
+                  "kind": "artifact_version",
+                  "value": "ARTV-F4E-PACKING"
+                },
+                "identity": {
+                  "kind": "provenance",
+                  "value": "PROV-F4E-PACKING"
+                },
+                "limitations": [],
+                "location_reference": "sources/packing-checklist.md",
+                "missing_material_basis": false,
+                "observation": {
+                  "kind": "observation",
+                  "value": "OBS-F4E-PACKING"
+                },
+                "origin_projects": [
+                  {
+                    "kind": "project",
+                    "value": "fixture-atlas-f4e"
+                  }
+                ],
+                "source": {
+                  "kind": "source",
+                  "value": "SRC-F4E-PACKING-CHECKLIST"
+                },
+                "transformation": "normalized",
+                "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+                "upstream": [
+                  {
+                    "kind": "provenance",
+                    "value": "PROV-OBS-F4E-PACKING"
+                  }
+                ]
+              },
+              "subject": {
+                "kind": "claim",
+                "value": "RI-F4E-PACKING-READINESS"
+              },
+              "uncertainty": []
+            },
+            "request": {
+              "kind": "request",
+              "value": "REQ-F4E-INVENTORY-READINESS"
+            },
+            "source_scope": "verified inventory count, packing-material availability, and checklist-preparation readiness only"
+          },
+          "outcome": "applicable",
+          "qualifications": [],
+          "reason_codes": [
+            "deterministic-task-relevance-established"
+          ]
+        },
+        "qualifications": [],
+        "reason_codes": [
+          "selected-explicit-material-basis",
+          "counterfactual-omission-material-risk"
+        ],
+        "role": "required",
+        "selected": {
+          "authorities": [],
+          "conflicts": [],
+          "currentness": [
+            {
+              "basis": [],
+              "currentness": "current",
+              "subject": {
+                "kind": "claim",
+                "value": "RI-F4E-PACKING-READINESS"
+              },
+              "temporal": {
+                "construction_time": null,
+                "effective_time": null,
+                "event_time": null,
+                "observation_time": null,
+                "version_time": null
+              }
+            }
+          ],
+          "governance": [
+            {
+              "provenance": {
+                "artifact": {
+                  "kind": "artifact",
+                  "value": "ART-F4E-PACKING"
+                },
+                "artifact_version": {
+                  "kind": "artifact_version",
+                  "value": "ARTV-F4E-PACKING"
+                },
+                "identity": {
+                  "kind": "provenance",
+                  "value": "PROV-F4E-PACKING"
+                },
+                "limitations": [],
+                "location_reference": "sources/packing-checklist.md",
+                "missing_material_basis": false,
+                "observation": {
+                  "kind": "observation",
+                  "value": "OBS-F4E-PACKING"
+                },
+                "origin_projects": [
+                  {
+                    "kind": "project",
+                    "value": "fixture-atlas-f4e"
+                  }
+                ],
+                "source": {
+                  "kind": "source",
+                  "value": "SRC-F4E-PACKING-CHECKLIST"
+                },
+                "transformation": "normalized",
+                "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+                "upstream": [
+                  {
+                    "kind": "provenance",
+                    "value": "PROV-OBS-F4E-PACKING"
+                  }
+                ]
+              },
+              "state": "approved",
+              "subject": {
+                "kind": "claim",
+                "value": "RI-F4E-PACKING-READINESS"
+              }
+            }
+          ],
+          "limitations": [],
+          "represented": {
+            "classifications": [],
+            "identity": {
+              "kind": "represented_information",
+              "value": "RI-F4E-PACKING-READINESS"
+            },
+            "provenance": {
+              "artifact": {
+                "kind": "artifact",
+                "value": "ART-F4E-PACKING"
+              },
+              "artifact_version": {
+                "kind": "artifact_version",
+                "value": "ARTV-F4E-PACKING"
+              },
+              "identity": {
+                "kind": "provenance",
+                "value": "PROV-F4E-PACKING"
+              },
+              "limitations": [],
+              "location_reference": "sources/packing-checklist.md",
+              "missing_material_basis": false,
+              "observation": {
+                "kind": "observation",
+                "value": "OBS-F4E-PACKING"
+              },
+              "origin_projects": [
+                {
+                  "kind": "project",
+                  "value": "fixture-atlas-f4e"
+                }
+              ],
+              "source": {
+                "kind": "source",
+                "value": "SRC-F4E-PACKING-CHECKLIST"
+              },
+              "transformation": "normalized",
+              "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+              "upstream": [
+                {
+                  "kind": "provenance",
+                  "value": "PROV-OBS-F4E-PACKING"
+                }
+              ]
+            },
+            "subject": {
+              "kind": "claim",
+              "value": "RI-F4E-PACKING-READINESS"
+            },
+            "uncertainty": []
+          },
+          "request": {
+            "kind": "request",
+            "value": "REQ-F4E-INVENTORY-READINESS"
+          },
+          "role": "required",
+          "selection_basis": "FX-F4-E frozen bounded governed selection: both available readiness items are Required only for REQ-F4E-INVENTORY-READINESS; neither substitutes for the broad final-release decision."
+        }
+      }
+    }
+  ],
+  "audit": [
+    [
+      "rendering-rendered",
+      "package=PKG-F4E-INVENTORY-READINESS; reasons=faithful-governed-package-presentation,rendering-is-not-delivery-receipt-or-use"
+    ]
+  ],
+  "bootstrap": {
+    "governance_basis": "project-owner-approved-f4-e-positive-conditional-sufficiency-design",
+    "project_configuration_reference": "/home/lobsterboss79/Projects/context-engine/docs/phase-4/ws2-item-2.1-fixtures/F4-E/project.toml",
+    "project_identity": "fixture-atlas-f4e",
+    "reference": "/home/lobsterboss79/Projects/context-engine/docs/phase-4/ws2-item-2.1-fixtures/F4-E/bootstrap.toml",
+    "scope": "controlled-validation-fixture"
+  },
+  "bounded_asu": {
+    "adequacy": "adequate",
+    "basis": "The explicitly governed bounded-task boundary consists only of the two available readiness Sources. It is adequate only for the stated inventory-readiness subtask and does not decide or reconstruct final release status.",
+    "request_reference": "REQ-F4E-INVENTORY-READINESS",
+    "sources": [
+      {
+        "availability": "available",
+        "identity": "SRC-F4E-INVENTORY-REGISTER",
+        "locator": "/home/lobsterboss79/Projects/context-engine",
+        "project": "fixture-atlas-f4e",
+        "scope": "verified inventory count, packing-material availability, and checklist-preparation readiness only",
+        "source_type": "git"
+      },
+      {
+        "availability": "available",
+        "identity": "SRC-F4E-PACKING-CHECKLIST",
+        "locator": "/home/lobsterboss79/Projects/context-engine",
+        "project": "fixture-atlas-f4e",
+        "scope": "verified inventory count, packing-material availability, and checklist-preparation readiness only",
+        "source_type": "git"
+      }
+    ]
+  },
+  "bounded_construction": {
+    "package": {
+      "coherence": {
+        "basis": "The explicit pre-execution bounded-task boundary, the broad Required deficiency, the unavailable broad decision Source, and the ASU qualification are retained without contradiction.",
+        "outcome": "coherent_with_qualification"
+      },
+      "identity": {
+        "kind": "package",
+        "value": "PKG-F4E-INVENTORY-READINESS"
+      },
+      "items": [
+        {
+          "authorities": [],
+          "conflicts": [],
+          "currentness": [
+            {
+              "basis": [],
+              "currentness": "current",
+              "subject": {
+                "kind": "claim",
+                "value": "RI-F4E-INVENTORY-READINESS"
+              },
+              "temporal": {
+                "construction_time": null,
+                "effective_time": null,
+                "event_time": null,
+                "observation_time": null,
+                "version_time": null
+              }
+            }
+          ],
+          "governance": [
+            {
+              "provenance": {
+                "artifact": {
+                  "kind": "artifact",
+                  "value": "ART-F4E-INVENTORY"
+                },
+                "artifact_version": {
+                  "kind": "artifact_version",
+                  "value": "ARTV-F4E-INVENTORY"
+                },
+                "identity": {
+                  "kind": "provenance",
+                  "value": "PROV-F4E-INVENTORY"
+                },
+                "limitations": [],
+                "location_reference": "sources/inventory-register.md",
+                "missing_material_basis": false,
+                "observation": {
+                  "kind": "observation",
+                  "value": "OBS-F4E-INVENTORY"
+                },
+                "origin_projects": [
+                  {
+                    "kind": "project",
+                    "value": "fixture-atlas-f4e"
+                  }
+                ],
+                "source": {
+                  "kind": "source",
+                  "value": "SRC-F4E-INVENTORY-REGISTER"
+                },
+                "transformation": "normalized",
+                "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+                "upstream": [
+                  {
+                    "kind": "provenance",
+                    "value": "PROV-OBS-F4E-INVENTORY"
+                  }
+                ]
+              },
+              "state": "approved",
+              "subject": {
+                "kind": "claim",
+                "value": "RI-F4E-INVENTORY-READINESS"
+              }
+            }
+          ],
+          "limitations": [],
+          "represented": {
+            "classifications": [],
+            "identity": {
+              "kind": "represented_information",
+              "value": "RI-F4E-INVENTORY-READINESS"
+            },
+            "provenance": {
+              "artifact": {
+                "kind": "artifact",
+                "value": "ART-F4E-INVENTORY"
+              },
+              "artifact_version": {
+                "kind": "artifact_version",
+                "value": "ARTV-F4E-INVENTORY"
+              },
+              "identity": {
+                "kind": "provenance",
+                "value": "PROV-F4E-INVENTORY"
+              },
+              "limitations": [],
+              "location_reference": "sources/inventory-register.md",
+              "missing_material_basis": false,
+              "observation": {
+                "kind": "observation",
+                "value": "OBS-F4E-INVENTORY"
+              },
+              "origin_projects": [
+                {
+                  "kind": "project",
+                  "value": "fixture-atlas-f4e"
+                }
+              ],
+              "source": {
+                "kind": "source",
+                "value": "SRC-F4E-INVENTORY-REGISTER"
+              },
+              "transformation": "normalized",
+              "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+              "upstream": [
+                {
+                  "kind": "provenance",
+                  "value": "PROV-OBS-F4E-INVENTORY"
+                }
+              ]
+            },
+            "subject": {
+              "kind": "claim",
+              "value": "RI-F4E-INVENTORY-READINESS"
+            },
+            "uncertainty": []
+          },
+          "request": {
+            "kind": "request",
+            "value": "REQ-F4E-INVENTORY-READINESS"
+          },
+          "role": "required",
+          "selection_basis": "FX-F4-E frozen bounded governed selection: both available readiness items are Required only for REQ-F4E-INVENTORY-READINESS; neither substitutes for the broad final-release decision."
+        },
+        {
+          "authorities": [],
+          "conflicts": [],
+          "currentness": [
+            {
+              "basis": [],
+              "currentness": "current",
+              "subject": {
+                "kind": "claim",
+                "value": "RI-F4E-PACKING-READINESS"
+              },
+              "temporal": {
+                "construction_time": null,
+                "effective_time": null,
+                "event_time": null,
+                "observation_time": null,
+                "version_time": null
+              }
+            }
+          ],
+          "governance": [
+            {
+              "provenance": {
+                "artifact": {
+                  "kind": "artifact",
+                  "value": "ART-F4E-PACKING"
+                },
+                "artifact_version": {
+                  "kind": "artifact_version",
+                  "value": "ARTV-F4E-PACKING"
+                },
+                "identity": {
+                  "kind": "provenance",
+                  "value": "PROV-F4E-PACKING"
+                },
+                "limitations": [],
+                "location_reference": "sources/packing-checklist.md",
+                "missing_material_basis": false,
+                "observation": {
+                  "kind": "observation",
+                  "value": "OBS-F4E-PACKING"
+                },
+                "origin_projects": [
+                  {
+                    "kind": "project",
+                    "value": "fixture-atlas-f4e"
+                  }
+                ],
+                "source": {
+                  "kind": "source",
+                  "value": "SRC-F4E-PACKING-CHECKLIST"
+                },
+                "transformation": "normalized",
+                "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+                "upstream": [
+                  {
+                    "kind": "provenance",
+                    "value": "PROV-OBS-F4E-PACKING"
+                  }
+                ]
+              },
+              "state": "approved",
+              "subject": {
+                "kind": "claim",
+                "value": "RI-F4E-PACKING-READINESS"
+              }
+            }
+          ],
+          "limitations": [],
+          "represented": {
+            "classifications": [],
+            "identity": {
+              "kind": "represented_information",
+              "value": "RI-F4E-PACKING-READINESS"
+            },
+            "provenance": {
+              "artifact": {
+                "kind": "artifact",
+                "value": "ART-F4E-PACKING"
+              },
+              "artifact_version": {
+                "kind": "artifact_version",
+                "value": "ARTV-F4E-PACKING"
+              },
+              "identity": {
+                "kind": "provenance",
+                "value": "PROV-F4E-PACKING"
+              },
+              "limitations": [],
+              "location_reference": "sources/packing-checklist.md",
+              "missing_material_basis": false,
+              "observation": {
+                "kind": "observation",
+                "value": "OBS-F4E-PACKING"
+              },
+              "origin_projects": [
+                {
+                  "kind": "project",
+                  "value": "fixture-atlas-f4e"
+                }
+              ],
+              "source": {
+                "kind": "source",
+                "value": "SRC-F4E-PACKING-CHECKLIST"
+              },
+              "transformation": "normalized",
+              "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+              "upstream": [
+                {
+                  "kind": "provenance",
+                  "value": "PROV-OBS-F4E-PACKING"
+                }
+              ]
+            },
+            "subject": {
+              "kind": "claim",
+              "value": "RI-F4E-PACKING-READINESS"
+            },
+            "uncertainty": []
+          },
+          "request": {
+            "kind": "request",
+            "value": "REQ-F4E-INVENTORY-READINESS"
+          },
+          "role": "required",
+          "selection_basis": "FX-F4-E frozen bounded governed selection: both available readiness items are Required only for REQ-F4E-INVENTORY-READINESS; neither substitutes for the broad final-release decision."
+        }
+      ],
+      "limitations": [
+        {
+          "detail": "ASU adequacy=adequate",
+          "evidence_boundary": "The explicitly governed bounded-task boundary consists only of the two available readiness Sources. It is adequate only for the stated inventory-readiness subtask and does not decide or reconstruct final release status.",
+          "state": "unknown"
+        },
+        {
+          "detail": "Required broad final-release decision is unavailable; its content was not observed, represented as content, or fabricated.",
+          "evidence_boundary": "SRC-F4E-FINAL-RELEASE-DECISION",
+          "state": "unavailable"
+        }
+      ],
+      "manifest": {
+        "entries": [
+          {
+            "contributed": true,
+            "limitations": [],
+            "observation": {
+              "kind": "observation",
+              "value": "OBS-F4E-INVENTORY"
+            },
+            "scope": null,
+            "source": {
+              "kind": "source",
+              "value": "SRC-F4E-INVENTORY-REGISTER"
+            }
+          },
+          {
+            "contributed": true,
+            "limitations": [],
+            "observation": {
+              "kind": "observation",
+              "value": "OBS-F4E-PACKING"
+            },
+            "scope": null,
+            "source": {
+              "kind": "source",
+              "value": "SRC-F4E-PACKING-CHECKLIST"
+            }
+          }
+        ]
+      },
+      "request": {
+        "kind": "request",
+        "value": "REQ-F4E-INVENTORY-READINESS"
+      },
+      "sufficiency": "conditionally_sufficient"
+    },
+    "record": {
+      "candidates": [
+        {
+          "authorities": [],
+          "conflicts": [],
+          "currentness": [
+            {
+              "basis": [],
+              "currentness": "current",
+              "subject": {
+                "kind": "claim",
+                "value": "RI-F4E-INVENTORY-READINESS"
+              },
+              "temporal": {
+                "construction_time": null,
+                "effective_time": null,
+                "event_time": null,
+                "observation_time": null,
+                "version_time": null
+              }
+            }
+          ],
+          "discovery_basis": "deterministic:literal",
+          "governance": [
+            {
+              "provenance": {
+                "artifact": {
+                  "kind": "artifact",
+                  "value": "ART-F4E-INVENTORY"
+                },
+                "artifact_version": {
+                  "kind": "artifact_version",
+                  "value": "ARTV-F4E-INVENTORY"
+                },
+                "identity": {
+                  "kind": "provenance",
+                  "value": "PROV-F4E-INVENTORY"
+                },
+                "limitations": [],
+                "location_reference": "sources/inventory-register.md",
+                "missing_material_basis": false,
+                "observation": {
+                  "kind": "observation",
+                  "value": "OBS-F4E-INVENTORY"
+                },
+                "origin_projects": [
+                  {
+                    "kind": "project",
+                    "value": "fixture-atlas-f4e"
+                  }
+                ],
+                "source": {
+                  "kind": "source",
+                  "value": "SRC-F4E-INVENTORY-REGISTER"
+                },
+                "transformation": "normalized",
+                "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+                "upstream": [
+                  {
+                    "kind": "provenance",
+                    "value": "PROV-OBS-F4E-INVENTORY"
+                  }
+                ]
+              },
+              "state": "approved",
+              "subject": {
+                "kind": "claim",
+                "value": "RI-F4E-INVENTORY-READINESS"
+              }
+            }
+          ],
+          "limitations": [],
+          "relationships": [],
+          "represented": {
+            "classifications": [],
+            "identity": {
+              "kind": "represented_information",
+              "value": "RI-F4E-INVENTORY-READINESS"
+            },
+            "provenance": {
+              "artifact": {
+                "kind": "artifact",
+                "value": "ART-F4E-INVENTORY"
+              },
+              "artifact_version": {
+                "kind": "artifact_version",
+                "value": "ARTV-F4E-INVENTORY"
+              },
+              "identity": {
+                "kind": "provenance",
+                "value": "PROV-F4E-INVENTORY"
+              },
+              "limitations": [],
+              "location_reference": "sources/inventory-register.md",
+              "missing_material_basis": false,
+              "observation": {
+                "kind": "observation",
+                "value": "OBS-F4E-INVENTORY"
+              },
+              "origin_projects": [
+                {
+                  "kind": "project",
+                  "value": "fixture-atlas-f4e"
+                }
+              ],
+              "source": {
+                "kind": "source",
+                "value": "SRC-F4E-INVENTORY-REGISTER"
+              },
+              "transformation": "normalized",
+              "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+              "upstream": [
+                {
+                  "kind": "provenance",
+                  "value": "PROV-OBS-F4E-INVENTORY"
+                }
+              ]
+            },
+            "subject": {
+              "kind": "claim",
+              "value": "RI-F4E-INVENTORY-READINESS"
+            },
+            "uncertainty": []
+          },
+          "request": {
+            "kind": "request",
+            "value": "REQ-F4E-INVENTORY-READINESS"
+          },
+          "source_scope": "verified inventory count, packing-material availability, and checklist-preparation readiness only"
+        },
+        {
+          "authorities": [],
+          "conflicts": [],
+          "currentness": [
+            {
+              "basis": [],
+              "currentness": "current",
+              "subject": {
+                "kind": "claim",
+                "value": "RI-F4E-PACKING-READINESS"
+              },
+              "temporal": {
+                "construction_time": null,
+                "effective_time": null,
+                "event_time": null,
+                "observation_time": null,
+                "version_time": null
+              }
+            }
+          ],
+          "discovery_basis": "deterministic:literal",
+          "governance": [
+            {
+              "provenance": {
+                "artifact": {
+                  "kind": "artifact",
+                  "value": "ART-F4E-PACKING"
+                },
+                "artifact_version": {
+                  "kind": "artifact_version",
+                  "value": "ARTV-F4E-PACKING"
+                },
+                "identity": {
+                  "kind": "provenance",
+                  "value": "PROV-F4E-PACKING"
+                },
+                "limitations": [],
+                "location_reference": "sources/packing-checklist.md",
+                "missing_material_basis": false,
+                "observation": {
+                  "kind": "observation",
+                  "value": "OBS-F4E-PACKING"
+                },
+                "origin_projects": [
+                  {
+                    "kind": "project",
+                    "value": "fixture-atlas-f4e"
+                  }
+                ],
+                "source": {
+                  "kind": "source",
+                  "value": "SRC-F4E-PACKING-CHECKLIST"
+                },
+                "transformation": "normalized",
+                "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+                "upstream": [
+                  {
+                    "kind": "provenance",
+                    "value": "PROV-OBS-F4E-PACKING"
+                  }
+                ]
+              },
+              "state": "approved",
+              "subject": {
+                "kind": "claim",
+                "value": "RI-F4E-PACKING-READINESS"
+              }
+            }
+          ],
+          "limitations": [],
+          "relationships": [],
+          "represented": {
+            "classifications": [],
+            "identity": {
+              "kind": "represented_information",
+              "value": "RI-F4E-PACKING-READINESS"
+            },
+            "provenance": {
+              "artifact": {
+                "kind": "artifact",
+                "value": "ART-F4E-PACKING"
+              },
+              "artifact_version": {
+                "kind": "artifact_version",
+                "value": "ARTV-F4E-PACKING"
+              },
+              "identity": {
+                "kind": "provenance",
+                "value": "PROV-F4E-PACKING"
+              },
+              "limitations": [],
+              "location_reference": "sources/packing-checklist.md",
+              "missing_material_basis": false,
+              "observation": {
+                "kind": "observation",
+                "value": "OBS-F4E-PACKING"
+              },
+              "origin_projects": [
+                {
+                  "kind": "project",
+                  "value": "fixture-atlas-f4e"
+                }
+              ],
+              "source": {
+                "kind": "source",
+                "value": "SRC-F4E-PACKING-CHECKLIST"
+              },
+              "transformation": "normalized",
+              "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+              "upstream": [
+                {
+                  "kind": "provenance",
+                  "value": "PROV-OBS-F4E-PACKING"
+                }
+              ]
+            },
+            "subject": {
+              "kind": "claim",
+              "value": "RI-F4E-PACKING-READINESS"
+            },
+            "uncertainty": []
+          },
+          "request": {
+            "kind": "request",
+            "value": "REQ-F4E-INVENTORY-READINESS"
+          },
+          "source_scope": "verified inventory count, packing-material availability, and checklist-preparation readiness only"
+        }
+      ],
+      "coherence": {
+        "basis": "The explicit pre-execution bounded-task boundary, the broad Required deficiency, the unavailable broad decision Source, and the ASU qualification are retained without contradiction.",
+        "outcome": "coherent_with_qualification"
+      },
+      "identity": {
+        "kind": "record",
+        "value": "PCR-F4E-INVENTORY-READINESS"
+      },
+      "limitations": [
+        {
+          "detail": "ASU adequacy=adequate",
+          "evidence_boundary": "The explicitly governed bounded-task boundary consists only of the two available readiness Sources. It is adequate only for the stated inventory-readiness subtask and does not decide or reconstruct final release status.",
+          "state": "unknown"
+        },
+        {
+          "detail": "Required broad final-release decision is unavailable; its content was not observed, represented as content, or fabricated.",
+          "evidence_boundary": "SRC-F4E-FINAL-RELEASE-DECISION",
+          "state": "unavailable"
+        }
+      ],
+      "outcome": "conditionally_sufficient",
+      "package": {
+        "kind": "package",
+        "value": "PKG-F4E-INVENTORY-READINESS"
+      },
+      "request": {
+        "kind": "request",
+        "value": "REQ-F4E-INVENTORY-READINESS"
+      },
+      "source_universe": {
+        "adequacy": {
+          "detail": "ASU adequacy=adequate",
+          "evidence_boundary": "The explicitly governed bounded-task boundary consists only of the two available readiness Sources. It is adequate only for the stated inventory-readiness subtask and does not decide or reconstruct final release status.",
+          "state": "unknown"
+        },
+        "sources": [
+          {
+            "kind": "source",
+            "value": "SRC-F4E-INVENTORY-REGISTER"
+          },
+          {
+            "kind": "source",
+            "value": "SRC-F4E-PACKING-CHECKLIST"
+          }
+        ]
+      },
+      "status": "completed",
+      "termination_basis": "FX-F4-E bounded package: supports only REQ-F4E-INVENTORY-READINESS; broad REQ-F4E-BROAD-RELEASE-RECOMMENDATION remains Insufficient because SRC-F4E-FINAL-RELEASE-DECISION is unavailable and Required."
+    }
+  },
+  "bounded_discovery": {
+    "candidates": [
+      {
+        "authorities": [],
+        "conflicts": [],
+        "currentness": [
+          {
+            "basis": [],
+            "currentness": "current",
+            "subject": {
+              "kind": "claim",
+              "value": "RI-F4E-INVENTORY-READINESS"
+            },
+            "temporal": {
+              "construction_time": null,
+              "effective_time": null,
+              "event_time": null,
+              "observation_time": null,
+              "version_time": null
+            }
+          }
+        ],
+        "discovery_basis": "deterministic:literal",
+        "governance": [
+          {
+            "provenance": {
+              "artifact": {
+                "kind": "artifact",
+                "value": "ART-F4E-INVENTORY"
+              },
+              "artifact_version": {
+                "kind": "artifact_version",
+                "value": "ARTV-F4E-INVENTORY"
+              },
+              "identity": {
+                "kind": "provenance",
+                "value": "PROV-F4E-INVENTORY"
+              },
+              "limitations": [],
+              "location_reference": "sources/inventory-register.md",
+              "missing_material_basis": false,
+              "observation": {
+                "kind": "observation",
+                "value": "OBS-F4E-INVENTORY"
+              },
+              "origin_projects": [
+                {
+                  "kind": "project",
+                  "value": "fixture-atlas-f4e"
+                }
+              ],
+              "source": {
+                "kind": "source",
+                "value": "SRC-F4E-INVENTORY-REGISTER"
+              },
+              "transformation": "normalized",
+              "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+              "upstream": [
+                {
+                  "kind": "provenance",
+                  "value": "PROV-OBS-F4E-INVENTORY"
+                }
+              ]
+            },
+            "state": "approved",
+            "subject": {
+              "kind": "claim",
+              "value": "RI-F4E-INVENTORY-READINESS"
+            }
+          }
+        ],
+        "limitations": [],
+        "relationships": [],
+        "represented": {
+          "classifications": [],
+          "identity": {
+            "kind": "represented_information",
+            "value": "RI-F4E-INVENTORY-READINESS"
+          },
+          "provenance": {
+            "artifact": {
+              "kind": "artifact",
+              "value": "ART-F4E-INVENTORY"
+            },
+            "artifact_version": {
+              "kind": "artifact_version",
+              "value": "ARTV-F4E-INVENTORY"
+            },
+            "identity": {
+              "kind": "provenance",
+              "value": "PROV-F4E-INVENTORY"
+            },
+            "limitations": [],
+            "location_reference": "sources/inventory-register.md",
+            "missing_material_basis": false,
+            "observation": {
+              "kind": "observation",
+              "value": "OBS-F4E-INVENTORY"
+            },
+            "origin_projects": [
+              {
+                "kind": "project",
+                "value": "fixture-atlas-f4e"
+              }
+            ],
+            "source": {
+              "kind": "source",
+              "value": "SRC-F4E-INVENTORY-REGISTER"
+            },
+            "transformation": "normalized",
+            "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+            "upstream": [
+              {
+                "kind": "provenance",
+                "value": "PROV-OBS-F4E-INVENTORY"
+              }
+            ]
+          },
+          "subject": {
+            "kind": "claim",
+            "value": "RI-F4E-INVENTORY-READINESS"
+          },
+          "uncertainty": []
+        },
+        "request": {
+          "kind": "request",
+          "value": "REQ-F4E-INVENTORY-READINESS"
+        },
+        "source_scope": "verified inventory count, packing-material availability, and checklist-preparation readiness only"
+      },
+      {
+        "authorities": [],
+        "conflicts": [],
+        "currentness": [
+          {
+            "basis": [],
+            "currentness": "current",
+            "subject": {
+              "kind": "claim",
+              "value": "RI-F4E-PACKING-READINESS"
+            },
+            "temporal": {
+              "construction_time": null,
+              "effective_time": null,
+              "event_time": null,
+              "observation_time": null,
+              "version_time": null
+            }
+          }
+        ],
+        "discovery_basis": "deterministic:literal",
+        "governance": [
+          {
+            "provenance": {
+              "artifact": {
+                "kind": "artifact",
+                "value": "ART-F4E-PACKING"
+              },
+              "artifact_version": {
+                "kind": "artifact_version",
+                "value": "ARTV-F4E-PACKING"
+              },
+              "identity": {
+                "kind": "provenance",
+                "value": "PROV-F4E-PACKING"
+              },
+              "limitations": [],
+              "location_reference": "sources/packing-checklist.md",
+              "missing_material_basis": false,
+              "observation": {
+                "kind": "observation",
+                "value": "OBS-F4E-PACKING"
+              },
+              "origin_projects": [
+                {
+                  "kind": "project",
+                  "value": "fixture-atlas-f4e"
+                }
+              ],
+              "source": {
+                "kind": "source",
+                "value": "SRC-F4E-PACKING-CHECKLIST"
+              },
+              "transformation": "normalized",
+              "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+              "upstream": [
+                {
+                  "kind": "provenance",
+                  "value": "PROV-OBS-F4E-PACKING"
+                }
+              ]
+            },
+            "state": "approved",
+            "subject": {
+              "kind": "claim",
+              "value": "RI-F4E-PACKING-READINESS"
+            }
+          }
+        ],
+        "limitations": [],
+        "relationships": [],
+        "represented": {
+          "classifications": [],
+          "identity": {
+            "kind": "represented_information",
+            "value": "RI-F4E-PACKING-READINESS"
+          },
+          "provenance": {
+            "artifact": {
+              "kind": "artifact",
+              "value": "ART-F4E-PACKING"
+            },
+            "artifact_version": {
+              "kind": "artifact_version",
+              "value": "ARTV-F4E-PACKING"
+            },
+            "identity": {
+              "kind": "provenance",
+              "value": "PROV-F4E-PACKING"
+            },
+            "limitations": [],
+            "location_reference": "sources/packing-checklist.md",
+            "missing_material_basis": false,
+            "observation": {
+              "kind": "observation",
+              "value": "OBS-F4E-PACKING"
+            },
+            "origin_projects": [
+              {
+                "kind": "project",
+                "value": "fixture-atlas-f4e"
+              }
+            ],
+            "source": {
+              "kind": "source",
+              "value": "SRC-F4E-PACKING-CHECKLIST"
+            },
+            "transformation": "normalized",
+            "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+            "upstream": [
+              {
+                "kind": "provenance",
+                "value": "PROV-OBS-F4E-PACKING"
+              }
+            ]
+          },
+          "subject": {
+            "kind": "claim",
+            "value": "RI-F4E-PACKING-READINESS"
+          },
+          "uncertainty": []
+        },
+        "request": {
+          "kind": "request",
+          "value": "REQ-F4E-INVENTORY-READINESS"
+        },
+        "source_scope": "verified inventory count, packing-material availability, and checklist-preparation readiness only"
+      }
+    ],
+    "excluded_sources": [],
+    "expanded_inspected_sources": [],
+    "expansion_basis": [],
+    "initial_inspected_sources": [
+      "SRC-F4E-INVENTORY-REGISTER",
+      "SRC-F4E-PACKING-CHECKLIST"
+    ],
+    "limitations": [
+      {
+        "detail": "ASU adequacy=adequate",
+        "evidence_boundary": "The explicitly governed bounded-task boundary consists only of the two available readiness Sources. It is adequate only for the stated inventory-readiness subtask and does not decide or reconstruct final release status.",
+        "state": "unknown"
+      }
+    ],
+    "negative_result_scope": "ASU=REQ-F4E-INVENTORY-READINESS; adequacy=adequate; inspected=SRC-F4E-INVENTORY-REGISTER,SRC-F4E-PACKING-CHECKLIST",
+    "termination_basis": "bounded deterministic inspection completed; no applicability, selection, or sufficiency evaluation"
+  },
+  "broad_asu": {
+    "adequacy": "known_incomplete",
+    "basis": "The explicitly governed broad-release boundary includes the named unavailable final decision and the two available readiness Sources; availability does not convert the missing decision into absence.",
+    "request_reference": "REQ-F4E-BROAD-RELEASE-RECOMMENDATION",
+    "sources": [
+      {
+        "availability": "unavailable",
+        "identity": "SRC-F4E-FINAL-RELEASE-DECISION",
+        "locator": null,
+        "project": "fixture-atlas-f4e",
+        "scope": "field-kit final release recommendation/decision support",
+        "source_type": "git"
+      },
+      {
+        "availability": "available",
+        "identity": "SRC-F4E-INVENTORY-REGISTER",
+        "locator": "/home/lobsterboss79/Projects/context-engine",
+        "project": "fixture-atlas-f4e",
+        "scope": "verified inventory count, packing-material availability, and checklist-preparation readiness only",
+        "source_type": "git"
+      },
+      {
+        "availability": "available",
+        "identity": "SRC-F4E-PACKING-CHECKLIST",
+        "locator": "/home/lobsterboss79/Projects/context-engine",
+        "project": "fixture-atlas-f4e",
+        "scope": "verified inventory count, packing-material availability, and checklist-preparation readiness only",
+        "source_type": "git"
+      }
+    ]
+  },
+  "broad_sufficiency": {
+    "limitations": [
+      {
+        "detail": "ASU adequacy=known_incomplete",
+        "evidence_boundary": "The explicitly governed broad-release boundary includes the named unavailable final decision and the two available readiness Sources; availability does not convert the missing decision into absence.",
+        "state": "unknown"
+      },
+      {
+        "detail": "Source SRC-F4E-FINAL-RELEASE-DECISION: unavailable",
+        "evidence_boundary": "The explicitly governed broad-release boundary includes the named unavailable final decision and the two available readiness Sources; availability does not convert the missing decision into absence.",
+        "state": "unavailable"
+      },
+      {
+        "detail": "Required broad final-release decision is unavailable; its content was not observed, represented as content, or fabricated.",
+        "evidence_boundary": "SRC-F4E-FINAL-RELEASE-DECISION",
+        "state": "unavailable"
+      }
+    ],
+    "outcome": "insufficient",
+    "reason_codes": [
+      "required-context-missing-or-omitted"
+    ],
+    "required_deficiencies": [
+      {
+        "basis": "The known final release decision is Required for REQ-F4E-BROAD-RELEASE-RECOMMENDATION, remains unavailable, and is safely outside only REQ-F4E-INVENTORY-READINESS. It must not be observed, represented as content, fabricated, downgraded, or substituted.",
+        "can_proceed_bounded_without": true,
+        "disclosure_denied": false,
+        "identity": {
+          "kind": "represented_information",
+          "value": "RI-F4E-FINAL-RELEASE-DECISION"
+        },
+        "limitation": {
+          "detail": "Required broad final-release decision is unavailable; its content was not observed, represented as content, or fabricated.",
+          "evidence_boundary": "SRC-F4E-FINAL-RELEASE-DECISION",
+          "state": "unavailable"
+        }
+      }
+    ]
+  },
+  "configuration": {
+    "governance_reference": "FX-F4-E v1 synthetic fixture; no production authority; Project Owner-approved pre-execution design",
+    "project_identity": "fixture-atlas-f4e",
+    "reference": "/home/lobsterboss79/Projects/context-engine/docs/phase-4/ws2-item-2.1-fixtures/F4-E/project.toml"
+  },
+  "controlled_request": {
+    "authorization": {
+      "consumer_capacity": "unrestricted",
+      "consumer_chatgpt_disclosure_authorized": true,
+      "consumer_codex_disclosure_authorized": true,
+      "consumer_human_disclosure_authorized": true,
+      "requester_authorized": true,
+      "requester_identity": "fixture-requester"
+    },
+    "bounded_asu": {
+      "adequacy": "adequate",
+      "basis": "The explicitly governed bounded-task boundary consists only of the two available readiness Sources. It is adequate only for the stated inventory-readiness subtask and does not decide or reconstruct final release status.",
+      "identity": "ASU-F4E-INVENTORY-READINESS",
+      "sources": [
+        "SRC-F4E-INVENTORY-REGISTER",
+        "SRC-F4E-PACKING-CHECKLIST"
+      ]
+    },
+    "bounded_subtask": {
+      "expected_sufficiency": "conditionally_sufficient",
+      "explicitly_established_before_execution": true,
+      "identity": "REQ-F4E-INVENTORY-READINESS",
+      "materially_bounded": true,
+      "purpose": "Prepare only the inventory-readiness portion of the synthetic Project Atlas field-kit work. Do not recommend, approve, authorize, or imply authorization of release.",
+      "safe_without_broad_required_decision": true,
+      "scope": "verified inventory count, packing-material availability, and checklist-preparation readiness only"
+    },
+    "broad_asu": {
+      "adequacy": "known_incomplete",
+      "basis": "The explicitly governed broad-release boundary includes the named unavailable final decision and the two available readiness Sources; availability does not convert the missing decision into absence.",
+      "identity": "ASU-F4E-BROAD-RELEASE",
+      "sources": [
+        "SRC-F4E-FINAL-RELEASE-DECISION",
+        "SRC-F4E-INVENTORY-REGISTER",
+        "SRC-F4E-PACKING-CHECKLIST"
+      ]
+    },
+    "broad_task": {
+      "expected_sufficiency": "insufficient",
+      "identity": "REQ-F4E-BROAD-RELEASE-RECOMMENDATION",
+      "purpose": "Prepare a final field-kit release recommendation for synthetic Project Atlas.",
+      "scope": "field-kit final release recommendation/decision support"
+    },
+    "construction": {
+      "bounded_construction_record_identity": "PCR-F4E-INVENTORY-READINESS",
+      "bounded_package_identity": "PKG-F4E-INVENTORY-READINESS",
+      "coherence_basis": "The explicit pre-execution bounded-task boundary, the broad Required deficiency, the unavailable broad decision Source, and the ASU qualification are retained without contradiction.",
+      "expected_coherence": "coherent_with_qualification"
+    },
+    "fixture": {
+      "engine_may_invent_or_modify_task_boundary": false,
+      "identity": "FX-F4-E",
+      "pre_execution_established": true,
+      "project": "fixture-atlas-f4e",
+      "synthetic_only": true,
+      "version": 1
+    },
+    "required_deficiency": {
+      "availability": "unavailable",
+      "basis": "The known final release decision is Required for REQ-F4E-BROAD-RELEASE-RECOMMENDATION, remains unavailable, and is safely outside only REQ-F4E-INVENTORY-READINESS. It must not be observed, represented as content, fabricated, downgraded, or substituted.",
+      "can_proceed_bounded_without": true,
+      "represented_identity": "RI-F4E-FINAL-RELEASE-DECISION",
+      "role_for_broad_task": "required",
+      "source_identity": "SRC-F4E-FINAL-RELEASE-DECISION"
+    },
+    "version": 1
+  },
+  "environment": {
+    "markdown_it": "3.0.0",
+    "platform": "Linux-7.0.0-34-generic-x86_64-with-glibc2.43",
+    "python": "3.14.4 (main, Aug 20 2026, 10:41:58) [GCC 15.2.0]"
+  },
+  "evidence_id": "VE-F4-E-001",
+  "execution_utc": "2026-09-26T22:58:53.972472+00:00",
+  "expected_result": "ER-F4-E v1",
+  "fixture": "FX-F4-E v1",
+  "known_required_deficiency": {
+    "basis": "The known final release decision is Required for REQ-F4E-BROAD-RELEASE-RECOMMENDATION, remains unavailable, and is safely outside only REQ-F4E-INVENTORY-READINESS. It must not be observed, represented as content, fabricated, downgraded, or substituted.",
+    "can_proceed_bounded_without": true,
+    "disclosure_denied": false,
+    "identity": {
+      "kind": "represented_information",
+      "value": "RI-F4E-FINAL-RELEASE-DECISION"
+    },
+    "limitation": {
+      "detail": "Required broad final-release decision is unavailable; its content was not observed, represented as content, or fabricated.",
+      "evidence_boundary": "SRC-F4E-FINAL-RELEASE-DECISION",
+      "state": "unavailable"
+    }
+  },
+  "renderings": {
+    "chatgpt": {
+      "reason_codes": [
+        "faithful-governed-package-presentation",
+        "rendering-is-not-delivery-receipt-or-use"
+      ],
+      "reference": "rendering:chatgpt:PKG-F4E-INVENTORY-READINESS",
+      "status": "rendered"
+    },
+    "codex": {
+      "reason_codes": [
+        "faithful-governed-package-presentation",
+        "rendering-is-not-delivery-receipt-or-use"
+      ],
+      "reference": "rendering:codex:PKG-F4E-INVENTORY-READINESS",
+      "status": "rendered"
+    },
+    "human": {
+      "reason_codes": [
+        "faithful-governed-package-presentation",
+        "rendering-is-not-delivery-receipt-or-use"
+      ],
+      "reference": "rendering:human:PKG-F4E-INVENTORY-READINESS",
+      "status": "rendered"
+    }
+  },
+  "represented_information": [
+    {
+      "classifications": [],
+      "identity": {
+        "kind": "represented_information",
+        "value": "RI-F4E-INVENTORY-READINESS"
+      },
+      "provenance": {
+        "artifact": {
+          "kind": "artifact",
+          "value": "ART-F4E-INVENTORY"
+        },
+        "artifact_version": {
+          "kind": "artifact_version",
+          "value": "ARTV-F4E-INVENTORY"
+        },
+        "identity": {
+          "kind": "provenance",
+          "value": "PROV-F4E-INVENTORY"
+        },
+        "limitations": [],
+        "location_reference": "sources/inventory-register.md",
+        "missing_material_basis": false,
+        "observation": {
+          "kind": "observation",
+          "value": "OBS-F4E-INVENTORY"
+        },
+        "origin_projects": [
+          {
+            "kind": "project",
+            "value": "fixture-atlas-f4e"
+          }
+        ],
+        "source": {
+          "kind": "source",
+          "value": "SRC-F4E-INVENTORY-REGISTER"
+        },
+        "transformation": "normalized",
+        "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+        "upstream": [
+          {
+            "kind": "provenance",
+            "value": "PROV-OBS-F4E-INVENTORY"
+          }
+        ]
+      },
+      "subject": {
+        "kind": "claim",
+        "value": "RI-F4E-INVENTORY-READINESS"
+      },
+      "uncertainty": []
+    },
+    {
+      "classifications": [],
+      "identity": {
+        "kind": "represented_information",
+        "value": "RI-F4E-PACKING-READINESS"
+      },
+      "provenance": {
+        "artifact": {
+          "kind": "artifact",
+          "value": "ART-F4E-PACKING"
+        },
+        "artifact_version": {
+          "kind": "artifact_version",
+          "value": "ARTV-F4E-PACKING"
+        },
+        "identity": {
+          "kind": "provenance",
+          "value": "PROV-F4E-PACKING"
+        },
+        "limitations": [],
+        "location_reference": "sources/packing-checklist.md",
+        "missing_material_basis": false,
+        "observation": {
+          "kind": "observation",
+          "value": "OBS-F4E-PACKING"
+        },
+        "origin_projects": [
+          {
+            "kind": "project",
+            "value": "fixture-atlas-f4e"
+          }
+        ],
+        "source": {
+          "kind": "source",
+          "value": "SRC-F4E-PACKING-CHECKLIST"
+        },
+        "transformation": "normalized",
+        "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+        "upstream": [
+          {
+            "kind": "provenance",
+            "value": "PROV-OBS-F4E-PACKING"
+          }
+        ]
+      },
+      "subject": {
+        "kind": "claim",
+        "value": "RI-F4E-PACKING-READINESS"
+      },
+      "uncertainty": []
+    }
+  ],
+  "source_observations": [
+    {
+      "git": {
+        "branch": "main",
+        "detached_head": false,
+        "head": "2b7435b294da68a2e99847d26bf447f9eb71f87c",
+        "history": [
+          "2b7435b294da68a2e99847d26bf447f9eb71f87c",
+          "ab0c2b4e887df366b451b843c31e21367cff55d7",
+          "478005b424b47216c372ac289032f1b242c136e1",
+          "b761cf024997f0810062730a975012e1cac6177b",
+          "7b902e153f529354c0e2b2f21b8f757035c32901",
+          "c7d17714a3983335f8564aa9360739d9ec785410",
+          "c9b39a3e950225498e06e687e69fdf15e9f37235",
+          "48df5148cba14415a41f5abd5cbde43247645a7c",
+          "bac6c3cdf7fb78278bd234f56d81c307a01a0090",
+          "1b61cb15cd9761aad843ed22261809b2aa61ced6",
+          "9d530d82926c3c67fa502c87f4f8d7dcfeda92a8",
+          "6a64e1e6f025d8c532ef6eed146779e42e116ecb",
+          "d4fa8e901a423966f5aba5866051b2ec2237613e",
+          "f5a874f1d1b42b19ce790ab2598c270ecd576af4",
+          "98624973feab235aaba81c16eb335a394b679331",
+          "6f0ae43c7d11135c5b33e57bc4aa9940ed925a05",
+          "40f8ddcb919692781fa20da93e6f051c0f77d67a",
+          "cec1bd1755913e6e22d0c4ef35cd11a736869cfd",
+          "483502c708711d82dd74be95920ed0a3e8f4078d",
+          "534dfe418d1353a9206d502c0c0311101aeb7cd6",
+          "97978562f1977ddea7f3892bbcb0a2448e3b569b",
+          "5511d1d978bc205227749c89131e1ecf97f320d3",
+          "1ed474e398f57d0a0d4f17aeac6f5b1537454576",
+          "995b48bd6877dd58b56d3009eda14966ab42882b",
+          "6fdec5d1ef8e993090b328f7934b9ff3348b1d81",
+          "ac22ed1a8ace9fbfc1b2dd1c054d657d1e4e6fe2",
+          "35cb4defebfdd12f75eb822f424e5b61d407ec74",
+          "09e5c85b4b3b611ac376f71c54c0e6deaceecd41",
+          "db26efbbb84db17504891ecbdfda5589213dc94d",
+          "758b3e48b2e29dc49bde989102236606c9133a96",
+          "6f1469461325bba090ccb9d0762e4fbdd85f090d",
+          "4b3e7bc9e9ef6873fbe1a702e54adc5b060cdc33"
+        ],
+        "limitations": [
+          {
+            "code": "local-observation-only",
+            "detail": "No remote, shared, governing, or current state was established."
+          },
+          {
+            "code": "scope-native-expression-unavailable",
+            "detail": "The registered Source Scope is retained as governed provenance; no unapproved native scope grammar was interpreted."
+          },
+          {
+            "code": "remote-names-source-reported",
+            "detail": "Configured remote names are local configuration evidence, not remote reachability or synchronization evidence."
+          }
+        ],
+        "locator": "/home/lobsterboss79/Projects/context-engine",
+        "observation_time": "2026-09-26T22:58:53.864092+00:00",
+        "outcome": "observed",
+        "remote_names": [
+          "origin"
+        ],
+        "repository_root": "/home/lobsterboss79/Projects/context-engine",
+        "source_identity": "SRC-F4E-INVENTORY-REGISTER",
+        "source_scope": "verified inventory count, packing-material availability, and checklist-preparation readiness only",
+        "staged_paths": [],
+        "unborn": false,
+        "unstaged_paths": [],
+        "untracked_paths": [
+          "docs/phase-4/validation-evidence/VE-F4-E-001/raw/f4-e-execution.py",
+          "docs/phase-4/validation-evidence/VE-F4-E-001/raw/f4-e-state.sqlite",
+          "docs/phase-4/validation-evidence/VE-F4-E-001/raw/ve-f4-e-bootstrap.stderr",
+          "docs/phase-4/validation-evidence/VE-F4-E-001/raw/ve-f4-e-bootstrap.stdout",
+          "docs/phase-4/validation-evidence/VE-F4-E-001/raw/ve-f4-e-execution.stderr",
+          "docs/phase-4/validation-evidence/VE-F4-E-001/raw/ve-f4-e-execution.stdout"
+        ],
+        "working_tree_clean": false
+      },
+      "markdown": {
+        "limitations": [],
+        "locator": "sources/inventory-register.md",
+        "original_markdown": "# Synthetic Project Atlas field-kit inventory register\n\nThe controlled inventory count for the inventory-readiness subtask is complete:\n\n- 24 sealed field-kit cases are counted and staged.\n- 24 serialized inventory cards are paired with those cases.\n- 24 tamper-evident seals are available at the packing station.\n\nThis register records inventory-readiness facts only. It does not state a final\nrelease decision and does not recommend, approve, or authorize release.\n",
+        "outcome": "observed"
+      },
+      "source": "SRC-F4E-INVENTORY-REGISTER",
+      "transformation": {
+        "artifact": {
+          "identity": {
+            "kind": "artifact",
+            "value": "ART-F4E-INVENTORY"
+          },
+          "locators": [
+            "sources/inventory-register.md"
+          ],
+          "source": {
+            "kind": "source",
+            "value": "SRC-F4E-INVENTORY-REGISTER"
+          }
+        },
+        "blocks": [
+          {
+            "content": "Synthetic Project Atlas field-kit inventory register",
+            "kind": "heading",
+            "line_end": 1,
+            "line_start": 1,
+            "links": [],
+            "ordinal": 0,
+            "parent_heading": null
+          },
+          {
+            "content": "The controlled inventory count for the inventory-readiness subtask is complete:",
+            "kind": "paragraph",
+            "line_end": 3,
+            "line_start": 3,
+            "links": [],
+            "ordinal": 1,
+            "parent_heading": 0
+          },
+          {
+            "content": "",
+            "kind": "bullet_list",
+            "line_end": 8,
+            "line_start": 5,
+            "links": [],
+            "ordinal": 2,
+            "parent_heading": 0
+          },
+          {
+            "content": "24 sealed field-kit cases are counted and staged.",
+            "kind": "paragraph",
+            "line_end": 5,
+            "line_start": 5,
+            "links": [],
+            "ordinal": 3,
+            "parent_heading": 0
+          },
+          {
+            "content": "24 serialized inventory cards are paired with those cases.",
+            "kind": "paragraph",
+            "line_end": 6,
+            "line_start": 6,
+            "links": [],
+            "ordinal": 4,
+            "parent_heading": 0
+          },
+          {
+            "content": "24 tamper-evident seals are available at the packing station.",
+            "kind": "paragraph",
+            "line_end": 7,
+            "line_start": 7,
+            "links": [],
+            "ordinal": 5,
+            "parent_heading": 0
+          },
+          {
+            "content": "This register records inventory-readiness facts only. It does not state a final\nrelease decision and does not recommend, approve, or authorize release.",
+            "kind": "paragraph",
+            "line_end": 10,
+            "line_start": 9,
+            "links": [],
+            "ordinal": 6,
+            "parent_heading": 0
+          }
+        ],
+        "limitations": [],
+        "original_markdown": "# Synthetic Project Atlas field-kit inventory register\n\nThe controlled inventory count for the inventory-readiness subtask is complete:\n\n- 24 sealed field-kit cases are counted and staged.\n- 24 serialized inventory cards are paired with those cases.\n- 24 tamper-evident seals are available at the packing station.\n\nThis register records inventory-readiness facts only. It does not state a final\nrelease decision and does not recommend, approve, or authorize release.\n",
+        "parser_configuration": "markdown-it-py-4/commonmark+table",
+        "parser_version": "3.0.0",
+        "version": {
+          "artifact": {
+            "kind": "artifact",
+            "value": "ART-F4E-INVENTORY"
+          },
+          "identity": {
+            "kind": "artifact_version",
+            "value": "ARTV-F4E-INVENTORY"
+          },
+          "native_state_reference": "2b7435b294da68a2e99847d26bf447f9eb71f87c",
+          "provenance": {
+            "artifact": null,
+            "artifact_version": null,
+            "identity": {
+              "kind": "provenance",
+              "value": "PROV-OBS-F4E-INVENTORY"
+            },
+            "limitations": [],
+            "location_reference": "sources/inventory-register.md",
+            "missing_material_basis": false,
+            "observation": {
+              "kind": "observation",
+              "value": "OBS-F4E-INVENTORY"
+            },
+            "origin_projects": [
+              {
+                "kind": "project",
+                "value": "fixture-atlas-f4e"
+              }
+            ],
+            "source": {
+              "kind": "source",
+              "value": "SRC-F4E-INVENTORY-REGISTER"
+            },
+            "transformation": "direct",
+            "transformation_reference": null,
+            "upstream": []
+          }
+        }
+      }
+    },
+    {
+      "git": {
+        "branch": "main",
+        "detached_head": false,
+        "head": "2b7435b294da68a2e99847d26bf447f9eb71f87c",
+        "history": [
+          "2b7435b294da68a2e99847d26bf447f9eb71f87c",
+          "ab0c2b4e887df366b451b843c31e21367cff55d7",
+          "478005b424b47216c372ac289032f1b242c136e1",
+          "b761cf024997f0810062730a975012e1cac6177b",
+          "7b902e153f529354c0e2b2f21b8f757035c32901",
+          "c7d17714a3983335f8564aa9360739d9ec785410",
+          "c9b39a3e950225498e06e687e69fdf15e9f37235",
+          "48df5148cba14415a41f5abd5cbde43247645a7c",
+          "bac6c3cdf7fb78278bd234f56d81c307a01a0090",
+          "1b61cb15cd9761aad843ed22261809b2aa61ced6",
+          "9d530d82926c3c67fa502c87f4f8d7dcfeda92a8",
+          "6a64e1e6f025d8c532ef6eed146779e42e116ecb",
+          "d4fa8e901a423966f5aba5866051b2ec2237613e",
+          "f5a874f1d1b42b19ce790ab2598c270ecd576af4",
+          "98624973feab235aaba81c16eb335a394b679331",
+          "6f0ae43c7d11135c5b33e57bc4aa9940ed925a05",
+          "40f8ddcb919692781fa20da93e6f051c0f77d67a",
+          "cec1bd1755913e6e22d0c4ef35cd11a736869cfd",
+          "483502c708711d82dd74be95920ed0a3e8f4078d",
+          "534dfe418d1353a9206d502c0c0311101aeb7cd6",
+          "97978562f1977ddea7f3892bbcb0a2448e3b569b",
+          "5511d1d978bc205227749c89131e1ecf97f320d3",
+          "1ed474e398f57d0a0d4f17aeac6f5b1537454576",
+          "995b48bd6877dd58b56d3009eda14966ab42882b",
+          "6fdec5d1ef8e993090b328f7934b9ff3348b1d81",
+          "ac22ed1a8ace9fbfc1b2dd1c054d657d1e4e6fe2",
+          "35cb4defebfdd12f75eb822f424e5b61d407ec74",
+          "09e5c85b4b3b611ac376f71c54c0e6deaceecd41",
+          "db26efbbb84db17504891ecbdfda5589213dc94d",
+          "758b3e48b2e29dc49bde989102236606c9133a96",
+          "6f1469461325bba090ccb9d0762e4fbdd85f090d",
+          "4b3e7bc9e9ef6873fbe1a702e54adc5b060cdc33"
+        ],
+        "limitations": [
+          {
+            "code": "local-observation-only",
+            "detail": "No remote, shared, governing, or current state was established."
+          },
+          {
+            "code": "scope-native-expression-unavailable",
+            "detail": "The registered Source Scope is retained as governed provenance; no unapproved native scope grammar was interpreted."
+          },
+          {
+            "code": "remote-names-source-reported",
+            "detail": "Configured remote names are local configuration evidence, not remote reachability or synchronization evidence."
+          }
+        ],
+        "locator": "/home/lobsterboss79/Projects/context-engine",
+        "observation_time": "2026-09-26T22:58:53.913085+00:00",
+        "outcome": "observed",
+        "remote_names": [
+          "origin"
+        ],
+        "repository_root": "/home/lobsterboss79/Projects/context-engine",
+        "source_identity": "SRC-F4E-PACKING-CHECKLIST",
+        "source_scope": "verified inventory count, packing-material availability, and checklist-preparation readiness only",
+        "staged_paths": [],
+        "unborn": false,
+        "unstaged_paths": [],
+        "untracked_paths": [
+          "docs/phase-4/validation-evidence/VE-F4-E-001/raw/f4-e-execution.py",
+          "docs/phase-4/validation-evidence/VE-F4-E-001/raw/f4-e-state.sqlite",
+          "docs/phase-4/validation-evidence/VE-F4-E-001/raw/ve-f4-e-bootstrap.stderr",
+          "docs/phase-4/validation-evidence/VE-F4-E-001/raw/ve-f4-e-bootstrap.stdout",
+          "docs/phase-4/validation-evidence/VE-F4-E-001/raw/ve-f4-e-execution.stderr",
+          "docs/phase-4/validation-evidence/VE-F4-E-001/raw/ve-f4-e-execution.stdout"
+        ],
+        "working_tree_clean": false
+      },
+      "markdown": {
+        "limitations": [],
+        "locator": "sources/packing-checklist.md",
+        "original_markdown": "# Synthetic Project Atlas packing-readiness checklist\n\nFor the inventory-readiness subtask, the packing station has 24 protective\nliners and 24 packing checklists available. The controlled checklist template\nis prepared for the staged field-kit cases.\n\nThis checklist records packing-readiness facts only. It does not state a final\nrelease decision and does not recommend, approve, or authorize release.\n",
+        "outcome": "observed"
+      },
+      "source": "SRC-F4E-PACKING-CHECKLIST",
+      "transformation": {
+        "artifact": {
+          "identity": {
+            "kind": "artifact",
+            "value": "ART-F4E-PACKING"
+          },
+          "locators": [
+            "sources/packing-checklist.md"
+          ],
+          "source": {
+            "kind": "source",
+            "value": "SRC-F4E-PACKING-CHECKLIST"
+          }
+        },
+        "blocks": [
+          {
+            "content": "Synthetic Project Atlas packing-readiness checklist",
+            "kind": "heading",
+            "line_end": 1,
+            "line_start": 1,
+            "links": [],
+            "ordinal": 0,
+            "parent_heading": null
+          },
+          {
+            "content": "For the inventory-readiness subtask, the packing station has 24 protective\nliners and 24 packing checklists available. The controlled checklist template\nis prepared for the staged field-kit cases.",
+            "kind": "paragraph",
+            "line_end": 5,
+            "line_start": 3,
+            "links": [],
+            "ordinal": 1,
+            "parent_heading": 0
+          },
+          {
+            "content": "This checklist records packing-readiness facts only. It does not state a final\nrelease decision and does not recommend, approve, or authorize release.",
+            "kind": "paragraph",
+            "line_end": 8,
+            "line_start": 7,
+            "links": [],
+            "ordinal": 2,
+            "parent_heading": 0
+          }
+        ],
+        "limitations": [],
+        "original_markdown": "# Synthetic Project Atlas packing-readiness checklist\n\nFor the inventory-readiness subtask, the packing station has 24 protective\nliners and 24 packing checklists available. The controlled checklist template\nis prepared for the staged field-kit cases.\n\nThis checklist records packing-readiness facts only. It does not state a final\nrelease decision and does not recommend, approve, or authorize release.\n",
+        "parser_configuration": "markdown-it-py-4/commonmark+table",
+        "parser_version": "3.0.0",
+        "version": {
+          "artifact": {
+            "kind": "artifact",
+            "value": "ART-F4E-PACKING"
+          },
+          "identity": {
+            "kind": "artifact_version",
+            "value": "ARTV-F4E-PACKING"
+          },
+          "native_state_reference": "2b7435b294da68a2e99847d26bf447f9eb71f87c",
+          "provenance": {
+            "artifact": null,
+            "artifact_version": null,
+            "identity": {
+              "kind": "provenance",
+              "value": "PROV-OBS-F4E-PACKING"
+            },
+            "limitations": [],
+            "location_reference": "sources/packing-checklist.md",
+            "missing_material_basis": false,
+            "observation": {
+              "kind": "observation",
+              "value": "OBS-F4E-PACKING"
+            },
+            "origin_projects": [
+              {
+                "kind": "project",
+                "value": "fixture-atlas-f4e"
+              }
+            ],
+            "source": {
+              "kind": "source",
+              "value": "SRC-F4E-PACKING-CHECKLIST"
+            },
+            "transformation": "direct",
+            "transformation_reference": null,
+            "upstream": []
+          }
+        }
+      }
+    },
+    {
+      "availability": "unavailable",
+      "observation": "not attempted: frozen unavailable broad Required Source; no Source content artifact exists",
+      "source": "SRC-F4E-FINAL-RELEASE-DECISION"
+    }
+  ]
+}

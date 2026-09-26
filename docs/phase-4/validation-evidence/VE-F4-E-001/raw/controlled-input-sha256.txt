@@ -1,0 +1,5 @@
+154e086925ba48e9d5d85021040610c92ddf31a1dd7e1e41da5e89fecd19c0ea  docs/phase-4/ws2-item-2.1-fixtures/F4-E/sources/inventory-register.md
+1767a9e69e590201a22fcfb7772c8ba677490899e53cac2e30fa28ab4da72b1d  docs/phase-4/ws2-item-2.1-fixtures/F4-E/sources/packing-checklist.md
+1e7fd9ba403c7b21d63b4870a096bfe96aa80dd49e02ae1e8b73d7e50f298875  docs/phase-4/ws2-item-2.1-fixtures/F4-E/bootstrap.toml
+7168a672bb37d1f0b80beca3a184f0508974e56107965e5d7dc8e03493204e50  docs/phase-4/ws2-item-2.1-fixtures/F4-E/project.toml
+de15d87bd6d0946e1918490957a55608fdc1e38965787347a95a036d344a226d  docs/phase-4/ws2-item-2.1-fixtures/F4-E/controlled-request.toml
