@@ -1,6 +1,6 @@
 # Phase 4 Master Plan & Checklist — Validation & Integration
 
-**Status:** **PLAN/CHECKLIST DESIGN — PROJECT OWNER APPROVED. PHASE 4 EXECUTION — NOT AUTHORIZED.** Gate 4A is **NOT APPROVED**. This governed plan is subordinate to the approved Phase 0–3 baseline, including the clean Phase 3 closure baseline at commit `9862497` (`Close Phase 3 v0.1 implementation`). It creates neither execution authority nor a production-readiness claim.
+**Status:** **PLAN/CHECKLIST DESIGN — PROJECT OWNER APPROVED. GATE 4A — PASS — PROJECT OWNER APPROVED. PHASE 4 EXECUTION — AUTHORIZED under the approved validation-governance package.** This governed plan is subordinate to the approved Phase 0–3 baseline, including the clean Phase 3 closure baseline at commit `9862497` (`Close Phase 3 v0.1 implementation`). Gate 4A authorization does not establish a validation result or a production-readiness claim; see the [Gate 4A decision record](../docs/phase-4/gate-4a-validation-plan-execution-authorization.md).
 
 ## Purpose, authority, and phase boundary
 
@@ -77,7 +77,7 @@ Phase 4 does not silently add LLM discovery, embeddings, semantic search, vector
 
 **Required decision:** Only a Project Owner **PASS**, together with explicit Phase 4 execution authorization, may permit planned execution activities to begin. HOLD or FAIL does not permit execution. This checklist’s creation is not Gate 4A approval.
 
-**Disposition:** **NOT APPROVED. Phase 4 execution is NOT AUTHORIZED.**
+**Disposition:** **PASS — PROJECT OWNER APPROVED.** Phase 4 execution is **AUTHORIZED under the approved validation-governance package**. This records separate Gate 4A PASS and explicit Project Owner execution authorization; it does not complete or execute any WS2 item, authorize fresh-Consumer preflight/proving, approve Gate 4B–4D, reopen TD-14, authorize remediation, change scope, or establish production readiness. See the [Gate 4A decision record](../docs/phase-4/gate-4a-validation-plan-execution-authorization.md).
 
 ## Workstream 2 — Deterministic End-to-End Integration Validation
 

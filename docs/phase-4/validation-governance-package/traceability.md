@@ -1,6 +1,6 @@
 # Traceability and Gate 4A Review Matrix
 
-This matrix maps every approved WS1 decision to the practical package artifact and the Gate 4A review criterion it supports. It preserves the Phase 0–3 governing chain; it does not approve Gate 4A.
+This matrix maps every approved WS1 decision to the practical package artifact and the Gate 4A review criterion it supported. It preserves the Phase 0–3 governing chain. Gate 4A is now **PASS — PROJECT OWNER APPROVED**; Phase 4 execution is **AUTHORIZED under the approved validation-governance package**. This authorization is not validation evidence or a validation result.
 
 | WS1 item | Approved rule / governing record | Operational package artifact | Later execution use | Gate 4A review criterion |
 | --- | --- | --- | --- | --- |
@@ -18,4 +18,4 @@ This matrix maps every approved WS1 decision to the practical package artifact a
 | 1.16 | [WS1 §1.16](../workstream-1-validation-governance-evidence-model.md#116--material-phase-4-scope-change-procedure) | [Scope-change record](material-scope-change-template.md) | Future Project Owner scope decision only | Phase 4 scope; materiality rules |
 | 1.17 | [Phase 4 checklist Item 1.17](../../../checklists/checklist-phase-4-validation-integration.md#workstream-1--validation-governance--evidence-model) | This complete package and matrix | Gate 4A review package | All listed Gate 4A criteria |
 
-The governing Phase 0–2 semantic/design records are enumerated in the [baseline register](baseline-register.md); the Phase 3 implementation origin and closure are linked there as well. Gate 4A remains **NOT APPROVED**; Gate 4B remains **NOT APPROVED**; validation/proving execution remains **NOT AUTHORIZED**.
+The governing Phase 0–2 semantic/design records are enumerated in the [baseline register](baseline-register.md); the Phase 3 implementation origin and closure are linked there as well. The [Gate 4A decision record](../gate-4a-validation-plan-execution-authorization.md) preserves the approved disposition and bounded Phase 4 execution authorization. Gate 4B remains **NOT APPROVED**; fresh-Consumer preflight and proving remain **NOT AUTHORIZED**.
