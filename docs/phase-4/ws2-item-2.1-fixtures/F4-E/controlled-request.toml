@@ -1,0 +1,58 @@
+version = 1
+
+[fixture]
+identity = "FX-F4-E"
+version = 1
+project = "fixture-atlas-f4e"
+synthetic_only = true
+pre_execution_established = true
+engine_may_invent_or_modify_task_boundary = false
+
+[broad_task]
+identity = "REQ-F4E-BROAD-RELEASE-RECOMMENDATION"
+purpose = "Prepare a final field-kit release recommendation for synthetic Project Atlas."
+scope = "field-kit final release recommendation/decision support"
+expected_sufficiency = "insufficient"
+
+[bounded_subtask]
+identity = "REQ-F4E-INVENTORY-READINESS"
+purpose = "Prepare only the inventory-readiness portion of the synthetic Project Atlas field-kit work. Do not recommend, approve, authorize, or imply authorization of release."
+scope = "verified inventory count, packing-material availability, and checklist-preparation readiness only"
+explicitly_established_before_execution = true
+materially_bounded = true
+safe_without_broad_required_decision = true
+expected_sufficiency = "conditionally_sufficient"
+
+[broad_asu]
+identity = "ASU-F4E-BROAD-RELEASE"
+adequacy = "known_incomplete"
+basis = "The explicitly governed broad-release boundary includes the named unavailable final decision and the two available readiness Sources; availability does not convert the missing decision into absence."
+sources = ["SRC-F4E-FINAL-RELEASE-DECISION", "SRC-F4E-INVENTORY-REGISTER", "SRC-F4E-PACKING-CHECKLIST"]
+
+[bounded_asu]
+identity = "ASU-F4E-INVENTORY-READINESS"
+adequacy = "adequate"
+basis = "The explicitly governed bounded-task boundary consists only of the two available readiness Sources. It is adequate only for the stated inventory-readiness subtask and does not decide or reconstruct final release status."
+sources = ["SRC-F4E-INVENTORY-REGISTER", "SRC-F4E-PACKING-CHECKLIST"]
+
+[required_deficiency]
+represented_identity = "RI-F4E-FINAL-RELEASE-DECISION"
+source_identity = "SRC-F4E-FINAL-RELEASE-DECISION"
+role_for_broad_task = "required"
+availability = "unavailable"
+basis = "The known final release decision is Required for REQ-F4E-BROAD-RELEASE-RECOMMENDATION, remains unavailable, and is safely outside only REQ-F4E-INVENTORY-READINESS. It must not be observed, represented as content, fabricated, downgraded, or substituted."
+can_proceed_bounded_without = true
+
+[authorization]
+requester_identity = "fixture-requester"
+requester_authorized = true
+consumer_human_disclosure_authorized = true
+consumer_chatgpt_disclosure_authorized = true
+consumer_codex_disclosure_authorized = true
+consumer_capacity = "unrestricted"
+
+[construction]
+bounded_package_identity = "PKG-F4E-INVENTORY-READINESS"
+bounded_construction_record_identity = "PCR-F4E-INVENTORY-READINESS"
+expected_coherence = "coherent_with_qualification"
+coherence_basis = "The explicit pre-execution bounded-task boundary, the broad Required deficiency, the unavailable broad decision Source, and the ASU qualification are retained without contradiction."

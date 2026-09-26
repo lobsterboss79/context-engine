@@ -1,0 +1,5 @@
+version = 1
+
+[project]
+identity = "fixture-atlas-f4e"
+governance_reference = "FX-F4-E v1 synthetic fixture; no production authority; Project Owner-approved pre-execution design"

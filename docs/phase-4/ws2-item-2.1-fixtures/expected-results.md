@@ -105,6 +105,26 @@ records, not implementation output.
 | Negative/failure criteria | Truncation, Supporting conversion, silent omission, false rendered status, or treating rendering failure as package insufficiency. |
 | Limitations / reviewer / authority / lineage | v0.1 has no approved condensation/reference/multipart alternative; shared reviewer/authority basis; initial frozen version. |
 
+## ER-F4-E v1
+
+| Template field | Frozen value |
+| --- | --- |
+| Expected Result ID | `ER-F4-E` |
+| Version | `v1` |
+| Status | **governed for authorized execution / pre-execution**. This is not PASS, FAIL, or INDETERMINATE; no F4-E execution has occurred. |
+| Governing requirement/design reference | P0 §§4–12; P1 Context Request/Task Intent/Task Scope/ASU/limitations; P2 Domain E selection, Required access limitation, and sufficiency; P2 Domain F logical package/rendering distinctions; P3 WS8 §§7–25; P3 WS9 §§5–11; Phase 4 WS1 expected-result controls; F4-A/F4-B bounded review conclusion B; Project Owner-approved F4-E design. |
+| Validation/checklist relationship | WS2 Item 2.5 positive Conditional Sufficiency coverage; Item 2.5 remains incomplete pending separately authorized execution and evidence review. Items 2.6–2.11 remain incomplete. |
+| Controlled fixture/input/Source identity | `FX-F4-E v1`; `F4-E/bootstrap.toml`; `F4-E/project.toml`; `F4-E/controlled-request.toml`; `SRC-F4E-INVENTORY-REGISTER`; `SRC-F4E-PACKING-CHECKLIST`; named unavailable `SRC-F4E-FINAL-RELEASE-DECISION`. |
+| Bootstrap/configuration/environment basis | Explicit v1 Bootstrap/project TOML and pre-execution controlled-request TOML; synthetic `fixture-atlas-f4e`; design baseline `ab0c2b4e887df366b451b843c31e21367cff55d7`; future controlled local environment must be separately recorded. |
+| Governed expectation | The broad release recommendation is `Insufficient` because its final decision remains Required and unavailable in a known-incomplete broad ASU. The explicitly pre-supplied inventory-readiness subtask has adequate bounded available coverage and is `Conditionally Sufficient`, retaining the broad deficiency/ASU limitation and `coherent_with_qualification`. No result authorizes the broad release decision. |
+| Acceptance criteria | (1) Broad Required decision stays Required/unavailable; (2) unavailable content is not fabricated; (3) broad task is Insufficient; (4) bounded task was supplied before execution; (5) engine does not invent/broaden/narrow it; (6) available Context covers only that explicit bounded task; (7) bounded result is Conditionally Sufficient; (8) bounded Context never substitutes for the broad decision; (9) broad deficiency remains explicit; (10) ASU basis/qualification remains explicit; (11) Provenance remains explicit; (12) coherence is `coherent_with_qualification`; (13) logical package distinguishes what can and cannot proceed; (14) Human/ChatGPT/Codex preserve that distinction; (15) no rendering recommends/approves/authorizes release; (16) no delivery/receipt/use assertion is made. |
+| Negative/failure criteria | Broad task called Sufficient; broad task called Conditionally Sufficient without the explicit bounded scope; task invented after the missing Context is discovered or silently broadened; Required decision treated as optional/downgraded/substituted; unavailable content fabricated; broad deficiency or ASU limitation omitted; Provenance lost; package or renderer permits/recommends/approves/authorizes release or implies a release decision can proceed; Conditional Sufficiency lacks qualification; package/rendering distinction is lost; or delivery/receipt/use is falsely asserted. |
+| Known limitations/qualifications | The availability evidence is adequate only for the named inventory-readiness subtask. It says nothing about the unavailable final release decision. The broad required deficiency is retained as a package-level limitation, not Source content. This record creates no release authority, execution result, evidence, finding, proving activity, Gate 4B approval, TD-14 reopening, or production-readiness claim. |
+| Reviewer basis | Assess against the cited Phase 0–3 semantics and WS1 controls, the frozen F4-E controlled inputs and hashes, and the prior F4-A/F4-B review; do not derive acceptance from implementation output. |
+| Governing/approving authority | Project Owner approval of F4-E pre-execution design as supplied for this preparation task; Phase 4 execution remains authorized, while any F4-E execution/evidence review remains separately governed. |
+| Affected evidence | Future placeholder only: `VE-F4-E-001` if separately authorized. It does not exist and is not created by this record. |
+| Revision reason and lineage | Initial `v1`; additive positive Conditional Sufficiency fixture following F4-A/F4-B coverage conclusion B. No predecessor; existing F1–F5 v1 expectations remain unchanged. |
+
 ## ER-F5-A v1
 
 | Template field | Frozen value |

@@ -1,0 +1,8 @@
+version = 1
+
+[bootstrap]
+project = "fixture-atlas-f4e"
+scope = "controlled-validation-fixture"
+governance_basis = "project-owner-approved-f4-e-positive-conditional-sufficiency-design"
+project_configuration = "project.toml"
+version = 1
