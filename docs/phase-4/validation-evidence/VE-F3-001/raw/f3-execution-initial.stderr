@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/tmp/context-engine-f3-execution.py", line 121, in <module>
+    if __name__ == "__main__": main()
+                               ~~~~^^
+  File "/tmp/context-engine-f3-execution.py", line 67, in main
+    ("RI-F3-DEPOT-UNVERIFIED", "SRC-F3-QUALIFICATION", "qualification.md", "ART-F3-DEPOT-UNVERIFIED", "ARTV-F3-DEPOT-UNVERIFIED", "OBS-F3-DEPOT-UNVERIFIED", "PROV-F3-DEPOT-UNVERIFIED", Currentness.UNKNOWN, GovernanceState.UNVERIFIED, (Uncertainty(EpistemicState.UNVERIFIED, evidence_boundary="UNC-F3-DEPOT", detail="FX-F3 governed depot availability remains unverified"),)),
+                                                                                                                                                                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'GovernanceState' has no attribute 'UNVERIFIED'

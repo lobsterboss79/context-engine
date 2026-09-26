@@ -1,0 +1,3 @@
+usage: context-engine bootstrap-validate [-h] --bootstrap BOOTSTRAP
+                                         --project-configuration PROJECT_CONFIGURATION
+context-engine bootstrap-validate: error: the following arguments are required: --bootstrap, --project-configuration

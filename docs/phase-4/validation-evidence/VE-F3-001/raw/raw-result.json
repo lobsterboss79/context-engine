@@ -1,0 +1,5016 @@
+{
+  "applicability_and_selection": [
+    {
+      "applicability": {
+        "candidate": {
+          "authorities": [],
+          "conflicts": [],
+          "currentness": [
+            {
+              "basis": [],
+              "currentness": "historical",
+              "subject": {
+                "kind": "claim",
+                "value": "RI-F3-CANVAS-HISTORY"
+              },
+              "temporal": {
+                "construction_time": null,
+                "effective_time": null,
+                "event_time": null,
+                "observation_time": null,
+                "version_time": null
+              }
+            }
+          ],
+          "discovery_basis": "deterministic:literal",
+          "governance": [
+            {
+              "provenance": {
+                "artifact": {
+                  "kind": "artifact",
+                  "value": "ART-F3-CANVAS-HISTORY"
+                },
+                "artifact_version": {
+                  "kind": "artifact_version",
+                  "value": "ARTV-F3-CANVAS-HISTORY"
+                },
+                "identity": {
+                  "kind": "provenance",
+                  "value": "PROV-F3-CANVAS-HISTORY"
+                },
+                "limitations": [],
+                "location_reference": "sources/historical-note.md",
+                "missing_material_basis": false,
+                "observation": {
+                  "kind": "observation",
+                  "value": "OBS-F3-CANVAS-HISTORY"
+                },
+                "origin_projects": [
+                  {
+                    "kind": "project",
+                    "value": "fixture-atlas-f3"
+                  }
+                ],
+                "source": {
+                  "kind": "source",
+                  "value": "SRC-F3-HISTORY"
+                },
+                "transformation": "normalized",
+                "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+                "upstream": [
+                  {
+                    "kind": "provenance",
+                    "value": "PROV-OBS-F3-HISTORY"
+                  }
+                ]
+              },
+              "state": "approved",
+              "subject": {
+                "kind": "claim",
+                "value": "RI-F3-CANVAS-HISTORY"
+              }
+            }
+          ],
+          "limitations": [],
+          "relationships": [],
+          "represented": {
+            "classifications": [],
+            "identity": {
+              "kind": "represented_information",
+              "value": "RI-F3-CANVAS-HISTORY"
+            },
+            "provenance": {
+              "artifact": {
+                "kind": "artifact",
+                "value": "ART-F3-CANVAS-HISTORY"
+              },
+              "artifact_version": {
+                "kind": "artifact_version",
+                "value": "ARTV-F3-CANVAS-HISTORY"
+              },
+              "identity": {
+                "kind": "provenance",
+                "value": "PROV-F3-CANVAS-HISTORY"
+              },
+              "limitations": [],
+              "location_reference": "sources/historical-note.md",
+              "missing_material_basis": false,
+              "observation": {
+                "kind": "observation",
+                "value": "OBS-F3-CANVAS-HISTORY"
+              },
+              "origin_projects": [
+                {
+                  "kind": "project",
+                  "value": "fixture-atlas-f3"
+                }
+              ],
+              "source": {
+                "kind": "source",
+                "value": "SRC-F3-HISTORY"
+              },
+              "transformation": "normalized",
+              "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+              "upstream": [
+                {
+                  "kind": "provenance",
+                  "value": "PROV-OBS-F3-HISTORY"
+                }
+              ]
+            },
+            "subject": {
+              "kind": "claim",
+              "value": "RI-F3-CANVAS-HISTORY"
+            },
+            "uncertainty": []
+          },
+          "request": {
+            "kind": "request",
+            "value": "REQ-F3-RELEASE-RECOMMENDATION"
+          },
+          "source_scope": "field-kit-release"
+        },
+        "outcome": "applicable",
+        "qualifications": [],
+        "reason_codes": [
+          "deterministic-task-relevance-established"
+        ]
+      },
+      "represented_information": "RI-F3-CANVAS-HISTORY",
+      "selection": {
+        "applicability": {
+          "candidate": {
+            "authorities": [],
+            "conflicts": [],
+            "currentness": [
+              {
+                "basis": [],
+                "currentness": "historical",
+                "subject": {
+                  "kind": "claim",
+                  "value": "RI-F3-CANVAS-HISTORY"
+                },
+                "temporal": {
+                  "construction_time": null,
+                  "effective_time": null,
+                  "event_time": null,
+                  "observation_time": null,
+                  "version_time": null
+                }
+              }
+            ],
+            "discovery_basis": "deterministic:literal",
+            "governance": [
+              {
+                "provenance": {
+                  "artifact": {
+                    "kind": "artifact",
+                    "value": "ART-F3-CANVAS-HISTORY"
+                  },
+                  "artifact_version": {
+                    "kind": "artifact_version",
+                    "value": "ARTV-F3-CANVAS-HISTORY"
+                  },
+                  "identity": {
+                    "kind": "provenance",
+                    "value": "PROV-F3-CANVAS-HISTORY"
+                  },
+                  "limitations": [],
+                  "location_reference": "sources/historical-note.md",
+                  "missing_material_basis": false,
+                  "observation": {
+                    "kind": "observation",
+                    "value": "OBS-F3-CANVAS-HISTORY"
+                  },
+                  "origin_projects": [
+                    {
+                      "kind": "project",
+                      "value": "fixture-atlas-f3"
+                    }
+                  ],
+                  "source": {
+                    "kind": "source",
+                    "value": "SRC-F3-HISTORY"
+                  },
+                  "transformation": "normalized",
+                  "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+                  "upstream": [
+                    {
+                      "kind": "provenance",
+                      "value": "PROV-OBS-F3-HISTORY"
+                    }
+                  ]
+                },
+                "state": "approved",
+                "subject": {
+                  "kind": "claim",
+                  "value": "RI-F3-CANVAS-HISTORY"
+                }
+              }
+            ],
+            "limitations": [],
+            "relationships": [],
+            "represented": {
+              "classifications": [],
+              "identity": {
+                "kind": "represented_information",
+                "value": "RI-F3-CANVAS-HISTORY"
+              },
+              "provenance": {
+                "artifact": {
+                  "kind": "artifact",
+                  "value": "ART-F3-CANVAS-HISTORY"
+                },
+                "artifact_version": {
+                  "kind": "artifact_version",
+                  "value": "ARTV-F3-CANVAS-HISTORY"
+                },
+                "identity": {
+                  "kind": "provenance",
+                  "value": "PROV-F3-CANVAS-HISTORY"
+                },
+                "limitations": [],
+                "location_reference": "sources/historical-note.md",
+                "missing_material_basis": false,
+                "observation": {
+                  "kind": "observation",
+                  "value": "OBS-F3-CANVAS-HISTORY"
+                },
+                "origin_projects": [
+                  {
+                    "kind": "project",
+                    "value": "fixture-atlas-f3"
+                  }
+                ],
+                "source": {
+                  "kind": "source",
+                  "value": "SRC-F3-HISTORY"
+                },
+                "transformation": "normalized",
+                "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+                "upstream": [
+                  {
+                    "kind": "provenance",
+                    "value": "PROV-OBS-F3-HISTORY"
+                  }
+                ]
+              },
+              "subject": {
+                "kind": "claim",
+                "value": "RI-F3-CANVAS-HISTORY"
+              },
+              "uncertainty": []
+            },
+            "request": {
+              "kind": "request",
+              "value": "REQ-F3-RELEASE-RECOMMENDATION"
+            },
+            "source_scope": "field-kit-release"
+          },
+          "outcome": "applicable",
+          "qualifications": [],
+          "reason_codes": [
+            "deterministic-task-relevance-established"
+          ]
+        },
+        "qualifications": [],
+        "reason_codes": [
+          "selected-explicit-material-basis",
+          "counterfactual-supporting-material-benefit"
+        ],
+        "role": "supporting",
+        "selected": {
+          "authorities": [],
+          "conflicts": [],
+          "currentness": [
+            {
+              "basis": [],
+              "currentness": "historical",
+              "subject": {
+                "kind": "claim",
+                "value": "RI-F3-CANVAS-HISTORY"
+              },
+              "temporal": {
+                "construction_time": null,
+                "effective_time": null,
+                "event_time": null,
+                "observation_time": null,
+                "version_time": null
+              }
+            }
+          ],
+          "governance": [
+            {
+              "provenance": {
+                "artifact": {
+                  "kind": "artifact",
+                  "value": "ART-F3-CANVAS-HISTORY"
+                },
+                "artifact_version": {
+                  "kind": "artifact_version",
+                  "value": "ARTV-F3-CANVAS-HISTORY"
+                },
+                "identity": {
+                  "kind": "provenance",
+                  "value": "PROV-F3-CANVAS-HISTORY"
+                },
+                "limitations": [],
+                "location_reference": "sources/historical-note.md",
+                "missing_material_basis": false,
+                "observation": {
+                  "kind": "observation",
+                  "value": "OBS-F3-CANVAS-HISTORY"
+                },
+                "origin_projects": [
+                  {
+                    "kind": "project",
+                    "value": "fixture-atlas-f3"
+                  }
+                ],
+                "source": {
+                  "kind": "source",
+                  "value": "SRC-F3-HISTORY"
+                },
+                "transformation": "normalized",
+                "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+                "upstream": [
+                  {
+                    "kind": "provenance",
+                    "value": "PROV-OBS-F3-HISTORY"
+                  }
+                ]
+              },
+              "state": "approved",
+              "subject": {
+                "kind": "claim",
+                "value": "RI-F3-CANVAS-HISTORY"
+              }
+            }
+          ],
+          "limitations": [],
+          "represented": {
+            "classifications": [],
+            "identity": {
+              "kind": "represented_information",
+              "value": "RI-F3-CANVAS-HISTORY"
+            },
+            "provenance": {
+              "artifact": {
+                "kind": "artifact",
+                "value": "ART-F3-CANVAS-HISTORY"
+              },
+              "artifact_version": {
+                "kind": "artifact_version",
+                "value": "ARTV-F3-CANVAS-HISTORY"
+              },
+              "identity": {
+                "kind": "provenance",
+                "value": "PROV-F3-CANVAS-HISTORY"
+              },
+              "limitations": [],
+              "location_reference": "sources/historical-note.md",
+              "missing_material_basis": false,
+              "observation": {
+                "kind": "observation",
+                "value": "OBS-F3-CANVAS-HISTORY"
+              },
+              "origin_projects": [
+                {
+                  "kind": "project",
+                  "value": "fixture-atlas-f3"
+                }
+              ],
+              "source": {
+                "kind": "source",
+                "value": "SRC-F3-HISTORY"
+              },
+              "transformation": "normalized",
+              "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+              "upstream": [
+                {
+                  "kind": "provenance",
+                  "value": "PROV-OBS-F3-HISTORY"
+                }
+              ]
+            },
+            "subject": {
+              "kind": "claim",
+              "value": "RI-F3-CANVAS-HISTORY"
+            },
+            "uncertainty": []
+          },
+          "request": {
+            "kind": "request",
+            "value": "REQ-F3-RELEASE-RECOMMENDATION"
+          },
+          "role": "supporting",
+          "selection_basis": "FX-F3 explicit governed selection preserves all applicable qualified context; no precedence or resolution is supplied"
+        }
+      }
+    },
+    {
+      "applicability": {
+        "candidate": {
+          "authorities": [],
+          "conflicts": [],
+          "currentness": [
+            {
+              "basis": [],
+              "currentness": "unknown",
+              "subject": {
+                "kind": "claim",
+                "value": "RI-F3-DEPOT-UNVERIFIED"
+              },
+              "temporal": {
+                "construction_time": null,
+                "effective_time": null,
+                "event_time": null,
+                "observation_time": null,
+                "version_time": null
+              }
+            }
+          ],
+          "discovery_basis": "deterministic:literal",
+          "governance": [
+            {
+              "provenance": {
+                "artifact": {
+                  "kind": "artifact",
+                  "value": "ART-F3-DEPOT-UNVERIFIED"
+                },
+                "artifact_version": {
+                  "kind": "artifact_version",
+                  "value": "ARTV-F3-DEPOT-UNVERIFIED"
+                },
+                "identity": {
+                  "kind": "provenance",
+                  "value": "PROV-F3-DEPOT-UNVERIFIED"
+                },
+                "limitations": [],
+                "location_reference": "sources/qualification.md",
+                "missing_material_basis": false,
+                "observation": {
+                  "kind": "observation",
+                  "value": "OBS-F3-DEPOT-UNVERIFIED"
+                },
+                "origin_projects": [
+                  {
+                    "kind": "project",
+                    "value": "fixture-atlas-f3"
+                  }
+                ],
+                "source": {
+                  "kind": "source",
+                  "value": "SRC-F3-QUALIFICATION"
+                },
+                "transformation": "normalized",
+                "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+                "upstream": [
+                  {
+                    "kind": "provenance",
+                    "value": "PROV-OBS-F3-QUALIFICATION"
+                  }
+                ]
+              },
+              "state": "unknown",
+              "subject": {
+                "kind": "claim",
+                "value": "RI-F3-DEPOT-UNVERIFIED"
+              }
+            }
+          ],
+          "limitations": [
+            {
+              "detail": "FX-F3 governed depot availability remains unverified",
+              "evidence_boundary": "UNC-F3-DEPOT",
+              "state": "unverified"
+            }
+          ],
+          "relationships": [],
+          "represented": {
+            "classifications": [],
+            "identity": {
+              "kind": "represented_information",
+              "value": "RI-F3-DEPOT-UNVERIFIED"
+            },
+            "provenance": {
+              "artifact": {
+                "kind": "artifact",
+                "value": "ART-F3-DEPOT-UNVERIFIED"
+              },
+              "artifact_version": {
+                "kind": "artifact_version",
+                "value": "ARTV-F3-DEPOT-UNVERIFIED"
+              },
+              "identity": {
+                "kind": "provenance",
+                "value": "PROV-F3-DEPOT-UNVERIFIED"
+              },
+              "limitations": [],
+              "location_reference": "sources/qualification.md",
+              "missing_material_basis": false,
+              "observation": {
+                "kind": "observation",
+                "value": "OBS-F3-DEPOT-UNVERIFIED"
+              },
+              "origin_projects": [
+                {
+                  "kind": "project",
+                  "value": "fixture-atlas-f3"
+                }
+              ],
+              "source": {
+                "kind": "source",
+                "value": "SRC-F3-QUALIFICATION"
+              },
+              "transformation": "normalized",
+              "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+              "upstream": [
+                {
+                  "kind": "provenance",
+                  "value": "PROV-OBS-F3-QUALIFICATION"
+                }
+              ]
+            },
+            "subject": {
+              "kind": "claim",
+              "value": "RI-F3-DEPOT-UNVERIFIED"
+            },
+            "uncertainty": [
+              {
+                "detail": "FX-F3 governed depot availability remains unverified",
+                "evidence_boundary": "UNC-F3-DEPOT",
+                "state": "unverified"
+              }
+            ]
+          },
+          "request": {
+            "kind": "request",
+            "value": "REQ-F3-RELEASE-RECOMMENDATION"
+          },
+          "source_scope": "field-kit-release"
+        },
+        "outcome": "applicable",
+        "qualifications": [
+          {
+            "detail": "FX-F3 governed depot availability remains unverified",
+            "evidence_boundary": "UNC-F3-DEPOT",
+            "state": "unverified"
+          }
+        ],
+        "reason_codes": [
+          "deterministic-task-relevance-established",
+          "limitations-preserved"
+        ]
+      },
+      "represented_information": "RI-F3-DEPOT-UNVERIFIED",
+      "selection": {
+        "applicability": {
+          "candidate": {
+            "authorities": [],
+            "conflicts": [],
+            "currentness": [
+              {
+                "basis": [],
+                "currentness": "unknown",
+                "subject": {
+                  "kind": "claim",
+                  "value": "RI-F3-DEPOT-UNVERIFIED"
+                },
+                "temporal": {
+                  "construction_time": null,
+                  "effective_time": null,
+                  "event_time": null,
+                  "observation_time": null,
+                  "version_time": null
+                }
+              }
+            ],
+            "discovery_basis": "deterministic:literal",
+            "governance": [
+              {
+                "provenance": {
+                  "artifact": {
+                    "kind": "artifact",
+                    "value": "ART-F3-DEPOT-UNVERIFIED"
+                  },
+                  "artifact_version": {
+                    "kind": "artifact_version",
+                    "value": "ARTV-F3-DEPOT-UNVERIFIED"
+                  },
+                  "identity": {
+                    "kind": "provenance",
+                    "value": "PROV-F3-DEPOT-UNVERIFIED"
+                  },
+                  "limitations": [],
+                  "location_reference": "sources/qualification.md",
+                  "missing_material_basis": false,
+                  "observation": {
+                    "kind": "observation",
+                    "value": "OBS-F3-DEPOT-UNVERIFIED"
+                  },
+                  "origin_projects": [
+                    {
+                      "kind": "project",
+                      "value": "fixture-atlas-f3"
+                    }
+                  ],
+                  "source": {
+                    "kind": "source",
+                    "value": "SRC-F3-QUALIFICATION"
+                  },
+                  "transformation": "normalized",
+                  "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+                  "upstream": [
+                    {
+                      "kind": "provenance",
+                      "value": "PROV-OBS-F3-QUALIFICATION"
+                    }
+                  ]
+                },
+                "state": "unknown",
+                "subject": {
+                  "kind": "claim",
+                  "value": "RI-F3-DEPOT-UNVERIFIED"
+                }
+              }
+            ],
+            "limitations": [
+              {
+                "detail": "FX-F3 governed depot availability remains unverified",
+                "evidence_boundary": "UNC-F3-DEPOT",
+                "state": "unverified"
+              }
+            ],
+            "relationships": [],
+            "represented": {
+              "classifications": [],
+              "identity": {
+                "kind": "represented_information",
+                "value": "RI-F3-DEPOT-UNVERIFIED"
+              },
+              "provenance": {
+                "artifact": {
+                  "kind": "artifact",
+                  "value": "ART-F3-DEPOT-UNVERIFIED"
+                },
+                "artifact_version": {
+                  "kind": "artifact_version",
+                  "value": "ARTV-F3-DEPOT-UNVERIFIED"
+                },
+                "identity": {
+                  "kind": "provenance",
+                  "value": "PROV-F3-DEPOT-UNVERIFIED"
+                },
+                "limitations": [],
+                "location_reference": "sources/qualification.md",
+                "missing_material_basis": false,
+                "observation": {
+                  "kind": "observation",
+                  "value": "OBS-F3-DEPOT-UNVERIFIED"
+                },
+                "origin_projects": [
+                  {
+                    "kind": "project",
+                    "value": "fixture-atlas-f3"
+                  }
+                ],
+                "source": {
+                  "kind": "source",
+                  "value": "SRC-F3-QUALIFICATION"
+                },
+                "transformation": "normalized",
+                "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+                "upstream": [
+                  {
+                    "kind": "provenance",
+                    "value": "PROV-OBS-F3-QUALIFICATION"
+                  }
+                ]
+              },
+              "subject": {
+                "kind": "claim",
+                "value": "RI-F3-DEPOT-UNVERIFIED"
+              },
+              "uncertainty": [
+                {
+                  "detail": "FX-F3 governed depot availability remains unverified",
+                  "evidence_boundary": "UNC-F3-DEPOT",
+                  "state": "unverified"
+                }
+              ]
+            },
+            "request": {
+              "kind": "request",
+              "value": "REQ-F3-RELEASE-RECOMMENDATION"
+            },
+            "source_scope": "field-kit-release"
+          },
+          "outcome": "applicable",
+          "qualifications": [
+            {
+              "detail": "FX-F3 governed depot availability remains unverified",
+              "evidence_boundary": "UNC-F3-DEPOT",
+              "state": "unverified"
+            }
+          ],
+          "reason_codes": [
+            "deterministic-task-relevance-established",
+            "limitations-preserved"
+          ]
+        },
+        "qualifications": [
+          {
+            "detail": "FX-F3 governed depot availability remains unverified",
+            "evidence_boundary": "UNC-F3-DEPOT",
+            "state": "unverified"
+          }
+        ],
+        "reason_codes": [
+          "selected-explicit-material-basis",
+          "counterfactual-supporting-material-benefit",
+          "limitations-preserved"
+        ],
+        "role": "supporting",
+        "selected": {
+          "authorities": [],
+          "conflicts": [],
+          "currentness": [
+            {
+              "basis": [],
+              "currentness": "unknown",
+              "subject": {
+                "kind": "claim",
+                "value": "RI-F3-DEPOT-UNVERIFIED"
+              },
+              "temporal": {
+                "construction_time": null,
+                "effective_time": null,
+                "event_time": null,
+                "observation_time": null,
+                "version_time": null
+              }
+            }
+          ],
+          "governance": [
+            {
+              "provenance": {
+                "artifact": {
+                  "kind": "artifact",
+                  "value": "ART-F3-DEPOT-UNVERIFIED"
+                },
+                "artifact_version": {
+                  "kind": "artifact_version",
+                  "value": "ARTV-F3-DEPOT-UNVERIFIED"
+                },
+                "identity": {
+                  "kind": "provenance",
+                  "value": "PROV-F3-DEPOT-UNVERIFIED"
+                },
+                "limitations": [],
+                "location_reference": "sources/qualification.md",
+                "missing_material_basis": false,
+                "observation": {
+                  "kind": "observation",
+                  "value": "OBS-F3-DEPOT-UNVERIFIED"
+                },
+                "origin_projects": [
+                  {
+                    "kind": "project",
+                    "value": "fixture-atlas-f3"
+                  }
+                ],
+                "source": {
+                  "kind": "source",
+                  "value": "SRC-F3-QUALIFICATION"
+                },
+                "transformation": "normalized",
+                "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+                "upstream": [
+                  {
+                    "kind": "provenance",
+                    "value": "PROV-OBS-F3-QUALIFICATION"
+                  }
+                ]
+              },
+              "state": "unknown",
+              "subject": {
+                "kind": "claim",
+                "value": "RI-F3-DEPOT-UNVERIFIED"
+              }
+            }
+          ],
+          "limitations": [
+            {
+              "detail": "FX-F3 governed depot availability remains unverified",
+              "evidence_boundary": "UNC-F3-DEPOT",
+              "state": "unverified"
+            }
+          ],
+          "represented": {
+            "classifications": [],
+            "identity": {
+              "kind": "represented_information",
+              "value": "RI-F3-DEPOT-UNVERIFIED"
+            },
+            "provenance": {
+              "artifact": {
+                "kind": "artifact",
+                "value": "ART-F3-DEPOT-UNVERIFIED"
+              },
+              "artifact_version": {
+                "kind": "artifact_version",
+                "value": "ARTV-F3-DEPOT-UNVERIFIED"
+              },
+              "identity": {
+                "kind": "provenance",
+                "value": "PROV-F3-DEPOT-UNVERIFIED"
+              },
+              "limitations": [],
+              "location_reference": "sources/qualification.md",
+              "missing_material_basis": false,
+              "observation": {
+                "kind": "observation",
+                "value": "OBS-F3-DEPOT-UNVERIFIED"
+              },
+              "origin_projects": [
+                {
+                  "kind": "project",
+                  "value": "fixture-atlas-f3"
+                }
+              ],
+              "source": {
+                "kind": "source",
+                "value": "SRC-F3-QUALIFICATION"
+              },
+              "transformation": "normalized",
+              "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+              "upstream": [
+                {
+                  "kind": "provenance",
+                  "value": "PROV-OBS-F3-QUALIFICATION"
+                }
+              ]
+            },
+            "subject": {
+              "kind": "claim",
+              "value": "RI-F3-DEPOT-UNVERIFIED"
+            },
+            "uncertainty": [
+              {
+                "detail": "FX-F3 governed depot availability remains unverified",
+                "evidence_boundary": "UNC-F3-DEPOT",
+                "state": "unverified"
+              }
+            ]
+          },
+          "request": {
+            "kind": "request",
+            "value": "REQ-F3-RELEASE-RECOMMENDATION"
+          },
+          "role": "supporting",
+          "selection_basis": "FX-F3 explicit governed selection preserves all applicable qualified context; no precedence or resolution is supplied"
+        }
+      }
+    },
+    {
+      "applicability": {
+        "candidate": {
+          "authorities": [],
+          "conflicts": [
+            {
+              "identity": {
+                "kind": "conflict",
+                "value": "CON-F3-CASE-CHOICE"
+              },
+              "participants": [
+                {
+                  "kind": "represented_information",
+                  "value": "RI-F3-SEALED"
+                },
+                {
+                  "kind": "represented_information",
+                  "value": "RI-F3-TOTE"
+                }
+              ],
+              "provenance": {
+                "artifact": {
+                  "kind": "artifact",
+                  "value": "ART-F3-SEALED"
+                },
+                "artifact_version": {
+                  "kind": "artifact_version",
+                  "value": "ARTV-F3-SEALED"
+                },
+                "identity": {
+                  "kind": "provenance",
+                  "value": "PROV-F3-SEALED"
+                },
+                "limitations": [],
+                "location_reference": "sources/current-decision.md",
+                "missing_material_basis": false,
+                "observation": {
+                  "kind": "observation",
+                  "value": "OBS-F3-SEALED"
+                },
+                "origin_projects": [
+                  {
+                    "kind": "project",
+                    "value": "fixture-atlas-f3"
+                  }
+                ],
+                "source": {
+                  "kind": "source",
+                  "value": "SRC-F3-CURRENT"
+                },
+                "transformation": "normalized",
+                "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+                "upstream": [
+                  {
+                    "kind": "provenance",
+                    "value": "PROV-OBS-F3-CURRENT"
+                  }
+                ]
+              },
+              "resolved_by": null,
+              "scope": "current field-kit case choice; no governed supersession supplied"
+            }
+          ],
+          "currentness": [
+            {
+              "basis": [],
+              "currentness": "current",
+              "subject": {
+                "kind": "claim",
+                "value": "RI-F3-SEALED"
+              },
+              "temporal": {
+                "construction_time": null,
+                "effective_time": null,
+                "event_time": null,
+                "observation_time": null,
+                "version_time": null
+              }
+            }
+          ],
+          "discovery_basis": "deterministic:literal",
+          "governance": [
+            {
+              "provenance": {
+                "artifact": {
+                  "kind": "artifact",
+                  "value": "ART-F3-SEALED"
+                },
+                "artifact_version": {
+                  "kind": "artifact_version",
+                  "value": "ARTV-F3-SEALED"
+                },
+                "identity": {
+                  "kind": "provenance",
+                  "value": "PROV-F3-SEALED"
+                },
+                "limitations": [],
+                "location_reference": "sources/current-decision.md",
+                "missing_material_basis": false,
+                "observation": {
+                  "kind": "observation",
+                  "value": "OBS-F3-SEALED"
+                },
+                "origin_projects": [
+                  {
+                    "kind": "project",
+                    "value": "fixture-atlas-f3"
+                  }
+                ],
+                "source": {
+                  "kind": "source",
+                  "value": "SRC-F3-CURRENT"
+                },
+                "transformation": "normalized",
+                "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+                "upstream": [
+                  {
+                    "kind": "provenance",
+                    "value": "PROV-OBS-F3-CURRENT"
+                  }
+                ]
+              },
+              "state": "approved",
+              "subject": {
+                "kind": "claim",
+                "value": "RI-F3-SEALED"
+              }
+            }
+          ],
+          "limitations": [],
+          "relationships": [],
+          "represented": {
+            "classifications": [],
+            "identity": {
+              "kind": "represented_information",
+              "value": "RI-F3-SEALED"
+            },
+            "provenance": {
+              "artifact": {
+                "kind": "artifact",
+                "value": "ART-F3-SEALED"
+              },
+              "artifact_version": {
+                "kind": "artifact_version",
+                "value": "ARTV-F3-SEALED"
+              },
+              "identity": {
+                "kind": "provenance",
+                "value": "PROV-F3-SEALED"
+              },
+              "limitations": [],
+              "location_reference": "sources/current-decision.md",
+              "missing_material_basis": false,
+              "observation": {
+                "kind": "observation",
+                "value": "OBS-F3-SEALED"
+              },
+              "origin_projects": [
+                {
+                  "kind": "project",
+                  "value": "fixture-atlas-f3"
+                }
+              ],
+              "source": {
+                "kind": "source",
+                "value": "SRC-F3-CURRENT"
+              },
+              "transformation": "normalized",
+              "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+              "upstream": [
+                {
+                  "kind": "provenance",
+                  "value": "PROV-OBS-F3-CURRENT"
+                }
+              ]
+            },
+            "subject": {
+              "kind": "claim",
+              "value": "RI-F3-SEALED"
+            },
+            "uncertainty": []
+          },
+          "request": {
+            "kind": "request",
+            "value": "REQ-F3-RELEASE-RECOMMENDATION"
+          },
+          "source_scope": "field-kit-release"
+        },
+        "outcome": "applicable",
+        "qualifications": [],
+        "reason_codes": [
+          "deterministic-task-relevance-established",
+          "conflict-preserved"
+        ]
+      },
+      "represented_information": "RI-F3-SEALED",
+      "selection": {
+        "applicability": {
+          "candidate": {
+            "authorities": [],
+            "conflicts": [
+              {
+                "identity": {
+                  "kind": "conflict",
+                  "value": "CON-F3-CASE-CHOICE"
+                },
+                "participants": [
+                  {
+                    "kind": "represented_information",
+                    "value": "RI-F3-SEALED"
+                  },
+                  {
+                    "kind": "represented_information",
+                    "value": "RI-F3-TOTE"
+                  }
+                ],
+                "provenance": {
+                  "artifact": {
+                    "kind": "artifact",
+                    "value": "ART-F3-SEALED"
+                  },
+                  "artifact_version": {
+                    "kind": "artifact_version",
+                    "value": "ARTV-F3-SEALED"
+                  },
+                  "identity": {
+                    "kind": "provenance",
+                    "value": "PROV-F3-SEALED"
+                  },
+                  "limitations": [],
+                  "location_reference": "sources/current-decision.md",
+                  "missing_material_basis": false,
+                  "observation": {
+                    "kind": "observation",
+                    "value": "OBS-F3-SEALED"
+                  },
+                  "origin_projects": [
+                    {
+                      "kind": "project",
+                      "value": "fixture-atlas-f3"
+                    }
+                  ],
+                  "source": {
+                    "kind": "source",
+                    "value": "SRC-F3-CURRENT"
+                  },
+                  "transformation": "normalized",
+                  "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+                  "upstream": [
+                    {
+                      "kind": "provenance",
+                      "value": "PROV-OBS-F3-CURRENT"
+                    }
+                  ]
+                },
+                "resolved_by": null,
+                "scope": "current field-kit case choice; no governed supersession supplied"
+              }
+            ],
+            "currentness": [
+              {
+                "basis": [],
+                "currentness": "current",
+                "subject": {
+                  "kind": "claim",
+                  "value": "RI-F3-SEALED"
+                },
+                "temporal": {
+                  "construction_time": null,
+                  "effective_time": null,
+                  "event_time": null,
+                  "observation_time": null,
+                  "version_time": null
+                }
+              }
+            ],
+            "discovery_basis": "deterministic:literal",
+            "governance": [
+              {
+                "provenance": {
+                  "artifact": {
+                    "kind": "artifact",
+                    "value": "ART-F3-SEALED"
+                  },
+                  "artifact_version": {
+                    "kind": "artifact_version",
+                    "value": "ARTV-F3-SEALED"
+                  },
+                  "identity": {
+                    "kind": "provenance",
+                    "value": "PROV-F3-SEALED"
+                  },
+                  "limitations": [],
+                  "location_reference": "sources/current-decision.md",
+                  "missing_material_basis": false,
+                  "observation": {
+                    "kind": "observation",
+                    "value": "OBS-F3-SEALED"
+                  },
+                  "origin_projects": [
+                    {
+                      "kind": "project",
+                      "value": "fixture-atlas-f3"
+                    }
+                  ],
+                  "source": {
+                    "kind": "source",
+                    "value": "SRC-F3-CURRENT"
+                  },
+                  "transformation": "normalized",
+                  "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+                  "upstream": [
+                    {
+                      "kind": "provenance",
+                      "value": "PROV-OBS-F3-CURRENT"
+                    }
+                  ]
+                },
+                "state": "approved",
+                "subject": {
+                  "kind": "claim",
+                  "value": "RI-F3-SEALED"
+                }
+              }
+            ],
+            "limitations": [],
+            "relationships": [],
+            "represented": {
+              "classifications": [],
+              "identity": {
+                "kind": "represented_information",
+                "value": "RI-F3-SEALED"
+              },
+              "provenance": {
+                "artifact": {
+                  "kind": "artifact",
+                  "value": "ART-F3-SEALED"
+                },
+                "artifact_version": {
+                  "kind": "artifact_version",
+                  "value": "ARTV-F3-SEALED"
+                },
+                "identity": {
+                  "kind": "provenance",
+                  "value": "PROV-F3-SEALED"
+                },
+                "limitations": [],
+                "location_reference": "sources/current-decision.md",
+                "missing_material_basis": false,
+                "observation": {
+                  "kind": "observation",
+                  "value": "OBS-F3-SEALED"
+                },
+                "origin_projects": [
+                  {
+                    "kind": "project",
+                    "value": "fixture-atlas-f3"
+                  }
+                ],
+                "source": {
+                  "kind": "source",
+                  "value": "SRC-F3-CURRENT"
+                },
+                "transformation": "normalized",
+                "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+                "upstream": [
+                  {
+                    "kind": "provenance",
+                    "value": "PROV-OBS-F3-CURRENT"
+                  }
+                ]
+              },
+              "subject": {
+                "kind": "claim",
+                "value": "RI-F3-SEALED"
+              },
+              "uncertainty": []
+            },
+            "request": {
+              "kind": "request",
+              "value": "REQ-F3-RELEASE-RECOMMENDATION"
+            },
+            "source_scope": "field-kit-release"
+          },
+          "outcome": "applicable",
+          "qualifications": [],
+          "reason_codes": [
+            "deterministic-task-relevance-established",
+            "conflict-preserved"
+          ]
+        },
+        "qualifications": [],
+        "reason_codes": [
+          "selected-explicit-material-basis",
+          "counterfactual-omission-material-risk",
+          "conflict-preserved"
+        ],
+        "role": "required",
+        "selected": {
+          "authorities": [],
+          "conflicts": [
+            {
+              "identity": {
+                "kind": "conflict",
+                "value": "CON-F3-CASE-CHOICE"
+              },
+              "participants": [
+                {
+                  "kind": "represented_information",
+                  "value": "RI-F3-SEALED"
+                },
+                {
+                  "kind": "represented_information",
+                  "value": "RI-F3-TOTE"
+                }
+              ],
+              "provenance": {
+                "artifact": {
+                  "kind": "artifact",
+                  "value": "ART-F3-SEALED"
+                },
+                "artifact_version": {
+                  "kind": "artifact_version",
+                  "value": "ARTV-F3-SEALED"
+                },
+                "identity": {
+                  "kind": "provenance",
+                  "value": "PROV-F3-SEALED"
+                },
+                "limitations": [],
+                "location_reference": "sources/current-decision.md",
+                "missing_material_basis": false,
+                "observation": {
+                  "kind": "observation",
+                  "value": "OBS-F3-SEALED"
+                },
+                "origin_projects": [
+                  {
+                    "kind": "project",
+                    "value": "fixture-atlas-f3"
+                  }
+                ],
+                "source": {
+                  "kind": "source",
+                  "value": "SRC-F3-CURRENT"
+                },
+                "transformation": "normalized",
+                "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+                "upstream": [
+                  {
+                    "kind": "provenance",
+                    "value": "PROV-OBS-F3-CURRENT"
+                  }
+                ]
+              },
+              "resolved_by": null,
+              "scope": "current field-kit case choice; no governed supersession supplied"
+            }
+          ],
+          "currentness": [
+            {
+              "basis": [],
+              "currentness": "current",
+              "subject": {
+                "kind": "claim",
+                "value": "RI-F3-SEALED"
+              },
+              "temporal": {
+                "construction_time": null,
+                "effective_time": null,
+                "event_time": null,
+                "observation_time": null,
+                "version_time": null
+              }
+            }
+          ],
+          "governance": [
+            {
+              "provenance": {
+                "artifact": {
+                  "kind": "artifact",
+                  "value": "ART-F3-SEALED"
+                },
+                "artifact_version": {
+                  "kind": "artifact_version",
+                  "value": "ARTV-F3-SEALED"
+                },
+                "identity": {
+                  "kind": "provenance",
+                  "value": "PROV-F3-SEALED"
+                },
+                "limitations": [],
+                "location_reference": "sources/current-decision.md",
+                "missing_material_basis": false,
+                "observation": {
+                  "kind": "observation",
+                  "value": "OBS-F3-SEALED"
+                },
+                "origin_projects": [
+                  {
+                    "kind": "project",
+                    "value": "fixture-atlas-f3"
+                  }
+                ],
+                "source": {
+                  "kind": "source",
+                  "value": "SRC-F3-CURRENT"
+                },
+                "transformation": "normalized",
+                "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+                "upstream": [
+                  {
+                    "kind": "provenance",
+                    "value": "PROV-OBS-F3-CURRENT"
+                  }
+                ]
+              },
+              "state": "approved",
+              "subject": {
+                "kind": "claim",
+                "value": "RI-F3-SEALED"
+              }
+            }
+          ],
+          "limitations": [],
+          "represented": {
+            "classifications": [],
+            "identity": {
+              "kind": "represented_information",
+              "value": "RI-F3-SEALED"
+            },
+            "provenance": {
+              "artifact": {
+                "kind": "artifact",
+                "value": "ART-F3-SEALED"
+              },
+              "artifact_version": {
+                "kind": "artifact_version",
+                "value": "ARTV-F3-SEALED"
+              },
+              "identity": {
+                "kind": "provenance",
+                "value": "PROV-F3-SEALED"
+              },
+              "limitations": [],
+              "location_reference": "sources/current-decision.md",
+              "missing_material_basis": false,
+              "observation": {
+                "kind": "observation",
+                "value": "OBS-F3-SEALED"
+              },
+              "origin_projects": [
+                {
+                  "kind": "project",
+                  "value": "fixture-atlas-f3"
+                }
+              ],
+              "source": {
+                "kind": "source",
+                "value": "SRC-F3-CURRENT"
+              },
+              "transformation": "normalized",
+              "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+              "upstream": [
+                {
+                  "kind": "provenance",
+                  "value": "PROV-OBS-F3-CURRENT"
+                }
+              ]
+            },
+            "subject": {
+              "kind": "claim",
+              "value": "RI-F3-SEALED"
+            },
+            "uncertainty": []
+          },
+          "request": {
+            "kind": "request",
+            "value": "REQ-F3-RELEASE-RECOMMENDATION"
+          },
+          "role": "required",
+          "selection_basis": "FX-F3 explicit governed selection preserves all applicable qualified context; no precedence or resolution is supplied"
+        }
+      }
+    },
+    {
+      "applicability": {
+        "candidate": {
+          "authorities": [],
+          "conflicts": [
+            {
+              "identity": {
+                "kind": "conflict",
+                "value": "CON-F3-CASE-CHOICE"
+              },
+              "participants": [
+                {
+                  "kind": "represented_information",
+                  "value": "RI-F3-SEALED"
+                },
+                {
+                  "kind": "represented_information",
+                  "value": "RI-F3-TOTE"
+                }
+              ],
+              "provenance": {
+                "artifact": {
+                  "kind": "artifact",
+                  "value": "ART-F3-SEALED"
+                },
+                "artifact_version": {
+                  "kind": "artifact_version",
+                  "value": "ARTV-F3-SEALED"
+                },
+                "identity": {
+                  "kind": "provenance",
+                  "value": "PROV-F3-SEALED"
+                },
+                "limitations": [],
+                "location_reference": "sources/current-decision.md",
+                "missing_material_basis": false,
+                "observation": {
+                  "kind": "observation",
+                  "value": "OBS-F3-SEALED"
+                },
+                "origin_projects": [
+                  {
+                    "kind": "project",
+                    "value": "fixture-atlas-f3"
+                  }
+                ],
+                "source": {
+                  "kind": "source",
+                  "value": "SRC-F3-CURRENT"
+                },
+                "transformation": "normalized",
+                "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+                "upstream": [
+                  {
+                    "kind": "provenance",
+                    "value": "PROV-OBS-F3-CURRENT"
+                  }
+                ]
+              },
+              "resolved_by": null,
+              "scope": "current field-kit case choice; no governed supersession supplied"
+            }
+          ],
+          "currentness": [
+            {
+              "basis": [],
+              "currentness": "current",
+              "subject": {
+                "kind": "claim",
+                "value": "RI-F3-TOTE"
+              },
+              "temporal": {
+                "construction_time": null,
+                "effective_time": null,
+                "event_time": null,
+                "observation_time": null,
+                "version_time": null
+              }
+            }
+          ],
+          "discovery_basis": "deterministic:literal",
+          "governance": [
+            {
+              "provenance": {
+                "artifact": {
+                  "kind": "artifact",
+                  "value": "ART-F3-TOTE"
+                },
+                "artifact_version": {
+                  "kind": "artifact_version",
+                  "value": "ARTV-F3-TOTE"
+                },
+                "identity": {
+                  "kind": "provenance",
+                  "value": "PROV-F3-TOTE"
+                },
+                "limitations": [],
+                "location_reference": "sources/competing-decision.md",
+                "missing_material_basis": false,
+                "observation": {
+                  "kind": "observation",
+                  "value": "OBS-F3-TOTE"
+                },
+                "origin_projects": [
+                  {
+                    "kind": "project",
+                    "value": "fixture-atlas-f3"
+                  }
+                ],
+                "source": {
+                  "kind": "source",
+                  "value": "SRC-F3-COMPETING"
+                },
+                "transformation": "normalized",
+                "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+                "upstream": [
+                  {
+                    "kind": "provenance",
+                    "value": "PROV-OBS-F3-COMPETING"
+                  }
+                ]
+              },
+              "state": "approved",
+              "subject": {
+                "kind": "claim",
+                "value": "RI-F3-TOTE"
+              }
+            }
+          ],
+          "limitations": [],
+          "relationships": [],
+          "represented": {
+            "classifications": [],
+            "identity": {
+              "kind": "represented_information",
+              "value": "RI-F3-TOTE"
+            },
+            "provenance": {
+              "artifact": {
+                "kind": "artifact",
+                "value": "ART-F3-TOTE"
+              },
+              "artifact_version": {
+                "kind": "artifact_version",
+                "value": "ARTV-F3-TOTE"
+              },
+              "identity": {
+                "kind": "provenance",
+                "value": "PROV-F3-TOTE"
+              },
+              "limitations": [],
+              "location_reference": "sources/competing-decision.md",
+              "missing_material_basis": false,
+              "observation": {
+                "kind": "observation",
+                "value": "OBS-F3-TOTE"
+              },
+              "origin_projects": [
+                {
+                  "kind": "project",
+                  "value": "fixture-atlas-f3"
+                }
+              ],
+              "source": {
+                "kind": "source",
+                "value": "SRC-F3-COMPETING"
+              },
+              "transformation": "normalized",
+              "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+              "upstream": [
+                {
+                  "kind": "provenance",
+                  "value": "PROV-OBS-F3-COMPETING"
+                }
+              ]
+            },
+            "subject": {
+              "kind": "claim",
+              "value": "RI-F3-TOTE"
+            },
+            "uncertainty": []
+          },
+          "request": {
+            "kind": "request",
+            "value": "REQ-F3-RELEASE-RECOMMENDATION"
+          },
+          "source_scope": "field-kit-release"
+        },
+        "outcome": "applicable",
+        "qualifications": [],
+        "reason_codes": [
+          "deterministic-task-relevance-established",
+          "conflict-preserved"
+        ]
+      },
+      "represented_information": "RI-F3-TOTE",
+      "selection": {
+        "applicability": {
+          "candidate": {
+            "authorities": [],
+            "conflicts": [
+              {
+                "identity": {
+                  "kind": "conflict",
+                  "value": "CON-F3-CASE-CHOICE"
+                },
+                "participants": [
+                  {
+                    "kind": "represented_information",
+                    "value": "RI-F3-SEALED"
+                  },
+                  {
+                    "kind": "represented_information",
+                    "value": "RI-F3-TOTE"
+                  }
+                ],
+                "provenance": {
+                  "artifact": {
+                    "kind": "artifact",
+                    "value": "ART-F3-SEALED"
+                  },
+                  "artifact_version": {
+                    "kind": "artifact_version",
+                    "value": "ARTV-F3-SEALED"
+                  },
+                  "identity": {
+                    "kind": "provenance",
+                    "value": "PROV-F3-SEALED"
+                  },
+                  "limitations": [],
+                  "location_reference": "sources/current-decision.md",
+                  "missing_material_basis": false,
+                  "observation": {
+                    "kind": "observation",
+                    "value": "OBS-F3-SEALED"
+                  },
+                  "origin_projects": [
+                    {
+                      "kind": "project",
+                      "value": "fixture-atlas-f3"
+                    }
+                  ],
+                  "source": {
+                    "kind": "source",
+                    "value": "SRC-F3-CURRENT"
+                  },
+                  "transformation": "normalized",
+                  "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+                  "upstream": [
+                    {
+                      "kind": "provenance",
+                      "value": "PROV-OBS-F3-CURRENT"
+                    }
+                  ]
+                },
+                "resolved_by": null,
+                "scope": "current field-kit case choice; no governed supersession supplied"
+              }
+            ],
+            "currentness": [
+              {
+                "basis": [],
+                "currentness": "current",
+                "subject": {
+                  "kind": "claim",
+                  "value": "RI-F3-TOTE"
+                },
+                "temporal": {
+                  "construction_time": null,
+                  "effective_time": null,
+                  "event_time": null,
+                  "observation_time": null,
+                  "version_time": null
+                }
+              }
+            ],
+            "discovery_basis": "deterministic:literal",
+            "governance": [
+              {
+                "provenance": {
+                  "artifact": {
+                    "kind": "artifact",
+                    "value": "ART-F3-TOTE"
+                  },
+                  "artifact_version": {
+                    "kind": "artifact_version",
+                    "value": "ARTV-F3-TOTE"
+                  },
+                  "identity": {
+                    "kind": "provenance",
+                    "value": "PROV-F3-TOTE"
+                  },
+                  "limitations": [],
+                  "location_reference": "sources/competing-decision.md",
+                  "missing_material_basis": false,
+                  "observation": {
+                    "kind": "observation",
+                    "value": "OBS-F3-TOTE"
+                  },
+                  "origin_projects": [
+                    {
+                      "kind": "project",
+                      "value": "fixture-atlas-f3"
+                    }
+                  ],
+                  "source": {
+                    "kind": "source",
+                    "value": "SRC-F3-COMPETING"
+                  },
+                  "transformation": "normalized",
+                  "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+                  "upstream": [
+                    {
+                      "kind": "provenance",
+                      "value": "PROV-OBS-F3-COMPETING"
+                    }
+                  ]
+                },
+                "state": "approved",
+                "subject": {
+                  "kind": "claim",
+                  "value": "RI-F3-TOTE"
+                }
+              }
+            ],
+            "limitations": [],
+            "relationships": [],
+            "represented": {
+              "classifications": [],
+              "identity": {
+                "kind": "represented_information",
+                "value": "RI-F3-TOTE"
+              },
+              "provenance": {
+                "artifact": {
+                  "kind": "artifact",
+                  "value": "ART-F3-TOTE"
+                },
+                "artifact_version": {
+                  "kind": "artifact_version",
+                  "value": "ARTV-F3-TOTE"
+                },
+                "identity": {
+                  "kind": "provenance",
+                  "value": "PROV-F3-TOTE"
+                },
+                "limitations": [],
+                "location_reference": "sources/competing-decision.md",
+                "missing_material_basis": false,
+                "observation": {
+                  "kind": "observation",
+                  "value": "OBS-F3-TOTE"
+                },
+                "origin_projects": [
+                  {
+                    "kind": "project",
+                    "value": "fixture-atlas-f3"
+                  }
+                ],
+                "source": {
+                  "kind": "source",
+                  "value": "SRC-F3-COMPETING"
+                },
+                "transformation": "normalized",
+                "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+                "upstream": [
+                  {
+                    "kind": "provenance",
+                    "value": "PROV-OBS-F3-COMPETING"
+                  }
+                ]
+              },
+              "subject": {
+                "kind": "claim",
+                "value": "RI-F3-TOTE"
+              },
+              "uncertainty": []
+            },
+            "request": {
+              "kind": "request",
+              "value": "REQ-F3-RELEASE-RECOMMENDATION"
+            },
+            "source_scope": "field-kit-release"
+          },
+          "outcome": "applicable",
+          "qualifications": [],
+          "reason_codes": [
+            "deterministic-task-relevance-established",
+            "conflict-preserved"
+          ]
+        },
+        "qualifications": [],
+        "reason_codes": [
+          "selected-explicit-material-basis",
+          "counterfactual-omission-material-risk",
+          "conflict-preserved"
+        ],
+        "role": "required",
+        "selected": {
+          "authorities": [],
+          "conflicts": [
+            {
+              "identity": {
+                "kind": "conflict",
+                "value": "CON-F3-CASE-CHOICE"
+              },
+              "participants": [
+                {
+                  "kind": "represented_information",
+                  "value": "RI-F3-SEALED"
+                },
+                {
+                  "kind": "represented_information",
+                  "value": "RI-F3-TOTE"
+                }
+              ],
+              "provenance": {
+                "artifact": {
+                  "kind": "artifact",
+                  "value": "ART-F3-SEALED"
+                },
+                "artifact_version": {
+                  "kind": "artifact_version",
+                  "value": "ARTV-F3-SEALED"
+                },
+                "identity": {
+                  "kind": "provenance",
+                  "value": "PROV-F3-SEALED"
+                },
+                "limitations": [],
+                "location_reference": "sources/current-decision.md",
+                "missing_material_basis": false,
+                "observation": {
+                  "kind": "observation",
+                  "value": "OBS-F3-SEALED"
+                },
+                "origin_projects": [
+                  {
+                    "kind": "project",
+                    "value": "fixture-atlas-f3"
+                  }
+                ],
+                "source": {
+                  "kind": "source",
+                  "value": "SRC-F3-CURRENT"
+                },
+                "transformation": "normalized",
+                "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+                "upstream": [
+                  {
+                    "kind": "provenance",
+                    "value": "PROV-OBS-F3-CURRENT"
+                  }
+                ]
+              },
+              "resolved_by": null,
+              "scope": "current field-kit case choice; no governed supersession supplied"
+            }
+          ],
+          "currentness": [
+            {
+              "basis": [],
+              "currentness": "current",
+              "subject": {
+                "kind": "claim",
+                "value": "RI-F3-TOTE"
+              },
+              "temporal": {
+                "construction_time": null,
+                "effective_time": null,
+                "event_time": null,
+                "observation_time": null,
+                "version_time": null
+              }
+            }
+          ],
+          "governance": [
+            {
+              "provenance": {
+                "artifact": {
+                  "kind": "artifact",
+                  "value": "ART-F3-TOTE"
+                },
+                "artifact_version": {
+                  "kind": "artifact_version",
+                  "value": "ARTV-F3-TOTE"
+                },
+                "identity": {
+                  "kind": "provenance",
+                  "value": "PROV-F3-TOTE"
+                },
+                "limitations": [],
+                "location_reference": "sources/competing-decision.md",
+                "missing_material_basis": false,
+                "observation": {
+                  "kind": "observation",
+                  "value": "OBS-F3-TOTE"
+                },
+                "origin_projects": [
+                  {
+                    "kind": "project",
+                    "value": "fixture-atlas-f3"
+                  }
+                ],
+                "source": {
+                  "kind": "source",
+                  "value": "SRC-F3-COMPETING"
+                },
+                "transformation": "normalized",
+                "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+                "upstream": [
+                  {
+                    "kind": "provenance",
+                    "value": "PROV-OBS-F3-COMPETING"
+                  }
+                ]
+              },
+              "state": "approved",
+              "subject": {
+                "kind": "claim",
+                "value": "RI-F3-TOTE"
+              }
+            }
+          ],
+          "limitations": [],
+          "represented": {
+            "classifications": [],
+            "identity": {
+              "kind": "represented_information",
+              "value": "RI-F3-TOTE"
+            },
+            "provenance": {
+              "artifact": {
+                "kind": "artifact",
+                "value": "ART-F3-TOTE"
+              },
+              "artifact_version": {
+                "kind": "artifact_version",
+                "value": "ARTV-F3-TOTE"
+              },
+              "identity": {
+                "kind": "provenance",
+                "value": "PROV-F3-TOTE"
+              },
+              "limitations": [],
+              "location_reference": "sources/competing-decision.md",
+              "missing_material_basis": false,
+              "observation": {
+                "kind": "observation",
+                "value": "OBS-F3-TOTE"
+              },
+              "origin_projects": [
+                {
+                  "kind": "project",
+                  "value": "fixture-atlas-f3"
+                }
+              ],
+              "source": {
+                "kind": "source",
+                "value": "SRC-F3-COMPETING"
+              },
+              "transformation": "normalized",
+              "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+              "upstream": [
+                {
+                  "kind": "provenance",
+                  "value": "PROV-OBS-F3-COMPETING"
+                }
+              ]
+            },
+            "subject": {
+              "kind": "claim",
+              "value": "RI-F3-TOTE"
+            },
+            "uncertainty": []
+          },
+          "request": {
+            "kind": "request",
+            "value": "REQ-F3-RELEASE-RECOMMENDATION"
+          },
+          "role": "required",
+          "selection_basis": "FX-F3 explicit governed selection preserves all applicable qualified context; no precedence or resolution is supplied"
+        }
+      }
+    }
+  ],
+  "audit": [
+    [
+      "rendering-rendered",
+      "package=PKG-F3-001; reasons=faithful-governed-package-presentation,rendering-is-not-delivery-receipt-or-use"
+    ]
+  ],
+  "bootstrap": {
+    "governance_basis": "project-owner-approved-ws2-item-2.1-synthetic-fixture",
+    "project_configuration_reference": "/home/lobsterboss79/Projects/context-engine/docs/phase-4/ws2-item-2.1-fixtures/F3/project.toml",
+    "project_identity": "fixture-atlas-f3",
+    "reference": "/home/lobsterboss79/Projects/context-engine/docs/phase-4/ws2-item-2.1-fixtures/F3/bootstrap.toml",
+    "scope": "controlled-validation-fixture"
+  },
+  "configuration": {
+    "governance_reference": "FX-F3 synthetic fixture record; no production authority",
+    "project_identity": "fixture-atlas-f3",
+    "reference": "/home/lobsterboss79/Projects/context-engine/docs/phase-4/ws2-item-2.1-fixtures/F3/project.toml"
+  },
+  "construction": {
+    "package": {
+      "coherence": {
+        "basis": "FX-F3 intentional unresolved current conflict, historical state, and uncertainty are explicitly preserved; construction is coherent with qualification",
+        "outcome": "coherent_with_qualification"
+      },
+      "identity": {
+        "kind": "package",
+        "value": "PKG-F3-001"
+      },
+      "items": [
+        {
+          "authorities": [],
+          "conflicts": [],
+          "currentness": [
+            {
+              "basis": [],
+              "currentness": "historical",
+              "subject": {
+                "kind": "claim",
+                "value": "RI-F3-CANVAS-HISTORY"
+              },
+              "temporal": {
+                "construction_time": null,
+                "effective_time": null,
+                "event_time": null,
+                "observation_time": null,
+                "version_time": null
+              }
+            }
+          ],
+          "governance": [
+            {
+              "provenance": {
+                "artifact": {
+                  "kind": "artifact",
+                  "value": "ART-F3-CANVAS-HISTORY"
+                },
+                "artifact_version": {
+                  "kind": "artifact_version",
+                  "value": "ARTV-F3-CANVAS-HISTORY"
+                },
+                "identity": {
+                  "kind": "provenance",
+                  "value": "PROV-F3-CANVAS-HISTORY"
+                },
+                "limitations": [],
+                "location_reference": "sources/historical-note.md",
+                "missing_material_basis": false,
+                "observation": {
+                  "kind": "observation",
+                  "value": "OBS-F3-CANVAS-HISTORY"
+                },
+                "origin_projects": [
+                  {
+                    "kind": "project",
+                    "value": "fixture-atlas-f3"
+                  }
+                ],
+                "source": {
+                  "kind": "source",
+                  "value": "SRC-F3-HISTORY"
+                },
+                "transformation": "normalized",
+                "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+                "upstream": [
+                  {
+                    "kind": "provenance",
+                    "value": "PROV-OBS-F3-HISTORY"
+                  }
+                ]
+              },
+              "state": "approved",
+              "subject": {
+                "kind": "claim",
+                "value": "RI-F3-CANVAS-HISTORY"
+              }
+            }
+          ],
+          "limitations": [],
+          "represented": {
+            "classifications": [],
+            "identity": {
+              "kind": "represented_information",
+              "value": "RI-F3-CANVAS-HISTORY"
+            },
+            "provenance": {
+              "artifact": {
+                "kind": "artifact",
+                "value": "ART-F3-CANVAS-HISTORY"
+              },
+              "artifact_version": {
+                "kind": "artifact_version",
+                "value": "ARTV-F3-CANVAS-HISTORY"
+              },
+              "identity": {
+                "kind": "provenance",
+                "value": "PROV-F3-CANVAS-HISTORY"
+              },
+              "limitations": [],
+              "location_reference": "sources/historical-note.md",
+              "missing_material_basis": false,
+              "observation": {
+                "kind": "observation",
+                "value": "OBS-F3-CANVAS-HISTORY"
+              },
+              "origin_projects": [
+                {
+                  "kind": "project",
+                  "value": "fixture-atlas-f3"
+                }
+              ],
+              "source": {
+                "kind": "source",
+                "value": "SRC-F3-HISTORY"
+              },
+              "transformation": "normalized",
+              "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+              "upstream": [
+                {
+                  "kind": "provenance",
+                  "value": "PROV-OBS-F3-HISTORY"
+                }
+              ]
+            },
+            "subject": {
+              "kind": "claim",
+              "value": "RI-F3-CANVAS-HISTORY"
+            },
+            "uncertainty": []
+          },
+          "request": {
+            "kind": "request",
+            "value": "REQ-F3-RELEASE-RECOMMENDATION"
+          },
+          "role": "supporting",
+          "selection_basis": "FX-F3 explicit governed selection preserves all applicable qualified context; no precedence or resolution is supplied"
+        },
+        {
+          "authorities": [],
+          "conflicts": [],
+          "currentness": [
+            {
+              "basis": [],
+              "currentness": "unknown",
+              "subject": {
+                "kind": "claim",
+                "value": "RI-F3-DEPOT-UNVERIFIED"
+              },
+              "temporal": {
+                "construction_time": null,
+                "effective_time": null,
+                "event_time": null,
+                "observation_time": null,
+                "version_time": null
+              }
+            }
+          ],
+          "governance": [
+            {
+              "provenance": {
+                "artifact": {
+                  "kind": "artifact",
+                  "value": "ART-F3-DEPOT-UNVERIFIED"
+                },
+                "artifact_version": {
+                  "kind": "artifact_version",
+                  "value": "ARTV-F3-DEPOT-UNVERIFIED"
+                },
+                "identity": {
+                  "kind": "provenance",
+                  "value": "PROV-F3-DEPOT-UNVERIFIED"
+                },
+                "limitations": [],
+                "location_reference": "sources/qualification.md",
+                "missing_material_basis": false,
+                "observation": {
+                  "kind": "observation",
+                  "value": "OBS-F3-DEPOT-UNVERIFIED"
+                },
+                "origin_projects": [
+                  {
+                    "kind": "project",
+                    "value": "fixture-atlas-f3"
+                  }
+                ],
+                "source": {
+                  "kind": "source",
+                  "value": "SRC-F3-QUALIFICATION"
+                },
+                "transformation": "normalized",
+                "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+                "upstream": [
+                  {
+                    "kind": "provenance",
+                    "value": "PROV-OBS-F3-QUALIFICATION"
+                  }
+                ]
+              },
+              "state": "unknown",
+              "subject": {
+                "kind": "claim",
+                "value": "RI-F3-DEPOT-UNVERIFIED"
+              }
+            }
+          ],
+          "limitations": [
+            {
+              "detail": "FX-F3 governed depot availability remains unverified",
+              "evidence_boundary": "UNC-F3-DEPOT",
+              "state": "unverified"
+            }
+          ],
+          "represented": {
+            "classifications": [],
+            "identity": {
+              "kind": "represented_information",
+              "value": "RI-F3-DEPOT-UNVERIFIED"
+            },
+            "provenance": {
+              "artifact": {
+                "kind": "artifact",
+                "value": "ART-F3-DEPOT-UNVERIFIED"
+              },
+              "artifact_version": {
+                "kind": "artifact_version",
+                "value": "ARTV-F3-DEPOT-UNVERIFIED"
+              },
+              "identity": {
+                "kind": "provenance",
+                "value": "PROV-F3-DEPOT-UNVERIFIED"
+              },
+              "limitations": [],
+              "location_reference": "sources/qualification.md",
+              "missing_material_basis": false,
+              "observation": {
+                "kind": "observation",
+                "value": "OBS-F3-DEPOT-UNVERIFIED"
+              },
+              "origin_projects": [
+                {
+                  "kind": "project",
+                  "value": "fixture-atlas-f3"
+                }
+              ],
+              "source": {
+                "kind": "source",
+                "value": "SRC-F3-QUALIFICATION"
+              },
+              "transformation": "normalized",
+              "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+              "upstream": [
+                {
+                  "kind": "provenance",
+                  "value": "PROV-OBS-F3-QUALIFICATION"
+                }
+              ]
+            },
+            "subject": {
+              "kind": "claim",
+              "value": "RI-F3-DEPOT-UNVERIFIED"
+            },
+            "uncertainty": [
+              {
+                "detail": "FX-F3 governed depot availability remains unverified",
+                "evidence_boundary": "UNC-F3-DEPOT",
+                "state": "unverified"
+              }
+            ]
+          },
+          "request": {
+            "kind": "request",
+            "value": "REQ-F3-RELEASE-RECOMMENDATION"
+          },
+          "role": "supporting",
+          "selection_basis": "FX-F3 explicit governed selection preserves all applicable qualified context; no precedence or resolution is supplied"
+        },
+        {
+          "authorities": [],
+          "conflicts": [
+            {
+              "identity": {
+                "kind": "conflict",
+                "value": "CON-F3-CASE-CHOICE"
+              },
+              "participants": [
+                {
+                  "kind": "represented_information",
+                  "value": "RI-F3-SEALED"
+                },
+                {
+                  "kind": "represented_information",
+                  "value": "RI-F3-TOTE"
+                }
+              ],
+              "provenance": {
+                "artifact": {
+                  "kind": "artifact",
+                  "value": "ART-F3-SEALED"
+                },
+                "artifact_version": {
+                  "kind": "artifact_version",
+                  "value": "ARTV-F3-SEALED"
+                },
+                "identity": {
+                  "kind": "provenance",
+                  "value": "PROV-F3-SEALED"
+                },
+                "limitations": [],
+                "location_reference": "sources/current-decision.md",
+                "missing_material_basis": false,
+                "observation": {
+                  "kind": "observation",
+                  "value": "OBS-F3-SEALED"
+                },
+                "origin_projects": [
+                  {
+                    "kind": "project",
+                    "value": "fixture-atlas-f3"
+                  }
+                ],
+                "source": {
+                  "kind": "source",
+                  "value": "SRC-F3-CURRENT"
+                },
+                "transformation": "normalized",
+                "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+                "upstream": [
+                  {
+                    "kind": "provenance",
+                    "value": "PROV-OBS-F3-CURRENT"
+                  }
+                ]
+              },
+              "resolved_by": null,
+              "scope": "current field-kit case choice; no governed supersession supplied"
+            }
+          ],
+          "currentness": [
+            {
+              "basis": [],
+              "currentness": "current",
+              "subject": {
+                "kind": "claim",
+                "value": "RI-F3-SEALED"
+              },
+              "temporal": {
+                "construction_time": null,
+                "effective_time": null,
+                "event_time": null,
+                "observation_time": null,
+                "version_time": null
+              }
+            }
+          ],
+          "governance": [
+            {
+              "provenance": {
+                "artifact": {
+                  "kind": "artifact",
+                  "value": "ART-F3-SEALED"
+                },
+                "artifact_version": {
+                  "kind": "artifact_version",
+                  "value": "ARTV-F3-SEALED"
+                },
+                "identity": {
+                  "kind": "provenance",
+                  "value": "PROV-F3-SEALED"
+                },
+                "limitations": [],
+                "location_reference": "sources/current-decision.md",
+                "missing_material_basis": false,
+                "observation": {
+                  "kind": "observation",
+                  "value": "OBS-F3-SEALED"
+                },
+                "origin_projects": [
+                  {
+                    "kind": "project",
+                    "value": "fixture-atlas-f3"
+                  }
+                ],
+                "source": {
+                  "kind": "source",
+                  "value": "SRC-F3-CURRENT"
+                },
+                "transformation": "normalized",
+                "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+                "upstream": [
+                  {
+                    "kind": "provenance",
+                    "value": "PROV-OBS-F3-CURRENT"
+                  }
+                ]
+              },
+              "state": "approved",
+              "subject": {
+                "kind": "claim",
+                "value": "RI-F3-SEALED"
+              }
+            }
+          ],
+          "limitations": [],
+          "represented": {
+            "classifications": [],
+            "identity": {
+              "kind": "represented_information",
+              "value": "RI-F3-SEALED"
+            },
+            "provenance": {
+              "artifact": {
+                "kind": "artifact",
+                "value": "ART-F3-SEALED"
+              },
+              "artifact_version": {
+                "kind": "artifact_version",
+                "value": "ARTV-F3-SEALED"
+              },
+              "identity": {
+                "kind": "provenance",
+                "value": "PROV-F3-SEALED"
+              },
+              "limitations": [],
+              "location_reference": "sources/current-decision.md",
+              "missing_material_basis": false,
+              "observation": {
+                "kind": "observation",
+                "value": "OBS-F3-SEALED"
+              },
+              "origin_projects": [
+                {
+                  "kind": "project",
+                  "value": "fixture-atlas-f3"
+                }
+              ],
+              "source": {
+                "kind": "source",
+                "value": "SRC-F3-CURRENT"
+              },
+              "transformation": "normalized",
+              "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+              "upstream": [
+                {
+                  "kind": "provenance",
+                  "value": "PROV-OBS-F3-CURRENT"
+                }
+              ]
+            },
+            "subject": {
+              "kind": "claim",
+              "value": "RI-F3-SEALED"
+            },
+            "uncertainty": []
+          },
+          "request": {
+            "kind": "request",
+            "value": "REQ-F3-RELEASE-RECOMMENDATION"
+          },
+          "role": "required",
+          "selection_basis": "FX-F3 explicit governed selection preserves all applicable qualified context; no precedence or resolution is supplied"
+        },
+        {
+          "authorities": [],
+          "conflicts": [
+            {
+              "identity": {
+                "kind": "conflict",
+                "value": "CON-F3-CASE-CHOICE"
+              },
+              "participants": [
+                {
+                  "kind": "represented_information",
+                  "value": "RI-F3-SEALED"
+                },
+                {
+                  "kind": "represented_information",
+                  "value": "RI-F3-TOTE"
+                }
+              ],
+              "provenance": {
+                "artifact": {
+                  "kind": "artifact",
+                  "value": "ART-F3-SEALED"
+                },
+                "artifact_version": {
+                  "kind": "artifact_version",
+                  "value": "ARTV-F3-SEALED"
+                },
+                "identity": {
+                  "kind": "provenance",
+                  "value": "PROV-F3-SEALED"
+                },
+                "limitations": [],
+                "location_reference": "sources/current-decision.md",
+                "missing_material_basis": false,
+                "observation": {
+                  "kind": "observation",
+                  "value": "OBS-F3-SEALED"
+                },
+                "origin_projects": [
+                  {
+                    "kind": "project",
+                    "value": "fixture-atlas-f3"
+                  }
+                ],
+                "source": {
+                  "kind": "source",
+                  "value": "SRC-F3-CURRENT"
+                },
+                "transformation": "normalized",
+                "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+                "upstream": [
+                  {
+                    "kind": "provenance",
+                    "value": "PROV-OBS-F3-CURRENT"
+                  }
+                ]
+              },
+              "resolved_by": null,
+              "scope": "current field-kit case choice; no governed supersession supplied"
+            }
+          ],
+          "currentness": [
+            {
+              "basis": [],
+              "currentness": "current",
+              "subject": {
+                "kind": "claim",
+                "value": "RI-F3-TOTE"
+              },
+              "temporal": {
+                "construction_time": null,
+                "effective_time": null,
+                "event_time": null,
+                "observation_time": null,
+                "version_time": null
+              }
+            }
+          ],
+          "governance": [
+            {
+              "provenance": {
+                "artifact": {
+                  "kind": "artifact",
+                  "value": "ART-F3-TOTE"
+                },
+                "artifact_version": {
+                  "kind": "artifact_version",
+                  "value": "ARTV-F3-TOTE"
+                },
+                "identity": {
+                  "kind": "provenance",
+                  "value": "PROV-F3-TOTE"
+                },
+                "limitations": [],
+                "location_reference": "sources/competing-decision.md",
+                "missing_material_basis": false,
+                "observation": {
+                  "kind": "observation",
+                  "value": "OBS-F3-TOTE"
+                },
+                "origin_projects": [
+                  {
+                    "kind": "project",
+                    "value": "fixture-atlas-f3"
+                  }
+                ],
+                "source": {
+                  "kind": "source",
+                  "value": "SRC-F3-COMPETING"
+                },
+                "transformation": "normalized",
+                "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+                "upstream": [
+                  {
+                    "kind": "provenance",
+                    "value": "PROV-OBS-F3-COMPETING"
+                  }
+                ]
+              },
+              "state": "approved",
+              "subject": {
+                "kind": "claim",
+                "value": "RI-F3-TOTE"
+              }
+            }
+          ],
+          "limitations": [],
+          "represented": {
+            "classifications": [],
+            "identity": {
+              "kind": "represented_information",
+              "value": "RI-F3-TOTE"
+            },
+            "provenance": {
+              "artifact": {
+                "kind": "artifact",
+                "value": "ART-F3-TOTE"
+              },
+              "artifact_version": {
+                "kind": "artifact_version",
+                "value": "ARTV-F3-TOTE"
+              },
+              "identity": {
+                "kind": "provenance",
+                "value": "PROV-F3-TOTE"
+              },
+              "limitations": [],
+              "location_reference": "sources/competing-decision.md",
+              "missing_material_basis": false,
+              "observation": {
+                "kind": "observation",
+                "value": "OBS-F3-TOTE"
+              },
+              "origin_projects": [
+                {
+                  "kind": "project",
+                  "value": "fixture-atlas-f3"
+                }
+              ],
+              "source": {
+                "kind": "source",
+                "value": "SRC-F3-COMPETING"
+              },
+              "transformation": "normalized",
+              "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+              "upstream": [
+                {
+                  "kind": "provenance",
+                  "value": "PROV-OBS-F3-COMPETING"
+                }
+              ]
+            },
+            "subject": {
+              "kind": "claim",
+              "value": "RI-F3-TOTE"
+            },
+            "uncertainty": []
+          },
+          "request": {
+            "kind": "request",
+            "value": "REQ-F3-RELEASE-RECOMMENDATION"
+          },
+          "role": "required",
+          "selection_basis": "FX-F3 explicit governed selection preserves all applicable qualified context; no precedence or resolution is supplied"
+        }
+      ],
+      "limitations": [
+        {
+          "detail": "ASU adequacy=adequate",
+          "evidence_boundary": "FX-F3 explicit synthetic four-Source ASU; adequacy is established by frozen fixture governance",
+          "state": "unknown"
+        }
+      ],
+      "manifest": {
+        "entries": [
+          {
+            "contributed": true,
+            "limitations": [],
+            "observation": {
+              "kind": "observation",
+              "value": "OBS-F3-TOTE"
+            },
+            "scope": null,
+            "source": {
+              "kind": "source",
+              "value": "SRC-F3-COMPETING"
+            }
+          },
+          {
+            "contributed": true,
+            "limitations": [],
+            "observation": {
+              "kind": "observation",
+              "value": "OBS-F3-SEALED"
+            },
+            "scope": null,
+            "source": {
+              "kind": "source",
+              "value": "SRC-F3-CURRENT"
+            }
+          },
+          {
+            "contributed": true,
+            "limitations": [],
+            "observation": {
+              "kind": "observation",
+              "value": "OBS-F3-CANVAS-HISTORY"
+            },
+            "scope": null,
+            "source": {
+              "kind": "source",
+              "value": "SRC-F3-HISTORY"
+            }
+          },
+          {
+            "contributed": true,
+            "limitations": [
+              {
+                "detail": "FX-F3 governed depot availability remains unverified",
+                "evidence_boundary": "UNC-F3-DEPOT",
+                "state": "unverified"
+              },
+              {
+                "detail": "FX-F3 governed depot availability remains unverified",
+                "evidence_boundary": "UNC-F3-DEPOT",
+                "state": "unverified"
+              }
+            ],
+            "observation": {
+              "kind": "observation",
+              "value": "OBS-F3-DEPOT-UNVERIFIED"
+            },
+            "scope": null,
+            "source": {
+              "kind": "source",
+              "value": "SRC-F3-QUALIFICATION"
+            }
+          }
+        ]
+      },
+      "request": {
+        "kind": "request",
+        "value": "REQ-F3-RELEASE-RECOMMENDATION"
+      },
+      "sufficiency": "insufficient"
+    },
+    "record": {
+      "candidates": [
+        {
+          "authorities": [],
+          "conflicts": [],
+          "currentness": [
+            {
+              "basis": [],
+              "currentness": "historical",
+              "subject": {
+                "kind": "claim",
+                "value": "RI-F3-CANVAS-HISTORY"
+              },
+              "temporal": {
+                "construction_time": null,
+                "effective_time": null,
+                "event_time": null,
+                "observation_time": null,
+                "version_time": null
+              }
+            }
+          ],
+          "discovery_basis": "deterministic:literal",
+          "governance": [
+            {
+              "provenance": {
+                "artifact": {
+                  "kind": "artifact",
+                  "value": "ART-F3-CANVAS-HISTORY"
+                },
+                "artifact_version": {
+                  "kind": "artifact_version",
+                  "value": "ARTV-F3-CANVAS-HISTORY"
+                },
+                "identity": {
+                  "kind": "provenance",
+                  "value": "PROV-F3-CANVAS-HISTORY"
+                },
+                "limitations": [],
+                "location_reference": "sources/historical-note.md",
+                "missing_material_basis": false,
+                "observation": {
+                  "kind": "observation",
+                  "value": "OBS-F3-CANVAS-HISTORY"
+                },
+                "origin_projects": [
+                  {
+                    "kind": "project",
+                    "value": "fixture-atlas-f3"
+                  }
+                ],
+                "source": {
+                  "kind": "source",
+                  "value": "SRC-F3-HISTORY"
+                },
+                "transformation": "normalized",
+                "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+                "upstream": [
+                  {
+                    "kind": "provenance",
+                    "value": "PROV-OBS-F3-HISTORY"
+                  }
+                ]
+              },
+              "state": "approved",
+              "subject": {
+                "kind": "claim",
+                "value": "RI-F3-CANVAS-HISTORY"
+              }
+            }
+          ],
+          "limitations": [],
+          "relationships": [],
+          "represented": {
+            "classifications": [],
+            "identity": {
+              "kind": "represented_information",
+              "value": "RI-F3-CANVAS-HISTORY"
+            },
+            "provenance": {
+              "artifact": {
+                "kind": "artifact",
+                "value": "ART-F3-CANVAS-HISTORY"
+              },
+              "artifact_version": {
+                "kind": "artifact_version",
+                "value": "ARTV-F3-CANVAS-HISTORY"
+              },
+              "identity": {
+                "kind": "provenance",
+                "value": "PROV-F3-CANVAS-HISTORY"
+              },
+              "limitations": [],
+              "location_reference": "sources/historical-note.md",
+              "missing_material_basis": false,
+              "observation": {
+                "kind": "observation",
+                "value": "OBS-F3-CANVAS-HISTORY"
+              },
+              "origin_projects": [
+                {
+                  "kind": "project",
+                  "value": "fixture-atlas-f3"
+                }
+              ],
+              "source": {
+                "kind": "source",
+                "value": "SRC-F3-HISTORY"
+              },
+              "transformation": "normalized",
+              "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+              "upstream": [
+                {
+                  "kind": "provenance",
+                  "value": "PROV-OBS-F3-HISTORY"
+                }
+              ]
+            },
+            "subject": {
+              "kind": "claim",
+              "value": "RI-F3-CANVAS-HISTORY"
+            },
+            "uncertainty": []
+          },
+          "request": {
+            "kind": "request",
+            "value": "REQ-F3-RELEASE-RECOMMENDATION"
+          },
+          "source_scope": "field-kit-release"
+        },
+        {
+          "authorities": [],
+          "conflicts": [],
+          "currentness": [
+            {
+              "basis": [],
+              "currentness": "unknown",
+              "subject": {
+                "kind": "claim",
+                "value": "RI-F3-DEPOT-UNVERIFIED"
+              },
+              "temporal": {
+                "construction_time": null,
+                "effective_time": null,
+                "event_time": null,
+                "observation_time": null,
+                "version_time": null
+              }
+            }
+          ],
+          "discovery_basis": "deterministic:literal",
+          "governance": [
+            {
+              "provenance": {
+                "artifact": {
+                  "kind": "artifact",
+                  "value": "ART-F3-DEPOT-UNVERIFIED"
+                },
+                "artifact_version": {
+                  "kind": "artifact_version",
+                  "value": "ARTV-F3-DEPOT-UNVERIFIED"
+                },
+                "identity": {
+                  "kind": "provenance",
+                  "value": "PROV-F3-DEPOT-UNVERIFIED"
+                },
+                "limitations": [],
+                "location_reference": "sources/qualification.md",
+                "missing_material_basis": false,
+                "observation": {
+                  "kind": "observation",
+                  "value": "OBS-F3-DEPOT-UNVERIFIED"
+                },
+                "origin_projects": [
+                  {
+                    "kind": "project",
+                    "value": "fixture-atlas-f3"
+                  }
+                ],
+                "source": {
+                  "kind": "source",
+                  "value": "SRC-F3-QUALIFICATION"
+                },
+                "transformation": "normalized",
+                "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+                "upstream": [
+                  {
+                    "kind": "provenance",
+                    "value": "PROV-OBS-F3-QUALIFICATION"
+                  }
+                ]
+              },
+              "state": "unknown",
+              "subject": {
+                "kind": "claim",
+                "value": "RI-F3-DEPOT-UNVERIFIED"
+              }
+            }
+          ],
+          "limitations": [
+            {
+              "detail": "FX-F3 governed depot availability remains unverified",
+              "evidence_boundary": "UNC-F3-DEPOT",
+              "state": "unverified"
+            }
+          ],
+          "relationships": [],
+          "represented": {
+            "classifications": [],
+            "identity": {
+              "kind": "represented_information",
+              "value": "RI-F3-DEPOT-UNVERIFIED"
+            },
+            "provenance": {
+              "artifact": {
+                "kind": "artifact",
+                "value": "ART-F3-DEPOT-UNVERIFIED"
+              },
+              "artifact_version": {
+                "kind": "artifact_version",
+                "value": "ARTV-F3-DEPOT-UNVERIFIED"
+              },
+              "identity": {
+                "kind": "provenance",
+                "value": "PROV-F3-DEPOT-UNVERIFIED"
+              },
+              "limitations": [],
+              "location_reference": "sources/qualification.md",
+              "missing_material_basis": false,
+              "observation": {
+                "kind": "observation",
+                "value": "OBS-F3-DEPOT-UNVERIFIED"
+              },
+              "origin_projects": [
+                {
+                  "kind": "project",
+                  "value": "fixture-atlas-f3"
+                }
+              ],
+              "source": {
+                "kind": "source",
+                "value": "SRC-F3-QUALIFICATION"
+              },
+              "transformation": "normalized",
+              "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+              "upstream": [
+                {
+                  "kind": "provenance",
+                  "value": "PROV-OBS-F3-QUALIFICATION"
+                }
+              ]
+            },
+            "subject": {
+              "kind": "claim",
+              "value": "RI-F3-DEPOT-UNVERIFIED"
+            },
+            "uncertainty": [
+              {
+                "detail": "FX-F3 governed depot availability remains unverified",
+                "evidence_boundary": "UNC-F3-DEPOT",
+                "state": "unverified"
+              }
+            ]
+          },
+          "request": {
+            "kind": "request",
+            "value": "REQ-F3-RELEASE-RECOMMENDATION"
+          },
+          "source_scope": "field-kit-release"
+        },
+        {
+          "authorities": [],
+          "conflicts": [
+            {
+              "identity": {
+                "kind": "conflict",
+                "value": "CON-F3-CASE-CHOICE"
+              },
+              "participants": [
+                {
+                  "kind": "represented_information",
+                  "value": "RI-F3-SEALED"
+                },
+                {
+                  "kind": "represented_information",
+                  "value": "RI-F3-TOTE"
+                }
+              ],
+              "provenance": {
+                "artifact": {
+                  "kind": "artifact",
+                  "value": "ART-F3-SEALED"
+                },
+                "artifact_version": {
+                  "kind": "artifact_version",
+                  "value": "ARTV-F3-SEALED"
+                },
+                "identity": {
+                  "kind": "provenance",
+                  "value": "PROV-F3-SEALED"
+                },
+                "limitations": [],
+                "location_reference": "sources/current-decision.md",
+                "missing_material_basis": false,
+                "observation": {
+                  "kind": "observation",
+                  "value": "OBS-F3-SEALED"
+                },
+                "origin_projects": [
+                  {
+                    "kind": "project",
+                    "value": "fixture-atlas-f3"
+                  }
+                ],
+                "source": {
+                  "kind": "source",
+                  "value": "SRC-F3-CURRENT"
+                },
+                "transformation": "normalized",
+                "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+                "upstream": [
+                  {
+                    "kind": "provenance",
+                    "value": "PROV-OBS-F3-CURRENT"
+                  }
+                ]
+              },
+              "resolved_by": null,
+              "scope": "current field-kit case choice; no governed supersession supplied"
+            }
+          ],
+          "currentness": [
+            {
+              "basis": [],
+              "currentness": "current",
+              "subject": {
+                "kind": "claim",
+                "value": "RI-F3-SEALED"
+              },
+              "temporal": {
+                "construction_time": null,
+                "effective_time": null,
+                "event_time": null,
+                "observation_time": null,
+                "version_time": null
+              }
+            }
+          ],
+          "discovery_basis": "deterministic:literal",
+          "governance": [
+            {
+              "provenance": {
+                "artifact": {
+                  "kind": "artifact",
+                  "value": "ART-F3-SEALED"
+                },
+                "artifact_version": {
+                  "kind": "artifact_version",
+                  "value": "ARTV-F3-SEALED"
+                },
+                "identity": {
+                  "kind": "provenance",
+                  "value": "PROV-F3-SEALED"
+                },
+                "limitations": [],
+                "location_reference": "sources/current-decision.md",
+                "missing_material_basis": false,
+                "observation": {
+                  "kind": "observation",
+                  "value": "OBS-F3-SEALED"
+                },
+                "origin_projects": [
+                  {
+                    "kind": "project",
+                    "value": "fixture-atlas-f3"
+                  }
+                ],
+                "source": {
+                  "kind": "source",
+                  "value": "SRC-F3-CURRENT"
+                },
+                "transformation": "normalized",
+                "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+                "upstream": [
+                  {
+                    "kind": "provenance",
+                    "value": "PROV-OBS-F3-CURRENT"
+                  }
+                ]
+              },
+              "state": "approved",
+              "subject": {
+                "kind": "claim",
+                "value": "RI-F3-SEALED"
+              }
+            }
+          ],
+          "limitations": [],
+          "relationships": [],
+          "represented": {
+            "classifications": [],
+            "identity": {
+              "kind": "represented_information",
+              "value": "RI-F3-SEALED"
+            },
+            "provenance": {
+              "artifact": {
+                "kind": "artifact",
+                "value": "ART-F3-SEALED"
+              },
+              "artifact_version": {
+                "kind": "artifact_version",
+                "value": "ARTV-F3-SEALED"
+              },
+              "identity": {
+                "kind": "provenance",
+                "value": "PROV-F3-SEALED"
+              },
+              "limitations": [],
+              "location_reference": "sources/current-decision.md",
+              "missing_material_basis": false,
+              "observation": {
+                "kind": "observation",
+                "value": "OBS-F3-SEALED"
+              },
+              "origin_projects": [
+                {
+                  "kind": "project",
+                  "value": "fixture-atlas-f3"
+                }
+              ],
+              "source": {
+                "kind": "source",
+                "value": "SRC-F3-CURRENT"
+              },
+              "transformation": "normalized",
+              "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+              "upstream": [
+                {
+                  "kind": "provenance",
+                  "value": "PROV-OBS-F3-CURRENT"
+                }
+              ]
+            },
+            "subject": {
+              "kind": "claim",
+              "value": "RI-F3-SEALED"
+            },
+            "uncertainty": []
+          },
+          "request": {
+            "kind": "request",
+            "value": "REQ-F3-RELEASE-RECOMMENDATION"
+          },
+          "source_scope": "field-kit-release"
+        },
+        {
+          "authorities": [],
+          "conflicts": [
+            {
+              "identity": {
+                "kind": "conflict",
+                "value": "CON-F3-CASE-CHOICE"
+              },
+              "participants": [
+                {
+                  "kind": "represented_information",
+                  "value": "RI-F3-SEALED"
+                },
+                {
+                  "kind": "represented_information",
+                  "value": "RI-F3-TOTE"
+                }
+              ],
+              "provenance": {
+                "artifact": {
+                  "kind": "artifact",
+                  "value": "ART-F3-SEALED"
+                },
+                "artifact_version": {
+                  "kind": "artifact_version",
+                  "value": "ARTV-F3-SEALED"
+                },
+                "identity": {
+                  "kind": "provenance",
+                  "value": "PROV-F3-SEALED"
+                },
+                "limitations": [],
+                "location_reference": "sources/current-decision.md",
+                "missing_material_basis": false,
+                "observation": {
+                  "kind": "observation",
+                  "value": "OBS-F3-SEALED"
+                },
+                "origin_projects": [
+                  {
+                    "kind": "project",
+                    "value": "fixture-atlas-f3"
+                  }
+                ],
+                "source": {
+                  "kind": "source",
+                  "value": "SRC-F3-CURRENT"
+                },
+                "transformation": "normalized",
+                "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+                "upstream": [
+                  {
+                    "kind": "provenance",
+                    "value": "PROV-OBS-F3-CURRENT"
+                  }
+                ]
+              },
+              "resolved_by": null,
+              "scope": "current field-kit case choice; no governed supersession supplied"
+            }
+          ],
+          "currentness": [
+            {
+              "basis": [],
+              "currentness": "current",
+              "subject": {
+                "kind": "claim",
+                "value": "RI-F3-TOTE"
+              },
+              "temporal": {
+                "construction_time": null,
+                "effective_time": null,
+                "event_time": null,
+                "observation_time": null,
+                "version_time": null
+              }
+            }
+          ],
+          "discovery_basis": "deterministic:literal",
+          "governance": [
+            {
+              "provenance": {
+                "artifact": {
+                  "kind": "artifact",
+                  "value": "ART-F3-TOTE"
+                },
+                "artifact_version": {
+                  "kind": "artifact_version",
+                  "value": "ARTV-F3-TOTE"
+                },
+                "identity": {
+                  "kind": "provenance",
+                  "value": "PROV-F3-TOTE"
+                },
+                "limitations": [],
+                "location_reference": "sources/competing-decision.md",
+                "missing_material_basis": false,
+                "observation": {
+                  "kind": "observation",
+                  "value": "OBS-F3-TOTE"
+                },
+                "origin_projects": [
+                  {
+                    "kind": "project",
+                    "value": "fixture-atlas-f3"
+                  }
+                ],
+                "source": {
+                  "kind": "source",
+                  "value": "SRC-F3-COMPETING"
+                },
+                "transformation": "normalized",
+                "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+                "upstream": [
+                  {
+                    "kind": "provenance",
+                    "value": "PROV-OBS-F3-COMPETING"
+                  }
+                ]
+              },
+              "state": "approved",
+              "subject": {
+                "kind": "claim",
+                "value": "RI-F3-TOTE"
+              }
+            }
+          ],
+          "limitations": [],
+          "relationships": [],
+          "represented": {
+            "classifications": [],
+            "identity": {
+              "kind": "represented_information",
+              "value": "RI-F3-TOTE"
+            },
+            "provenance": {
+              "artifact": {
+                "kind": "artifact",
+                "value": "ART-F3-TOTE"
+              },
+              "artifact_version": {
+                "kind": "artifact_version",
+                "value": "ARTV-F3-TOTE"
+              },
+              "identity": {
+                "kind": "provenance",
+                "value": "PROV-F3-TOTE"
+              },
+              "limitations": [],
+              "location_reference": "sources/competing-decision.md",
+              "missing_material_basis": false,
+              "observation": {
+                "kind": "observation",
+                "value": "OBS-F3-TOTE"
+              },
+              "origin_projects": [
+                {
+                  "kind": "project",
+                  "value": "fixture-atlas-f3"
+                }
+              ],
+              "source": {
+                "kind": "source",
+                "value": "SRC-F3-COMPETING"
+              },
+              "transformation": "normalized",
+              "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+              "upstream": [
+                {
+                  "kind": "provenance",
+                  "value": "PROV-OBS-F3-COMPETING"
+                }
+              ]
+            },
+            "subject": {
+              "kind": "claim",
+              "value": "RI-F3-TOTE"
+            },
+            "uncertainty": []
+          },
+          "request": {
+            "kind": "request",
+            "value": "REQ-F3-RELEASE-RECOMMENDATION"
+          },
+          "source_scope": "field-kit-release"
+        }
+      ],
+      "coherence": {
+        "basis": "FX-F3 intentional unresolved current conflict, historical state, and uncertainty are explicitly preserved; construction is coherent with qualification",
+        "outcome": "coherent_with_qualification"
+      },
+      "identity": {
+        "kind": "record",
+        "value": "PCR-F3-001"
+      },
+      "limitations": [
+        {
+          "detail": "ASU adequacy=adequate",
+          "evidence_boundary": "FX-F3 explicit synthetic four-Source ASU; adequacy is established by frozen fixture governance",
+          "state": "unknown"
+        }
+      ],
+      "outcome": "insufficient",
+      "package": {
+        "kind": "package",
+        "value": "PKG-F3-001"
+      },
+      "request": {
+        "kind": "request",
+        "value": "REQ-F3-RELEASE-RECOMMENDATION"
+      },
+      "source_universe": {
+        "adequacy": {
+          "detail": "ASU adequacy=adequate",
+          "evidence_boundary": "FX-F3 explicit synthetic four-Source ASU; adequacy is established by frozen fixture governance",
+          "state": "unknown"
+        },
+        "sources": [
+          {
+            "kind": "source",
+            "value": "SRC-F3-CURRENT"
+          },
+          {
+            "kind": "source",
+            "value": "SRC-F3-COMPETING"
+          },
+          {
+            "kind": "source",
+            "value": "SRC-F3-HISTORY"
+          },
+          {
+            "kind": "source",
+            "value": "SRC-F3-QUALIFICATION"
+          }
+        ]
+      },
+      "status": "completed",
+      "termination_basis": "FX-F3 adequate ASU fully inspected; unresolved current conflict and depot uncertainty preserved"
+    }
+  },
+  "discovery": {
+    "candidates": [
+      {
+        "authorities": [],
+        "conflicts": [],
+        "currentness": [
+          {
+            "basis": [],
+            "currentness": "historical",
+            "subject": {
+              "kind": "claim",
+              "value": "RI-F3-CANVAS-HISTORY"
+            },
+            "temporal": {
+              "construction_time": null,
+              "effective_time": null,
+              "event_time": null,
+              "observation_time": null,
+              "version_time": null
+            }
+          }
+        ],
+        "discovery_basis": "deterministic:literal",
+        "governance": [
+          {
+            "provenance": {
+              "artifact": {
+                "kind": "artifact",
+                "value": "ART-F3-CANVAS-HISTORY"
+              },
+              "artifact_version": {
+                "kind": "artifact_version",
+                "value": "ARTV-F3-CANVAS-HISTORY"
+              },
+              "identity": {
+                "kind": "provenance",
+                "value": "PROV-F3-CANVAS-HISTORY"
+              },
+              "limitations": [],
+              "location_reference": "sources/historical-note.md",
+              "missing_material_basis": false,
+              "observation": {
+                "kind": "observation",
+                "value": "OBS-F3-CANVAS-HISTORY"
+              },
+              "origin_projects": [
+                {
+                  "kind": "project",
+                  "value": "fixture-atlas-f3"
+                }
+              ],
+              "source": {
+                "kind": "source",
+                "value": "SRC-F3-HISTORY"
+              },
+              "transformation": "normalized",
+              "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+              "upstream": [
+                {
+                  "kind": "provenance",
+                  "value": "PROV-OBS-F3-HISTORY"
+                }
+              ]
+            },
+            "state": "approved",
+            "subject": {
+              "kind": "claim",
+              "value": "RI-F3-CANVAS-HISTORY"
+            }
+          }
+        ],
+        "limitations": [],
+        "relationships": [],
+        "represented": {
+          "classifications": [],
+          "identity": {
+            "kind": "represented_information",
+            "value": "RI-F3-CANVAS-HISTORY"
+          },
+          "provenance": {
+            "artifact": {
+              "kind": "artifact",
+              "value": "ART-F3-CANVAS-HISTORY"
+            },
+            "artifact_version": {
+              "kind": "artifact_version",
+              "value": "ARTV-F3-CANVAS-HISTORY"
+            },
+            "identity": {
+              "kind": "provenance",
+              "value": "PROV-F3-CANVAS-HISTORY"
+            },
+            "limitations": [],
+            "location_reference": "sources/historical-note.md",
+            "missing_material_basis": false,
+            "observation": {
+              "kind": "observation",
+              "value": "OBS-F3-CANVAS-HISTORY"
+            },
+            "origin_projects": [
+              {
+                "kind": "project",
+                "value": "fixture-atlas-f3"
+              }
+            ],
+            "source": {
+              "kind": "source",
+              "value": "SRC-F3-HISTORY"
+            },
+            "transformation": "normalized",
+            "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+            "upstream": [
+              {
+                "kind": "provenance",
+                "value": "PROV-OBS-F3-HISTORY"
+              }
+            ]
+          },
+          "subject": {
+            "kind": "claim",
+            "value": "RI-F3-CANVAS-HISTORY"
+          },
+          "uncertainty": []
+        },
+        "request": {
+          "kind": "request",
+          "value": "REQ-F3-RELEASE-RECOMMENDATION"
+        },
+        "source_scope": "field-kit-release"
+      },
+      {
+        "authorities": [],
+        "conflicts": [],
+        "currentness": [
+          {
+            "basis": [],
+            "currentness": "unknown",
+            "subject": {
+              "kind": "claim",
+              "value": "RI-F3-DEPOT-UNVERIFIED"
+            },
+            "temporal": {
+              "construction_time": null,
+              "effective_time": null,
+              "event_time": null,
+              "observation_time": null,
+              "version_time": null
+            }
+          }
+        ],
+        "discovery_basis": "deterministic:literal",
+        "governance": [
+          {
+            "provenance": {
+              "artifact": {
+                "kind": "artifact",
+                "value": "ART-F3-DEPOT-UNVERIFIED"
+              },
+              "artifact_version": {
+                "kind": "artifact_version",
+                "value": "ARTV-F3-DEPOT-UNVERIFIED"
+              },
+              "identity": {
+                "kind": "provenance",
+                "value": "PROV-F3-DEPOT-UNVERIFIED"
+              },
+              "limitations": [],
+              "location_reference": "sources/qualification.md",
+              "missing_material_basis": false,
+              "observation": {
+                "kind": "observation",
+                "value": "OBS-F3-DEPOT-UNVERIFIED"
+              },
+              "origin_projects": [
+                {
+                  "kind": "project",
+                  "value": "fixture-atlas-f3"
+                }
+              ],
+              "source": {
+                "kind": "source",
+                "value": "SRC-F3-QUALIFICATION"
+              },
+              "transformation": "normalized",
+              "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+              "upstream": [
+                {
+                  "kind": "provenance",
+                  "value": "PROV-OBS-F3-QUALIFICATION"
+                }
+              ]
+            },
+            "state": "unknown",
+            "subject": {
+              "kind": "claim",
+              "value": "RI-F3-DEPOT-UNVERIFIED"
+            }
+          }
+        ],
+        "limitations": [
+          {
+            "detail": "FX-F3 governed depot availability remains unverified",
+            "evidence_boundary": "UNC-F3-DEPOT",
+            "state": "unverified"
+          }
+        ],
+        "relationships": [],
+        "represented": {
+          "classifications": [],
+          "identity": {
+            "kind": "represented_information",
+            "value": "RI-F3-DEPOT-UNVERIFIED"
+          },
+          "provenance": {
+            "artifact": {
+              "kind": "artifact",
+              "value": "ART-F3-DEPOT-UNVERIFIED"
+            },
+            "artifact_version": {
+              "kind": "artifact_version",
+              "value": "ARTV-F3-DEPOT-UNVERIFIED"
+            },
+            "identity": {
+              "kind": "provenance",
+              "value": "PROV-F3-DEPOT-UNVERIFIED"
+            },
+            "limitations": [],
+            "location_reference": "sources/qualification.md",
+            "missing_material_basis": false,
+            "observation": {
+              "kind": "observation",
+              "value": "OBS-F3-DEPOT-UNVERIFIED"
+            },
+            "origin_projects": [
+              {
+                "kind": "project",
+                "value": "fixture-atlas-f3"
+              }
+            ],
+            "source": {
+              "kind": "source",
+              "value": "SRC-F3-QUALIFICATION"
+            },
+            "transformation": "normalized",
+            "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+            "upstream": [
+              {
+                "kind": "provenance",
+                "value": "PROV-OBS-F3-QUALIFICATION"
+              }
+            ]
+          },
+          "subject": {
+            "kind": "claim",
+            "value": "RI-F3-DEPOT-UNVERIFIED"
+          },
+          "uncertainty": [
+            {
+              "detail": "FX-F3 governed depot availability remains unverified",
+              "evidence_boundary": "UNC-F3-DEPOT",
+              "state": "unverified"
+            }
+          ]
+        },
+        "request": {
+          "kind": "request",
+          "value": "REQ-F3-RELEASE-RECOMMENDATION"
+        },
+        "source_scope": "field-kit-release"
+      },
+      {
+        "authorities": [],
+        "conflicts": [
+          {
+            "identity": {
+              "kind": "conflict",
+              "value": "CON-F3-CASE-CHOICE"
+            },
+            "participants": [
+              {
+                "kind": "represented_information",
+                "value": "RI-F3-SEALED"
+              },
+              {
+                "kind": "represented_information",
+                "value": "RI-F3-TOTE"
+              }
+            ],
+            "provenance": {
+              "artifact": {
+                "kind": "artifact",
+                "value": "ART-F3-SEALED"
+              },
+              "artifact_version": {
+                "kind": "artifact_version",
+                "value": "ARTV-F3-SEALED"
+              },
+              "identity": {
+                "kind": "provenance",
+                "value": "PROV-F3-SEALED"
+              },
+              "limitations": [],
+              "location_reference": "sources/current-decision.md",
+              "missing_material_basis": false,
+              "observation": {
+                "kind": "observation",
+                "value": "OBS-F3-SEALED"
+              },
+              "origin_projects": [
+                {
+                  "kind": "project",
+                  "value": "fixture-atlas-f3"
+                }
+              ],
+              "source": {
+                "kind": "source",
+                "value": "SRC-F3-CURRENT"
+              },
+              "transformation": "normalized",
+              "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+              "upstream": [
+                {
+                  "kind": "provenance",
+                  "value": "PROV-OBS-F3-CURRENT"
+                }
+              ]
+            },
+            "resolved_by": null,
+            "scope": "current field-kit case choice; no governed supersession supplied"
+          }
+        ],
+        "currentness": [
+          {
+            "basis": [],
+            "currentness": "current",
+            "subject": {
+              "kind": "claim",
+              "value": "RI-F3-SEALED"
+            },
+            "temporal": {
+              "construction_time": null,
+              "effective_time": null,
+              "event_time": null,
+              "observation_time": null,
+              "version_time": null
+            }
+          }
+        ],
+        "discovery_basis": "deterministic:literal",
+        "governance": [
+          {
+            "provenance": {
+              "artifact": {
+                "kind": "artifact",
+                "value": "ART-F3-SEALED"
+              },
+              "artifact_version": {
+                "kind": "artifact_version",
+                "value": "ARTV-F3-SEALED"
+              },
+              "identity": {
+                "kind": "provenance",
+                "value": "PROV-F3-SEALED"
+              },
+              "limitations": [],
+              "location_reference": "sources/current-decision.md",
+              "missing_material_basis": false,
+              "observation": {
+                "kind": "observation",
+                "value": "OBS-F3-SEALED"
+              },
+              "origin_projects": [
+                {
+                  "kind": "project",
+                  "value": "fixture-atlas-f3"
+                }
+              ],
+              "source": {
+                "kind": "source",
+                "value": "SRC-F3-CURRENT"
+              },
+              "transformation": "normalized",
+              "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+              "upstream": [
+                {
+                  "kind": "provenance",
+                  "value": "PROV-OBS-F3-CURRENT"
+                }
+              ]
+            },
+            "state": "approved",
+            "subject": {
+              "kind": "claim",
+              "value": "RI-F3-SEALED"
+            }
+          }
+        ],
+        "limitations": [],
+        "relationships": [],
+        "represented": {
+          "classifications": [],
+          "identity": {
+            "kind": "represented_information",
+            "value": "RI-F3-SEALED"
+          },
+          "provenance": {
+            "artifact": {
+              "kind": "artifact",
+              "value": "ART-F3-SEALED"
+            },
+            "artifact_version": {
+              "kind": "artifact_version",
+              "value": "ARTV-F3-SEALED"
+            },
+            "identity": {
+              "kind": "provenance",
+              "value": "PROV-F3-SEALED"
+            },
+            "limitations": [],
+            "location_reference": "sources/current-decision.md",
+            "missing_material_basis": false,
+            "observation": {
+              "kind": "observation",
+              "value": "OBS-F3-SEALED"
+            },
+            "origin_projects": [
+              {
+                "kind": "project",
+                "value": "fixture-atlas-f3"
+              }
+            ],
+            "source": {
+              "kind": "source",
+              "value": "SRC-F3-CURRENT"
+            },
+            "transformation": "normalized",
+            "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+            "upstream": [
+              {
+                "kind": "provenance",
+                "value": "PROV-OBS-F3-CURRENT"
+              }
+            ]
+          },
+          "subject": {
+            "kind": "claim",
+            "value": "RI-F3-SEALED"
+          },
+          "uncertainty": []
+        },
+        "request": {
+          "kind": "request",
+          "value": "REQ-F3-RELEASE-RECOMMENDATION"
+        },
+        "source_scope": "field-kit-release"
+      },
+      {
+        "authorities": [],
+        "conflicts": [
+          {
+            "identity": {
+              "kind": "conflict",
+              "value": "CON-F3-CASE-CHOICE"
+            },
+            "participants": [
+              {
+                "kind": "represented_information",
+                "value": "RI-F3-SEALED"
+              },
+              {
+                "kind": "represented_information",
+                "value": "RI-F3-TOTE"
+              }
+            ],
+            "provenance": {
+              "artifact": {
+                "kind": "artifact",
+                "value": "ART-F3-SEALED"
+              },
+              "artifact_version": {
+                "kind": "artifact_version",
+                "value": "ARTV-F3-SEALED"
+              },
+              "identity": {
+                "kind": "provenance",
+                "value": "PROV-F3-SEALED"
+              },
+              "limitations": [],
+              "location_reference": "sources/current-decision.md",
+              "missing_material_basis": false,
+              "observation": {
+                "kind": "observation",
+                "value": "OBS-F3-SEALED"
+              },
+              "origin_projects": [
+                {
+                  "kind": "project",
+                  "value": "fixture-atlas-f3"
+                }
+              ],
+              "source": {
+                "kind": "source",
+                "value": "SRC-F3-CURRENT"
+              },
+              "transformation": "normalized",
+              "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+              "upstream": [
+                {
+                  "kind": "provenance",
+                  "value": "PROV-OBS-F3-CURRENT"
+                }
+              ]
+            },
+            "resolved_by": null,
+            "scope": "current field-kit case choice; no governed supersession supplied"
+          }
+        ],
+        "currentness": [
+          {
+            "basis": [],
+            "currentness": "current",
+            "subject": {
+              "kind": "claim",
+              "value": "RI-F3-TOTE"
+            },
+            "temporal": {
+              "construction_time": null,
+              "effective_time": null,
+              "event_time": null,
+              "observation_time": null,
+              "version_time": null
+            }
+          }
+        ],
+        "discovery_basis": "deterministic:literal",
+        "governance": [
+          {
+            "provenance": {
+              "artifact": {
+                "kind": "artifact",
+                "value": "ART-F3-TOTE"
+              },
+              "artifact_version": {
+                "kind": "artifact_version",
+                "value": "ARTV-F3-TOTE"
+              },
+              "identity": {
+                "kind": "provenance",
+                "value": "PROV-F3-TOTE"
+              },
+              "limitations": [],
+              "location_reference": "sources/competing-decision.md",
+              "missing_material_basis": false,
+              "observation": {
+                "kind": "observation",
+                "value": "OBS-F3-TOTE"
+              },
+              "origin_projects": [
+                {
+                  "kind": "project",
+                  "value": "fixture-atlas-f3"
+                }
+              ],
+              "source": {
+                "kind": "source",
+                "value": "SRC-F3-COMPETING"
+              },
+              "transformation": "normalized",
+              "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+              "upstream": [
+                {
+                  "kind": "provenance",
+                  "value": "PROV-OBS-F3-COMPETING"
+                }
+              ]
+            },
+            "state": "approved",
+            "subject": {
+              "kind": "claim",
+              "value": "RI-F3-TOTE"
+            }
+          }
+        ],
+        "limitations": [],
+        "relationships": [],
+        "represented": {
+          "classifications": [],
+          "identity": {
+            "kind": "represented_information",
+            "value": "RI-F3-TOTE"
+          },
+          "provenance": {
+            "artifact": {
+              "kind": "artifact",
+              "value": "ART-F3-TOTE"
+            },
+            "artifact_version": {
+              "kind": "artifact_version",
+              "value": "ARTV-F3-TOTE"
+            },
+            "identity": {
+              "kind": "provenance",
+              "value": "PROV-F3-TOTE"
+            },
+            "limitations": [],
+            "location_reference": "sources/competing-decision.md",
+            "missing_material_basis": false,
+            "observation": {
+              "kind": "observation",
+              "value": "OBS-F3-TOTE"
+            },
+            "origin_projects": [
+              {
+                "kind": "project",
+                "value": "fixture-atlas-f3"
+              }
+            ],
+            "source": {
+              "kind": "source",
+              "value": "SRC-F3-COMPETING"
+            },
+            "transformation": "normalized",
+            "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+            "upstream": [
+              {
+                "kind": "provenance",
+                "value": "PROV-OBS-F3-COMPETING"
+              }
+            ]
+          },
+          "subject": {
+            "kind": "claim",
+            "value": "RI-F3-TOTE"
+          },
+          "uncertainty": []
+        },
+        "request": {
+          "kind": "request",
+          "value": "REQ-F3-RELEASE-RECOMMENDATION"
+        },
+        "source_scope": "field-kit-release"
+      }
+    ],
+    "excluded_sources": [],
+    "expanded_inspected_sources": [],
+    "expansion_basis": [],
+    "initial_inspected_sources": [
+      "SRC-F3-COMPETING",
+      "SRC-F3-CURRENT",
+      "SRC-F3-HISTORY",
+      "SRC-F3-QUALIFICATION"
+    ],
+    "limitations": [
+      {
+        "detail": "ASU adequacy=adequate",
+        "evidence_boundary": "FX-F3 explicit synthetic four-Source ASU; adequacy is established by frozen fixture governance",
+        "state": "unknown"
+      }
+    ],
+    "negative_result_scope": "ASU=REQ-F3-RELEASE-RECOMMENDATION; adequacy=adequate; inspected=SRC-F3-COMPETING,SRC-F3-CURRENT,SRC-F3-HISTORY,SRC-F3-QUALIFICATION",
+    "termination_basis": "bounded deterministic inspection completed; no applicability, selection, or sufficiency evaluation"
+  },
+  "environment": {
+    "markdown_it": "3.0.0",
+    "platform": "Linux-7.0.0-34-generic-x86_64-with-glibc2.43",
+    "python": "3.14.4 (main, Aug 20 2026, 10:41:58) [GCC 15.2.0]"
+  },
+  "evidence_id": "VE-F3-001",
+  "execution_utc": "2026-09-26T16:00:46.692496+00:00",
+  "expected_result": "ER-F3 v1",
+  "fixture": "FX-F3 v1",
+  "renderings": {
+    "chatgpt": {
+      "reason_codes": [
+        "faithful-governed-package-presentation",
+        "rendering-is-not-delivery-receipt-or-use"
+      ],
+      "reference": "rendering:chatgpt:PKG-F3-001",
+      "status": "rendered"
+    },
+    "codex": {
+      "reason_codes": [
+        "faithful-governed-package-presentation",
+        "rendering-is-not-delivery-receipt-or-use"
+      ],
+      "reference": "rendering:codex:PKG-F3-001",
+      "status": "rendered"
+    },
+    "human": {
+      "reason_codes": [
+        "faithful-governed-package-presentation",
+        "rendering-is-not-delivery-receipt-or-use"
+      ],
+      "reference": "rendering:human:PKG-F3-001",
+      "status": "rendered"
+    }
+  },
+  "represented_information": [
+    {
+      "classifications": [],
+      "identity": {
+        "kind": "represented_information",
+        "value": "RI-F3-SEALED"
+      },
+      "provenance": {
+        "artifact": {
+          "kind": "artifact",
+          "value": "ART-F3-SEALED"
+        },
+        "artifact_version": {
+          "kind": "artifact_version",
+          "value": "ARTV-F3-SEALED"
+        },
+        "identity": {
+          "kind": "provenance",
+          "value": "PROV-F3-SEALED"
+        },
+        "limitations": [],
+        "location_reference": "sources/current-decision.md",
+        "missing_material_basis": false,
+        "observation": {
+          "kind": "observation",
+          "value": "OBS-F3-SEALED"
+        },
+        "origin_projects": [
+          {
+            "kind": "project",
+            "value": "fixture-atlas-f3"
+          }
+        ],
+        "source": {
+          "kind": "source",
+          "value": "SRC-F3-CURRENT"
+        },
+        "transformation": "normalized",
+        "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+        "upstream": [
+          {
+            "kind": "provenance",
+            "value": "PROV-OBS-F3-CURRENT"
+          }
+        ]
+      },
+      "subject": {
+        "kind": "claim",
+        "value": "RI-F3-SEALED"
+      },
+      "uncertainty": []
+    },
+    {
+      "classifications": [],
+      "identity": {
+        "kind": "represented_information",
+        "value": "RI-F3-TOTE"
+      },
+      "provenance": {
+        "artifact": {
+          "kind": "artifact",
+          "value": "ART-F3-TOTE"
+        },
+        "artifact_version": {
+          "kind": "artifact_version",
+          "value": "ARTV-F3-TOTE"
+        },
+        "identity": {
+          "kind": "provenance",
+          "value": "PROV-F3-TOTE"
+        },
+        "limitations": [],
+        "location_reference": "sources/competing-decision.md",
+        "missing_material_basis": false,
+        "observation": {
+          "kind": "observation",
+          "value": "OBS-F3-TOTE"
+        },
+        "origin_projects": [
+          {
+            "kind": "project",
+            "value": "fixture-atlas-f3"
+          }
+        ],
+        "source": {
+          "kind": "source",
+          "value": "SRC-F3-COMPETING"
+        },
+        "transformation": "normalized",
+        "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+        "upstream": [
+          {
+            "kind": "provenance",
+            "value": "PROV-OBS-F3-COMPETING"
+          }
+        ]
+      },
+      "subject": {
+        "kind": "claim",
+        "value": "RI-F3-TOTE"
+      },
+      "uncertainty": []
+    },
+    {
+      "classifications": [],
+      "identity": {
+        "kind": "represented_information",
+        "value": "RI-F3-CANVAS-HISTORY"
+      },
+      "provenance": {
+        "artifact": {
+          "kind": "artifact",
+          "value": "ART-F3-CANVAS-HISTORY"
+        },
+        "artifact_version": {
+          "kind": "artifact_version",
+          "value": "ARTV-F3-CANVAS-HISTORY"
+        },
+        "identity": {
+          "kind": "provenance",
+          "value": "PROV-F3-CANVAS-HISTORY"
+        },
+        "limitations": [],
+        "location_reference": "sources/historical-note.md",
+        "missing_material_basis": false,
+        "observation": {
+          "kind": "observation",
+          "value": "OBS-F3-CANVAS-HISTORY"
+        },
+        "origin_projects": [
+          {
+            "kind": "project",
+            "value": "fixture-atlas-f3"
+          }
+        ],
+        "source": {
+          "kind": "source",
+          "value": "SRC-F3-HISTORY"
+        },
+        "transformation": "normalized",
+        "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+        "upstream": [
+          {
+            "kind": "provenance",
+            "value": "PROV-OBS-F3-HISTORY"
+          }
+        ]
+      },
+      "subject": {
+        "kind": "claim",
+        "value": "RI-F3-CANVAS-HISTORY"
+      },
+      "uncertainty": []
+    },
+    {
+      "classifications": [],
+      "identity": {
+        "kind": "represented_information",
+        "value": "RI-F3-DEPOT-UNVERIFIED"
+      },
+      "provenance": {
+        "artifact": {
+          "kind": "artifact",
+          "value": "ART-F3-DEPOT-UNVERIFIED"
+        },
+        "artifact_version": {
+          "kind": "artifact_version",
+          "value": "ARTV-F3-DEPOT-UNVERIFIED"
+        },
+        "identity": {
+          "kind": "provenance",
+          "value": "PROV-F3-DEPOT-UNVERIFIED"
+        },
+        "limitations": [],
+        "location_reference": "sources/qualification.md",
+        "missing_material_basis": false,
+        "observation": {
+          "kind": "observation",
+          "value": "OBS-F3-DEPOT-UNVERIFIED"
+        },
+        "origin_projects": [
+          {
+            "kind": "project",
+            "value": "fixture-atlas-f3"
+          }
+        ],
+        "source": {
+          "kind": "source",
+          "value": "SRC-F3-QUALIFICATION"
+        },
+        "transformation": "normalized",
+        "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+        "upstream": [
+          {
+            "kind": "provenance",
+            "value": "PROV-OBS-F3-QUALIFICATION"
+          }
+        ]
+      },
+      "subject": {
+        "kind": "claim",
+        "value": "RI-F3-DEPOT-UNVERIFIED"
+      },
+      "uncertainty": [
+        {
+          "detail": "FX-F3 governed depot availability remains unverified",
+          "evidence_boundary": "UNC-F3-DEPOT",
+          "state": "unverified"
+        }
+      ]
+    }
+  ],
+  "source_observations": [
+    {
+      "git": {
+        "branch": "main",
+        "detached_head": false,
+        "head": "b761cf024997f0810062730a975012e1cac6177b",
+        "history": [
+          "b761cf024997f0810062730a975012e1cac6177b",
+          "7b902e153f529354c0e2b2f21b8f757035c32901",
+          "c7d17714a3983335f8564aa9360739d9ec785410",
+          "c9b39a3e950225498e06e687e69fdf15e9f37235",
+          "48df5148cba14415a41f5abd5cbde43247645a7c",
+          "bac6c3cdf7fb78278bd234f56d81c307a01a0090",
+          "1b61cb15cd9761aad843ed22261809b2aa61ced6",
+          "9d530d82926c3c67fa502c87f4f8d7dcfeda92a8",
+          "6a64e1e6f025d8c532ef6eed146779e42e116ecb",
+          "d4fa8e901a423966f5aba5866051b2ec2237613e",
+          "f5a874f1d1b42b19ce790ab2598c270ecd576af4",
+          "98624973feab235aaba81c16eb335a394b679331",
+          "6f0ae43c7d11135c5b33e57bc4aa9940ed925a05",
+          "40f8ddcb919692781fa20da93e6f051c0f77d67a",
+          "cec1bd1755913e6e22d0c4ef35cd11a736869cfd",
+          "483502c708711d82dd74be95920ed0a3e8f4078d",
+          "534dfe418d1353a9206d502c0c0311101aeb7cd6",
+          "97978562f1977ddea7f3892bbcb0a2448e3b569b",
+          "5511d1d978bc205227749c89131e1ecf97f320d3",
+          "1ed474e398f57d0a0d4f17aeac6f5b1537454576",
+          "995b48bd6877dd58b56d3009eda14966ab42882b",
+          "6fdec5d1ef8e993090b328f7934b9ff3348b1d81",
+          "ac22ed1a8ace9fbfc1b2dd1c054d657d1e4e6fe2",
+          "35cb4defebfdd12f75eb822f424e5b61d407ec74",
+          "09e5c85b4b3b611ac376f71c54c0e6deaceecd41",
+          "db26efbbb84db17504891ecbdfda5589213dc94d",
+          "758b3e48b2e29dc49bde989102236606c9133a96",
+          "6f1469461325bba090ccb9d0762e4fbdd85f090d",
+          "4b3e7bc9e9ef6873fbe1a702e54adc5b060cdc33",
+          "08e9e6f3fc0f5c46c913ce9500b757e0a2196328",
+          "6cf5e378a5ca6400d66e25013704d2d18133d3f0",
+          "dad65bb1f6a68408a117d79144bc1053e38cc676"
+        ],
+        "limitations": [
+          {
+            "code": "local-observation-only",
+            "detail": "No remote, shared, governing, or current state was established."
+          },
+          {
+            "code": "scope-native-expression-unavailable",
+            "detail": "The registered Source Scope is retained as governed provenance; no unapproved native scope grammar was interpreted."
+          },
+          {
+            "code": "remote-names-source-reported",
+            "detail": "Configured remote names are local configuration evidence, not remote reachability or synchronization evidence."
+          }
+        ],
+        "locator": "/home/lobsterboss79/Projects/context-engine",
+        "observation_time": "2026-09-26T16:00:46.556235+00:00",
+        "outcome": "observed",
+        "remote_names": [
+          "origin"
+        ],
+        "repository_root": "/home/lobsterboss79/Projects/context-engine",
+        "source_identity": "SRC-F3-CURRENT",
+        "source_scope": "field-kit-release",
+        "staged_paths": [],
+        "unborn": false,
+        "unstaged_paths": [],
+        "untracked_paths": [],
+        "working_tree_clean": true
+      },
+      "markdown": {
+        "limitations": [],
+        "locator": "sources/current-decision.md",
+        "original_markdown": "# Current controlled decision\n\nFor the field-kit release, use the standard sealed case. This is the current\nsynthetic governed decision for the fixture.\n",
+        "outcome": "observed"
+      },
+      "source": "SRC-F3-CURRENT",
+      "transformation": {
+        "artifact": {
+          "identity": {
+            "kind": "artifact",
+            "value": "ART-F3-SEALED"
+          },
+          "locators": [
+            "sources/current-decision.md"
+          ],
+          "source": {
+            "kind": "source",
+            "value": "SRC-F3-CURRENT"
+          }
+        },
+        "blocks": [
+          {
+            "content": "Current controlled decision",
+            "kind": "heading",
+            "line_end": 1,
+            "line_start": 1,
+            "links": [],
+            "ordinal": 0,
+            "parent_heading": null
+          },
+          {
+            "content": "For the field-kit release, use the standard sealed case. This is the current\nsynthetic governed decision for the fixture.",
+            "kind": "paragraph",
+            "line_end": 4,
+            "line_start": 3,
+            "links": [],
+            "ordinal": 1,
+            "parent_heading": 0
+          }
+        ],
+        "limitations": [],
+        "original_markdown": "# Current controlled decision\n\nFor the field-kit release, use the standard sealed case. This is the current\nsynthetic governed decision for the fixture.\n",
+        "parser_configuration": "markdown-it-py-4/commonmark+table",
+        "parser_version": "3.0.0",
+        "version": {
+          "artifact": {
+            "kind": "artifact",
+            "value": "ART-F3-SEALED"
+          },
+          "identity": {
+            "kind": "artifact_version",
+            "value": "ARTV-F3-SEALED"
+          },
+          "native_state_reference": "b761cf024997f0810062730a975012e1cac6177b",
+          "provenance": {
+            "artifact": null,
+            "artifact_version": null,
+            "identity": {
+              "kind": "provenance",
+              "value": "PROV-OBS-F3-CURRENT"
+            },
+            "limitations": [],
+            "location_reference": "sources/current-decision.md",
+            "missing_material_basis": false,
+            "observation": {
+              "kind": "observation",
+              "value": "OBS-F3-SEALED"
+            },
+            "origin_projects": [
+              {
+                "kind": "project",
+                "value": "fixture-atlas-f3"
+              }
+            ],
+            "source": {
+              "kind": "source",
+              "value": "SRC-F3-CURRENT"
+            },
+            "transformation": "direct",
+            "transformation_reference": null,
+            "upstream": []
+          }
+        }
+      }
+    },
+    {
+      "git": {
+        "branch": "main",
+        "detached_head": false,
+        "head": "b761cf024997f0810062730a975012e1cac6177b",
+        "history": [
+          "b761cf024997f0810062730a975012e1cac6177b",
+          "7b902e153f529354c0e2b2f21b8f757035c32901",
+          "c7d17714a3983335f8564aa9360739d9ec785410",
+          "c9b39a3e950225498e06e687e69fdf15e9f37235",
+          "48df5148cba14415a41f5abd5cbde43247645a7c",
+          "bac6c3cdf7fb78278bd234f56d81c307a01a0090",
+          "1b61cb15cd9761aad843ed22261809b2aa61ced6",
+          "9d530d82926c3c67fa502c87f4f8d7dcfeda92a8",
+          "6a64e1e6f025d8c532ef6eed146779e42e116ecb",
+          "d4fa8e901a423966f5aba5866051b2ec2237613e",
+          "f5a874f1d1b42b19ce790ab2598c270ecd576af4",
+          "98624973feab235aaba81c16eb335a394b679331",
+          "6f0ae43c7d11135c5b33e57bc4aa9940ed925a05",
+          "40f8ddcb919692781fa20da93e6f051c0f77d67a",
+          "cec1bd1755913e6e22d0c4ef35cd11a736869cfd",
+          "483502c708711d82dd74be95920ed0a3e8f4078d",
+          "534dfe418d1353a9206d502c0c0311101aeb7cd6",
+          "97978562f1977ddea7f3892bbcb0a2448e3b569b",
+          "5511d1d978bc205227749c89131e1ecf97f320d3",
+          "1ed474e398f57d0a0d4f17aeac6f5b1537454576",
+          "995b48bd6877dd58b56d3009eda14966ab42882b",
+          "6fdec5d1ef8e993090b328f7934b9ff3348b1d81",
+          "ac22ed1a8ace9fbfc1b2dd1c054d657d1e4e6fe2",
+          "35cb4defebfdd12f75eb822f424e5b61d407ec74",
+          "09e5c85b4b3b611ac376f71c54c0e6deaceecd41",
+          "db26efbbb84db17504891ecbdfda5589213dc94d",
+          "758b3e48b2e29dc49bde989102236606c9133a96",
+          "6f1469461325bba090ccb9d0762e4fbdd85f090d",
+          "4b3e7bc9e9ef6873fbe1a702e54adc5b060cdc33",
+          "08e9e6f3fc0f5c46c913ce9500b757e0a2196328",
+          "6cf5e378a5ca6400d66e25013704d2d18133d3f0",
+          "dad65bb1f6a68408a117d79144bc1053e38cc676"
+        ],
+        "limitations": [
+          {
+            "code": "local-observation-only",
+            "detail": "No remote, shared, governing, or current state was established."
+          },
+          {
+            "code": "scope-native-expression-unavailable",
+            "detail": "The registered Source Scope is retained as governed provenance; no unapproved native scope grammar was interpreted."
+          },
+          {
+            "code": "remote-names-source-reported",
+            "detail": "Configured remote names are local configuration evidence, not remote reachability or synchronization evidence."
+          }
+        ],
+        "locator": "/home/lobsterboss79/Projects/context-engine",
+        "observation_time": "2026-09-26T16:00:46.588479+00:00",
+        "outcome": "observed",
+        "remote_names": [
+          "origin"
+        ],
+        "repository_root": "/home/lobsterboss79/Projects/context-engine",
+        "source_identity": "SRC-F3-COMPETING",
+        "source_scope": "field-kit-release",
+        "staged_paths": [],
+        "unborn": false,
+        "unstaged_paths": [],
+        "untracked_paths": [],
+        "working_tree_clean": true
+      },
+      "markdown": {
+        "limitations": [],
+        "locator": "sources/competing-decision.md",
+        "original_markdown": "# Competing controlled decision\n\nFor the field-kit release, use the reinforced tote. This is a separate current\nsynthetic governed decision whose relationship to the sealed-case decision is\nnot resolved by this fixture.\n",
+        "outcome": "observed"
+      },
+      "source": "SRC-F3-COMPETING",
+      "transformation": {
+        "artifact": {
+          "identity": {
+            "kind": "artifact",
+            "value": "ART-F3-TOTE"
+          },
+          "locators": [
+            "sources/competing-decision.md"
+          ],
+          "source": {
+            "kind": "source",
+            "value": "SRC-F3-COMPETING"
+          }
+        },
+        "blocks": [
+          {
+            "content": "Competing controlled decision",
+            "kind": "heading",
+            "line_end": 1,
+            "line_start": 1,
+            "links": [],
+            "ordinal": 0,
+            "parent_heading": null
+          },
+          {
+            "content": "For the field-kit release, use the reinforced tote. This is a separate current\nsynthetic governed decision whose relationship to the sealed-case decision is\nnot resolved by this fixture.",
+            "kind": "paragraph",
+            "line_end": 5,
+            "line_start": 3,
+            "links": [],
+            "ordinal": 1,
+            "parent_heading": 0
+          }
+        ],
+        "limitations": [],
+        "original_markdown": "# Competing controlled decision\n\nFor the field-kit release, use the reinforced tote. This is a separate current\nsynthetic governed decision whose relationship to the sealed-case decision is\nnot resolved by this fixture.\n",
+        "parser_configuration": "markdown-it-py-4/commonmark+table",
+        "parser_version": "3.0.0",
+        "version": {
+          "artifact": {
+            "kind": "artifact",
+            "value": "ART-F3-TOTE"
+          },
+          "identity": {
+            "kind": "artifact_version",
+            "value": "ARTV-F3-TOTE"
+          },
+          "native_state_reference": "b761cf024997f0810062730a975012e1cac6177b",
+          "provenance": {
+            "artifact": null,
+            "artifact_version": null,
+            "identity": {
+              "kind": "provenance",
+              "value": "PROV-OBS-F3-COMPETING"
+            },
+            "limitations": [],
+            "location_reference": "sources/competing-decision.md",
+            "missing_material_basis": false,
+            "observation": {
+              "kind": "observation",
+              "value": "OBS-F3-TOTE"
+            },
+            "origin_projects": [
+              {
+                "kind": "project",
+                "value": "fixture-atlas-f3"
+              }
+            ],
+            "source": {
+              "kind": "source",
+              "value": "SRC-F3-COMPETING"
+            },
+            "transformation": "direct",
+            "transformation_reference": null,
+            "upstream": []
+          }
+        }
+      }
+    },
+    {
+      "git": {
+        "branch": "main",
+        "detached_head": false,
+        "head": "b761cf024997f0810062730a975012e1cac6177b",
+        "history": [
+          "b761cf024997f0810062730a975012e1cac6177b",
+          "7b902e153f529354c0e2b2f21b8f757035c32901",
+          "c7d17714a3983335f8564aa9360739d9ec785410",
+          "c9b39a3e950225498e06e687e69fdf15e9f37235",
+          "48df5148cba14415a41f5abd5cbde43247645a7c",
+          "bac6c3cdf7fb78278bd234f56d81c307a01a0090",
+          "1b61cb15cd9761aad843ed22261809b2aa61ced6",
+          "9d530d82926c3c67fa502c87f4f8d7dcfeda92a8",
+          "6a64e1e6f025d8c532ef6eed146779e42e116ecb",
+          "d4fa8e901a423966f5aba5866051b2ec2237613e",
+          "f5a874f1d1b42b19ce790ab2598c270ecd576af4",
+          "98624973feab235aaba81c16eb335a394b679331",
+          "6f0ae43c7d11135c5b33e57bc4aa9940ed925a05",
+          "40f8ddcb919692781fa20da93e6f051c0f77d67a",
+          "cec1bd1755913e6e22d0c4ef35cd11a736869cfd",
+          "483502c708711d82dd74be95920ed0a3e8f4078d",
+          "534dfe418d1353a9206d502c0c0311101aeb7cd6",
+          "97978562f1977ddea7f3892bbcb0a2448e3b569b",
+          "5511d1d978bc205227749c89131e1ecf97f320d3",
+          "1ed474e398f57d0a0d4f17aeac6f5b1537454576",
+          "995b48bd6877dd58b56d3009eda14966ab42882b",
+          "6fdec5d1ef8e993090b328f7934b9ff3348b1d81",
+          "ac22ed1a8ace9fbfc1b2dd1c054d657d1e4e6fe2",
+          "35cb4defebfdd12f75eb822f424e5b61d407ec74",
+          "09e5c85b4b3b611ac376f71c54c0e6deaceecd41",
+          "db26efbbb84db17504891ecbdfda5589213dc94d",
+          "758b3e48b2e29dc49bde989102236606c9133a96",
+          "6f1469461325bba090ccb9d0762e4fbdd85f090d",
+          "4b3e7bc9e9ef6873fbe1a702e54adc5b060cdc33",
+          "08e9e6f3fc0f5c46c913ce9500b757e0a2196328",
+          "6cf5e378a5ca6400d66e25013704d2d18133d3f0",
+          "dad65bb1f6a68408a117d79144bc1053e38cc676"
+        ],
+        "limitations": [
+          {
+            "code": "local-observation-only",
+            "detail": "No remote, shared, governing, or current state was established."
+          },
+          {
+            "code": "scope-native-expression-unavailable",
+            "detail": "The registered Source Scope is retained as governed provenance; no unapproved native scope grammar was interpreted."
+          },
+          {
+            "code": "remote-names-source-reported",
+            "detail": "Configured remote names are local configuration evidence, not remote reachability or synchronization evidence."
+          }
+        ],
+        "locator": "/home/lobsterboss79/Projects/context-engine",
+        "observation_time": "2026-09-26T16:00:46.613573+00:00",
+        "outcome": "observed",
+        "remote_names": [
+          "origin"
+        ],
+        "repository_root": "/home/lobsterboss79/Projects/context-engine",
+        "source_identity": "SRC-F3-HISTORY",
+        "source_scope": "field-kit-release",
+        "staged_paths": [],
+        "unborn": false,
+        "unstaged_paths": [],
+        "untracked_paths": [],
+        "working_tree_clean": true
+      },
+      "markdown": {
+        "limitations": [],
+        "locator": "sources/historical-note.md",
+        "original_markdown": "# Historical controlled note\n\nThe prior demonstration used a canvas bag. This is historical state only and\ndoes not state that it is superseded.\n",
+        "outcome": "observed"
+      },
+      "source": "SRC-F3-HISTORY",
+      "transformation": {
+        "artifact": {
+          "identity": {
+            "kind": "artifact",
+            "value": "ART-F3-CANVAS-HISTORY"
+          },
+          "locators": [
+            "sources/historical-note.md"
+          ],
+          "source": {
+            "kind": "source",
+            "value": "SRC-F3-HISTORY"
+          }
+        },
+        "blocks": [
+          {
+            "content": "Historical controlled note",
+            "kind": "heading",
+            "line_end": 1,
+            "line_start": 1,
+            "links": [],
+            "ordinal": 0,
+            "parent_heading": null
+          },
+          {
+            "content": "The prior demonstration used a canvas bag. This is historical state only and\ndoes not state that it is superseded.",
+            "kind": "paragraph",
+            "line_end": 4,
+            "line_start": 3,
+            "links": [],
+            "ordinal": 1,
+            "parent_heading": 0
+          }
+        ],
+        "limitations": [],
+        "original_markdown": "# Historical controlled note\n\nThe prior demonstration used a canvas bag. This is historical state only and\ndoes not state that it is superseded.\n",
+        "parser_configuration": "markdown-it-py-4/commonmark+table",
+        "parser_version": "3.0.0",
+        "version": {
+          "artifact": {
+            "kind": "artifact",
+            "value": "ART-F3-CANVAS-HISTORY"
+          },
+          "identity": {
+            "kind": "artifact_version",
+            "value": "ARTV-F3-CANVAS-HISTORY"
+          },
+          "native_state_reference": "b761cf024997f0810062730a975012e1cac6177b",
+          "provenance": {
+            "artifact": null,
+            "artifact_version": null,
+            "identity": {
+              "kind": "provenance",
+              "value": "PROV-OBS-F3-HISTORY"
+            },
+            "limitations": [],
+            "location_reference": "sources/historical-note.md",
+            "missing_material_basis": false,
+            "observation": {
+              "kind": "observation",
+              "value": "OBS-F3-CANVAS-HISTORY"
+            },
+            "origin_projects": [
+              {
+                "kind": "project",
+                "value": "fixture-atlas-f3"
+              }
+            ],
+            "source": {
+              "kind": "source",
+              "value": "SRC-F3-HISTORY"
+            },
+            "transformation": "direct",
+            "transformation_reference": null,
+            "upstream": []
+          }
+        }
+      }
+    },
+    {
+      "git": {
+        "branch": "main",
+        "detached_head": false,
+        "head": "b761cf024997f0810062730a975012e1cac6177b",
+        "history": [
+          "b761cf024997f0810062730a975012e1cac6177b",
+          "7b902e153f529354c0e2b2f21b8f757035c32901",
+          "c7d17714a3983335f8564aa9360739d9ec785410",
+          "c9b39a3e950225498e06e687e69fdf15e9f37235",
+          "48df5148cba14415a41f5abd5cbde43247645a7c",
+          "bac6c3cdf7fb78278bd234f56d81c307a01a0090",
+          "1b61cb15cd9761aad843ed22261809b2aa61ced6",
+          "9d530d82926c3c67fa502c87f4f8d7dcfeda92a8",
+          "6a64e1e6f025d8c532ef6eed146779e42e116ecb",
+          "d4fa8e901a423966f5aba5866051b2ec2237613e",
+          "f5a874f1d1b42b19ce790ab2598c270ecd576af4",
+          "98624973feab235aaba81c16eb335a394b679331",
+          "6f0ae43c7d11135c5b33e57bc4aa9940ed925a05",
+          "40f8ddcb919692781fa20da93e6f051c0f77d67a",
+          "cec1bd1755913e6e22d0c4ef35cd11a736869cfd",
+          "483502c708711d82dd74be95920ed0a3e8f4078d",
+          "534dfe418d1353a9206d502c0c0311101aeb7cd6",
+          "97978562f1977ddea7f3892bbcb0a2448e3b569b",
+          "5511d1d978bc205227749c89131e1ecf97f320d3",
+          "1ed474e398f57d0a0d4f17aeac6f5b1537454576",
+          "995b48bd6877dd58b56d3009eda14966ab42882b",
+          "6fdec5d1ef8e993090b328f7934b9ff3348b1d81",
+          "ac22ed1a8ace9fbfc1b2dd1c054d657d1e4e6fe2",
+          "35cb4defebfdd12f75eb822f424e5b61d407ec74",
+          "09e5c85b4b3b611ac376f71c54c0e6deaceecd41",
+          "db26efbbb84db17504891ecbdfda5589213dc94d",
+          "758b3e48b2e29dc49bde989102236606c9133a96",
+          "6f1469461325bba090ccb9d0762e4fbdd85f090d",
+          "4b3e7bc9e9ef6873fbe1a702e54adc5b060cdc33",
+          "08e9e6f3fc0f5c46c913ce9500b757e0a2196328",
+          "6cf5e378a5ca6400d66e25013704d2d18133d3f0",
+          "dad65bb1f6a68408a117d79144bc1053e38cc676"
+        ],
+        "limitations": [
+          {
+            "code": "local-observation-only",
+            "detail": "No remote, shared, governing, or current state was established."
+          },
+          {
+            "code": "scope-native-expression-unavailable",
+            "detail": "The registered Source Scope is retained as governed provenance; no unapproved native scope grammar was interpreted."
+          },
+          {
+            "code": "remote-names-source-reported",
+            "detail": "Configured remote names are local configuration evidence, not remote reachability or synchronization evidence."
+          }
+        ],
+        "locator": "/home/lobsterboss79/Projects/context-engine",
+        "observation_time": "2026-09-26T16:00:46.649282+00:00",
+        "outcome": "observed",
+        "remote_names": [
+          "origin"
+        ],
+        "repository_root": "/home/lobsterboss79/Projects/context-engine",
+        "source_identity": "SRC-F3-QUALIFICATION",
+        "source_scope": "field-kit-release",
+        "staged_paths": [],
+        "unborn": false,
+        "unstaged_paths": [],
+        "untracked_paths": [],
+        "working_tree_clean": true
+      },
+      "markdown": {
+        "limitations": [],
+        "locator": "sources/qualification.md",
+        "original_markdown": "# Controlled qualification\n\nAn inventory note reports that sealed-case availability for the northern depot\nis unverified. The fixture does not resolve the report.\n",
+        "outcome": "observed"
+      },
+      "source": "SRC-F3-QUALIFICATION",
+      "transformation": {
+        "artifact": {
+          "identity": {
+            "kind": "artifact",
+            "value": "ART-F3-DEPOT-UNVERIFIED"
+          },
+          "locators": [
+            "sources/qualification.md"
+          ],
+          "source": {
+            "kind": "source",
+            "value": "SRC-F3-QUALIFICATION"
+          }
+        },
+        "blocks": [
+          {
+            "content": "Controlled qualification",
+            "kind": "heading",
+            "line_end": 1,
+            "line_start": 1,
+            "links": [],
+            "ordinal": 0,
+            "parent_heading": null
+          },
+          {
+            "content": "An inventory note reports that sealed-case availability for the northern depot\nis unverified. The fixture does not resolve the report.",
+            "kind": "paragraph",
+            "line_end": 4,
+            "line_start": 3,
+            "links": [],
+            "ordinal": 1,
+            "parent_heading": 0
+          }
+        ],
+        "limitations": [],
+        "original_markdown": "# Controlled qualification\n\nAn inventory note reports that sealed-case availability for the northern depot\nis unverified. The fixture does not resolve the report.\n",
+        "parser_configuration": "markdown-it-py-4/commonmark+table",
+        "parser_version": "3.0.0",
+        "version": {
+          "artifact": {
+            "kind": "artifact",
+            "value": "ART-F3-DEPOT-UNVERIFIED"
+          },
+          "identity": {
+            "kind": "artifact_version",
+            "value": "ARTV-F3-DEPOT-UNVERIFIED"
+          },
+          "native_state_reference": "b761cf024997f0810062730a975012e1cac6177b",
+          "provenance": {
+            "artifact": null,
+            "artifact_version": null,
+            "identity": {
+              "kind": "provenance",
+              "value": "PROV-OBS-F3-QUALIFICATION"
+            },
+            "limitations": [],
+            "location_reference": "sources/qualification.md",
+            "missing_material_basis": false,
+            "observation": {
+              "kind": "observation",
+              "value": "OBS-F3-DEPOT-UNVERIFIED"
+            },
+            "origin_projects": [
+              {
+                "kind": "project",
+                "value": "fixture-atlas-f3"
+              }
+            ],
+            "source": {
+              "kind": "source",
+              "value": "SRC-F3-QUALIFICATION"
+            },
+            "transformation": "direct",
+            "transformation_reference": null,
+            "upstream": []
+          }
+        }
+      }
+    }
+  ]
+}
