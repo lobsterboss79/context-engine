@@ -1,0 +1,1228 @@
+{
+  "applicability_and_selection": [
+    {
+      "applicability": {
+        "candidate": {
+          "authorities": [],
+          "conflicts": [],
+          "currentness": [
+            {
+              "basis": [],
+              "currentness": "current",
+              "subject": {
+                "kind": "claim",
+                "value": "RI-F4B-SUPPORT"
+              },
+              "temporal": {
+                "construction_time": null,
+                "effective_time": null,
+                "event_time": null,
+                "observation_time": null,
+                "version_time": null
+              }
+            }
+          ],
+          "discovery_basis": "deterministic:literal",
+          "governance": [
+            {
+              "provenance": {
+                "artifact": {
+                  "kind": "artifact",
+                  "value": "ART-F4B-SUPPORT"
+                },
+                "artifact_version": {
+                  "kind": "artifact_version",
+                  "value": "ARTV-F4B-SUPPORT"
+                },
+                "identity": {
+                  "kind": "provenance",
+                  "value": "PROV-F4B-SUPPORT"
+                },
+                "limitations": [],
+                "location_reference": "sources/available-support.md",
+                "missing_material_basis": false,
+                "observation": {
+                  "kind": "observation",
+                  "value": "OBS-F4B-SUPPORT"
+                },
+                "origin_projects": [
+                  {
+                    "kind": "project",
+                    "value": "fixture-atlas-f4"
+                  }
+                ],
+                "source": {
+                  "kind": "source",
+                  "value": "SRC-F4B-SUPPORT"
+                },
+                "transformation": "normalized",
+                "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+                "upstream": [
+                  {
+                    "kind": "provenance",
+                    "value": "PROV-OBS-F4B-SUPPORT"
+                  }
+                ]
+              },
+              "state": "approved",
+              "subject": {
+                "kind": "claim",
+                "value": "RI-F4B-SUPPORT"
+              }
+            }
+          ],
+          "limitations": [],
+          "relationships": [],
+          "represented": {
+            "classifications": [],
+            "identity": {
+              "kind": "represented_information",
+              "value": "RI-F4B-SUPPORT"
+            },
+            "provenance": {
+              "artifact": {
+                "kind": "artifact",
+                "value": "ART-F4B-SUPPORT"
+              },
+              "artifact_version": {
+                "kind": "artifact_version",
+                "value": "ARTV-F4B-SUPPORT"
+              },
+              "identity": {
+                "kind": "provenance",
+                "value": "PROV-F4B-SUPPORT"
+              },
+              "limitations": [],
+              "location_reference": "sources/available-support.md",
+              "missing_material_basis": false,
+              "observation": {
+                "kind": "observation",
+                "value": "OBS-F4B-SUPPORT"
+              },
+              "origin_projects": [
+                {
+                  "kind": "project",
+                  "value": "fixture-atlas-f4"
+                }
+              ],
+              "source": {
+                "kind": "source",
+                "value": "SRC-F4B-SUPPORT"
+              },
+              "transformation": "normalized",
+              "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+              "upstream": [
+                {
+                  "kind": "provenance",
+                  "value": "PROV-OBS-F4B-SUPPORT"
+                }
+              ]
+            },
+            "subject": {
+              "kind": "claim",
+              "value": "RI-F4B-SUPPORT"
+            },
+            "uncertainty": []
+          },
+          "request": {
+            "kind": "request",
+            "value": "REQ-F4-RELEASE-CHECKLIST"
+          },
+          "source_scope": "field-kit-release"
+        },
+        "outcome": "applicable",
+        "qualifications": [],
+        "reason_codes": [
+          "deterministic-task-relevance-established"
+        ]
+      },
+      "represented_information": "RI-F4B-SUPPORT",
+      "selection": {
+        "applicability": {
+          "candidate": {
+            "authorities": [],
+            "conflicts": [],
+            "currentness": [
+              {
+                "basis": [],
+                "currentness": "current",
+                "subject": {
+                  "kind": "claim",
+                  "value": "RI-F4B-SUPPORT"
+                },
+                "temporal": {
+                  "construction_time": null,
+                  "effective_time": null,
+                  "event_time": null,
+                  "observation_time": null,
+                  "version_time": null
+                }
+              }
+            ],
+            "discovery_basis": "deterministic:literal",
+            "governance": [
+              {
+                "provenance": {
+                  "artifact": {
+                    "kind": "artifact",
+                    "value": "ART-F4B-SUPPORT"
+                  },
+                  "artifact_version": {
+                    "kind": "artifact_version",
+                    "value": "ARTV-F4B-SUPPORT"
+                  },
+                  "identity": {
+                    "kind": "provenance",
+                    "value": "PROV-F4B-SUPPORT"
+                  },
+                  "limitations": [],
+                  "location_reference": "sources/available-support.md",
+                  "missing_material_basis": false,
+                  "observation": {
+                    "kind": "observation",
+                    "value": "OBS-F4B-SUPPORT"
+                  },
+                  "origin_projects": [
+                    {
+                      "kind": "project",
+                      "value": "fixture-atlas-f4"
+                    }
+                  ],
+                  "source": {
+                    "kind": "source",
+                    "value": "SRC-F4B-SUPPORT"
+                  },
+                  "transformation": "normalized",
+                  "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+                  "upstream": [
+                    {
+                      "kind": "provenance",
+                      "value": "PROV-OBS-F4B-SUPPORT"
+                    }
+                  ]
+                },
+                "state": "approved",
+                "subject": {
+                  "kind": "claim",
+                  "value": "RI-F4B-SUPPORT"
+                }
+              }
+            ],
+            "limitations": [],
+            "relationships": [],
+            "represented": {
+              "classifications": [],
+              "identity": {
+                "kind": "represented_information",
+                "value": "RI-F4B-SUPPORT"
+              },
+              "provenance": {
+                "artifact": {
+                  "kind": "artifact",
+                  "value": "ART-F4B-SUPPORT"
+                },
+                "artifact_version": {
+                  "kind": "artifact_version",
+                  "value": "ARTV-F4B-SUPPORT"
+                },
+                "identity": {
+                  "kind": "provenance",
+                  "value": "PROV-F4B-SUPPORT"
+                },
+                "limitations": [],
+                "location_reference": "sources/available-support.md",
+                "missing_material_basis": false,
+                "observation": {
+                  "kind": "observation",
+                  "value": "OBS-F4B-SUPPORT"
+                },
+                "origin_projects": [
+                  {
+                    "kind": "project",
+                    "value": "fixture-atlas-f4"
+                  }
+                ],
+                "source": {
+                  "kind": "source",
+                  "value": "SRC-F4B-SUPPORT"
+                },
+                "transformation": "normalized",
+                "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+                "upstream": [
+                  {
+                    "kind": "provenance",
+                    "value": "PROV-OBS-F4B-SUPPORT"
+                  }
+                ]
+              },
+              "subject": {
+                "kind": "claim",
+                "value": "RI-F4B-SUPPORT"
+              },
+              "uncertainty": []
+            },
+            "request": {
+              "kind": "request",
+              "value": "REQ-F4-RELEASE-CHECKLIST"
+            },
+            "source_scope": "field-kit-release"
+          },
+          "outcome": "applicable",
+          "qualifications": [],
+          "reason_codes": [
+            "deterministic-task-relevance-established"
+          ]
+        },
+        "qualifications": [],
+        "reason_codes": [
+          "selected-explicit-material-basis",
+          "counterfactual-supporting-material-benefit"
+        ],
+        "role": "supporting",
+        "selected": {
+          "authorities": [],
+          "conflicts": [],
+          "currentness": [
+            {
+              "basis": [],
+              "currentness": "current",
+              "subject": {
+                "kind": "claim",
+                "value": "RI-F4B-SUPPORT"
+              },
+              "temporal": {
+                "construction_time": null,
+                "effective_time": null,
+                "event_time": null,
+                "observation_time": null,
+                "version_time": null
+              }
+            }
+          ],
+          "governance": [
+            {
+              "provenance": {
+                "artifact": {
+                  "kind": "artifact",
+                  "value": "ART-F4B-SUPPORT"
+                },
+                "artifact_version": {
+                  "kind": "artifact_version",
+                  "value": "ARTV-F4B-SUPPORT"
+                },
+                "identity": {
+                  "kind": "provenance",
+                  "value": "PROV-F4B-SUPPORT"
+                },
+                "limitations": [],
+                "location_reference": "sources/available-support.md",
+                "missing_material_basis": false,
+                "observation": {
+                  "kind": "observation",
+                  "value": "OBS-F4B-SUPPORT"
+                },
+                "origin_projects": [
+                  {
+                    "kind": "project",
+                    "value": "fixture-atlas-f4"
+                  }
+                ],
+                "source": {
+                  "kind": "source",
+                  "value": "SRC-F4B-SUPPORT"
+                },
+                "transformation": "normalized",
+                "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+                "upstream": [
+                  {
+                    "kind": "provenance",
+                    "value": "PROV-OBS-F4B-SUPPORT"
+                  }
+                ]
+              },
+              "state": "approved",
+              "subject": {
+                "kind": "claim",
+                "value": "RI-F4B-SUPPORT"
+              }
+            }
+          ],
+          "limitations": [],
+          "represented": {
+            "classifications": [],
+            "identity": {
+              "kind": "represented_information",
+              "value": "RI-F4B-SUPPORT"
+            },
+            "provenance": {
+              "artifact": {
+                "kind": "artifact",
+                "value": "ART-F4B-SUPPORT"
+              },
+              "artifact_version": {
+                "kind": "artifact_version",
+                "value": "ARTV-F4B-SUPPORT"
+              },
+              "identity": {
+                "kind": "provenance",
+                "value": "PROV-F4B-SUPPORT"
+              },
+              "limitations": [],
+              "location_reference": "sources/available-support.md",
+              "missing_material_basis": false,
+              "observation": {
+                "kind": "observation",
+                "value": "OBS-F4B-SUPPORT"
+              },
+              "origin_projects": [
+                {
+                  "kind": "project",
+                  "value": "fixture-atlas-f4"
+                }
+              ],
+              "source": {
+                "kind": "source",
+                "value": "SRC-F4B-SUPPORT"
+              },
+              "transformation": "normalized",
+              "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+              "upstream": [
+                {
+                  "kind": "provenance",
+                  "value": "PROV-OBS-F4B-SUPPORT"
+                }
+              ]
+            },
+            "subject": {
+              "kind": "claim",
+              "value": "RI-F4B-SUPPORT"
+            },
+            "uncertainty": []
+          },
+          "request": {
+            "kind": "request",
+            "value": "REQ-F4-RELEASE-CHECKLIST"
+          },
+          "role": "supporting",
+          "selection_basis": "FX-F4-B frozen governed selection permits available Supporting context only; known Required deficiency remains unselected and explicit"
+        }
+      }
+    }
+  ],
+  "audit": [
+    [
+      "rendering-rendered",
+      "package=PKG-F4-B-001; reasons=faithful-governed-package-presentation,rendering-is-not-delivery-receipt-or-use"
+    ]
+  ],
+  "bootstrap": {
+    "governance_basis": "project-owner-approved-ws2-item-2.1-synthetic-fixture",
+    "project_configuration_reference": "/home/lobsterboss79/Projects/context-engine/docs/phase-4/ws2-item-2.1-fixtures/F4-B/project.toml",
+    "project_identity": "fixture-atlas-f4",
+    "reference": "/home/lobsterboss79/Projects/context-engine/docs/phase-4/ws2-item-2.1-fixtures/F4-B/bootstrap.toml",
+    "scope": "controlled-validation-fixture"
+  },
+  "configuration": {
+    "governance_reference": "FX-F4 synthetic fixture family; no production authority",
+    "project_identity": "fixture-atlas-f4",
+    "reference": "/home/lobsterboss79/Projects/context-engine/docs/phase-4/ws2-item-2.1-fixtures/F4-B/project.toml"
+  },
+  "construction": {
+    "package": {
+      "coherence": {
+        "basis": "FX-F4-B known Required deficiency and ASU limitation are intentionally preserved",
+        "outcome": "coherent_with_qualification"
+      },
+      "identity": {
+        "kind": "package",
+        "value": "PKG-F4-B-001"
+      },
+      "items": [
+        {
+          "authorities": [],
+          "conflicts": [],
+          "currentness": [
+            {
+              "basis": [],
+              "currentness": "current",
+              "subject": {
+                "kind": "claim",
+                "value": "RI-F4B-SUPPORT"
+              },
+              "temporal": {
+                "construction_time": null,
+                "effective_time": null,
+                "event_time": null,
+                "observation_time": null,
+                "version_time": null
+              }
+            }
+          ],
+          "governance": [
+            {
+              "provenance": {
+                "artifact": {
+                  "kind": "artifact",
+                  "value": "ART-F4B-SUPPORT"
+                },
+                "artifact_version": {
+                  "kind": "artifact_version",
+                  "value": "ARTV-F4B-SUPPORT"
+                },
+                "identity": {
+                  "kind": "provenance",
+                  "value": "PROV-F4B-SUPPORT"
+                },
+                "limitations": [],
+                "location_reference": "sources/available-support.md",
+                "missing_material_basis": false,
+                "observation": {
+                  "kind": "observation",
+                  "value": "OBS-F4B-SUPPORT"
+                },
+                "origin_projects": [
+                  {
+                    "kind": "project",
+                    "value": "fixture-atlas-f4"
+                  }
+                ],
+                "source": {
+                  "kind": "source",
+                  "value": "SRC-F4B-SUPPORT"
+                },
+                "transformation": "normalized",
+                "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+                "upstream": [
+                  {
+                    "kind": "provenance",
+                    "value": "PROV-OBS-F4B-SUPPORT"
+                  }
+                ]
+              },
+              "state": "approved",
+              "subject": {
+                "kind": "claim",
+                "value": "RI-F4B-SUPPORT"
+              }
+            }
+          ],
+          "limitations": [],
+          "represented": {
+            "classifications": [],
+            "identity": {
+              "kind": "represented_information",
+              "value": "RI-F4B-SUPPORT"
+            },
+            "provenance": {
+              "artifact": {
+                "kind": "artifact",
+                "value": "ART-F4B-SUPPORT"
+              },
+              "artifact_version": {
+                "kind": "artifact_version",
+                "value": "ARTV-F4B-SUPPORT"
+              },
+              "identity": {
+                "kind": "provenance",
+                "value": "PROV-F4B-SUPPORT"
+              },
+              "limitations": [],
+              "location_reference": "sources/available-support.md",
+              "missing_material_basis": false,
+              "observation": {
+                "kind": "observation",
+                "value": "OBS-F4B-SUPPORT"
+              },
+              "origin_projects": [
+                {
+                  "kind": "project",
+                  "value": "fixture-atlas-f4"
+                }
+              ],
+              "source": {
+                "kind": "source",
+                "value": "SRC-F4B-SUPPORT"
+              },
+              "transformation": "normalized",
+              "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+              "upstream": [
+                {
+                  "kind": "provenance",
+                  "value": "PROV-OBS-F4B-SUPPORT"
+                }
+              ]
+            },
+            "subject": {
+              "kind": "claim",
+              "value": "RI-F4B-SUPPORT"
+            },
+            "uncertainty": []
+          },
+          "request": {
+            "kind": "request",
+            "value": "REQ-F4-RELEASE-CHECKLIST"
+          },
+          "role": "supporting",
+          "selection_basis": "FX-F4-B frozen governed selection permits available Supporting context only; known Required deficiency remains unselected and explicit"
+        }
+      ],
+      "limitations": [
+        {
+          "detail": "ASU adequacy=known_incomplete",
+          "evidence_boundary": "FX-F4-B frozen ASU: SRC-F4B-REQUIRED-MISSING is known Required but unavailable; SRC-F4B-SUPPORT is available",
+          "state": "unknown"
+        },
+        {
+          "detail": "Source SRC-F4B-REQUIRED-MISSING: unavailable",
+          "evidence_boundary": "FX-F4-B frozen ASU: SRC-F4B-REQUIRED-MISSING is known Required but unavailable; SRC-F4B-SUPPORT is available",
+          "state": "unavailable"
+        },
+        {
+          "detail": "Required governed context unavailable; contents not observed or fabricated",
+          "evidence_boundary": "SRC-F4B-REQUIRED-MISSING",
+          "state": "unavailable"
+        }
+      ],
+      "manifest": {
+        "entries": [
+          {
+            "contributed": true,
+            "limitations": [],
+            "observation": {
+              "kind": "observation",
+              "value": "OBS-F4B-SUPPORT"
+            },
+            "scope": null,
+            "source": {
+              "kind": "source",
+              "value": "SRC-F4B-SUPPORT"
+            }
+          }
+        ]
+      },
+      "request": {
+        "kind": "request",
+        "value": "REQ-F4-RELEASE-CHECKLIST"
+      },
+      "sufficiency": "insufficient"
+    },
+    "record": {
+      "candidates": [
+        {
+          "authorities": [],
+          "conflicts": [],
+          "currentness": [
+            {
+              "basis": [],
+              "currentness": "current",
+              "subject": {
+                "kind": "claim",
+                "value": "RI-F4B-SUPPORT"
+              },
+              "temporal": {
+                "construction_time": null,
+                "effective_time": null,
+                "event_time": null,
+                "observation_time": null,
+                "version_time": null
+              }
+            }
+          ],
+          "discovery_basis": "deterministic:literal",
+          "governance": [
+            {
+              "provenance": {
+                "artifact": {
+                  "kind": "artifact",
+                  "value": "ART-F4B-SUPPORT"
+                },
+                "artifact_version": {
+                  "kind": "artifact_version",
+                  "value": "ARTV-F4B-SUPPORT"
+                },
+                "identity": {
+                  "kind": "provenance",
+                  "value": "PROV-F4B-SUPPORT"
+                },
+                "limitations": [],
+                "location_reference": "sources/available-support.md",
+                "missing_material_basis": false,
+                "observation": {
+                  "kind": "observation",
+                  "value": "OBS-F4B-SUPPORT"
+                },
+                "origin_projects": [
+                  {
+                    "kind": "project",
+                    "value": "fixture-atlas-f4"
+                  }
+                ],
+                "source": {
+                  "kind": "source",
+                  "value": "SRC-F4B-SUPPORT"
+                },
+                "transformation": "normalized",
+                "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+                "upstream": [
+                  {
+                    "kind": "provenance",
+                    "value": "PROV-OBS-F4B-SUPPORT"
+                  }
+                ]
+              },
+              "state": "approved",
+              "subject": {
+                "kind": "claim",
+                "value": "RI-F4B-SUPPORT"
+              }
+            }
+          ],
+          "limitations": [],
+          "relationships": [],
+          "represented": {
+            "classifications": [],
+            "identity": {
+              "kind": "represented_information",
+              "value": "RI-F4B-SUPPORT"
+            },
+            "provenance": {
+              "artifact": {
+                "kind": "artifact",
+                "value": "ART-F4B-SUPPORT"
+              },
+              "artifact_version": {
+                "kind": "artifact_version",
+                "value": "ARTV-F4B-SUPPORT"
+              },
+              "identity": {
+                "kind": "provenance",
+                "value": "PROV-F4B-SUPPORT"
+              },
+              "limitations": [],
+              "location_reference": "sources/available-support.md",
+              "missing_material_basis": false,
+              "observation": {
+                "kind": "observation",
+                "value": "OBS-F4B-SUPPORT"
+              },
+              "origin_projects": [
+                {
+                  "kind": "project",
+                  "value": "fixture-atlas-f4"
+                }
+              ],
+              "source": {
+                "kind": "source",
+                "value": "SRC-F4B-SUPPORT"
+              },
+              "transformation": "normalized",
+              "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+              "upstream": [
+                {
+                  "kind": "provenance",
+                  "value": "PROV-OBS-F4B-SUPPORT"
+                }
+              ]
+            },
+            "subject": {
+              "kind": "claim",
+              "value": "RI-F4B-SUPPORT"
+            },
+            "uncertainty": []
+          },
+          "request": {
+            "kind": "request",
+            "value": "REQ-F4-RELEASE-CHECKLIST"
+          },
+          "source_scope": "field-kit-release"
+        }
+      ],
+      "coherence": {
+        "basis": "FX-F4-B known Required deficiency and ASU limitation are intentionally preserved",
+        "outcome": "coherent_with_qualification"
+      },
+      "identity": {
+        "kind": "record",
+        "value": "PCR-F4-B-001"
+      },
+      "limitations": [
+        {
+          "detail": "ASU adequacy=known_incomplete",
+          "evidence_boundary": "FX-F4-B frozen ASU: SRC-F4B-REQUIRED-MISSING is known Required but unavailable; SRC-F4B-SUPPORT is available",
+          "state": "unknown"
+        },
+        {
+          "detail": "Source SRC-F4B-REQUIRED-MISSING: unavailable",
+          "evidence_boundary": "FX-F4-B frozen ASU: SRC-F4B-REQUIRED-MISSING is known Required but unavailable; SRC-F4B-SUPPORT is available",
+          "state": "unavailable"
+        },
+        {
+          "detail": "Required governed context unavailable; contents not observed or fabricated",
+          "evidence_boundary": "SRC-F4B-REQUIRED-MISSING",
+          "state": "unavailable"
+        }
+      ],
+      "outcome": "insufficient",
+      "package": {
+        "kind": "package",
+        "value": "PKG-F4-B-001"
+      },
+      "request": {
+        "kind": "request",
+        "value": "REQ-F4-RELEASE-CHECKLIST"
+      },
+      "source_universe": {
+        "adequacy": {
+          "detail": "ASU adequacy=known_incomplete",
+          "evidence_boundary": "FX-F4-B frozen ASU: SRC-F4B-REQUIRED-MISSING is known Required but unavailable; SRC-F4B-SUPPORT is available",
+          "state": "unknown"
+        },
+        "sources": [
+          {
+            "kind": "source",
+            "value": "SRC-F4B-SUPPORT"
+          },
+          {
+            "kind": "source",
+            "value": "SRC-F4B-REQUIRED-MISSING"
+          }
+        ]
+      },
+      "status": "completed",
+      "termination_basis": "FX-F4-B known-incomplete ASU and unavailable Required Source are explicitly preserved; no safe bounded task is supplied"
+    }
+  },
+  "discovery": {
+    "candidates": [
+      {
+        "authorities": [],
+        "conflicts": [],
+        "currentness": [
+          {
+            "basis": [],
+            "currentness": "current",
+            "subject": {
+              "kind": "claim",
+              "value": "RI-F4B-SUPPORT"
+            },
+            "temporal": {
+              "construction_time": null,
+              "effective_time": null,
+              "event_time": null,
+              "observation_time": null,
+              "version_time": null
+            }
+          }
+        ],
+        "discovery_basis": "deterministic:literal",
+        "governance": [
+          {
+            "provenance": {
+              "artifact": {
+                "kind": "artifact",
+                "value": "ART-F4B-SUPPORT"
+              },
+              "artifact_version": {
+                "kind": "artifact_version",
+                "value": "ARTV-F4B-SUPPORT"
+              },
+              "identity": {
+                "kind": "provenance",
+                "value": "PROV-F4B-SUPPORT"
+              },
+              "limitations": [],
+              "location_reference": "sources/available-support.md",
+              "missing_material_basis": false,
+              "observation": {
+                "kind": "observation",
+                "value": "OBS-F4B-SUPPORT"
+              },
+              "origin_projects": [
+                {
+                  "kind": "project",
+                  "value": "fixture-atlas-f4"
+                }
+              ],
+              "source": {
+                "kind": "source",
+                "value": "SRC-F4B-SUPPORT"
+              },
+              "transformation": "normalized",
+              "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+              "upstream": [
+                {
+                  "kind": "provenance",
+                  "value": "PROV-OBS-F4B-SUPPORT"
+                }
+              ]
+            },
+            "state": "approved",
+            "subject": {
+              "kind": "claim",
+              "value": "RI-F4B-SUPPORT"
+            }
+          }
+        ],
+        "limitations": [],
+        "relationships": [],
+        "represented": {
+          "classifications": [],
+          "identity": {
+            "kind": "represented_information",
+            "value": "RI-F4B-SUPPORT"
+          },
+          "provenance": {
+            "artifact": {
+              "kind": "artifact",
+              "value": "ART-F4B-SUPPORT"
+            },
+            "artifact_version": {
+              "kind": "artifact_version",
+              "value": "ARTV-F4B-SUPPORT"
+            },
+            "identity": {
+              "kind": "provenance",
+              "value": "PROV-F4B-SUPPORT"
+            },
+            "limitations": [],
+            "location_reference": "sources/available-support.md",
+            "missing_material_basis": false,
+            "observation": {
+              "kind": "observation",
+              "value": "OBS-F4B-SUPPORT"
+            },
+            "origin_projects": [
+              {
+                "kind": "project",
+                "value": "fixture-atlas-f4"
+              }
+            ],
+            "source": {
+              "kind": "source",
+              "value": "SRC-F4B-SUPPORT"
+            },
+            "transformation": "normalized",
+            "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+            "upstream": [
+              {
+                "kind": "provenance",
+                "value": "PROV-OBS-F4B-SUPPORT"
+              }
+            ]
+          },
+          "subject": {
+            "kind": "claim",
+            "value": "RI-F4B-SUPPORT"
+          },
+          "uncertainty": []
+        },
+        "request": {
+          "kind": "request",
+          "value": "REQ-F4-RELEASE-CHECKLIST"
+        },
+        "source_scope": "field-kit-release"
+      }
+    ],
+    "excluded_sources": [
+      [
+        "SRC-F4B-REQUIRED-MISSING",
+        "unavailable"
+      ]
+    ],
+    "expanded_inspected_sources": [],
+    "expansion_basis": [],
+    "initial_inspected_sources": [
+      "SRC-F4B-SUPPORT"
+    ],
+    "limitations": [
+      {
+        "detail": "ASU adequacy=known_incomplete",
+        "evidence_boundary": "FX-F4-B frozen ASU: SRC-F4B-REQUIRED-MISSING is known Required but unavailable; SRC-F4B-SUPPORT is available",
+        "state": "unknown"
+      },
+      {
+        "detail": "Source SRC-F4B-REQUIRED-MISSING: unavailable",
+        "evidence_boundary": "FX-F4-B frozen ASU: SRC-F4B-REQUIRED-MISSING is known Required but unavailable; SRC-F4B-SUPPORT is available",
+        "state": "unavailable"
+      }
+    ],
+    "negative_result_scope": "ASU=REQ-F4-RELEASE-CHECKLIST; adequacy=known_incomplete; inspected=SRC-F4B-SUPPORT",
+    "termination_basis": "bounded deterministic inspection completed; no applicability, selection, or sufficiency evaluation"
+  },
+  "environment": {
+    "markdown_it": "3.0.0",
+    "platform": "Linux-7.0.0-34-generic-x86_64-with-glibc2.43",
+    "python": "3.14.4 (main, Aug 20 2026, 10:41:58) [GCC 15.2.0]"
+  },
+  "evidence_id": "VE-F4-B-001",
+  "execution_utc": "2026-09-26T16:09:29.393500+00:00",
+  "expected_result": "ER-F4-B v1",
+  "fixture": "FX-F4-B v1",
+  "known_required_deficiency": {
+    "basis": "FX-F4-B frozen known Required release decision; Source SRC-F4B-REQUIRED-MISSING is unavailable and no bounded safe task is supplied",
+    "can_proceed_bounded_without": false,
+    "disclosure_denied": false,
+    "identity": {
+      "kind": "represented_information",
+      "value": "RI-F4-REQUIRED-DECISION"
+    },
+    "limitation": {
+      "detail": "Required governed context unavailable; contents not observed or fabricated",
+      "evidence_boundary": "SRC-F4B-REQUIRED-MISSING",
+      "state": "unavailable"
+    }
+  },
+  "renderings": {
+    "chatgpt": {
+      "reason_codes": [
+        "faithful-governed-package-presentation",
+        "rendering-is-not-delivery-receipt-or-use"
+      ],
+      "reference": "rendering:chatgpt:PKG-F4-B-001",
+      "status": "rendered"
+    },
+    "codex": {
+      "reason_codes": [
+        "faithful-governed-package-presentation",
+        "rendering-is-not-delivery-receipt-or-use"
+      ],
+      "reference": "rendering:codex:PKG-F4-B-001",
+      "status": "rendered"
+    },
+    "human": {
+      "reason_codes": [
+        "faithful-governed-package-presentation",
+        "rendering-is-not-delivery-receipt-or-use"
+      ],
+      "reference": "rendering:human:PKG-F4-B-001",
+      "status": "rendered"
+    }
+  },
+  "represented_information": [
+    {
+      "classifications": [],
+      "identity": {
+        "kind": "represented_information",
+        "value": "RI-F4B-SUPPORT"
+      },
+      "provenance": {
+        "artifact": {
+          "kind": "artifact",
+          "value": "ART-F4B-SUPPORT"
+        },
+        "artifact_version": {
+          "kind": "artifact_version",
+          "value": "ARTV-F4B-SUPPORT"
+        },
+        "identity": {
+          "kind": "provenance",
+          "value": "PROV-F4B-SUPPORT"
+        },
+        "limitations": [],
+        "location_reference": "sources/available-support.md",
+        "missing_material_basis": false,
+        "observation": {
+          "kind": "observation",
+          "value": "OBS-F4B-SUPPORT"
+        },
+        "origin_projects": [
+          {
+            "kind": "project",
+            "value": "fixture-atlas-f4"
+          }
+        ],
+        "source": {
+          "kind": "source",
+          "value": "SRC-F4B-SUPPORT"
+        },
+        "transformation": "normalized",
+        "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+        "upstream": [
+          {
+            "kind": "provenance",
+            "value": "PROV-OBS-F4B-SUPPORT"
+          }
+        ]
+      },
+      "subject": {
+        "kind": "claim",
+        "value": "RI-F4B-SUPPORT"
+      },
+      "uncertainty": []
+    }
+  ],
+  "source_observations": [
+    {
+      "git": {
+        "branch": "main",
+        "detached_head": false,
+        "head": "478005b424b47216c372ac289032f1b242c136e1",
+        "history": [
+          "478005b424b47216c372ac289032f1b242c136e1",
+          "b761cf024997f0810062730a975012e1cac6177b",
+          "7b902e153f529354c0e2b2f21b8f757035c32901",
+          "c7d17714a3983335f8564aa9360739d9ec785410",
+          "c9b39a3e950225498e06e687e69fdf15e9f37235",
+          "48df5148cba14415a41f5abd5cbde43247645a7c",
+          "bac6c3cdf7fb78278bd234f56d81c307a01a0090",
+          "1b61cb15cd9761aad843ed22261809b2aa61ced6",
+          "9d530d82926c3c67fa502c87f4f8d7dcfeda92a8",
+          "6a64e1e6f025d8c532ef6eed146779e42e116ecb",
+          "d4fa8e901a423966f5aba5866051b2ec2237613e",
+          "f5a874f1d1b42b19ce790ab2598c270ecd576af4",
+          "98624973feab235aaba81c16eb335a394b679331",
+          "6f0ae43c7d11135c5b33e57bc4aa9940ed925a05",
+          "40f8ddcb919692781fa20da93e6f051c0f77d67a",
+          "cec1bd1755913e6e22d0c4ef35cd11a736869cfd",
+          "483502c708711d82dd74be95920ed0a3e8f4078d",
+          "534dfe418d1353a9206d502c0c0311101aeb7cd6",
+          "97978562f1977ddea7f3892bbcb0a2448e3b569b",
+          "5511d1d978bc205227749c89131e1ecf97f320d3",
+          "1ed474e398f57d0a0d4f17aeac6f5b1537454576",
+          "995b48bd6877dd58b56d3009eda14966ab42882b",
+          "6fdec5d1ef8e993090b328f7934b9ff3348b1d81",
+          "ac22ed1a8ace9fbfc1b2dd1c054d657d1e4e6fe2",
+          "35cb4defebfdd12f75eb822f424e5b61d407ec74",
+          "09e5c85b4b3b611ac376f71c54c0e6deaceecd41",
+          "db26efbbb84db17504891ecbdfda5589213dc94d",
+          "758b3e48b2e29dc49bde989102236606c9133a96",
+          "6f1469461325bba090ccb9d0762e4fbdd85f090d",
+          "4b3e7bc9e9ef6873fbe1a702e54adc5b060cdc33",
+          "08e9e6f3fc0f5c46c913ce9500b757e0a2196328",
+          "6cf5e378a5ca6400d66e25013704d2d18133d3f0"
+        ],
+        "limitations": [
+          {
+            "code": "local-observation-only",
+            "detail": "No remote, shared, governing, or current state was established."
+          },
+          {
+            "code": "scope-native-expression-unavailable",
+            "detail": "The registered Source Scope is retained as governed provenance; no unapproved native scope grammar was interpreted."
+          },
+          {
+            "code": "remote-names-source-reported",
+            "detail": "Configured remote names are local configuration evidence, not remote reachability or synchronization evidence."
+          }
+        ],
+        "locator": "/home/lobsterboss79/Projects/context-engine",
+        "observation_time": "2026-09-26T16:09:29.351484+00:00",
+        "outcome": "observed",
+        "remote_names": [
+          "origin"
+        ],
+        "repository_root": "/home/lobsterboss79/Projects/context-engine",
+        "source_identity": "SRC-F4B-SUPPORT",
+        "source_scope": "field-kit-release",
+        "staged_paths": [],
+        "unborn": false,
+        "unstaged_paths": [],
+        "untracked_paths": [
+          "docs/phase-4/validation-evidence/VE-F4-A-001/raw/controlled-input-sha256.txt",
+          "docs/phase-4/validation-evidence/VE-F4-A-001/raw/f4-a-execution.py",
+          "docs/phase-4/validation-evidence/VE-F4-A-001/raw/f4-a-state.sqlite",
+          "docs/phase-4/validation-evidence/VE-F4-A-001/raw/raw-result.json",
+          "docs/phase-4/validation-evidence/VE-F4-A-001/raw/rendering-chatgpt.md",
+          "docs/phase-4/validation-evidence/VE-F4-A-001/raw/rendering-codex.md",
+          "docs/phase-4/validation-evidence/VE-F4-A-001/raw/rendering-human.md",
+          "docs/phase-4/validation-evidence/VE-F4-A-001/raw/ve-f4-a-bootstrap.stderr",
+          "docs/phase-4/validation-evidence/VE-F4-A-001/raw/ve-f4-a-bootstrap.stdout",
+          "docs/phase-4/validation-evidence/VE-F4-A-001/raw/ve-f4-a-execution.stderr",
+          "docs/phase-4/validation-evidence/VE-F4-A-001/raw/ve-f4-a-execution.stdout",
+          "docs/phase-4/validation-evidence/VE-F4-B-001/raw/f4-b-execution.py"
+        ],
+        "working_tree_clean": false
+      },
+      "markdown": {
+        "limitations": [],
+        "locator": "sources/available-support.md",
+        "original_markdown": "# Available support only\n\nThe release label uses the neutral blue identifier.\n",
+        "outcome": "observed"
+      },
+      "source": "SRC-F4B-SUPPORT",
+      "transformation": {
+        "artifact": {
+          "identity": {
+            "kind": "artifact",
+            "value": "ART-F4B-SUPPORT"
+          },
+          "locators": [
+            "sources/available-support.md"
+          ],
+          "source": {
+            "kind": "source",
+            "value": "SRC-F4B-SUPPORT"
+          }
+        },
+        "blocks": [
+          {
+            "content": "Available support only",
+            "kind": "heading",
+            "line_end": 1,
+            "line_start": 1,
+            "links": [],
+            "ordinal": 0,
+            "parent_heading": null
+          },
+          {
+            "content": "The release label uses the neutral blue identifier.",
+            "kind": "paragraph",
+            "line_end": 3,
+            "line_start": 3,
+            "links": [],
+            "ordinal": 1,
+            "parent_heading": 0
+          }
+        ],
+        "limitations": [],
+        "original_markdown": "# Available support only\n\nThe release label uses the neutral blue identifier.\n",
+        "parser_configuration": "markdown-it-py-4/commonmark+table",
+        "parser_version": "3.0.0",
+        "version": {
+          "artifact": {
+            "kind": "artifact",
+            "value": "ART-F4B-SUPPORT"
+          },
+          "identity": {
+            "kind": "artifact_version",
+            "value": "ARTV-F4B-SUPPORT"
+          },
+          "native_state_reference": "478005b424b47216c372ac289032f1b242c136e1",
+          "provenance": {
+            "artifact": null,
+            "artifact_version": null,
+            "identity": {
+              "kind": "provenance",
+              "value": "PROV-OBS-F4B-SUPPORT"
+            },
+            "limitations": [],
+            "location_reference": "sources/available-support.md",
+            "missing_material_basis": false,
+            "observation": {
+              "kind": "observation",
+              "value": "OBS-F4B-SUPPORT"
+            },
+            "origin_projects": [
+              {
+                "kind": "project",
+                "value": "fixture-atlas-f4"
+              }
+            ],
+            "source": {
+              "kind": "source",
+              "value": "SRC-F4B-SUPPORT"
+            },
+            "transformation": "direct",
+            "transformation_reference": null,
+            "upstream": []
+          }
+        }
+      }
+    },
+    {
+      "availability": "unavailable",
+      "observation": "not attempted: frozen unavailable Required Source; no content exists in observed set",
+      "source": "SRC-F4B-REQUIRED-MISSING"
+    }
+  ]
+}
