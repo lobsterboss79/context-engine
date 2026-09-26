@@ -1,0 +1,10 @@
+075882e4072e95b7ea8a7bb033fd0502fe1d0e4035ae329f6405aab6b7b6fec2  docs/phase-4/validation-evidence/VE-F4-E-002/raw/f4-e-retest-execution.py
+be110e35153c8741a0a7fd786bf304e26df78fd97704cc4b5fda10e207cbab84  docs/phase-4/validation-evidence/VE-F4-E-002/raw/f4-e-state.sqlite
+062611f805b72ee94a477b4d54adb8ac323148811b7bb6ebd144bea846360f37  docs/phase-4/validation-evidence/VE-F4-E-002/raw/raw-result.json
+546343c68822ecefe87cd57515de57976c4846a0d05d6e0a0cd0e585a85e23c4  docs/phase-4/validation-evidence/VE-F4-E-002/raw/rendering-chatgpt.md
+7dd08ea61530c613c7f238f493a65c2ea15f323173111913462ddc7da2d493fe  docs/phase-4/validation-evidence/VE-F4-E-002/raw/rendering-codex.md
+420e945bd34e59832a08af9acf94d620b3ddb15fb2cbdf899434de54d396bb31  docs/phase-4/validation-evidence/VE-F4-E-002/raw/rendering-human.md
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  docs/phase-4/validation-evidence/VE-F4-E-002/raw/ve-f4-e-bootstrap.stderr
+72332da3f083705e37aac5da5038512423e75e23c1b60e25a9435a19e963fc68  docs/phase-4/validation-evidence/VE-F4-E-002/raw/ve-f4-e-bootstrap.stdout
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  docs/phase-4/validation-evidence/VE-F4-E-002/raw/ve-f4-e-retest-execution.stderr
+7a43809c7c562bad7e39d79471984ab113d20583edb5114970debb49b65dfa61  docs/phase-4/validation-evidence/VE-F4-E-002/raw/ve-f4-e-retest-execution.stdout

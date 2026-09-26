@@ -12,7 +12,7 @@ from context_engine.application.lifecycle import ApplicableSourceUniverse, Scope
 from context_engine.application.package_construction import CoherenceInputs, PackageConstruction, construct_logical_package, evaluate_coherence, persist_construction
 from context_engine.application.rendering import ConsumerContract, RenderingResult, render_package
 from context_engine.application.sufficiency import RequiredDeficiency, SufficiencyDecision, SufficiencyInputs, evaluate_sufficiency
-from context_engine.core.model import CandidateContext, ContextRequest, SemanticIdentity
+from context_engine.core.model import CandidateContext, ContextRequest, SemanticIdentity, Uncertainty
 
 
 @dataclass(frozen=True)
@@ -44,6 +44,7 @@ class GovernedRenderInputs:
     scope_inputs: ScopeInputs = ScopeInputs()
     expansions: tuple[ExpansionRequest, ...] = ()
     coherence_inputs: CoherenceInputs = CoherenceInputs()
+    construction_qualifications: tuple[Uncertainty, ...] = ()
 
 
 @dataclass(frozen=True)
@@ -79,7 +80,8 @@ def run_governed_render(inputs: GovernedRenderInputs, *, store: SQLiteStateStore
     construction = construct_logical_package(package_identity=inputs.package_identity, request=inputs.request.identity,
         selected=tuple(selected), candidates=discovery.candidates, universe=inputs.universe, sufficiency=sufficiency,
         coherence=evaluate_coherence(inputs.coherence_inputs), record_identity=inputs.record_identity,
-        termination_basis=inputs.termination_basis)
+        termination_basis=inputs.termination_basis,
+        construction_qualifications=inputs.construction_qualifications)
     if store is not None:
         persist_construction(store, project_identity=inputs.request.project.value, construction=construction)
     try:

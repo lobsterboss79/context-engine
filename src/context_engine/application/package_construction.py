@@ -48,6 +48,7 @@ def construct_logical_package(
     universe: ApplicableSourceUniverse, sufficiency: SufficiencyDecision,
     coherence: ConstructionState, record_identity: SemanticIdentity,
     termination_basis: str,
+    construction_qualifications: tuple[Uncertainty, ...] = (),
 ) -> PackageConstruction:
     """Construct an authorized logical package, never a rendering/delivery.
 
@@ -55,7 +56,11 @@ def construct_logical_package(
     empty package.  Incoherence can downgrade, never upgrade, sufficiency.
     """
     outcome = _coherent_outcome(sufficiency.outcome, coherence)
-    limitations = sufficiency.limitations
+    # Construction can carry material qualifications established outside the
+    # task-local sufficiency calculation (for example, a governed bounded-task
+    # boundary). They are limitations, not represented Source content, and
+    # must survive in both the logical package and its durable record.
+    limitations = sufficiency.limitations + construction_qualifications
     core_universe = CoreApplicableSourceUniverse(
         tuple(SemanticIdentity("source", source.identity) for source in universe.sources),
         limitations[0] if limitations else None,

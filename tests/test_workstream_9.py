@@ -83,6 +83,16 @@ def test_all_renderers_share_one_complete_semantic_view(governed_request: Contex
     assert not hasattr(results[0].rendering, "delivery")
 
 
+def test_all_renderers_preserve_material_package_qualifications(governed_request: ContextRequest) -> None:
+    logical = package(governed_request)
+    qualification = Uncertainty(EpistemicState.UNKNOWN, evidence_boundary="broad-task", detail="Broad task is insufficient; bounded task only; no authorization may proceed.")
+    qualified = ContextPackage(logical.identity, logical.request, logical.items, logical.manifest, logical.sufficiency,
+                               logical.coherence, logical.limitations + (qualification,))
+    for kind in ConsumerKind:
+        view = payload(render_package(qualified, contract(governed_request, kind)))
+        assert {entry["detail"] for entry in view["gaps_and_limitations"]} >= {qualification.detail}
+
+
 def test_disclosure_and_capacity_fail_closed_without_package_leak(governed_request: ContextRequest) -> None:
     logical = package(governed_request)
     denied = render_package(logical, contract(governed_request, ConsumerKind.HUMAN, disclosure_authorized=None))

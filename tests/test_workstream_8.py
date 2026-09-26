@@ -39,10 +39,10 @@ def universe(adequacy: BoundaryAdequacy = BoundaryAdequacy.ADEQUATE, availabilit
     return ApplicableSourceUniverse("request-8", (RegisteredSource("source-a", "project-a", "git", "docs", availability),), adequacy, "governed ASU fixture")
 
 
-def construct(sufficiency, coherence=None):
+def construct(sufficiency, coherence=None, construction_qualifications=()):
     selected = (item(),)
     candidate = CandidateContext(selected[0].request, selected[0].represented, "d")
-    return construct_logical_package(package_identity=ident("package", "package-8"), request=selected[0].request, selected=selected, candidates=(candidate,), universe=universe(), sufficiency=sufficiency, coherence=coherence or evaluate_coherence(CoherenceInputs()), record_identity=ident("record", "record-8"), termination_basis="bounded governed termination")
+    return construct_logical_package(package_identity=ident("package", "package-8"), request=selected[0].request, selected=selected, candidates=(candidate,), universe=universe(), sufficiency=sufficiency, coherence=coherence or evaluate_coherence(CoherenceInputs()), record_identity=ident("record", "record-8"), termination_basis="bounded governed termination", construction_qualifications=construction_qualifications)
 
 
 def test_adequate_asu_and_required_coverage_can_be_sufficient() -> None:
@@ -78,6 +78,27 @@ def test_source_failure_qualifications_are_preserved(availability: Availability)
     decision = evaluate_sufficiency(SufficiencyInputs((item(),), universe(BoundaryAdequacy.KNOWN_INCOMPLETE, availability), bounded_task_safe=True))
     assert decision.outcome is SufficiencyOutcome.CONDITIONALLY_SUFFICIENT
     assert decision.limitations and availability.value in " ".join(entry.detail or "" for entry in decision.limitations)
+
+
+def test_material_construction_qualifications_survive_logical_package_and_record() -> None:
+    deficiency = RequiredDeficiency(ident("represented_information", "missing"), "required decision", can_proceed_bounded_without=True,
+                                    limitation=Uncertainty(EpistemicState.UNAVAILABLE, detail="Required decision remains unavailable"))
+    decision = evaluate_sufficiency(SufficiencyInputs((item(),), universe(), (deficiency,), bounded_task_safe=True))
+    broad_boundary = Uncertainty(EpistemicState.UNKNOWN, evidence_boundary="broad-task", detail="Broad task remains insufficient; ASU is known-incomplete; bounded task only; no authorization may proceed.")
+    construction = construct(decision, evaluate_coherence(CoherenceInputs(understood_qualified_state=True)), (broad_boundary,))
+    assert construction.package is not None
+    assert construction.package.sufficiency is SufficiencyOutcome.CONDITIONALLY_SUFFICIENT
+    assert construction.package.limitations == construction.record.limitations
+    assert deficiency.limitation in construction.package.limitations
+    assert broad_boundary in construction.package.limitations
+
+
+def test_sufficient_package_without_construction_qualifications_is_unchanged() -> None:
+    decision = evaluate_sufficiency(SufficiencyInputs((item(),), universe()))
+    construction = construct(decision)
+    assert construction.package is not None
+    assert construction.package.sufficiency is SufficiencyOutcome.SUFFICIENT
+    assert construction.package.limitations == decision.limitations
 
 
 def test_conflict_uncertainty_and_package_existence_do_not_establish_sufficiency() -> None:
