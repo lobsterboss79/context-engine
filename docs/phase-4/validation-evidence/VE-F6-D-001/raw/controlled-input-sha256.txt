@@ -1,0 +1,4 @@
+a36761630dead061f856b74624b35605db24ffe16bcbc5f89e56d05b3904781e  docs/phase-4/ws2-item-2.6-fixtures/F6-D/bootstrap.toml
+98fe288577b9f7bb1beb0334a206f693ed668a3886db1accef47249ba5f5e4cc  docs/phase-4/ws2-item-2.6-fixtures/F6-D/project.toml
+43154878e540b32b0d3b21bd022f8de80a81fde78cbc04d4f7a2a718216b0a2b  docs/phase-4/ws2-item-2.6-fixtures/F6-D/controlled-request.toml
+7f04af1022fdf6d7358a4083a4985b391aecef1d7aa8706f68cf4646e194b08d  docs/phase-4/ws2-item-2.6-fixtures/F6-D/sources/field-operations-note.md
