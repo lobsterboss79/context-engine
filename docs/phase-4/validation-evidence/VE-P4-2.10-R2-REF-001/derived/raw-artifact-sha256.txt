@@ -1,0 +1,10 @@
+5ae09a0fe8fd07399ffe3fb1f0254e565bf47de29108bfe57d0771361c365144  ./__pycache__/r2-execution.cpython-314.pyc
+8fe8be720606b4d6cffff1d2447ada74aa7902b5ddc99db089e0b4ca6cfdd9a4  ./derive-semantic-projection.py
+a30b43c8b58773132c5eb378ad453fbf132bef1d6092624b4bbe59cd3a32c7a0  ./f3-state.sqlite
+b9ebe8e187bc329e991e5cbefe24685c9a7134581520a4163260fd936fbc1bbd  ./r2-execution.py
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  ./r2-ref-execution.stderr
+14a3772d0dacad90121cdb386ea0531c89d70e1273ddb11d0da3e124db3c6aa7  ./r2-ref-execution.stdout
+9ddae13898d75a0888ad2dd78e3eba008b17050c4111172a35064f7443ff66ff  ./raw-result.json
+2e4b5435ef938743275d3112580ba3887a4f74368f90e3b133e8e53a7c489619  ./rendering-chatgpt.md
+d9448a5eb4e8bc45f25191a578d10c4df80ecbf08d2c03d77fdc783821653a1f  ./rendering-codex.md
+1d0755986ba7f04c579f2590231775e9747e6c6dcc878b7cb3970028ef97cb4c  ./rendering-human.md

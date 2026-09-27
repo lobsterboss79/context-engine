@@ -1,0 +1,6 @@
+e898c46ef2c07c528e342cb76fc432934b417ed17ce3e107f92041f3ee05c9f9  ./raw-artifact-sha256.txt
+4167ff9c6be55196c1a12426401e664119e707129f5ed898a35f20a098e32177  ./semantic-assessment.json
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  ./semantic-assessment.stderr
+400b8e55da12563c1227d582d267e3812a1976e83455a700ecf2ec74bb85cea3  ./semantic-assessment.stdout
+59aa4210239cce3a3a5b3224334c32c9fb066a44fd7ffb01c4d92a45c41fbf02  ./semantic-projection-initial-presentation-order.json
+7abe9201119abdc629082ac692ccc2fa998e989271e9191c0bade93bb9708681  ./semantic-projection.json
