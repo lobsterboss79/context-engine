@@ -1,0 +1,8 @@
+02b0ef798ee6c1ad045ce1744e2685f4ae330f2dfe60d34832dc83cb542ecc43  docs/phase-4/ws2-item-2.1-fixtures/F5-A/bootstrap.toml
+25b592461efb64fa5aeffbeab78336552964f399eef03a0b469e285b8c3c34b7  docs/phase-4/ws2-item-2.1-fixtures/F5-A/project.toml
+8db24b3110a12a17fbb6cd7917e41ba8d765f3cde6fe59d399d89aa470fb2a01  docs/phase-4/ws2-item-2.1-fixtures/F5-A/beacon-bootstrap.toml
+0c0345e8f23edd966eb18122c991fc6496ca0c7bb11f8e6fe520e259647b15e0  docs/phase-4/ws2-item-2.1-fixtures/F5-A/beacon-project.toml
+7bcc30f0d853b597ec641c669ff8c1d5d6150f3480957c50efc77cb4ffa62c5b  docs/phase-4/ws2-item-2.1-fixtures/F5-A/sources/atlas-task.md
+54275a04eda2c20798d69662e0c74bf04ff6ba89c994235b03eacba387d9395f  docs/phase-4/ws2-item-2.1-fixtures/F5-A/sources/beacon-note.md
+201dc4d13c927ce424e66c7615365e9e3f494ed998195f10d88f48f892244cec  docs/phase-4/ws2-item-2.1-fixtures/fixture-records.md
+b285bfcca4b7afd748b2c6a3f020ea08d6fe2a0b464313cd56a396a4cb231744  docs/phase-4/ws2-item-2.1-fixtures/expected-results.md

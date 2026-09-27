@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/home/lobsterboss79/Projects/context-engine/docs/phase-4/validation-evidence/VE-F5-A-001/raw/f5-a-execution.py", line 241, in <module>
+    main()
+    ~~~~^^
+  File "/home/lobsterboss79/Projects/context-engine/docs/phase-4/validation-evidence/VE-F5-A-001/raw/f5-a-execution.py", line 202, in main
+    if outcome.discovery.inspected_sources != (atlas,):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'DiscoveryResult' object has no attribute 'inspected_sources'

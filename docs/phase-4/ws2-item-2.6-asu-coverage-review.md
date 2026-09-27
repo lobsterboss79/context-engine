@@ -74,12 +74,13 @@ indeterminate.  They also do not require an invented unsupported Source type.
 
 Reviewed preserved execution records: `VE-F1-001`, `VE-F2-001`, `VE-F3-001`,
 `VE-F4-A-001`, `VE-F4-B-001`, immutable `VE-F4-E-001`, remediation retest
-`VE-F4-E-002`, and `VE-F4-D-001`; plus `F-F4-E-001` and `R-F4-E-001` for
-original-FAIL/remediation lineage.  The underlying raw results, package and
-renderer artifacts linked by those records were considered where needed.
+`VE-F4-E-002`, `VE-F4-D-001`, and `VE-F5-A-001`; plus `F-F4-E-001` and
+`R-F4-E-001` for original-FAIL/remediation lineage.  The underlying raw
+results, package and renderer artifacts linked by those records were considered
+where needed.
 
-Reviewed frozen, unexecuted controls: `FX/ER-F4-C`, `FX/ER-F5-A`,
-`FX/ER-F5-B`, and `FX/ER-F5-C`, in the fixture and expected-result registers.
+Reviewed frozen, unexecuted controls: `FX/ER-F4-C`, `FX/ER-F5-B`, and
+`FX/ER-F5-C`, in the fixture and expected-result registers.
 Their pre-execution status is potential coverage only, never execution
 evidence.
 
@@ -95,12 +96,12 @@ evidence.
 | **2.6-F — bounded expansion** | **SUPPORTING EVIDENCE ONLY** | P1 bounded cross-Project traversal; P2 E13/E17; P3 WS6 §§21–25; P3 WS8 §19 | `VE-F1-001`; static multi-Source `VE-F3-001`; two-scope `VE-F4-E-001` / `VE-F4-E-002` | F1 has deterministic termination but no expansion. F3’s four Sources were a statically declared ASU, not initial Sources followed by a governed expansion. E-001/E-002 distinguish a broad known-incomplete ASU from a bounded adequate ASU for a separately supplied task; they do not add Sources through an expansion request. Thus the records support the distinction but do not exercise initial set, deficiency trigger/basis, newly inspected Sources, bounded stop, and resulting scope. | No direct bounded-expansion execution. |
 | **2.6-G — unavailable limitation** | **DIRECTLY VALIDATED** | P1 ASU/package limitations; P2 C5, SA-05, E12–E14; P3 WS4 §10; P3 WS8 §15 | `VE-F4-B-001`; `VE-F4-E-001`; `VE-F4-E-002` | F4-B deliberately retained a named unavailable Required Source as a limitation rather than absence, substitution, or fabricated content. E-002 confirms the same broad unavailable Required deficiency and limitation after remediation through package/rendering. | No gap for unavailable handling. This evidence must not be relabeled inaccessible. |
 | **2.6-H — inaccessible limitation** | **SUPPORTING EVIDENCE ONLY** | P1 ASU; P2 SA-05/OBS-04; P2 E12–E14; P3 WS4 §10; P3 WS6 §19 | `VE-F4-B-001`; `VE-F4-E-001` / `VE-F4-E-002` | These runs preserve unavailable Sources and are relevant to limitation handling, but none establishes a Source that exists and is in scope yet cannot be read via the approved mechanism. The governing records explicitly distinguish the states. | Direct inaccessible-Source observation/limitation/package-or-rendering preservation is absent. |
-| **2.6-I — unauthorized limitation** | **NOT YET VALIDATED** | P1 ASU and authorization-bound explanation; P2 C5, E13 T-04, E14; P3 WS6 §19 | No executed F4-C/F5 evidence | Existing runs contain authorized requester/Consumer fields, but authorization configuration is not unauthorized-path validation. F4-B/E are unavailable, not authorization-denied. F4-C and F5-A are frozen but unexecuted. | A deliberate Source exclusion or inability to inspect due to authorization/governance, with preserved non-disclosing limitation, is not validated. |
+| **2.6-I — unauthorized limitation** | **DIRECTLY VALIDATED** | P1 ASU and authorization-bound explanation; P2 C5, E13 T-04, E14; P3 WS6 §19 | `VE-F5-A-001` | F5-A deliberately establishes an Atlas-only adequate ASU while a controlled Beacon Source identity exists outside a governed relationship. Cross-Project Requester authorization is denied and Consumer disclosure is not established. Beacon is explicitly uninspected before observation/representation/Candidate use; no Beacon content enters applicability, selection, package, or renderings. This is preserved as an authorization/governance boundary, not absence, unavailable, inaccessible, unsupported, or indeterminate ASU. | No gap for the unauthorized Source-path obligation. It does not establish inaccessible or unsupported handling. |
 | **2.6-J — unsupported limitation** | **NOT YET VALIDATED** | P1 Source adapter boundary; P2 SA-05/C12; P2 E13 T-05; P3 WS4 §10; P3 WS6 §19; P3 WS8 §15 | No preserved Phase 4 execution | Phase 3 documents supported capability semantics, but no Phase 4 fixture execution deliberately presents an otherwise relevant Source/mechanism that the approved implementation cannot handle and preserves an unsupported limitation. No unsupported technology or type is inferred from a gap. | Direct evidence is absent; an actual approved relevant unsupported condition would be needed before validation design. |
 | **2.6-K — limitation preservation** | **DIRECTLY VALIDATED** | P1 package limitation preservation; P2 E10/E14; P3 WS8 §§15–25; P3 WS9 rendering boundary | `VE-F4-B-001`; immutable `VE-F4-E-001`; `F-F4-E-001`; `R-F4-E-001`; `VE-F4-E-002` | F4-B preserves unavailable Required/ASU limitation through the insufficient logical package and all renderings. E-001 directly exposed the material integration omission of broad ASU/two-scope qualification, which was preserved as immutable FAIL. E-002 then directly verifies the corrected general qualification in package and all renderings while retaining original evidence and remediation lineage. | No gap for preservation where the demonstrated unavailable/known-incomplete limitations occur. It does not substitute for proving inaccessible, unauthorized, or unsupported limitations. |
 
-Coverage count: **5 DIRECTLY VALIDATED** (A, B, C, G, K); **3 SUPPORTING
-EVIDENCE ONLY** (E, F, H); **3 NOT YET VALIDATED** (D, I, J); **0
+Coverage count: **6 DIRECTLY VALIDATED** (A, B, C, G, I, K); **3 SUPPORTING
+EVIDENCE ONLY** (E, F, H); **2 NOT YET VALIDATED** (D, J); **0
 AMBIGUOUS-H3**.
 
 ## 6. Frozen-but-unexecuted potential coverage
@@ -112,7 +113,6 @@ executed against its frozen expected result, and preserved/reviewed.
 | Frozen fixture | Predetermined semantics relevant to Item 2.6 | Potential future coverage | Limit |
 | --- | --- | --- | --- |
 | `FX/ER-F4-C v1` | Available adequate ASU; requester may inspect but Consumer disclosure of Required material is denied; non-sensitive denial/qualification is required. | Authorization-limitation preservation at package/rendering boundary; potentially supporting 2.6-I/K. | It is a Consumer-disclosure denial, not clearly a Source inspection exclusion/inaccessibility; alone it does not meet the exact 2.6-I Source-path obligation. |
-| `FX/ER-F5-A v1` | No governed Atlas–Beacon relationship; cross-Project requester authorization denied; discovery/traversal stops at Atlas and Beacon is outside effective discovery/ASU. | Best existing frozen candidate for 2.6-I: authorization/governance causes Source exclusion and preserves no-Beacon outcome. | It contains no unavailable/inaccessible/unsupported condition, no negative-result inspection record, and no expansion. |
 | `FX/ER-F5-B v1` | One already bounded authorized traversal reaches Beacon, whose item is Candidate but inapplicable/excluded. | Supporting cross-Project boundary/applicability evidence only. | It is not a scoped negative result and does not state an initial set, deficiency-driven expansion trigger, expansion request, or stopping condition required by 2.6-F. |
 | `FX/ER-F5-C v1` | Named authorized Beacon Source is included as Supporting context under a bounded relationship. | Supporting evidence for static bounded cross-Project ASU and limitation/provenance distinction. | It is not bounded discovery expansion; its two Sources are statically governed for the request. |
 
@@ -124,9 +124,9 @@ or unsupported capability handling.
 
 The unresolved obligations are: direct indeterminate-ASU evidence (2.6-D);
 direct scoped negative-result evidence (2.6-E); direct bounded-expansion
-evidence (2.6-F); direct inaccessible limitation evidence (2.6-H); direct
-unauthorized Source-path evidence (2.6-I); and direct unsupported limitation
-evidence (2.6-J).  Supporting records do not close any of those gaps.
+evidence (2.6-F); direct inaccessible limitation evidence (2.6-H); and direct
+unsupported limitation evidence (2.6-J). Supporting records do not close any
+of those gaps.
 
 ## 8. Minimum future validation-scenario grouping
 
@@ -135,7 +135,6 @@ execution procedures.
 
 | Minimum scenario | Obligations covered | Existing frozen fixture usable? | Why needed |
 | --- | --- | --- | --- |
-| Authorization-governance exclusion | 2.6-I | Yes: `FX-F5-A v1` appears usable. | Its frozen premise is a denied cross-Project authorization that stops traversal before representation and should preserve the boundary without treating configuration alone as evidence. |
 | Indeterminate evidence boundary | 2.6-D | No. | A controlled ASU must have adequacy genuinely not establishable as adequate or known-incomplete, with qualification preserved. |
 | Deficiency-driven bounded expansion ending in a scoped result | 2.6-E, 2.6-F | No. | One coherent scenario can establish initial inspected Sources, authorized governed deficiency/expansion basis, newly inspected Sources, bounded termination, and a resulting explicitly scoped no-result (or otherwise scoped result). It must not be static multi-Source scope. |
 | Existing but unreadable in-scope Source | 2.6-H | No. | It must distinguish access failure from absence/unavailability and preserve the limitation at the applicable downstream boundary. |
@@ -149,8 +148,10 @@ execution procedures.
 `VE-F2-001` demonstrates Candidate and applicability exclusions, not a
 deterministic discovery deficiency; `VE-F4-B-001` and `VE-F4-E-001/E-002`
 demonstrate named unavailable Required Sources and appropriately preserve the
-resulting insufficiency/qualification; no execution demonstrates inaccessible,
-unauthorized, or unsupported discovery.  No preserved evidence demonstrates
+resulting insufficiency/qualification; `VE-F5-A-001` demonstrates expected
+authorization/governance exclusion before inspection, not an inability to
+discover authorized in-scope material; no execution demonstrates inaccessible
+or unsupported discovery. No preserved evidence demonstrates
 bounded-expansion exhaustion, nor materially or repeatedly undiscoverable
 relevant, authorized, in-scope Required Context through approved deterministic
 mechanisms that causes incorrect/insufficient context or material harm.
@@ -161,16 +162,14 @@ discovery recommendation follows from this review.
 
 ## 10. Recommended next validation step
 
-Seek the separately authorized next WS2 validation decision for the smallest
-already-frozen match: execute and review `FX-F5-A v1` if the Project Owner
-authorizes it for the unauthorized-boundary obligation.  The remaining gaps
-need future governed fixture design/expected-result approval before execution;
-this review does not design them.
+The F5-A authorization-governance exclusion has now been directly validated.
+The remaining gaps need future governed fixture design/expected-result approval
+before execution; this review does not design them.
 
 ## 11. Non-execution attestation
 
-No fixture was executed for this review.  No Validation Evidence Record,
-PASS/FAIL/INDETERMINATE result, finding, remediation, expected-result change,
-fixture change, application/source/test change, Gate 4B action, proving action,
-or TD-14 action was made.  Item 2.6 remains **INCOMPLETE**; Items 2.7–2.11
-remain unchanged.
+Only `FX-F5-A v1` was executed against `ER-F5-A v1`, with `VE-F5-A-001`
+preserved as PASS. No other fixture was run and no finding, remediation,
+expected-result change, fixture change, application/source/test change, Gate
+4B action, proving action, or TD-14 action was made. Item 2.6 remains
+**INCOMPLETE**; Items 2.7–2.11 remain unchanged.
