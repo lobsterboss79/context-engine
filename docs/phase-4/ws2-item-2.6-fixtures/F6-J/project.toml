@@ -1,0 +1,5 @@
+version = 1
+
+[project]
+identity = "fixture-lantern-f6j"
+governance_reference = "FX-F6-J v1 synthetic fixture for WS2 Item 2.6-J; no production authority; pre-execution only"

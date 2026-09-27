@@ -1,0 +1,8 @@
+version = 1
+
+[bootstrap]
+project = "fixture-lantern-f6j"
+scope = "controlled-validation-fixture"
+governance_basis = "project-owner-approved-ws2-item-2.6-j-unsupported-artifact-capability-pre-results-control"
+project_configuration = "project.toml"
+version = 1

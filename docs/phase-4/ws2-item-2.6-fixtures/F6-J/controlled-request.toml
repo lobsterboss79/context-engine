@@ -1,0 +1,55 @@
+version = 1
+
+[fixture]
+identity = "FX-F6-J"
+version = 1
+project = "fixture-lantern-f6j"
+synthetic_only = true
+pre_execution_established = true
+engine_may_invent_or_modify_task_boundary = false
+
+[task]
+identity = "REQ-F6J-LANTERN-REVIEW-STATUS"
+purpose = "Prepare the synthetic Lantern review status stated only in the governed Required Artifact."
+scope = "the specific review-status statement contained in the Required PDF Artifact; Source registration, Artifact filename, and Artifact metadata do not supply the statement"
+unbounded = false
+separately_supplied_safe_bounded_subtask = false
+
+[asu]
+identity = "ASU-F6J-LANTERN-REVIEW-STATUS"
+adequacy = "adequate"
+basis = "For REQ-F6J-LANTERN-REVIEW-STATUS, the complete governed applicable Source universe is exactly SRC-F6J-LANTERN-REVIEW-REPOSITORY. That local Source and its Artifact ART-F6J-LANTERN-REVIEW-STATUS-PDF are registered, governed in scope, available, accessible, and requester-authorized. The governed boundary is adequate as a Source universe; the Required Artifact's PDF capability limitation is separately preserved and does not establish another Source or ASU gap."
+sources = ["SRC-F6J-LANTERN-REVIEW-REPOSITORY"]
+
+[[sources]]
+identity = "SRC-F6J-LANTERN-REVIEW-REPOSITORY"
+scope = "lantern/governed-review/current"
+path = "sources"
+available = true
+accessible = true
+authorized = true
+supported = true
+governed_in_scope = true
+inspection = "normal_local_git_source_observation"
+
+[[artifacts]]
+identity = "ART-F6J-LANTERN-REVIEW-STATUS-PDF"
+source = "SRC-F6J-LANTERN-REVIEW-REPOSITORY"
+locator = "sources/lantern-review-status.pdf"
+format = "pdf"
+relevant_to_task = true
+role = "required"
+contains_required_material = true
+content_definition = "The Artifact is the sole governed location of the synthetic Lantern review-status statement required by REQ-F6J-LANTERN-REVIEW-STATUS. The statement is intentionally not reproduced in this fixture, its filename, metadata, or any Markdown Artifact."
+
+[authorization]
+requester_identity = "fixture-requester"
+requester_authorized = true
+consumer_human_disclosure_authorized = true
+consumer_chatgpt_disclosure_authorized = true
+consumer_codex_disclosure_authorized = true
+consumer_capacity = "unrestricted"
+
+[construction]
+package_identity = "PKG-F6J-LANTERN-REVIEW-STATUS"
+construction_record_identity = "PCR-F6J-LANTERN-REVIEW-STATUS"
