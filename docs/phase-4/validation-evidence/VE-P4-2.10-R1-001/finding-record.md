@@ -42,3 +42,21 @@ The authoritative disposition is recorded in
 [ws2-item-2.10-r1-ordering-failure-disposition.md](../../ws2-item-2.10-r1-ordering-failure-disposition.md).
 The original R1-01 FAIL remains historically true against v1 and is not
 retroactively changed.
+
+## Project Owner-approved final lifecycle closure
+
+**Historical lifecycle preserved:** original MATERIAL / INTEGRATION
+classification, H3 stop, v1 FAIL, investigation, root-cause disposition, and
+later MATERIAL / DESIGN reclassification remain intact.
+
+**Final lifecycle state:** **CLOSED — PROJECT OWNER APPROVED.** The closure is
+additive and does not alter the original evidence or classifications. Its basis
+is the governed v2 control supersession; faithful R1 v2 execution with three
+new independent PASS runs; mutually equal governed semantic projections; no
+new semantic discrepancy; no required application remediation; and
+established intended corrected-control behavior. See the
+[post-R1 v2 results disposition](../../ws2-item-2.10-r1v2-post-results-disposition.md).
+
+R1 v1 remains FAIL against its erroneous executed v1 control. R1 v2 PASS does
+not retroactively convert that historical result to PASS. R2 v2 remains
+unexecuted and separately authorized only by a future Project Owner decision.
