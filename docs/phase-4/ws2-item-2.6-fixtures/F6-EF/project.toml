@@ -1,0 +1,5 @@
+version = 1
+
+[project]
+identity = "fixture-harbor-f6ef"
+governance_reference = "FX-F6-EF v1 synthetic fixture for WS2 Items 2.6-E and 2.6-F; no production authority; pre-execution only"

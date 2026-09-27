@@ -1,0 +1,111 @@
+version = 1
+
+[fixture]
+identity = "FX-F6-EF"
+version = 1
+project = "fixture-harbor-f6ef"
+synthetic_only = true
+pre_execution_established = true
+engine_may_invent_or_modify_task_boundary = false
+engine_may_invent_expansion = false
+
+[task]
+identity = "REQ-F6EF-HARBOR-SCOPED-IDENTIFIER-REPORT"
+purpose = "Report whether the exact controlled identifier is present within the governed inspected ASU after the authorized bounded expansion."
+scope = "bounded reporting only; report the governed inspected-evidence result and do not decide whether information exists outside that boundary"
+unbounded = false
+separately_supplied_safe_bounded_subtask = true
+expected_sufficiency = "sufficient"
+
+[query]
+identity = "QRY-F6EF-EXACT-ABSENCE"
+exact_literal = "CE-F6EF-ABSENT-IDENTIFIER-7Q3M"
+matching_mode = "exact_literal_only"
+expected_matching_candidates = 0
+
+[asu]
+identity = "ASU-F6EF-HARBOR-SCOPED-REPORT"
+adequacy = "adequate"
+basis = "For REQ-F6EF-HARBOR-SCOPED-IDENTIFIER-REPORT, the governed Source universe is complete and consists exactly of SRC-F6EF-HARBOR-ORIGIN and SRC-F6EF-HARBOR-EXPANSION-TARGET. Both are local, available, accessible, authorized, supported, and governed in scope. The task is only to report the exact-literal result within this governed inspected ASU after its pre-authorized one-hop inspection path; no Source outside these two belongs to that bounded reporting task."
+sources = ["SRC-F6EF-HARBOR-ORIGIN", "SRC-F6EF-HARBOR-EXPANSION-TARGET"]
+
+[[sources]]
+identity = "SRC-F6EF-HARBOR-ORIGIN"
+scope = "harbor/controlled-register/origin"
+path = "sources/origin-register.md"
+available = true
+accessible = true
+authorized = true
+supported = true
+governed_in_scope = true
+inspection = "initial_normal_local_markdown_observation"
+initially_inspected = true
+expansion_only = false
+
+[[sources]]
+identity = "SRC-F6EF-HARBOR-EXPANSION-TARGET"
+scope = "harbor/controlled-register/annex"
+path = "sources/expansion-target-annex.md"
+available = true
+accessible = true
+authorized = true
+supported = true
+governed_in_scope = true
+inspection = "authorized_expansion_only_local_markdown_observation"
+initially_inspected = false
+expansion_only = true
+
+[relationship]
+identity = "REL-F6EF-HARBOR-ORIGIN-TO-ANNEX"
+kind = "governed-controlled-annex"
+origin_represented_information = "RI-F6EF-HARBOR-ORIGIN-REGISTER"
+target_source = "SRC-F6EF-HARBOR-EXPANSION-TARGET"
+represented_in_source = "SRC-F6EF-HARBOR-ORIGIN"
+authorized_for_request = true
+hop_limit = 1
+
+[deficiency]
+identity = "DEF-F6EF-INITIAL-EXACT-QUERY-ABSENCE"
+basis = "Initial inspection of SRC-F6EF-HARBOR-ORIGIN found no exact literal match for the controlled query. For the bounded reporting task, this is material and potentially resolvable because the one represented governed relationship identifies one already-governed, available expansion-only Source for inspection."
+material = true
+resolvable_by_discovery = true
+authorized = true
+in_scope = true
+source_ids = ["SRC-F6EF-HARBOR-EXPANSION-TARGET"]
+
+[expansion_request]
+identity = "EXP-F6EF-HARBOR-ONE-HOP"
+origin_represented_information = "RI-F6EF-HARBOR-ORIGIN-REGISTER"
+relationship = "REL-F6EF-HARBOR-ORIGIN-TO-ANNEX"
+target_source = "SRC-F6EF-HARBOR-EXPANSION-TARGET"
+material_resolvable_deficiency = true
+inspection_authorized = true
+basis = "DEF-F6EF-INITIAL-EXACT-QUERY-ABSENCE; authorized one-hop inspection of the sole represented governed annex target."
+
+[bounded_iteration_plan]
+initial_boundary = "SRC-F6EF-HARBOR-ORIGIN"
+additional_sources = ["SRC-F6EF-HARBOR-EXPANSION-TARGET"]
+authorized_to_discover = true
+termination_reason = "Initial origin inspection completed; the sole authorized one-hop target was inspected; no exact match occurred in either governed inspected Source; the approved one-hop path is exhausted."
+
+[expected_discovery]
+initial_inspected_sources = ["SRC-F6EF-HARBOR-ORIGIN"]
+expanded_inspected_sources = ["SRC-F6EF-HARBOR-EXPANSION-TARGET"]
+effective_inspected_sources = ["SRC-F6EF-HARBOR-ORIGIN", "SRC-F6EF-HARBOR-EXPANSION-TARGET"]
+expansion_basis = "DEF-F6EF-INITIAL-EXACT-QUERY-ABSENCE; authorized one-hop inspection of the sole represented governed annex target."
+negative_result_scope = "Not found within ASU-F6EF-HARBOR-SCOPED-REPORT: the governed inspected Sources SRC-F6EF-HARBOR-ORIGIN and SRC-F6EF-HARBOR-EXPANSION-TARGET, after the sole authorized one-hop expansion. This is not a universal-absence assertion."
+termination_basis = "Initial inspection of SRC-F6EF-HARBOR-ORIGIN completed; one authorized governed expansion inspected SRC-F6EF-HARBOR-EXPANSION-TARGET; no exact literal match in either Source; no second hop is authorized; the sole approved expansion path is exhausted."
+
+[authorization]
+requester_identity = "fixture-requester"
+requester_authorized = true
+consumer_human_disclosure_authorized = true
+consumer_chatgpt_disclosure_authorized = true
+consumer_codex_disclosure_authorized = true
+consumer_capacity = "unrestricted"
+
+[construction]
+package_identity = "PKG-F6EF-HARBOR-SCOPED-IDENTIFIER-REPORT"
+construction_record_identity = "PCR-F6EF-HARBOR-SCOPED-IDENTIFIER-REPORT"
+expected_coherence = "coherent"
+coherence_basis = "The bounded reporting task, adequate ASU, initial-only origin inspection, authorized one-hop expansion, final two-Source inspected set, zero exact matches, scoped negative result, Sufficient reporting outcome, and termination basis are retained without contradiction."

@@ -1,0 +1,8 @@
+version = 1
+
+[bootstrap]
+project = "fixture-harbor-f6ef"
+scope = "controlled-validation-fixture"
+governance_basis = "project-owner-approved-ws2-item-2.6-e-f-scoped-negative-bounded-expansion-pre-results-control"
+project_configuration = "project.toml"
+version = 1
