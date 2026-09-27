@@ -1,0 +1,854 @@
+{
+  "asu": {
+    "adequacy": "adequate",
+    "basis": "For REQ-F6EF-HARBOR-SCOPED-IDENTIFIER-REPORT, the governed Source universe is complete and consists exactly of SRC-F6EF-HARBOR-ORIGIN and SRC-F6EF-HARBOR-EXPANSION-TARGET. Both are local, available, accessible, authorized, supported, and governed in scope. The task is only to report the exact-literal result within this governed inspected ASU after its pre-authorized one-hop inspection path; no Source outside these two belongs to that bounded reporting task.",
+    "identity": "ASU-F6EF-HARBOR-SCOPED-REPORT"
+  },
+  "bounded_iteration_plan": {
+    "additional_sources": [
+      "SRC-F6EF-HARBOR-EXPANSION-TARGET"
+    ],
+    "authorized_to_discover": true,
+    "deficiency": {
+      "authorized": true,
+      "basis": "Initial inspection of SRC-F6EF-HARBOR-ORIGIN found no exact literal match for the controlled query. For the bounded reporting task, this is material and potentially resolvable because the one represented governed relationship identifies one already-governed, available expansion-only Source for inspection.",
+      "identity": {
+        "kind": "deficiency",
+        "value": "DEF-F6EF-INITIAL-EXACT-QUERY-ABSENCE"
+      },
+      "in_scope": true,
+      "material": true,
+      "resolvable_by_discovery": true,
+      "source_ids": [
+        "SRC-F6EF-HARBOR-EXPANSION-TARGET"
+      ]
+    },
+    "initial_boundary": "ASU=REQ-F6EF-HARBOR-SCOPED-IDENTIFIER-REPORT; adequacy=adequate; basis=For REQ-F6EF-HARBOR-SCOPED-IDENTIFIER-REPORT, the governed Source universe is complete and consists exactly of SRC-F6EF-HARBOR-ORIGIN and SRC-F6EF-HARBOR-EXPANSION-TARGET. Both are local, available, accessible, authorized, supported, and governed in scope. The task is only to report the exact-literal result within this governed inspected ASU after its pre-authorized one-hop inspection path; no Source outside these two belongs to that bounded reporting task.",
+    "termination_reason": "one-bounded-authorized-discovery-step-requested"
+  },
+  "construction": {
+    "package": {
+      "coherence": {
+        "basis": "The bounded reporting task, adequate ASU, initial-only origin inspection, authorized one-hop expansion, final two-Source inspected set, zero exact matches, scoped negative result, Sufficient reporting outcome, and termination basis are retained without contradiction.",
+        "outcome": "coherent"
+      },
+      "identity": {
+        "kind": "package",
+        "value": "PKG-F6EF-HARBOR-SCOPED-IDENTIFIER-REPORT"
+      },
+      "items": [],
+      "limitations": [
+        {
+          "detail": "ASU adequacy=adequate",
+          "evidence_boundary": "For REQ-F6EF-HARBOR-SCOPED-IDENTIFIER-REPORT, the governed Source universe is complete and consists exactly of SRC-F6EF-HARBOR-ORIGIN and SRC-F6EF-HARBOR-EXPANSION-TARGET. Both are local, available, accessible, authorized, supported, and governed in scope. The task is only to report the exact-literal result within this governed inspected ASU after its pre-authorized one-hop inspection path; no Source outside these two belongs to that bounded reporting task.",
+          "state": "unknown"
+        },
+        {
+          "detail": "FX-F6-EF bounded reporting task: exact query CE-F6EF-ABSENT-IDENTIFIER-7Q3M; ASU-F6EF-HARBOR-SCOPED-REPORT is adequate and contains exactly the two governed Sources.",
+          "evidence_boundary": "For REQ-F6EF-HARBOR-SCOPED-IDENTIFIER-REPORT, the governed Source universe is complete and consists exactly of SRC-F6EF-HARBOR-ORIGIN and SRC-F6EF-HARBOR-EXPANSION-TARGET. Both are local, available, accessible, authorized, supported, and governed in scope. The task is only to report the exact-literal result within this governed inspected ASU after its pre-authorized one-hop inspection path; no Source outside these two belongs to that bounded reporting task.",
+          "state": "unknown"
+        },
+        {
+          "detail": "Initial inspected Sources: SRC-F6EF-HARBOR-ORIGIN only. Its normalized represented information is RI-F6EF-HARBOR-ORIGIN-REGISTER and preserves relationship REL-F6EF-HARBOR-ORIGIN-TO-ANNEX.",
+          "evidence_boundary": "For REQ-F6EF-HARBOR-SCOPED-IDENTIFIER-REPORT, the governed Source universe is complete and consists exactly of SRC-F6EF-HARBOR-ORIGIN and SRC-F6EF-HARBOR-EXPANSION-TARGET. Both are local, available, accessible, authorized, supported, and governed in scope. The task is only to report the exact-literal result within this governed inspected ASU after its pre-authorized one-hop inspection path; no Source outside these two belongs to that bounded reporting task.",
+          "state": "unknown"
+        },
+        {
+          "detail": "Initial deficiency DEF-F6EF-INITIAL-EXACT-QUERY-ABSENCE was material and potentially resolvable. Pre-frozen EXP-F6EF-HARBOR-ONE-HOP authorized one governed one-hop expansion to SRC-F6EF-HARBOR-EXPANSION-TARGET.",
+          "evidence_boundary": "For REQ-F6EF-HARBOR-SCOPED-IDENTIFIER-REPORT, the governed Source universe is complete and consists exactly of SRC-F6EF-HARBOR-ORIGIN and SRC-F6EF-HARBOR-EXPANSION-TARGET. Both are local, available, accessible, authorized, supported, and governed in scope. The task is only to report the exact-literal result within this governed inspected ASU after its pre-authorized one-hop inspection path; no Source outside these two belongs to that bounded reporting task.",
+          "state": "unknown"
+        },
+        {
+          "detail": "Expanded inspected Sources: SRC-F6EF-HARBOR-EXPANSION-TARGET only; effective inspected Sources: SRC-F6EF-HARBOR-ORIGIN, SRC-F6EF-HARBOR-EXPANSION-TARGET.",
+          "evidence_boundary": "For REQ-F6EF-HARBOR-SCOPED-IDENTIFIER-REPORT, the governed Source universe is complete and consists exactly of SRC-F6EF-HARBOR-ORIGIN and SRC-F6EF-HARBOR-EXPANSION-TARGET. Both are local, available, accessible, authorized, supported, and governed in scope. The task is only to report the exact-literal result within this governed inspected ASU after its pre-authorized one-hop inspection path; no Source outside these two belongs to that bounded reporting task.",
+          "state": "unknown"
+        },
+        {
+          "detail": "Zero exact matching Candidates were found. This is no-result evidence, not Candidate inapplicability or exclusion.",
+          "evidence_boundary": "For REQ-F6EF-HARBOR-SCOPED-IDENTIFIER-REPORT, the governed Source universe is complete and consists exactly of SRC-F6EF-HARBOR-ORIGIN and SRC-F6EF-HARBOR-EXPANSION-TARGET. Both are local, available, accessible, authorized, supported, and governed in scope. The task is only to report the exact-literal result within this governed inspected ASU after its pre-authorized one-hop inspection path; no Source outside these two belongs to that bounded reporting task.",
+          "state": "unknown"
+        },
+        {
+          "detail": "Not found within the governed inspected ASU. This is not a universal-absence assertion and does not decide whether information exists outside that boundary.",
+          "evidence_boundary": "For REQ-F6EF-HARBOR-SCOPED-IDENTIFIER-REPORT, the governed Source universe is complete and consists exactly of SRC-F6EF-HARBOR-ORIGIN and SRC-F6EF-HARBOR-EXPANSION-TARGET. Both are local, available, accessible, authorized, supported, and governed in scope. The task is only to report the exact-literal result within this governed inspected ASU after its pre-authorized one-hop inspection path; no Source outside these two belongs to that bounded reporting task.",
+          "state": "unknown"
+        },
+        {
+          "detail": "Termination: origin inspected; sole authorized one-hop target inspected; no exact match in either; sole approved path exhausted; no second hop or crawl authorized. Sufficient only for this bounded reporting task.",
+          "evidence_boundary": "For REQ-F6EF-HARBOR-SCOPED-IDENTIFIER-REPORT, the governed Source universe is complete and consists exactly of SRC-F6EF-HARBOR-ORIGIN and SRC-F6EF-HARBOR-EXPANSION-TARGET. Both are local, available, accessible, authorized, supported, and governed in scope. The task is only to report the exact-literal result within this governed inspected ASU after its pre-authorized one-hop inspection path; no Source outside these two belongs to that bounded reporting task.",
+          "state": "unknown"
+        }
+      ],
+      "manifest": {
+        "entries": []
+      },
+      "request": {
+        "kind": "request",
+        "value": "REQ-F6EF-HARBOR-SCOPED-IDENTIFIER-REPORT"
+      },
+      "sufficiency": "sufficient"
+    },
+    "record": {
+      "candidates": [],
+      "coherence": {
+        "basis": "The bounded reporting task, adequate ASU, initial-only origin inspection, authorized one-hop expansion, final two-Source inspected set, zero exact matches, scoped negative result, Sufficient reporting outcome, and termination basis are retained without contradiction.",
+        "outcome": "coherent"
+      },
+      "identity": {
+        "kind": "record",
+        "value": "PCR-F6EF-HARBOR-SCOPED-IDENTIFIER-REPORT"
+      },
+      "limitations": [
+        {
+          "detail": "ASU adequacy=adequate",
+          "evidence_boundary": "For REQ-F6EF-HARBOR-SCOPED-IDENTIFIER-REPORT, the governed Source universe is complete and consists exactly of SRC-F6EF-HARBOR-ORIGIN and SRC-F6EF-HARBOR-EXPANSION-TARGET. Both are local, available, accessible, authorized, supported, and governed in scope. The task is only to report the exact-literal result within this governed inspected ASU after its pre-authorized one-hop inspection path; no Source outside these two belongs to that bounded reporting task.",
+          "state": "unknown"
+        },
+        {
+          "detail": "FX-F6-EF bounded reporting task: exact query CE-F6EF-ABSENT-IDENTIFIER-7Q3M; ASU-F6EF-HARBOR-SCOPED-REPORT is adequate and contains exactly the two governed Sources.",
+          "evidence_boundary": "For REQ-F6EF-HARBOR-SCOPED-IDENTIFIER-REPORT, the governed Source universe is complete and consists exactly of SRC-F6EF-HARBOR-ORIGIN and SRC-F6EF-HARBOR-EXPANSION-TARGET. Both are local, available, accessible, authorized, supported, and governed in scope. The task is only to report the exact-literal result within this governed inspected ASU after its pre-authorized one-hop inspection path; no Source outside these two belongs to that bounded reporting task.",
+          "state": "unknown"
+        },
+        {
+          "detail": "Initial inspected Sources: SRC-F6EF-HARBOR-ORIGIN only. Its normalized represented information is RI-F6EF-HARBOR-ORIGIN-REGISTER and preserves relationship REL-F6EF-HARBOR-ORIGIN-TO-ANNEX.",
+          "evidence_boundary": "For REQ-F6EF-HARBOR-SCOPED-IDENTIFIER-REPORT, the governed Source universe is complete and consists exactly of SRC-F6EF-HARBOR-ORIGIN and SRC-F6EF-HARBOR-EXPANSION-TARGET. Both are local, available, accessible, authorized, supported, and governed in scope. The task is only to report the exact-literal result within this governed inspected ASU after its pre-authorized one-hop inspection path; no Source outside these two belongs to that bounded reporting task.",
+          "state": "unknown"
+        },
+        {
+          "detail": "Initial deficiency DEF-F6EF-INITIAL-EXACT-QUERY-ABSENCE was material and potentially resolvable. Pre-frozen EXP-F6EF-HARBOR-ONE-HOP authorized one governed one-hop expansion to SRC-F6EF-HARBOR-EXPANSION-TARGET.",
+          "evidence_boundary": "For REQ-F6EF-HARBOR-SCOPED-IDENTIFIER-REPORT, the governed Source universe is complete and consists exactly of SRC-F6EF-HARBOR-ORIGIN and SRC-F6EF-HARBOR-EXPANSION-TARGET. Both are local, available, accessible, authorized, supported, and governed in scope. The task is only to report the exact-literal result within this governed inspected ASU after its pre-authorized one-hop inspection path; no Source outside these two belongs to that bounded reporting task.",
+          "state": "unknown"
+        },
+        {
+          "detail": "Expanded inspected Sources: SRC-F6EF-HARBOR-EXPANSION-TARGET only; effective inspected Sources: SRC-F6EF-HARBOR-ORIGIN, SRC-F6EF-HARBOR-EXPANSION-TARGET.",
+          "evidence_boundary": "For REQ-F6EF-HARBOR-SCOPED-IDENTIFIER-REPORT, the governed Source universe is complete and consists exactly of SRC-F6EF-HARBOR-ORIGIN and SRC-F6EF-HARBOR-EXPANSION-TARGET. Both are local, available, accessible, authorized, supported, and governed in scope. The task is only to report the exact-literal result within this governed inspected ASU after its pre-authorized one-hop inspection path; no Source outside these two belongs to that bounded reporting task.",
+          "state": "unknown"
+        },
+        {
+          "detail": "Zero exact matching Candidates were found. This is no-result evidence, not Candidate inapplicability or exclusion.",
+          "evidence_boundary": "For REQ-F6EF-HARBOR-SCOPED-IDENTIFIER-REPORT, the governed Source universe is complete and consists exactly of SRC-F6EF-HARBOR-ORIGIN and SRC-F6EF-HARBOR-EXPANSION-TARGET. Both are local, available, accessible, authorized, supported, and governed in scope. The task is only to report the exact-literal result within this governed inspected ASU after its pre-authorized one-hop inspection path; no Source outside these two belongs to that bounded reporting task.",
+          "state": "unknown"
+        },
+        {
+          "detail": "Not found within the governed inspected ASU. This is not a universal-absence assertion and does not decide whether information exists outside that boundary.",
+          "evidence_boundary": "For REQ-F6EF-HARBOR-SCOPED-IDENTIFIER-REPORT, the governed Source universe is complete and consists exactly of SRC-F6EF-HARBOR-ORIGIN and SRC-F6EF-HARBOR-EXPANSION-TARGET. Both are local, available, accessible, authorized, supported, and governed in scope. The task is only to report the exact-literal result within this governed inspected ASU after its pre-authorized one-hop inspection path; no Source outside these two belongs to that bounded reporting task.",
+          "state": "unknown"
+        },
+        {
+          "detail": "Termination: origin inspected; sole authorized one-hop target inspected; no exact match in either; sole approved path exhausted; no second hop or crawl authorized. Sufficient only for this bounded reporting task.",
+          "evidence_boundary": "For REQ-F6EF-HARBOR-SCOPED-IDENTIFIER-REPORT, the governed Source universe is complete and consists exactly of SRC-F6EF-HARBOR-ORIGIN and SRC-F6EF-HARBOR-EXPANSION-TARGET. Both are local, available, accessible, authorized, supported, and governed in scope. The task is only to report the exact-literal result within this governed inspected ASU after its pre-authorized one-hop inspection path; no Source outside these two belongs to that bounded reporting task.",
+          "state": "unknown"
+        }
+      ],
+      "outcome": "sufficient",
+      "package": {
+        "kind": "package",
+        "value": "PKG-F6EF-HARBOR-SCOPED-IDENTIFIER-REPORT"
+      },
+      "request": {
+        "kind": "request",
+        "value": "REQ-F6EF-HARBOR-SCOPED-IDENTIFIER-REPORT"
+      },
+      "source_universe": {
+        "adequacy": {
+          "detail": "ASU adequacy=adequate",
+          "evidence_boundary": "For REQ-F6EF-HARBOR-SCOPED-IDENTIFIER-REPORT, the governed Source universe is complete and consists exactly of SRC-F6EF-HARBOR-ORIGIN and SRC-F6EF-HARBOR-EXPANSION-TARGET. Both are local, available, accessible, authorized, supported, and governed in scope. The task is only to report the exact-literal result within this governed inspected ASU after its pre-authorized one-hop inspection path; no Source outside these two belongs to that bounded reporting task.",
+          "state": "unknown"
+        },
+        "sources": [
+          {
+            "kind": "source",
+            "value": "SRC-F6EF-HARBOR-ORIGIN"
+          },
+          {
+            "kind": "source",
+            "value": "SRC-F6EF-HARBOR-EXPANSION-TARGET"
+          }
+        ]
+      },
+      "status": "completed",
+      "termination_basis": "Initial inspection of SRC-F6EF-HARBOR-ORIGIN completed; one authorized governed expansion inspected SRC-F6EF-HARBOR-EXPANSION-TARGET; no exact literal match in either Source; no second hop is authorized; the sole approved expansion path is exhausted."
+    }
+  },
+  "deficiency": {
+    "authorized": true,
+    "basis": "Initial inspection of SRC-F6EF-HARBOR-ORIGIN found no exact literal match for the controlled query. For the bounded reporting task, this is material and potentially resolvable because the one represented governed relationship identifies one already-governed, available expansion-only Source for inspection.",
+    "identity": {
+      "kind": "deficiency",
+      "value": "DEF-F6EF-INITIAL-EXACT-QUERY-ABSENCE"
+    },
+    "in_scope": true,
+    "material": true,
+    "resolvable_by_discovery": true,
+    "source_ids": [
+      "SRC-F6EF-HARBOR-EXPANSION-TARGET"
+    ]
+  },
+  "discovery": {
+    "candidates": [],
+    "excluded_sources": [],
+    "expanded_inspected_sources": [
+      "SRC-F6EF-HARBOR-EXPANSION-TARGET"
+    ],
+    "expansion_basis": [
+      "DEF-F6EF-INITIAL-EXACT-QUERY-ABSENCE; authorized one-hop inspection of the sole represented governed annex target."
+    ],
+    "initial_inspected_sources": [
+      "SRC-F6EF-HARBOR-ORIGIN"
+    ],
+    "limitations": [
+      {
+        "detail": "ASU adequacy=adequate",
+        "evidence_boundary": "For REQ-F6EF-HARBOR-SCOPED-IDENTIFIER-REPORT, the governed Source universe is complete and consists exactly of SRC-F6EF-HARBOR-ORIGIN and SRC-F6EF-HARBOR-EXPANSION-TARGET. Both are local, available, accessible, authorized, supported, and governed in scope. The task is only to report the exact-literal result within this governed inspected ASU after its pre-authorized one-hop inspection path; no Source outside these two belongs to that bounded reporting task.",
+        "state": "unknown"
+      }
+    ],
+    "negative_result_scope": "ASU=REQ-F6EF-HARBOR-SCOPED-IDENTIFIER-REPORT; adequacy=adequate; inspected=SRC-F6EF-HARBOR-ORIGIN,SRC-F6EF-HARBOR-EXPANSION-TARGET",
+    "termination_basis": "bounded deterministic inspection completed; no applicability, selection, or sufficiency evaluation"
+  },
+  "environment": {
+    "markdown_it": "3.0.0",
+    "platform": "Linux-7.0.0-34-generic-x86_64-with-glibc2.43",
+    "python": "3.14.4 (main, Aug 20 2026, 10:41:58) [GCC 15.2.0]"
+  },
+  "evidence_id": "VE-F6-EF-001",
+  "execution_utc": "2026-09-27T02:28:39.405220+00:00",
+  "expansion_request": {
+    "basis": "DEF-F6EF-INITIAL-EXACT-QUERY-ABSENCE; authorized one-hop inspection of the sole represented governed annex target.",
+    "inspection_authorized": true,
+    "material_resolvable_deficiency": true,
+    "origin": {
+      "kind": "represented_information",
+      "value": "RI-F6EF-HARBOR-ORIGIN-REGISTER"
+    },
+    "relationship": {
+      "kind": "relationship",
+      "value": "REL-F6EF-HARBOR-ORIGIN-TO-ANNEX"
+    },
+    "target_source": "SRC-F6EF-HARBOR-EXPANSION-TARGET"
+  },
+  "expected_result": "ER-F6-EF v1",
+  "fixture": "FX-F6-EF v1",
+  "initial_discovery": {
+    "candidates": [],
+    "excluded_sources": [
+      [
+        "SRC-F6EF-HARBOR-EXPANSION-TARGET",
+        "not-inspected"
+      ]
+    ],
+    "expanded_inspected_sources": [],
+    "expansion_basis": [],
+    "initial_inspected_sources": [
+      "SRC-F6EF-HARBOR-ORIGIN"
+    ],
+    "limitations": [
+      {
+        "detail": "ASU adequacy=adequate",
+        "evidence_boundary": "For REQ-F6EF-HARBOR-SCOPED-IDENTIFIER-REPORT, the governed Source universe is complete and consists exactly of SRC-F6EF-HARBOR-ORIGIN and SRC-F6EF-HARBOR-EXPANSION-TARGET. Both are local, available, accessible, authorized, supported, and governed in scope. The task is only to report the exact-literal result within this governed inspected ASU after its pre-authorized one-hop inspection path; no Source outside these two belongs to that bounded reporting task.",
+        "state": "unknown"
+      },
+      {
+        "detail": "Source SRC-F6EF-HARBOR-EXPANSION-TARGET: not-inspected",
+        "evidence_boundary": "For REQ-F6EF-HARBOR-SCOPED-IDENTIFIER-REPORT, the governed Source universe is complete and consists exactly of SRC-F6EF-HARBOR-ORIGIN and SRC-F6EF-HARBOR-EXPANSION-TARGET. Both are local, available, accessible, authorized, supported, and governed in scope. The task is only to report the exact-literal result within this governed inspected ASU after its pre-authorized one-hop inspection path; no Source outside these two belongs to that bounded reporting task.",
+        "state": "unavailable"
+      }
+    ],
+    "negative_result_scope": "ASU=REQ-F6EF-HARBOR-SCOPED-IDENTIFIER-REPORT; adequacy=adequate; inspected=SRC-F6EF-HARBOR-ORIGIN",
+    "termination_basis": "bounded deterministic inspection completed; no applicability, selection, or sufficiency evaluation"
+  },
+  "renderings": {
+    "chatgpt": {
+      "reason_codes": [
+        "faithful-governed-package-presentation",
+        "rendering-is-not-delivery-receipt-or-use"
+      ],
+      "reference": "rendering:chatgpt:PKG-F6EF-HARBOR-SCOPED-IDENTIFIER-REPORT",
+      "status": "rendered"
+    },
+    "codex": {
+      "reason_codes": [
+        "faithful-governed-package-presentation",
+        "rendering-is-not-delivery-receipt-or-use"
+      ],
+      "reference": "rendering:codex:PKG-F6EF-HARBOR-SCOPED-IDENTIFIER-REPORT",
+      "status": "rendered"
+    },
+    "human": {
+      "reason_codes": [
+        "faithful-governed-package-presentation",
+        "rendering-is-not-delivery-receipt-or-use"
+      ],
+      "reference": "rendering:human:PKG-F6EF-HARBOR-SCOPED-IDENTIFIER-REPORT",
+      "status": "rendered"
+    }
+  },
+  "represented_relationship": {
+    "identity": {
+      "kind": "relationship",
+      "value": "REL-F6EF-HARBOR-ORIGIN-TO-ANNEX"
+    },
+    "inferred": false,
+    "kind": "governed-controlled-annex",
+    "provenance": null,
+    "scope": null,
+    "source": {
+      "kind": "represented_information",
+      "value": "RI-F6EF-HARBOR-ORIGIN-REGISTER"
+    },
+    "target": {
+      "kind": "source",
+      "value": "SRC-F6EF-HARBOR-EXPANSION-TARGET"
+    }
+  },
+  "request": {
+    "constraints": [],
+    "consumer": {
+      "identity": {
+        "kind": "consumer",
+        "value": "fixture-human"
+      }
+    },
+    "identity": {
+      "kind": "request",
+      "value": "REQ-F6EF-HARBOR-SCOPED-IDENTIFIER-REPORT"
+    },
+    "intent": {
+      "inferred": false,
+      "purpose": "report whether the exact controlled identifier is present within the governed inspected ASU after the authorized bounded expansion",
+      "uncertainty": null
+    },
+    "project": {
+      "kind": "project",
+      "value": "fixture-harbor-f6ef"
+    },
+    "requester": {
+      "identity": {
+        "kind": "requester",
+        "value": "fixture-requester"
+      }
+    },
+    "scope": {
+      "description": "bounded reporting only; governed inspected ASU"
+    }
+  },
+  "source_observations": [
+    {
+      "git": {
+        "branch": "main",
+        "detached_head": false,
+        "head": "0c1001a347fc62e05ffaa91c4430eba0f0d617f4",
+        "history": [
+          "0c1001a347fc62e05ffaa91c4430eba0f0d617f4",
+          "058e160ccd9a5e58a36d3cf94c2b590bbea94d84",
+          "5a46b97654e25abc3ea954fb264339178c74aecb",
+          "7d3568c4eb4a5b409b5157ef60ce686860a8beca",
+          "656047b37558678594c6a18679846e7bcf3d8f1f",
+          "c80331f7c8861183e70030f7d9988afd0724d5c6",
+          "3f5887224c11abde1e1166b3c31be03e6e35cb75",
+          "362ea3ceb7164e9fbddee0606c63be1bb9c78deb",
+          "efbfd77995df39aa4d7151af95b1005678f4684c",
+          "a6db6f8562c7749a7401139503ae8e2960f920c9",
+          "37f4dbe822c9024673ce12a2f839df30f391581c",
+          "922131ccafd0b8c541b29bb0031d9e517bb0ea51",
+          "185c17f0fc709e1b80c06b2ee557a1f7a1942b4e",
+          "2b7435b294da68a2e99847d26bf447f9eb71f87c",
+          "ab0c2b4e887df366b451b843c31e21367cff55d7",
+          "478005b424b47216c372ac289032f1b242c136e1",
+          "b761cf024997f0810062730a975012e1cac6177b",
+          "7b902e153f529354c0e2b2f21b8f757035c32901",
+          "c7d17714a3983335f8564aa9360739d9ec785410",
+          "c9b39a3e950225498e06e687e69fdf15e9f37235",
+          "48df5148cba14415a41f5abd5cbde43247645a7c",
+          "bac6c3cdf7fb78278bd234f56d81c307a01a0090",
+          "1b61cb15cd9761aad843ed22261809b2aa61ced6",
+          "9d530d82926c3c67fa502c87f4f8d7dcfeda92a8",
+          "6a64e1e6f025d8c532ef6eed146779e42e116ecb",
+          "d4fa8e901a423966f5aba5866051b2ec2237613e",
+          "f5a874f1d1b42b19ce790ab2598c270ecd576af4",
+          "98624973feab235aaba81c16eb335a394b679331",
+          "6f0ae43c7d11135c5b33e57bc4aa9940ed925a05",
+          "40f8ddcb919692781fa20da93e6f051c0f77d67a",
+          "cec1bd1755913e6e22d0c4ef35cd11a736869cfd",
+          "483502c708711d82dd74be95920ed0a3e8f4078d"
+        ],
+        "limitations": [
+          {
+            "code": "local-observation-only",
+            "detail": "No remote, shared, governing, or current state was established."
+          },
+          {
+            "code": "scope-native-expression-unavailable",
+            "detail": "The registered Source Scope is retained as governed provenance; no unapproved native scope grammar was interpreted."
+          },
+          {
+            "code": "remote-names-source-reported",
+            "detail": "Configured remote names are local configuration evidence, not remote reachability or synchronization evidence."
+          }
+        ],
+        "locator": "/home/lobsterboss79/Projects/context-engine",
+        "observation_time": "2026-09-27T02:28:39.336716+00:00",
+        "outcome": "observed",
+        "remote_names": [
+          "origin"
+        ],
+        "repository_root": "/home/lobsterboss79/Projects/context-engine",
+        "source_identity": "SRC-F6EF-HARBOR-ORIGIN",
+        "source_scope": "harbor/controlled-register/origin",
+        "staged_paths": [],
+        "unborn": false,
+        "unstaged_paths": [],
+        "untracked_paths": [
+          "docs/phase-4/validation-evidence/VE-F6-EF-001/raw/f6-ef-execution.py",
+          "docs/phase-4/validation-evidence/VE-F6-EF-001/raw/f6-ef-execution.stderr",
+          "docs/phase-4/validation-evidence/VE-F6-EF-001/raw/f6-ef-execution.stdout",
+          "docs/phase-4/validation-evidence/VE-F6-EF-001/raw/f6-ef-preflight.py",
+          "docs/phase-4/validation-evidence/VE-F6-EF-001/raw/procedure-preflight.json"
+        ],
+        "working_tree_clean": false
+      },
+      "markdown": {
+        "limitations": [],
+        "locator": "sources/origin-register.md",
+        "original_markdown": "# Synthetic Harbor controlled origin register\n\nThe controlled origin register records ordinary harbor preparation facts:\n\n- The dock team verified three sealed sample crates in the origin register.\n- The annex register is the governed controlled annex for this reporting task.\n- The next local inventory review is scheduled for the first weekday of the month.\n\nThe governed relationship to the annex identifies one permitted reporting-path\nSource. It does not authorize traversal beyond that annex.\n",
+        "outcome": "observed"
+      },
+      "represented_information": {
+        "classifications": [],
+        "identity": {
+          "kind": "represented_information",
+          "value": "RI-F6EF-HARBOR-ORIGIN-REGISTER"
+        },
+        "provenance": {
+          "artifact": {
+            "kind": "artifact",
+            "value": "ART-SRC-F6EF-HARBOR-ORIGIN"
+          },
+          "artifact_version": {
+            "kind": "artifact_version",
+            "value": "ARTV-SRC-F6EF-HARBOR-ORIGIN"
+          },
+          "identity": {
+            "kind": "provenance",
+            "value": "PROV-SRC-F6EF-HARBOR-ORIGIN"
+          },
+          "limitations": [],
+          "location_reference": "sources/origin-register.md",
+          "missing_material_basis": false,
+          "observation": {
+            "kind": "observation",
+            "value": "OBS-SRC-F6EF-HARBOR-ORIGIN"
+          },
+          "origin_projects": [
+            {
+              "kind": "project",
+              "value": "fixture-harbor-f6ef"
+            }
+          ],
+          "source": {
+            "kind": "source",
+            "value": "SRC-F6EF-HARBOR-ORIGIN"
+          },
+          "transformation": "normalized",
+          "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+          "upstream": [
+            {
+              "kind": "provenance",
+              "value": "PROV-OBS-SRC-F6EF-HARBOR-ORIGIN"
+            }
+          ]
+        },
+        "subject": {
+          "kind": "claim",
+          "value": "RI-F6EF-HARBOR-ORIGIN-REGISTER"
+        },
+        "uncertainty": []
+      },
+      "source": "SRC-F6EF-HARBOR-ORIGIN",
+      "transformation": {
+        "artifact": {
+          "identity": {
+            "kind": "artifact",
+            "value": "ART-SRC-F6EF-HARBOR-ORIGIN"
+          },
+          "locators": [
+            "sources/origin-register.md"
+          ],
+          "source": {
+            "kind": "source",
+            "value": "SRC-F6EF-HARBOR-ORIGIN"
+          }
+        },
+        "blocks": [
+          {
+            "content": "Synthetic Harbor controlled origin register",
+            "kind": "heading",
+            "line_end": 1,
+            "line_start": 1,
+            "links": [],
+            "ordinal": 0,
+            "parent_heading": null
+          },
+          {
+            "content": "The controlled origin register records ordinary harbor preparation facts:",
+            "kind": "paragraph",
+            "line_end": 3,
+            "line_start": 3,
+            "links": [],
+            "ordinal": 1,
+            "parent_heading": 0
+          },
+          {
+            "content": "",
+            "kind": "bullet_list",
+            "line_end": 8,
+            "line_start": 5,
+            "links": [],
+            "ordinal": 2,
+            "parent_heading": 0
+          },
+          {
+            "content": "The dock team verified three sealed sample crates in the origin register.",
+            "kind": "paragraph",
+            "line_end": 5,
+            "line_start": 5,
+            "links": [],
+            "ordinal": 3,
+            "parent_heading": 0
+          },
+          {
+            "content": "The annex register is the governed controlled annex for this reporting task.",
+            "kind": "paragraph",
+            "line_end": 6,
+            "line_start": 6,
+            "links": [],
+            "ordinal": 4,
+            "parent_heading": 0
+          },
+          {
+            "content": "The next local inventory review is scheduled for the first weekday of the month.",
+            "kind": "paragraph",
+            "line_end": 7,
+            "line_start": 7,
+            "links": [],
+            "ordinal": 5,
+            "parent_heading": 0
+          },
+          {
+            "content": "The governed relationship to the annex identifies one permitted reporting-path\nSource. It does not authorize traversal beyond that annex.",
+            "kind": "paragraph",
+            "line_end": 10,
+            "line_start": 9,
+            "links": [],
+            "ordinal": 6,
+            "parent_heading": 0
+          }
+        ],
+        "limitations": [],
+        "original_markdown": "# Synthetic Harbor controlled origin register\n\nThe controlled origin register records ordinary harbor preparation facts:\n\n- The dock team verified three sealed sample crates in the origin register.\n- The annex register is the governed controlled annex for this reporting task.\n- The next local inventory review is scheduled for the first weekday of the month.\n\nThe governed relationship to the annex identifies one permitted reporting-path\nSource. It does not authorize traversal beyond that annex.\n",
+        "parser_configuration": "markdown-it-py-4/commonmark+table",
+        "parser_version": "3.0.0",
+        "version": {
+          "artifact": {
+            "kind": "artifact",
+            "value": "ART-SRC-F6EF-HARBOR-ORIGIN"
+          },
+          "identity": {
+            "kind": "artifact_version",
+            "value": "ARTV-SRC-F6EF-HARBOR-ORIGIN"
+          },
+          "native_state_reference": "0c1001a347fc62e05ffaa91c4430eba0f0d617f4",
+          "provenance": {
+            "artifact": null,
+            "artifact_version": null,
+            "identity": {
+              "kind": "provenance",
+              "value": "PROV-OBS-SRC-F6EF-HARBOR-ORIGIN"
+            },
+            "limitations": [],
+            "location_reference": "sources/origin-register.md",
+            "missing_material_basis": false,
+            "observation": {
+              "kind": "observation",
+              "value": "OBS-SRC-F6EF-HARBOR-ORIGIN"
+            },
+            "origin_projects": [
+              {
+                "kind": "project",
+                "value": "fixture-harbor-f6ef"
+              }
+            ],
+            "source": {
+              "kind": "source",
+              "value": "SRC-F6EF-HARBOR-ORIGIN"
+            },
+            "transformation": "direct",
+            "transformation_reference": null,
+            "upstream": []
+          }
+        }
+      }
+    },
+    {
+      "git": {
+        "branch": "main",
+        "detached_head": false,
+        "head": "0c1001a347fc62e05ffaa91c4430eba0f0d617f4",
+        "history": [
+          "0c1001a347fc62e05ffaa91c4430eba0f0d617f4",
+          "058e160ccd9a5e58a36d3cf94c2b590bbea94d84",
+          "5a46b97654e25abc3ea954fb264339178c74aecb",
+          "7d3568c4eb4a5b409b5157ef60ce686860a8beca",
+          "656047b37558678594c6a18679846e7bcf3d8f1f",
+          "c80331f7c8861183e70030f7d9988afd0724d5c6",
+          "3f5887224c11abde1e1166b3c31be03e6e35cb75",
+          "362ea3ceb7164e9fbddee0606c63be1bb9c78deb",
+          "efbfd77995df39aa4d7151af95b1005678f4684c",
+          "a6db6f8562c7749a7401139503ae8e2960f920c9",
+          "37f4dbe822c9024673ce12a2f839df30f391581c",
+          "922131ccafd0b8c541b29bb0031d9e517bb0ea51",
+          "185c17f0fc709e1b80c06b2ee557a1f7a1942b4e",
+          "2b7435b294da68a2e99847d26bf447f9eb71f87c",
+          "ab0c2b4e887df366b451b843c31e21367cff55d7",
+          "478005b424b47216c372ac289032f1b242c136e1",
+          "b761cf024997f0810062730a975012e1cac6177b",
+          "7b902e153f529354c0e2b2f21b8f757035c32901",
+          "c7d17714a3983335f8564aa9360739d9ec785410",
+          "c9b39a3e950225498e06e687e69fdf15e9f37235",
+          "48df5148cba14415a41f5abd5cbde43247645a7c",
+          "bac6c3cdf7fb78278bd234f56d81c307a01a0090",
+          "1b61cb15cd9761aad843ed22261809b2aa61ced6",
+          "9d530d82926c3c67fa502c87f4f8d7dcfeda92a8",
+          "6a64e1e6f025d8c532ef6eed146779e42e116ecb",
+          "d4fa8e901a423966f5aba5866051b2ec2237613e",
+          "f5a874f1d1b42b19ce790ab2598c270ecd576af4",
+          "98624973feab235aaba81c16eb335a394b679331",
+          "6f0ae43c7d11135c5b33e57bc4aa9940ed925a05",
+          "40f8ddcb919692781fa20da93e6f051c0f77d67a",
+          "cec1bd1755913e6e22d0c4ef35cd11a736869cfd",
+          "483502c708711d82dd74be95920ed0a3e8f4078d"
+        ],
+        "limitations": [
+          {
+            "code": "local-observation-only",
+            "detail": "No remote, shared, governing, or current state was established."
+          },
+          {
+            "code": "scope-native-expression-unavailable",
+            "detail": "The registered Source Scope is retained as governed provenance; no unapproved native scope grammar was interpreted."
+          },
+          {
+            "code": "remote-names-source-reported",
+            "detail": "Configured remote names are local configuration evidence, not remote reachability or synchronization evidence."
+          }
+        ],
+        "locator": "/home/lobsterboss79/Projects/context-engine",
+        "observation_time": "2026-09-27T02:28:39.378255+00:00",
+        "outcome": "observed",
+        "remote_names": [
+          "origin"
+        ],
+        "repository_root": "/home/lobsterboss79/Projects/context-engine",
+        "source_identity": "SRC-F6EF-HARBOR-EXPANSION-TARGET",
+        "source_scope": "harbor/controlled-register/annex",
+        "staged_paths": [],
+        "unborn": false,
+        "unstaged_paths": [],
+        "untracked_paths": [
+          "docs/phase-4/validation-evidence/VE-F6-EF-001/raw/f6-ef-execution.py",
+          "docs/phase-4/validation-evidence/VE-F6-EF-001/raw/f6-ef-execution.stderr",
+          "docs/phase-4/validation-evidence/VE-F6-EF-001/raw/f6-ef-execution.stdout",
+          "docs/phase-4/validation-evidence/VE-F6-EF-001/raw/f6-ef-preflight.py",
+          "docs/phase-4/validation-evidence/VE-F6-EF-001/raw/procedure-preflight.json"
+        ],
+        "working_tree_clean": false
+      },
+      "markdown": {
+        "limitations": [],
+        "locator": "sources/expansion-target-annex.md",
+        "original_markdown": "# Synthetic Harbor controlled annex register\n\nThe controlled annex register records ordinary harbor preparation facts:\n\n- The annex custodian verified two calibration seals.\n- The local inventory review uses the controlled origin register and this annex.\n- No further reporting-path Source is identified by this annex.\n",
+        "outcome": "observed"
+      },
+      "represented_information": {
+        "classifications": [],
+        "identity": {
+          "kind": "represented_information",
+          "value": "RI-F6EF-HARBOR-EXPANSION-TARGET-ANNEX"
+        },
+        "provenance": {
+          "artifact": {
+            "kind": "artifact",
+            "value": "ART-SRC-F6EF-HARBOR-EXPANSION-TARGET"
+          },
+          "artifact_version": {
+            "kind": "artifact_version",
+            "value": "ARTV-SRC-F6EF-HARBOR-EXPANSION-TARGET"
+          },
+          "identity": {
+            "kind": "provenance",
+            "value": "PROV-SRC-F6EF-HARBOR-EXPANSION-TARGET"
+          },
+          "limitations": [],
+          "location_reference": "sources/expansion-target-annex.md",
+          "missing_material_basis": false,
+          "observation": {
+            "kind": "observation",
+            "value": "OBS-SRC-F6EF-HARBOR-EXPANSION-TARGET"
+          },
+          "origin_projects": [
+            {
+              "kind": "project",
+              "value": "fixture-harbor-f6ef"
+            }
+          ],
+          "source": {
+            "kind": "source",
+            "value": "SRC-F6EF-HARBOR-EXPANSION-TARGET"
+          },
+          "transformation": "normalized",
+          "transformation_reference": "markdown-it-py-4/commonmark+table; version=3.0.0",
+          "upstream": [
+            {
+              "kind": "provenance",
+              "value": "PROV-OBS-SRC-F6EF-HARBOR-EXPANSION-TARGET"
+            }
+          ]
+        },
+        "subject": {
+          "kind": "claim",
+          "value": "RI-F6EF-HARBOR-EXPANSION-TARGET-ANNEX"
+        },
+        "uncertainty": []
+      },
+      "source": "SRC-F6EF-HARBOR-EXPANSION-TARGET",
+      "transformation": {
+        "artifact": {
+          "identity": {
+            "kind": "artifact",
+            "value": "ART-SRC-F6EF-HARBOR-EXPANSION-TARGET"
+          },
+          "locators": [
+            "sources/expansion-target-annex.md"
+          ],
+          "source": {
+            "kind": "source",
+            "value": "SRC-F6EF-HARBOR-EXPANSION-TARGET"
+          }
+        },
+        "blocks": [
+          {
+            "content": "Synthetic Harbor controlled annex register",
+            "kind": "heading",
+            "line_end": 1,
+            "line_start": 1,
+            "links": [],
+            "ordinal": 0,
+            "parent_heading": null
+          },
+          {
+            "content": "The controlled annex register records ordinary harbor preparation facts:",
+            "kind": "paragraph",
+            "line_end": 3,
+            "line_start": 3,
+            "links": [],
+            "ordinal": 1,
+            "parent_heading": 0
+          },
+          {
+            "content": "",
+            "kind": "bullet_list",
+            "line_end": 7,
+            "line_start": 5,
+            "links": [],
+            "ordinal": 2,
+            "parent_heading": 0
+          },
+          {
+            "content": "The annex custodian verified two calibration seals.",
+            "kind": "paragraph",
+            "line_end": 5,
+            "line_start": 5,
+            "links": [],
+            "ordinal": 3,
+            "parent_heading": 0
+          },
+          {
+            "content": "The local inventory review uses the controlled origin register and this annex.",
+            "kind": "paragraph",
+            "line_end": 6,
+            "line_start": 6,
+            "links": [],
+            "ordinal": 4,
+            "parent_heading": 0
+          },
+          {
+            "content": "No further reporting-path Source is identified by this annex.",
+            "kind": "paragraph",
+            "line_end": 7,
+            "line_start": 7,
+            "links": [],
+            "ordinal": 5,
+            "parent_heading": 0
+          }
+        ],
+        "limitations": [],
+        "original_markdown": "# Synthetic Harbor controlled annex register\n\nThe controlled annex register records ordinary harbor preparation facts:\n\n- The annex custodian verified two calibration seals.\n- The local inventory review uses the controlled origin register and this annex.\n- No further reporting-path Source is identified by this annex.\n",
+        "parser_configuration": "markdown-it-py-4/commonmark+table",
+        "parser_version": "3.0.0",
+        "version": {
+          "artifact": {
+            "kind": "artifact",
+            "value": "ART-SRC-F6EF-HARBOR-EXPANSION-TARGET"
+          },
+          "identity": {
+            "kind": "artifact_version",
+            "value": "ARTV-SRC-F6EF-HARBOR-EXPANSION-TARGET"
+          },
+          "native_state_reference": "0c1001a347fc62e05ffaa91c4430eba0f0d617f4",
+          "provenance": {
+            "artifact": null,
+            "artifact_version": null,
+            "identity": {
+              "kind": "provenance",
+              "value": "PROV-OBS-SRC-F6EF-HARBOR-EXPANSION-TARGET"
+            },
+            "limitations": [],
+            "location_reference": "sources/expansion-target-annex.md",
+            "missing_material_basis": false,
+            "observation": {
+              "kind": "observation",
+              "value": "OBS-SRC-F6EF-HARBOR-EXPANSION-TARGET"
+            },
+            "origin_projects": [
+              {
+                "kind": "project",
+                "value": "fixture-harbor-f6ef"
+              }
+            ],
+            "source": {
+              "kind": "source",
+              "value": "SRC-F6EF-HARBOR-EXPANSION-TARGET"
+            },
+            "transformation": "direct",
+            "transformation_reference": null,
+            "upstream": []
+          }
+        }
+      }
+    }
+  ],
+  "sufficiency": {
+    "limitations": [
+      {
+        "detail": "ASU adequacy=adequate",
+        "evidence_boundary": "For REQ-F6EF-HARBOR-SCOPED-IDENTIFIER-REPORT, the governed Source universe is complete and consists exactly of SRC-F6EF-HARBOR-ORIGIN and SRC-F6EF-HARBOR-EXPANSION-TARGET. Both are local, available, accessible, authorized, supported, and governed in scope. The task is only to report the exact-literal result within this governed inspected ASU after its pre-authorized one-hop inspection path; no Source outside these two belongs to that bounded reporting task.",
+        "state": "unknown"
+      }
+    ],
+    "outcome": "sufficient",
+    "reason_codes": [
+      "selected-required-coverage-and-adequate-asu"
+    ],
+    "required_deficiencies": []
+  }
+}

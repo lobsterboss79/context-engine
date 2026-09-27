@@ -1,0 +1,18 @@
+{
+  "checks": {
+    "asu_contains_origin_and_target": true,
+    "bounded_iteration": true,
+    "exact_literal_only": true,
+    "expansion_request_booleans_and_basis": true,
+    "expansion_request_origin": true,
+    "expansion_request_relationship": true,
+    "expansion_request_target": true,
+    "initial_inspection_is_origin_only": true,
+    "no_result_injection": true,
+    "no_runtime_generated_second_target": true,
+    "target_is_expansion_only_and_not_initial": true
+  },
+  "fixture": "FX-F6-EF v1",
+  "pipeline_executed": false,
+  "result": "PASS"
+}

@@ -1,0 +1,5 @@
+3cd49b98a18a75fbf26b1a3fddce4c256d10d7330f8a89795a5b7fd4d0a50184  docs/phase-4/ws2-item-2.6-fixtures/F6-EF/bootstrap.toml
+a46568e2eedafde3e700b29b953bd945958de9523b275f6225ebd9a625085ff2  docs/phase-4/ws2-item-2.6-fixtures/F6-EF/project.toml
+6d69ba781811f67c96135d1b24375c309b094f2666a8e5b994fb57f456f4f2e5  docs/phase-4/ws2-item-2.6-fixtures/F6-EF/controlled-request.toml
+b3c3c4173086b4d25e97a8e92f33c7c22bdd5dac418ca6443677457988708c48  docs/phase-4/ws2-item-2.6-fixtures/F6-EF/sources/origin-register.md
+431c2c4870029999a82f9971a53e92eb629153cb12f050797620be35847d444b  docs/phase-4/ws2-item-2.6-fixtures/F6-EF/sources/expansion-target-annex.md
