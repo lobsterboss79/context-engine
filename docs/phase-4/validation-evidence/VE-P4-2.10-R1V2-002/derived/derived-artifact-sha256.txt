@@ -1,0 +1,5 @@
+ee052ba26353077a3e5da020ac5f601119a42ecada5f8e2a01f0063fb5833ee0  docs/phase-4/validation-evidence/VE-P4-2.10-R1V2-002/derived/raw-artifact-sha256.txt
+4167ff9c6be55196c1a12426401e664119e707129f5ed898a35f20a098e32177  docs/phase-4/validation-evidence/VE-P4-2.10-R1V2-002/derived/semantic-assessment.json
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  docs/phase-4/validation-evidence/VE-P4-2.10-R1V2-002/derived/semantic-assessment.stderr
+400b8e55da12563c1227d582d267e3812a1976e83455a700ecf2ec74bb85cea3  docs/phase-4/validation-evidence/VE-P4-2.10-R1V2-002/derived/semantic-assessment.stdout
+9224660240c676a694565c55f826558f98fb928bb47a94d76fdc6e32d6477190  docs/phase-4/validation-evidence/VE-P4-2.10-R1V2-002/derived/semantic-projection.json

@@ -1,0 +1,9 @@
+53cc31f3d890ad893e69659ee984a6c4772f908fd8482019590db9ee6e47d573  docs/phase-4/validation-evidence/VE-P4-2.10-R1V2-001/raw/derive-semantic-projection.py
+a30b43c8b58773132c5eb378ad453fbf132bef1d6092624b4bbe59cd3a32c7a0  docs/phase-4/validation-evidence/VE-P4-2.10-R1V2-001/raw/f3-state.sqlite
+0760ee72f09d955b51e2adab79dc19cff8f27c23d2bf8a3ede8ff78536446c1d  docs/phase-4/validation-evidence/VE-P4-2.10-R1V2-001/raw/r1v2-01-execution.py
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  docs/phase-4/validation-evidence/VE-P4-2.10-R1V2-001/raw/r1v2-01-execution.stderr
+1fb8853b459ea13fdb214822387cd3f706d60bc11ced2977e16bb9bd4bbc43d8  docs/phase-4/validation-evidence/VE-P4-2.10-R1V2-001/raw/r1v2-01-execution.stdout
+7527ca10c1e7dbd9a24fdaa0dd61314448aaf3c198454a7c2bafddc7c2319dc8  docs/phase-4/validation-evidence/VE-P4-2.10-R1V2-001/raw/raw-result.json
+2e4b5435ef938743275d3112580ba3887a4f74368f90e3b133e8e53a7c489619  docs/phase-4/validation-evidence/VE-P4-2.10-R1V2-001/raw/rendering-chatgpt.md
+d9448a5eb4e8bc45f25191a578d10c4df80ecbf08d2c03d77fdc783821653a1f  docs/phase-4/validation-evidence/VE-P4-2.10-R1V2-001/raw/rendering-codex.md
+1d0755986ba7f04c579f2590231775e9747e6c6dcc878b7cb3970028ef97cb4c  docs/phase-4/validation-evidence/VE-P4-2.10-R1V2-001/raw/rendering-human.md
