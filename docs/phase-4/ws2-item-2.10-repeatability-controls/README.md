@@ -9,7 +9,10 @@ or an Item 2.10 completion disposition. R1 and R2 have not been executed.
 
 Both controls reference, without replacing or revising, `FX-F3 v1`, unchanged
 `ER-F3 v1`, and immutable historical `VE-F3-001`. The original F3 execution
-is not part of either run matrix and must not be rerun under `ER-F3 v1`.
+is not part of either run matrix and must not be rerun under `ER-F3 v1`. The
+approved provenance-only correction changes neither F3 semantic record nor
+either control's semantic expectation, shared comparison contract, R1
+three-run design, R2 reference/four-run matrix, application behavior, or tests.
 
 The F3 fixture/ER materialization baseline is
 `c7d17714a3983335f8564aa9360739d9ec785410`; its implementation origin is
@@ -19,10 +22,15 @@ The separate repeatability-control materialization baseline is the first
 commit that contains this package; it must be recorded in future execution
 evidence and is not a revision of either F3 baseline.
 
-The frozen F3 input inventory and SHA-256 values are copied in
-[repeatability expected results](repeatability-expected-results.md#f3-input-inventory-and-hash-control).
-The authoritative historical copy remains the F3 manifest; this copy is a
-control reference only.
+The frozen F3 controlled-file inventory, historical whole-file materialization
+provenance, and current F3 record-integrity controls are in
+[repeatability expected results](repeatability-expected-results.md#f3-input-inventory-and-provenanceintegrity-control).
+The historical whole-file hashes are verified against the Git state at
+`c7d17714`, while current integrity is verified from the two frozen extracted
+F3 record ranges. Current shared-register whole-file equality is not required.
+The authoritative historical copy remains the F3 manifest; this package is a
+control reference only. See the approved
+[F3 register provenance investigation](../ws2-item-2.10-f3-register-provenance-investigation.md).
 
 ## Control family
 
@@ -44,16 +52,21 @@ governed mismatch observable.
 
 Every future run must use a new SQLite database and a new output/evidence
 workspace, with no inherited database, audit, cache, generated package, or
-rendering. Before execution, the operator must identify any other stateful
-component that could influence the result; if it cannot be isolated under
-these controls, stop under H3. The approved v0.1 interfaces inspected for
-preparation are local-Git/Markdown observation, `GovernedRenderInputs`,
+rendering. Before execution, preflight must verify the six actual F3
+controlled-file hashes, the historical shared-register hashes at `c7d17714`,
+the two current extracted-record hashes, and absence of a later F3 semantic
+revision. The operator must identify any other stateful component that could
+influence the result; if it cannot be isolated under these controls, stop under
+H3. The approved v0.1 interfaces inspected for preparation are
+local-Git/Markdown observation, `GovernedRenderInputs`,
 `run_governed_render`, `SQLiteStateStore`, and the three renderers. No network,
 dependency, application-source, or test change is authorized by this package.
 
 ## Boundary
 
 This package does not approve Gate 4B, proving, TD-14 reopening, remediation,
-or production readiness. A semantic mismatch is not to be normalized or
-explained away: preserve originals and route it through Item 2.11/finding and
-H3 governance as applicable.
+or production readiness. R1 is authorized in principle but not re-executed;
+it requires a new Project Owner execution authorization after this correction
+is reviewed and committed. R2 remains not authorized for execution. A semantic
+mismatch is not to be normalized or explained away: preserve originals and
+route it through Item 2.11/finding and H3 governance as applicable.

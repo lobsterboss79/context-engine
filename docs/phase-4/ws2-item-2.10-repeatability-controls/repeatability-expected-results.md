@@ -5,10 +5,12 @@ reuse the identity of, `ER-F3 v1`. They are frozen before any R1/R2 execution.
 They inherit the approved Phase 0–3 baseline, Phase 4 checklist, validation
 governance package, and approved Item 2.10 analysis.
 
-## F3 input inventory and hash control
+## F3 input inventory and provenance/integrity control
 
-Every R1/R2 run must first verify this exact inventory. A mismatch is a
-controlled-input failure, not an allowed variation.
+Every R1/R2 preflight must verify the following distinct controls. A mismatch
+is a controlled-input or control-integrity failure, not an allowed variation.
+
+### Actual controlled F3 fixture files
 
 | SHA-256 | Frozen input |
 | --- | --- |
@@ -18,13 +20,46 @@ controlled-input failure, not an allowed variation.
 | `c22ea350f759e63c0315a2d6c4a370498449e7a2f30e16cf33c2e8b7b8f1a776` | `F3/sources/current-decision.md` |
 | `e4c12c53455c16b11d2a723104d65310f142450ec82d20f6005107b90ac73008` | `F3/sources/historical-note.md` |
 | `fc90e05050be6c023c8214b7acdb28dddc56033d5c7171f5eb68895d9b0af9d2` | `F3/sources/qualification.md` |
-| `ddc68a86d135c4927e519d1c037b2d4cdad8e91c4b89516b8ef7c879ace7c794` | `fixture-records.md` (`FX-F3 v1` record) |
-| `a8aa072209f6d0b2515ababadcd51bb787bec470b82f04e6c8b0d834016a2600` | `expected-results.md` (`ER-F3 v1` register) |
 
 The controlled request is `REQ-F3-RELEASE-RECOMMENDATION`, Project is
 `fixture-atlas-f3`, and scope is `field-kit-release`. The four Sources,
 represented-information identities, artifact/observation/provenance identities,
 and F3 governed metadata remain exactly those established by `FX-F3 v1`.
+
+### Historical whole-file provenance at F3 materialization baseline
+
+`c7d17714a3983335f8564aa9360739d9ec785410` is the historical F3
+materialization baseline. The following are **HISTORICAL WHOLE-FILE PROVENANCE
+HASHES AT F3 MATERIALIZATION BASELINE**, not expected hashes for the current
+shared files. Preflight must verify them against the corresponding Git object
+at `c7d17714`, not against the current worktree files.
+
+| SHA-256 at `c7d17714` | Historical complete shared register |
+| --- | --- |
+| `ddc68a86d135c4927e519d1c037b2d4cdad8e91c4b89516b8ef7c879ace7c794` | `fixture-records.md` |
+| `a8aa072209f6d0b2515ababadcd51bb787bec470b82f04e6c8b0d834016a2600` | `expected-results.md` |
+
+### Current F3 record-level integrity
+
+Preflight must extract each current record using the deterministic frozen range
+rule below and compare its SHA-256 to the stated invariant value. The
+extraction includes the matched level-two heading and all subsequent content
+through immediately **before** the next level-two Markdown heading, preserving
+the terminal blank line as emitted by that range. No general repository
+canonicalization is introduced.
+
+| Current preflight record-integrity control | Frozen deterministic extraction start | SHA-256 |
+| --- | --- | --- |
+| `FX-F3 v1` | Exact heading `## FX-F3 — Conflict, uncertainty, and provenance` in `fixture-records.md` | `6bda6616a07021a2d54a10bc07331675337a910e1a9958525aacbba8ed226e6e` |
+| `ER-F3 v1` | Exact heading `## ER-F3 v1` in `expected-results.md` | `72e5b2de99cd2b23c00f845dbb2e1f10aae481dc3a0f9afbf38ece248ff5b02f` |
+
+The historical whole-file provenance and current record-level integrity are
+separate required checks. Preflight must also verify that no later commit has
+changed either extracted F3 record semantically. The approved investigation,
+[`ws2-item-2.10-f3-register-provenance-investigation.md`](../ws2-item-2.10-f3-register-provenance-investigation.md),
+records that R1 stopped before execution, no validation evidence was created,
+the root cause was provenance representation, Classification A was approved by
+the Project Owner, and a Finding is not warranted.
 
 ## Shared semantic-comparison contract `SC-P4-2.10 v1`
 

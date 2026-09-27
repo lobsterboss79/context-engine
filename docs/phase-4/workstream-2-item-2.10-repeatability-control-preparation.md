@@ -44,8 +44,22 @@ The additive package is [ws2-item-2.10-repeatability-controls](ws2-item-2.10-rep
   allowlist, and prohibited-normalization rule.
 
 The control package separately records F3's original fixture/ER baseline, this
-preparation baseline, and the future control-materialization baseline. It
-freezes the eight F3 governed input hashes without copying or changing F3.
+preparation baseline, and the future control-materialization baseline. The
+Project Owner-approved provenance-only correction retains the two historical
+whole-register hashes at `c7d17714` as provenance evidence and adds two frozen
+current extracted-record integrity hashes for `FX-F3 v1` and `ER-F3 v1`. It
+does not require current shared-register whole-file equality, and it does not
+copy or change F3. The six actual F3 controlled-file hashes remain frozen.
+See [the F3 register provenance investigation](ws2-item-2.10-f3-register-provenance-investigation.md):
+R1 stopped before execution, no validation evidence was created, Classification
+A is Project Owner approved, and Finding not warranted is approved.
+
+This correction is provenance/control representation only. It does not change
+`FX-F3 v1`, `ER-F3 v1`, F3 controlled Sources, F3 semantics,
+`SC-P4-2.10 v1`, either R1/R2 semantic expectation, the R1 three-run design,
+the R2 reference/four-run matrix, Item 2.10 obligation mapping, application
+behavior, or tests. Item 2.10 remains incomplete; R1 is authorized in
+principle but not re-executed, and R2 remains not authorized for execution.
 
 ## R2 feasibility disposition
 
