@@ -1,0 +1,6 @@
+PC-P4-3B-001 v2 frozen execution invocation
+
+test ! -e docs/phase-4/validation-evidence/VE-P4-3B-002/raw/state && PYTHONPATH=src python3 docs/phase-4/ws3-lane-b-trust-state-audit/control-runner-v2.py docs/phase-4/validation-evidence/VE-P4-3B-002/raw/state > docs/phase-4/validation-evidence/VE-P4-3B-002/raw/stdout.txt 2> docs/phase-4/validation-evidence/VE-P4-3B-002/raw/stderr.txt
+
+Pre-execution layout: raw/ exists; raw/state/ does not exist. stdout.txt and
+stderr.txt are capture paths outside the runner-supplied state directory.
