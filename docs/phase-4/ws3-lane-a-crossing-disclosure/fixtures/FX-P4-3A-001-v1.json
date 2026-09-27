@@ -1,0 +1,9 @@
+{
+  "fixture_id": "FX-P4-3A-001",
+  "version": "v1",
+  "projects": ["project-lane-a-atlas", "project-lane-a-beacon"],
+  "sources": ["SRC-3A-ATLAS", "SRC-3A-BEACON"],
+  "bounded_relationship": "REL-3A-ATLAS-TO-BEACON",
+  "task_requirement": "TASK-3A-EXTERNAL-COMPATIBILITY",
+  "protected_content_marker": "protected-cross-project-content-is-never-rendered"
+}

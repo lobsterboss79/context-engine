@@ -1,0 +1,67 @@
+{
+  "consumer_denied": {
+    "origin_projects": [
+      "project-lane-a-beacon"
+    ],
+    "outcome": "denied",
+    "reasons": [
+      "consumer-disclosure-authorization-not-established"
+    ]
+  },
+  "crossing_allowed": {
+    "origin_projects": [
+      "project-lane-a-beacon"
+    ],
+    "outcome": "applicable",
+    "reasons": [
+      "deterministic-task-relevance-established"
+    ]
+  },
+  "crossing_denied": {
+    "origin_projects": [
+      "project-lane-a-beacon"
+    ],
+    "outcome": "denied",
+    "reasons": [
+      "cross-project-prerequisites-not-established"
+    ]
+  },
+  "disclosure_denied_render": {
+    "content_is_none": true,
+    "reasons": [
+      "consumer-disclosure-authorization-not-established"
+    ],
+    "rendering_is_none": true,
+    "status": "denied"
+  },
+  "requester_denied": {
+    "origin_projects": [
+      "project-lane-a-beacon"
+    ],
+    "outcome": "denied",
+    "reasons": [
+      "requester-authorization-not-established"
+    ]
+  },
+  "scope_cases": {
+    "all_prerequisites": [
+      "SRC-3A-ATLAS",
+      "SRC-3A-BEACON"
+    ],
+    "default": [
+      "SRC-3A-ATLAS"
+    ],
+    "missing_disclosure": [
+      "SRC-3A-ATLAS"
+    ],
+    "missing_relationship": [
+      "SRC-3A-ATLAS"
+    ],
+    "missing_requester": [
+      "SRC-3A-ATLAS"
+    ],
+    "missing_task": [
+      "SRC-3A-ATLAS"
+    ]
+  }
+}
