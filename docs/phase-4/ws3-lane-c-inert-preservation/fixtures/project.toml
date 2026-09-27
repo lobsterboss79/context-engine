@@ -1,0 +1,5 @@
+version = 1
+
+[project]
+identity = "fixture-ws3-lane-c"
+governance_reference = "synthetic-lane-c-fixture-not-production-authority"

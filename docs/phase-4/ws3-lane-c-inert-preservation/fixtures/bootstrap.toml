@@ -1,0 +1,7 @@
+version = 1
+
+[bootstrap]
+project = "fixture-ws3-lane-c"
+scope = "ws3-lane-c-controlled-validation"
+governance_basis = "synthetic-lane-c-fixture-not-production-authority"
+project_configuration = "project.toml"
