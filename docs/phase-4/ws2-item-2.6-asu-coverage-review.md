@@ -1,6 +1,6 @@
 # WS2 Item 2.6 — ASU Establishment and Boundaries Coverage Review
 
-**Status:** **REVIEW COMPLETE / ITEM 2.6 INCOMPLETE**
+**Status:** **REVIEW COMPLETE / ITEM 2.6 COMPLETE WITH ACCEPTED VALIDATION LIMITATION**
 
 ## 1. Status and boundary
 
@@ -11,7 +11,9 @@ alter frozen controls, remediate, or change application/source/test code.
 
 Gate 4B remains **NOT APPROVED**.  Proving remains **NOT AUTHORIZED**.
 TD-14 remains **CLOSED / NOT REOPENED**.  Production readiness is not
-established.  This review does not mark Item 2.6 or Items 2.7–2.11 complete.
+established. The later Project Owner final disposition marks Item 2.6
+**COMPLETE WITH ACCEPTED VALIDATION LIMITATION**; it does not alter the
+evidence classifications below or complete Items 2.7–2.11.
 
 ## 2. Exact review baseline
 
@@ -123,11 +125,16 @@ bounded expansion through `VE-F6-EF-001`; and `FX/ER-F6-J v1` directly
 validates unsupported Artifact capability through `VE-F6-J-001`. No remaining
 frozen unexecuted fixture is predesigned for inaccessible Source handling.
 
-## 7. Residual validation gaps
+## 7. Accepted/deferred validation limitation
 
-The sole unresolved direct-evidence obligation is inaccessible limitation
-evidence (2.6-H). H remains the Project Owner-governed v0.1 validation
-limitation. Supporting records do not close that gap.
+The sole non-direct obligation is inaccessible limitation evidence (2.6-H).
+The Project Owner has accepted it as the active deferred v0.1 validation
+limitation `DVL-P4-001`; see the [final disposition](ws2-item-2.6-final-disposition.md)
+and [deferred-validation/accepted-limitations register](deferred-validation-accepted-limitations-register.md).
+H remains **SUPPORTING EVIDENCE ONLY**. Supporting records do not make it
+directly validated. Item 2.6 is complete only for the approved v0.1 executable
+validation boundary: 10 directly validated obligations plus this accepted
+limitation, not universal direct proof of every semantic condition.
 
 ## 8. Minimum future validation-scenario grouping
 
@@ -164,11 +171,13 @@ The coverage gaps mean the required cases have not yet been validated; they do
 not themselves show deterministic discovery failure.  No AI/vector/model-based
 discovery recommendation follows from this review.
 
-## 10. Recommended next validation step
+## 10. Disposition and future tracking
 
-The F6-J execution directly validates J. H remains the governed v0.1
-validation limitation. A separate Project Owner-governed final Item 2.6
-disposition review remains required and is not performed here.
+The F6-J execution directly validates J. The Project Owner has completed the
+final Item 2.6 disposition: **COMPLETE WITH ACCEPTED VALIDATION LIMITATION**.
+`DVL-P4-001` remains active until its governed closure criteria are met.
+Items 2.7–2.11 are authorized to proceed under existing Phase 4 controls; this
+does not approve Gate 4B or proving.
 
 ## 11. Non-execution attestation
 
@@ -176,4 +185,6 @@ disposition review remains required and is not performed here.
 preserved as PASS. H was not created or simulated; no other fixture was run or
 prepared in this task and no finding, remediation, expected-result change, fixture change,
 application/source/test change, Gate 4B action, proving action, or TD-14 action
-was made. Item 2.6 remains **INCOMPLETE**; Items 2.7–2.11 remain unchanged.
+was made. The later final disposition changes only Item 2.6's documentation
+status to **COMPLETE WITH ACCEPTED VALIDATION LIMITATION**; H remains
+**SUPPORTING EVIDENCE ONLY** and Items 2.7–2.11 remain incomplete.
