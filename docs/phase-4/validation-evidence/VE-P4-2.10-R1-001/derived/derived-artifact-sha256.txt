@@ -1,0 +1,3 @@
+59a6b1de93c314c6e5591fd9fed1956c7cb5daa0c2dece2e6c859373d1b87d2c  docs/phase-4/validation-evidence/VE-P4-2.10-R1-001/derived/semantic-projection.json
+413fd5c08cf534f4605f7852b46e1a39feff2bfbca6d65a581911349e744d8c3  docs/phase-4/validation-evidence/VE-P4-2.10-R1-001/validation-evidence-record.md
+3174fea77f28741af3db3ca105a949d302e6878dd47cd413244360adcd86bf4a  docs/phase-4/validation-evidence/VE-P4-2.10-R1-001/finding-record.md

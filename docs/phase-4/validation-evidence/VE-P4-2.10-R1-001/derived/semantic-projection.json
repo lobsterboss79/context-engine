@@ -1,0 +1,23 @@
+{
+  "source_raw_result": "../raw/raw-result.json",
+  "contract": "SC-P4-2.10 v1",
+  "request": "REQ-F3-RELEASE-RECOMMENDATION",
+  "project": "fixture-atlas-f3",
+  "scope": "field-kit-release",
+  "represented_information": ["RI-F3-SEALED", "RI-F3-TOTE", "RI-F3-CANVAS-HISTORY", "RI-F3-DEPOT-UNVERIFIED"],
+  "candidate_order_observed": ["RI-F3-CANVAS-HISTORY", "RI-F3-DEPOT-UNVERIFIED", "RI-F3-SEALED", "RI-F3-TOTE"],
+  "package_item_order_observed": ["RI-F3-CANVAS-HISTORY", "RI-F3-DEPOT-UNVERIFIED", "RI-F3-SEALED", "RI-F3-TOTE"],
+  "source_manifest_order_observed": ["SRC-F3-COMPETING", "SRC-F3-CURRENT", "SRC-F3-HISTORY", "SRC-F3-QUALIFICATION"],
+  "expected_canonical_item_order": ["RI-F3-SEALED", "RI-F3-TOTE", "RI-F3-CANVAS-HISTORY", "RI-F3-DEPOT-UNVERIFIED"],
+  "roles_by_observed_package_item": [["RI-F3-CANVAS-HISTORY", "supporting"], ["RI-F3-DEPOT-UNVERIFIED", "supporting"], ["RI-F3-SEALED", "required"], ["RI-F3-TOTE", "required"]],
+  "conflict": {"identity": "CON-F3-CASE-CHOICE", "participants": ["RI-F3-SEALED", "RI-F3-TOTE"], "resolved_by": null},
+  "uncertainty": {"identity": "UNC-F3-DEPOT", "state": "unverified"},
+  "currentness": {"RI-F3-SEALED": "current", "RI-F3-TOTE": "current", "RI-F3-CANVAS-HISTORY": "historical", "RI-F3-DEPOT-UNVERIFIED": "unknown"},
+  "sufficiency": "insufficient",
+  "coherence": "coherent_with_qualification",
+  "renderer_statuses": {"human": "rendered", "chatgpt": "rendered", "codex": "rendered"},
+  "renderer_material_order_observed": {"human": ["RI-F3-SEALED", "RI-F3-TOTE", "RI-F3-CANVAS-HISTORY", "RI-F3-DEPOT-UNVERIFIED"], "chatgpt": ["RI-F3-SEALED", "RI-F3-TOTE", "RI-F3-CANVAS-HISTORY", "RI-F3-DEPOT-UNVERIFIED"], "codex": ["RI-F3-SEALED", "RI-F3-TOTE", "RI-F3-CANVAS-HISTORY", "RI-F3-DEPOT-UNVERIFIED"]},
+  "renderer_boundary_reason_code": "rendering-is-not-delivery-receipt-or-use",
+  "classification": "FAIL",
+  "failure_basis": "Candidate and logical-package item order differ from the frozen canonical semantic order. SC-P4-2.10 v1 prohibits normalizing that order difference."
+}

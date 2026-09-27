@@ -184,3 +184,7 @@ non-applicability, R1/R2 integrated semantic evidence, and whether the Item
 If later review finds a genuine uncovered governing obligation, execution must
 stop and the gap must be reported under H3 rather than filled with static
 evidence.
+
+## Supersession notice — Project Owner-approved v2
+
+This v1 record remains preserved because its R1 expected result was executed and produced immutable `VE-P4-2.10-R1-001` FAIL evidence. The Project Owner disposition in [ordering-failure disposition](../ws2-item-2.10-r1-ordering-failure-disposition.md) supersedes the v1 shared unified-order assertion and R1/R2 expectations with [SC-P4-2.10 v2 and ER v2](repeatability-expected-results-v2.md). Only the independently governed ordering taxonomy changed; F3 inputs, provenance, isolation, other semantic fields, R1's three-run requirement, R2's matrix, and v1 history remain unchanged.

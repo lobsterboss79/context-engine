@@ -70,3 +70,7 @@ it requires a new Project Owner execution authorization after this correction
 is reviewed and committed. R2 remains not authorized for execution. A semantic
 mismatch is not to be normalized or explained away: preserve originals and
 route it through Item 2.11/finding and H3 governance as applicable.
+
+## Project Owner-approved v2 control correction
+
+R1 v1 was executed once and remains immutable FAIL evidence. The Project Owner determined its unified Candidate/package ordering expectation was a control-design error, not an implementation defect. The v1 records above are preserved; future execution must use [v2 expected results](repeatability-expected-results-v2.md), [R1 v2](R1-v2/README.md), and [R2 v2](R2-v2/README.md). R1 v2 still requires three new isolated runs; the v1 run does not count. R2 v2 remains unexecuted and not authorized.

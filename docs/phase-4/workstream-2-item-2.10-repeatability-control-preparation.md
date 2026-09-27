@@ -80,3 +80,7 @@ checklist status, historical F3 artifact, expected-result baseline, finding,
 limitation register, or governance disposition was modified. No dependency was
 introduced. Future execution remains separately governed and must preserve
 original artifacts before comparison.
+
+## Project Owner-approved superseding control preparation
+
+After R1-01 faithfully failed the executed v1 unified-order expectation, the Project Owner approved the bounded root-cause disposition: Phase 3 WS6 mechanism/represented-information/Provenance order governs Candidates; selected/package order follows Candidate traversal; Source Manifest has a separate Source-identity order; and renderers separately group Required then Supporting. The v1 records and evidence remain preserved. The corrected pre-results controls are `RC-P4-2.10-R1 v2` / `ER-P4-2.10-R1 v2`, `RC-P4-2.10-R2 v2` / `ER-P4-2.10-R2 v2`, and `SC-P4-2.10 v2`; see the [disposition](ws2-item-2.10-r1-ordering-failure-disposition.md). This is a control correction only: no source, test, F3 record, historical evidence, or application behavior changed. R1 v2 requires three new runs under separate authorization; R2 remains not authorized.
