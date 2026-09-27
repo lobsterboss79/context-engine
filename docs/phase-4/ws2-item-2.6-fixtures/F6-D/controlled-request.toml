@@ -1,0 +1,49 @@
+version = 1
+
+[fixture]
+identity = "FX-F6-D"
+version = 1
+project = "fixture-atlas-f6d"
+synthetic_only = true
+pre_execution_established = true
+engine_may_invent_or_modify_task_boundary = false
+
+[task]
+identity = "REQ-F6D-ATLAS-DEPLOYMENT-RECOMMENDATION"
+purpose = "Prepare an unqualified deployment recommendation for the synthetic Project Atlas field operations plan."
+scope = "the complete unbounded field-operations deployment recommendation; no separately supplied safe bounded subtask"
+unbounded = true
+separately_supplied_safe_bounded_subtask = false
+expected_sufficiency = "insufficient"
+
+[asu]
+identity = "ASU-F6D-ATLAS-DEPLOYMENT"
+adequacy = "indeterminate"
+basis = "The governed inspection boundary identifies and permits normal inspection of the known local Source SRC-F6D-FIELD-OPERATIONS-NOTE in scope 'atlas/field-operations/current-plan'. The available governed boundary and inventory evidence establishes this known local boundary, but does not reliably establish whether an additional Source or Source scope could be applicable to the complete unbounded deployment-recommendation task. No particular omitted material Source, Source scope, or governed relationship is known or asserted."
+sources = ["SRC-F6D-FIELD-OPERATIONS-NOTE"]
+
+[[sources]]
+identity = "SRC-F6D-FIELD-OPERATIONS-NOTE"
+scope = "atlas/field-operations/current-plan"
+path = "sources/field-operations-note.md"
+available = true
+accessible = true
+authorized = true
+supported = true
+governed_in_scope = true
+inspection = "normal_local_markdown_observation"
+task_mapping = "The represented current field-operations staging and safety-review information is Candidate and applicable Supporting Context for REQ-F6D-ATLAS-DEPLOYMENT-RECOMMENDATION."
+
+[authorization]
+requester_identity = "fixture-requester"
+requester_authorized = true
+consumer_human_disclosure_authorized = true
+consumer_chatgpt_disclosure_authorized = true
+consumer_codex_disclosure_authorized = true
+consumer_capacity = "unrestricted"
+
+[construction]
+package_identity = "PKG-F6D-ATLAS-DEPLOYMENT"
+construction_record_identity = "PCR-F6D-ATLAS-DEPLOYMENT"
+expected_coherence = "coherent_with_qualification"
+coherence_basis = "The known selected Context, its Provenance, the nonempty ASU establishment basis, indeterminate adequacy, Insufficient sufficiency, and evidence-boundary limitation are retained without contradiction."

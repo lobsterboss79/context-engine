@@ -1,0 +1,5 @@
+version = 1
+
+[project]
+identity = "fixture-atlas-f6d"
+governance_reference = "FX-F6-D v1 synthetic fixture for WS2 Item 2.6-D; no production authority; pre-execution only"
