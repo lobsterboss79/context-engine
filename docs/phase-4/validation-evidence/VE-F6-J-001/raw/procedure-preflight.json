@@ -1,0 +1,19 @@
+{
+  "checks": {
+    "artifact_observation_executed": false,
+    "asu_frozen_adequate": true,
+    "bootstrap_project": true,
+    "fixture_identity": true,
+    "no_preclassified_source_failure": true,
+    "no_runtime_outcome_injected": true,
+    "pipeline_executed": false,
+    "project_identity": true,
+    "required_pdf_artifact_preserved": true,
+    "sole_artifact_location_exists": true,
+    "sole_source_preserved": true,
+    "task_identity": true
+  },
+  "expected_result": "ER-F6-J v1",
+  "fixture": "FX-F6-J v1",
+  "result": "PASS"
+}

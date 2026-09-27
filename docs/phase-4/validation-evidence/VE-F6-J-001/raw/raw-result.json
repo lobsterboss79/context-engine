@@ -1,0 +1,257 @@
+{
+  "artifact": {
+    "capability_observation": {
+      "limitations": [
+        {
+          "detail": "unsupported-artifact-type: Only Markdown Artifacts are supported in this workstream.",
+          "evidence_boundary": null,
+          "state": "unavailable"
+        }
+      ],
+      "locator": "sources/lantern-review-status.pdf",
+      "original_markdown": null,
+      "outcome": "failed"
+    },
+    "contains_required_material": true,
+    "format": "pdf",
+    "identity": "ART-F6J-LANTERN-REVIEW-STATUS-PDF",
+    "locator": "sources/lantern-review-status.pdf",
+    "relevant_to_task": true,
+    "role": "required",
+    "source": "SRC-F6J-LANTERN-REVIEW-REPOSITORY"
+  },
+  "asu": {
+    "adequacy": "adequate",
+    "basis": "For REQ-F6J-LANTERN-REVIEW-STATUS, the complete governed applicable Source universe is exactly SRC-F6J-LANTERN-REVIEW-REPOSITORY. That local Source and its Artifact ART-F6J-LANTERN-REVIEW-STATUS-PDF are registered, governed in scope, available, accessible, and requester-authorized. The governed boundary is adequate as a Source universe; the Required Artifact's PDF capability limitation is separately preserved and does not establish another Source or ASU gap.",
+    "identity": "ASU-F6J-LANTERN-REVIEW-STATUS"
+  },
+  "audit": [
+    [
+      "rendering-rendered",
+      "package=PKG-F6J-LANTERN-REVIEW-STATUS; reasons=faithful-governed-package-presentation,rendering-is-not-delivery-receipt-or-use"
+    ]
+  ],
+  "candidates": [],
+  "construction": {
+    "package": {
+      "coherence": {
+        "basis": "The adequate ASU and Source state, unsupported Required Artifact capability, explicit Required deficiency, zero Artifact-derived representation/Candidates, Insufficient sufficiency, and retained limitation are internally consistent.",
+        "outcome": "coherent_with_qualification"
+      },
+      "identity": {
+        "kind": "package",
+        "value": "PKG-F6J-LANTERN-REVIEW-STATUS"
+      },
+      "items": [],
+      "limitations": [
+        {
+          "detail": "ASU adequacy=adequate",
+          "evidence_boundary": "For REQ-F6J-LANTERN-REVIEW-STATUS, the complete governed applicable Source universe is exactly SRC-F6J-LANTERN-REVIEW-REPOSITORY. That local Source and its Artifact ART-F6J-LANTERN-REVIEW-STATUS-PDF are registered, governed in scope, available, accessible, and requester-authorized. The governed boundary is adequate as a Source universe; the Required Artifact's PDF capability limitation is separately preserved and does not establish another Source or ASU gap.",
+          "state": "unknown"
+        },
+        {
+          "detail": "DEF-F6J-REQUIRED-PDF-CAPABILITY: Required information need remains unmet. ART-F6J-LANTERN-REVIEW-STATUS-PDF belongs to available, accessible, requester-authorized, supported, governed-in-scope Source SRC-F6J-LANTERN-REVIEW-REPOSITORY; Artifact format=pdf is unsupported by the approved v0.1 Artifact capability. Zero Artifact-derived represented information and zero Artifact-derived Candidate Context exist. This is not Source unavailability, inaccessibility, unauthorized status, absence, or unsupported Source state.",
+          "evidence_boundary": "For REQ-F6J-LANTERN-REVIEW-STATUS, the complete governed applicable Source universe is exactly SRC-F6J-LANTERN-REVIEW-REPOSITORY. That local Source and its Artifact ART-F6J-LANTERN-REVIEW-STATUS-PDF are registered, governed in scope, available, accessible, and requester-authorized. The governed boundary is adequate as a Source universe; the Required Artifact's PDF capability limitation is separately preserved and does not establish another Source or ASU gap.",
+          "state": "unknown"
+        },
+        {
+          "detail": "DEF-F6J-REQUIRED-PDF-CAPABILITY: Required information need remains unmet. ART-F6J-LANTERN-REVIEW-STATUS-PDF belongs to available, accessible, requester-authorized, supported, governed-in-scope Source SRC-F6J-LANTERN-REVIEW-REPOSITORY; Artifact format=pdf is unsupported by the approved v0.1 Artifact capability. Zero Artifact-derived represented information and zero Artifact-derived Candidate Context exist. This is not Source unavailability, inaccessibility, unauthorized status, absence, or unsupported Source state.",
+          "evidence_boundary": "For REQ-F6J-LANTERN-REVIEW-STATUS, the complete governed applicable Source universe is exactly SRC-F6J-LANTERN-REVIEW-REPOSITORY. That local Source and its Artifact ART-F6J-LANTERN-REVIEW-STATUS-PDF are registered, governed in scope, available, accessible, and requester-authorized. The governed boundary is adequate as a Source universe; the Required Artifact's PDF capability limitation is separately preserved and does not establish another Source or ASU gap.",
+          "state": "unknown"
+        }
+      ],
+      "manifest": {
+        "entries": []
+      },
+      "request": {
+        "kind": "request",
+        "value": "REQ-F6J-LANTERN-REVIEW-STATUS"
+      },
+      "sufficiency": "insufficient"
+    },
+    "record": {
+      "candidates": [],
+      "coherence": {
+        "basis": "The adequate ASU and Source state, unsupported Required Artifact capability, explicit Required deficiency, zero Artifact-derived representation/Candidates, Insufficient sufficiency, and retained limitation are internally consistent.",
+        "outcome": "coherent_with_qualification"
+      },
+      "identity": {
+        "kind": "record",
+        "value": "PCR-F6J-LANTERN-REVIEW-STATUS"
+      },
+      "limitations": [
+        {
+          "detail": "ASU adequacy=adequate",
+          "evidence_boundary": "For REQ-F6J-LANTERN-REVIEW-STATUS, the complete governed applicable Source universe is exactly SRC-F6J-LANTERN-REVIEW-REPOSITORY. That local Source and its Artifact ART-F6J-LANTERN-REVIEW-STATUS-PDF are registered, governed in scope, available, accessible, and requester-authorized. The governed boundary is adequate as a Source universe; the Required Artifact's PDF capability limitation is separately preserved and does not establish another Source or ASU gap.",
+          "state": "unknown"
+        },
+        {
+          "detail": "DEF-F6J-REQUIRED-PDF-CAPABILITY: Required information need remains unmet. ART-F6J-LANTERN-REVIEW-STATUS-PDF belongs to available, accessible, requester-authorized, supported, governed-in-scope Source SRC-F6J-LANTERN-REVIEW-REPOSITORY; Artifact format=pdf is unsupported by the approved v0.1 Artifact capability. Zero Artifact-derived represented information and zero Artifact-derived Candidate Context exist. This is not Source unavailability, inaccessibility, unauthorized status, absence, or unsupported Source state.",
+          "evidence_boundary": "For REQ-F6J-LANTERN-REVIEW-STATUS, the complete governed applicable Source universe is exactly SRC-F6J-LANTERN-REVIEW-REPOSITORY. That local Source and its Artifact ART-F6J-LANTERN-REVIEW-STATUS-PDF are registered, governed in scope, available, accessible, and requester-authorized. The governed boundary is adequate as a Source universe; the Required Artifact's PDF capability limitation is separately preserved and does not establish another Source or ASU gap.",
+          "state": "unknown"
+        },
+        {
+          "detail": "DEF-F6J-REQUIRED-PDF-CAPABILITY: Required information need remains unmet. ART-F6J-LANTERN-REVIEW-STATUS-PDF belongs to available, accessible, requester-authorized, supported, governed-in-scope Source SRC-F6J-LANTERN-REVIEW-REPOSITORY; Artifact format=pdf is unsupported by the approved v0.1 Artifact capability. Zero Artifact-derived represented information and zero Artifact-derived Candidate Context exist. This is not Source unavailability, inaccessibility, unauthorized status, absence, or unsupported Source state.",
+          "evidence_boundary": "For REQ-F6J-LANTERN-REVIEW-STATUS, the complete governed applicable Source universe is exactly SRC-F6J-LANTERN-REVIEW-REPOSITORY. That local Source and its Artifact ART-F6J-LANTERN-REVIEW-STATUS-PDF are registered, governed in scope, available, accessible, and requester-authorized. The governed boundary is adequate as a Source universe; the Required Artifact's PDF capability limitation is separately preserved and does not establish another Source or ASU gap.",
+          "state": "unknown"
+        }
+      ],
+      "outcome": "insufficient",
+      "package": {
+        "kind": "package",
+        "value": "PKG-F6J-LANTERN-REVIEW-STATUS"
+      },
+      "request": {
+        "kind": "request",
+        "value": "REQ-F6J-LANTERN-REVIEW-STATUS"
+      },
+      "source_universe": {
+        "adequacy": {
+          "detail": "ASU adequacy=adequate",
+          "evidence_boundary": "For REQ-F6J-LANTERN-REVIEW-STATUS, the complete governed applicable Source universe is exactly SRC-F6J-LANTERN-REVIEW-REPOSITORY. That local Source and its Artifact ART-F6J-LANTERN-REVIEW-STATUS-PDF are registered, governed in scope, available, accessible, and requester-authorized. The governed boundary is adequate as a Source universe; the Required Artifact's PDF capability limitation is separately preserved and does not establish another Source or ASU gap.",
+          "state": "unknown"
+        },
+        "sources": [
+          {
+            "kind": "source",
+            "value": "SRC-F6J-LANTERN-REVIEW-REPOSITORY"
+          }
+        ]
+      },
+      "status": "completed",
+      "termination_basis": "Source registration, availability, accessibility, and requester authorization were established. The Required PDF Artifact reached unsupported-artifact-type before content parsing; no Artifact content was observed, transformed, represented, or used to form a Candidate. Required deficiency remains; no bounded substitute exists."
+    }
+  },
+  "environment": {
+    "markdown_it": "3.0.0",
+    "platform": "Linux-7.0.0-34-generic-x86_64-with-glibc2.43",
+    "python": "3.14.4 (main, Aug 20 2026, 10:41:58) [GCC 15.2.0]"
+  },
+  "evidence_id": "VE-F6-J-001",
+  "execution_utc": "2026-09-27T10:53:47.676659+00:00",
+  "expected_result": "ER-F6-J v1",
+  "fixture": "FX-F6-J v1",
+  "renderings": {
+    "chatgpt": {
+      "reason_codes": [
+        "faithful-governed-package-presentation",
+        "rendering-is-not-delivery-receipt-or-use"
+      ],
+      "reference": "rendering:chatgpt:PKG-F6J-LANTERN-REVIEW-STATUS",
+      "status": "rendered"
+    },
+    "codex": {
+      "reason_codes": [
+        "faithful-governed-package-presentation",
+        "rendering-is-not-delivery-receipt-or-use"
+      ],
+      "reference": "rendering:codex:PKG-F6J-LANTERN-REVIEW-STATUS",
+      "status": "rendered"
+    },
+    "human": {
+      "reason_codes": [
+        "faithful-governed-package-presentation",
+        "rendering-is-not-delivery-receipt-or-use"
+      ],
+      "reference": "rendering:human:PKG-F6J-LANTERN-REVIEW-STATUS",
+      "status": "rendered"
+    }
+  },
+  "represented_information": [],
+  "required_deficiency": {
+    "basis": "The task materially depends on the Required PDF Artifact content; no Supporting substitute or separately safe bounded task exists.",
+    "can_proceed_bounded_without": false,
+    "disclosure_denied": false,
+    "identity": {
+      "kind": "deficiency",
+      "value": "DEF-F6J-REQUIRED-PDF-CAPABILITY"
+    },
+    "limitation": {
+      "detail": "DEF-F6J-REQUIRED-PDF-CAPABILITY: Required information need remains unmet. ART-F6J-LANTERN-REVIEW-STATUS-PDF belongs to available, accessible, requester-authorized, supported, governed-in-scope Source SRC-F6J-LANTERN-REVIEW-REPOSITORY; Artifact format=pdf is unsupported by the approved v0.1 Artifact capability. Zero Artifact-derived represented information and zero Artifact-derived Candidate Context exist. This is not Source unavailability, inaccessibility, unauthorized status, absence, or unsupported Source state.",
+      "evidence_boundary": "For REQ-F6J-LANTERN-REVIEW-STATUS, the complete governed applicable Source universe is exactly SRC-F6J-LANTERN-REVIEW-REPOSITORY. That local Source and its Artifact ART-F6J-LANTERN-REVIEW-STATUS-PDF are registered, governed in scope, available, accessible, and requester-authorized. The governed boundary is adequate as a Source universe; the Required Artifact's PDF capability limitation is separately preserved and does not establish another Source or ASU gap.",
+      "state": "unknown"
+    }
+  },
+  "required_information_need": "The particular synthetic Lantern review-status statement exists only inside the governed Required PDF Artifact.",
+  "source_state": {
+    "accessible": true,
+    "availability": "available",
+    "git_observation": {
+      "branch": "main",
+      "detached_head": false,
+      "head": "55e0c56b70991da3a171783e0d957c57b4817933",
+      "history": [
+        "55e0c56b70991da3a171783e0d957c57b4817933",
+        "30e89a2ac3311f9d93187f4b1f4db37b0d4717f6",
+        "0c1001a347fc62e05ffaa91c4430eba0f0d617f4",
+        "058e160ccd9a5e58a36d3cf94c2b590bbea94d84",
+        "5a46b97654e25abc3ea954fb264339178c74aecb",
+        "7d3568c4eb4a5b409b5157ef60ce686860a8beca",
+        "656047b37558678594c6a18679846e7bcf3d8f1f",
+        "c80331f7c8861183e70030f7d9988afd0724d5c6",
+        "3f5887224c11abde1e1166b3c31be03e6e35cb75",
+        "362ea3ceb7164e9fbddee0606c63be1bb9c78deb",
+        "efbfd77995df39aa4d7151af95b1005678f4684c",
+        "a6db6f8562c7749a7401139503ae8e2960f920c9",
+        "37f4dbe822c9024673ce12a2f839df30f391581c",
+        "922131ccafd0b8c541b29bb0031d9e517bb0ea51",
+        "185c17f0fc709e1b80c06b2ee557a1f7a1942b4e",
+        "2b7435b294da68a2e99847d26bf447f9eb71f87c",
+        "ab0c2b4e887df366b451b843c31e21367cff55d7",
+        "478005b424b47216c372ac289032f1b242c136e1",
+        "b761cf024997f0810062730a975012e1cac6177b",
+        "7b902e153f529354c0e2b2f21b8f757035c32901",
+        "c7d17714a3983335f8564aa9360739d9ec785410",
+        "c9b39a3e950225498e06e687e69fdf15e9f37235",
+        "48df5148cba14415a41f5abd5cbde43247645a7c",
+        "bac6c3cdf7fb78278bd234f56d81c307a01a0090",
+        "1b61cb15cd9761aad843ed22261809b2aa61ced6",
+        "9d530d82926c3c67fa502c87f4f8d7dcfeda92a8",
+        "6a64e1e6f025d8c532ef6eed146779e42e116ecb",
+        "d4fa8e901a423966f5aba5866051b2ec2237613e",
+        "f5a874f1d1b42b19ce790ab2598c270ecd576af4",
+        "98624973feab235aaba81c16eb335a394b679331",
+        "6f0ae43c7d11135c5b33e57bc4aa9940ed925a05",
+        "40f8ddcb919692781fa20da93e6f051c0f77d67a"
+      ],
+      "limitations": [
+        {
+          "code": "local-observation-only",
+          "detail": "No remote, shared, governing, or current state was established."
+        },
+        {
+          "code": "scope-native-expression-unavailable",
+          "detail": "The registered Source Scope is retained as governed provenance; no unapproved native scope grammar was interpreted."
+        },
+        {
+          "code": "remote-names-source-reported",
+          "detail": "Configured remote names are local configuration evidence, not remote reachability or synchronization evidence."
+        }
+      ],
+      "locator": "/home/lobsterboss79/Projects/context-engine",
+      "observation_time": "2026-09-27T10:53:47.629385+00:00",
+      "outcome": "observed",
+      "remote_names": [
+        "origin"
+      ],
+      "repository_root": "/home/lobsterboss79/Projects/context-engine",
+      "source_identity": "SRC-F6J-LANTERN-REVIEW-REPOSITORY",
+      "source_scope": "lantern/governed-review/current",
+      "staged_paths": [],
+      "unborn": false,
+      "unstaged_paths": [],
+      "untracked_paths": [
+        "docs/phase-4/validation-evidence/VE-F6-J-001/raw/f6-j-execution.py",
+        "docs/phase-4/validation-evidence/VE-F6-J-001/raw/f6-j-execution.stderr",
+        "docs/phase-4/validation-evidence/VE-F6-J-001/raw/f6-j-execution.stdout",
+        "docs/phase-4/validation-evidence/VE-F6-J-001/raw/f6-j-procedure-preflight.py",
+        "docs/phase-4/validation-evidence/VE-F6-J-001/raw/procedure-preflight.json"
+      ],
+      "working_tree_clean": false
+    },
+    "governed_in_scope": true,
+    "identity": "SRC-F6J-LANTERN-REVIEW-REPOSITORY",
+    "requester_authorized": true,
+    "supported": true
+  }
+}

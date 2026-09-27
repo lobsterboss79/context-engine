@@ -1,0 +1,12 @@
+14651454e10b4fffa19beca74a60de07e155871071ac7e9c6d23c493b38b05d2  docs/phase-4/validation-evidence/VE-F6-J-001/raw/rendering-codex.md
+25ee5fdd5cd051cdf5da1c6a89019b62e7d03acda64bd59991d8975003a4ec4c  docs/phase-4/validation-evidence/VE-F6-J-001/raw/f6-j-state.sqlite
+5d997cd586a8a498a365c6494e9f6cc7f14182038383cfb307ee32b5a3b5f565  docs/phase-4/validation-evidence/VE-F6-J-001/raw/rendering-chatgpt.md
+8325d94ec9bc69ba7626529c3b1ab2d9dcd3c7c204cf92cf94dc72be2abd0f06  docs/phase-4/validation-evidence/VE-F6-J-001/raw/f6-j-execution.stdout
+aa4dd7d42cc2f0797926b8148173e72ddef754d743c71b26d7835583e75cdd24  docs/phase-4/validation-evidence/VE-F6-J-001/raw/f6-j-execution.py
+bdc778225c9ac0f161d8a64a0ac85164721622534e83a040e9c674fcce6396f7  docs/phase-4/validation-evidence/VE-F6-J-001/raw/controlled-input-aggregate-sha256.txt
+c20b1d12f9b9c3651a6d6463335d2d60656cf38b6e42f0257bfdeaced4fcbf9f  docs/phase-4/validation-evidence/VE-F6-J-001/raw/procedure-preflight.json
+dd934ee0509f45f154443c00f30fb136c63be9b3102aaba310e26194e0650159  docs/phase-4/validation-evidence/VE-F6-J-001/raw/raw-result.json
+e3289945227135472393b448a537ff1c18dd2d7713b24eaeded2b7313166406c  docs/phase-4/validation-evidence/VE-F6-J-001/raw/rendering-human.md
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  docs/phase-4/validation-evidence/VE-F6-J-001/raw/f6-j-execution.stderr
+f28750e131f187c9d3bffa5804b059bf14b9e4efd38a673d9428482532357e7b  docs/phase-4/validation-evidence/VE-F6-J-001/raw/controlled-input-sha256.txt
+f6f5761b82798849f507b062c989af6c6e09eea9c361c63e046bbc0c1ae9fcf3  docs/phase-4/validation-evidence/VE-F6-J-001/raw/f6-j-procedure-preflight.py

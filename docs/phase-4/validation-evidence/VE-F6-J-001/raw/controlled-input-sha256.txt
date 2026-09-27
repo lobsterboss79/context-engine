@@ -1,0 +1,4 @@
+01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b  docs/phase-4/ws2-item-2.6-fixtures/F6-J/sources/lantern-review-status.pdf
+60b83ed221919fa22e38aa5867f1aefb6199caba4b6d16fcaefed171d71878d8  docs/phase-4/ws2-item-2.6-fixtures/F6-J/controlled-request.toml
+c8d953af00498df87bfc990759b2a867f6cb251dd18f7e266d533bacab5e7128  docs/phase-4/ws2-item-2.6-fixtures/F6-J/project.toml
+e1e2deb256a80d7c7cb7bd67424695892a8bf7b7f89fd006721738353f8a7c77  docs/phase-4/ws2-item-2.6-fixtures/F6-J/bootstrap.toml

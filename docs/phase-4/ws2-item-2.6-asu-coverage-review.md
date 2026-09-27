@@ -75,7 +75,7 @@ indeterminate.  They also do not require an invented unsupported Source type.
 Reviewed preserved execution records: `VE-F1-001`, `VE-F2-001`, `VE-F3-001`,
 `VE-F4-A-001`, `VE-F4-B-001`, immutable `VE-F4-E-001`, remediation retest
 `VE-F4-E-002`, `VE-F4-D-001`, `VE-F5-A-001`, immutable procedure-deficient
-`VE-F6-D-001`, faithful retest `VE-F6-D-002`, and `VE-F6-EF-001`; plus `F-F4-E-001` and
+`VE-F6-D-001`, faithful retest `VE-F6-D-002`, `VE-F6-EF-001`, and `VE-F6-J-001`; plus `F-F4-E-001` and
 `R-F4-E-001` for original-FAIL/remediation lineage. The underlying raw
 results, package and renderer artifacts linked by those records were considered
 where needed.
@@ -98,11 +98,11 @@ evidence.
 | **2.6-G — unavailable limitation** | **DIRECTLY VALIDATED** | P1 ASU/package limitations; P2 C5, SA-05, E12–E14; P3 WS4 §10; P3 WS8 §15 | `VE-F4-B-001`; `VE-F4-E-001`; `VE-F4-E-002` | F4-B deliberately retained a named unavailable Required Source as a limitation rather than absence, substitution, or fabricated content. E-002 confirms the same broad unavailable Required deficiency and limitation after remediation through package/rendering. | No gap for unavailable handling. This evidence must not be relabeled inaccessible. |
 | **2.6-H — inaccessible limitation** | **SUPPORTING EVIDENCE ONLY** | P1 ASU; P2 SA-05/OBS-04; P2 E12–E14; P3 WS4 §10; P3 WS6 §19 | `VE-F4-B-001`; `VE-F4-E-001` / `VE-F4-E-002` | These runs preserve unavailable Sources and are relevant to limitation handling, but none establishes a Source that exists and is in scope yet cannot be read via the approved mechanism. The governing records explicitly distinguish the states. | Direct inaccessible-Source observation/limitation/package-or-rendering preservation is absent. |
 | **2.6-I — unauthorized limitation** | **DIRECTLY VALIDATED** | P1 ASU and authorization-bound explanation; P2 C5, E13 T-04, E14; P3 WS6 §19 | `VE-F5-A-001` | F5-A deliberately establishes an Atlas-only adequate ASU while a controlled Beacon Source identity exists outside a governed relationship. Cross-Project Requester authorization is denied and Consumer disclosure is not established. Beacon is explicitly uninspected before observation/representation/Candidate use; no Beacon content enters applicability, selection, package, or renderings. This is preserved as an authorization/governance boundary, not absence, unavailable, inaccessible, unsupported, or indeterminate ASU. | No gap for the unauthorized Source-path obligation. It does not establish inaccessible or unsupported handling. |
-| **2.6-J — unsupported limitation** | **NOT YET VALIDATED** | P1 Source adapter boundary; P2 SA-05/C12; P2 E13 T-05; P3 WS4 §10; P3 WS6 §19; P3 WS8 §15 | No preserved Phase 4 execution | Phase 3 documents supported capability semantics, but no Phase 4 fixture execution deliberately presents an otherwise relevant Source/mechanism that the approved implementation cannot handle and preserves an unsupported limitation. No unsupported technology or type is inferred from a gap. | Direct evidence is absent; an actual approved relevant unsupported condition would be needed before validation design. |
+| **2.6-J — unsupported limitation** | **DIRECTLY VALIDATED** | P1 Source adapter boundary; P2 SA-05/C12; P2 E13 T-05; P3 WS4 §10; P3 WS6 §19; P3 WS8 §15 | `VE-F6-J-001` PASS | The authorized frozen F6-J control establishes an otherwise available, accessible, requester-authorized, supported, in-scope Source with a relevant Required PDF Artifact. The existing capability check reports `unsupported-artifact-type` before content parsing. Zero Artifact-derived represented information/Candidates result; the explicit Required deficiency produces Insufficient, `coherent_with_qualification`, package preservation, and faithful Human/ChatGPT/Codex renderings without collapsing Source and Artifact state. | No gap for direct unsupported-Artifact-capability handling. It does not alter H's inaccessible-Source limitation. |
 | **2.6-K — limitation preservation** | **DIRECTLY VALIDATED** | P1 package limitation preservation; P2 E10/E14; P3 WS8 §§15–25; P3 WS9 rendering boundary | `VE-F4-B-001`; immutable `VE-F4-E-001`; `F-F4-E-001`; `R-F4-E-001`; `VE-F4-E-002` | F4-B preserves unavailable Required/ASU limitation through the insufficient logical package and all renderings. E-001 directly exposed the material integration omission of broad ASU/two-scope qualification, which was preserved as immutable FAIL. E-002 then directly verifies the corrected general qualification in package and all renderings while retaining original evidence and remediation lineage. | No gap for preservation where the demonstrated unavailable/known-incomplete limitations occur. It does not substitute for proving inaccessible, unauthorized, or unsupported limitations. |
 
-Coverage count: **9 DIRECTLY VALIDATED** (A, B, C, D, E, F, G, I, K); **1 SUPPORTING
-EVIDENCE ONLY** (H); **1 NOT YET VALIDATED** (J); **0
+Coverage count: **10 DIRECTLY VALIDATED** (A, B, C, D, E, F, G, I, J, K); **1 SUPPORTING
+EVIDENCE ONLY** (H); **0 NOT YET VALIDATED**; **0
 AMBIGUOUS-H3**.
 
 ## 6. Frozen-but-unexecuted potential coverage
@@ -119,16 +119,15 @@ executed against its frozen expected result, and preserved/reviewed.
 
 The now-executed `FX/ER-F6-D v1` directly validates indeterminate ASU through
 `VE-F6-D-002`; `FX/ER-F6-EF v1` directly validates scoped negative results and
-bounded expansion through `VE-F6-EF-001`. No remaining frozen unexecuted
-fixture is predesigned for inaccessible Source handling or unsupported
-capability handling.
+bounded expansion through `VE-F6-EF-001`; and `FX/ER-F6-J v1` directly
+validates unsupported Artifact capability through `VE-F6-J-001`. No remaining
+frozen unexecuted fixture is predesigned for inaccessible Source handling.
 
 ## 7. Residual validation gaps
 
-The unresolved obligations are direct inaccessible limitation evidence (2.6-H)
-and direct unsupported limitation evidence (2.6-J). H remains the
-Project Owner-governed v0.1 validation limitation. Supporting records do not
-close either gap.
+The sole unresolved direct-evidence obligation is inaccessible limitation
+evidence (2.6-H). H remains the Project Owner-governed v0.1 validation
+limitation. Supporting records do not close that gap.
 
 ## 8. Minimum future validation-scenario grouping
 
@@ -153,8 +152,10 @@ resulting insufficiency/qualification; `VE-F5-A-001` demonstrates expected
 authorization/governance exclusion before inspection, not an inability to
 discover authorized in-scope material; `VE-F6-EF-001` demonstrates the
 expected exhaustion of the sole bounded path and a scoped negative result for
-its reporting task, not a deterministic-discovery deficiency. No execution
-demonstrates inaccessible or unsupported discovery, nor materially or
+its reporting task, not a deterministic-discovery deficiency; `VE-F6-J-001`
+demonstrates the approved unsupported-PDF Artifact capability boundary while
+preserving an available, accessible, authorized Source and insufficiency. No
+execution demonstrates inaccessible Source handling, nor materially or
 repeatedly undiscoverable relevant, authorized, in-scope Required Context
 through approved deterministic mechanisms that causes incorrect/insufficient
 context or material harm.
@@ -165,14 +166,14 @@ discovery recommendation follows from this review.
 
 ## 10. Recommended next validation step
 
-The F6-EF execution directly validates E and F. H remains the governed v0.1
-validation limitation and J remains not yet validated. This task does not
-prepare or execute J.
+The F6-J execution directly validates J. H remains the governed v0.1
+validation limitation. A separate Project Owner-governed final Item 2.6
+disposition review remains required and is not performed here.
 
 ## 11. Non-execution attestation
 
-`FX-F6-EF v1` was executed against `ER-F6-EF v1`, with `VE-F6-EF-001`
-preserved as PASS. No other fixture was run or prepared in this task and no
-finding, remediation, expected-result change, fixture change,
+`FX-F6-J v1` was executed against `ER-F6-J v1`, with `VE-F6-J-001`
+preserved as PASS. H was not created or simulated; no other fixture was run or
+prepared in this task and no finding, remediation, expected-result change, fixture change,
 application/source/test change, Gate 4B action, proving action, or TD-14 action
 was made. Item 2.6 remains **INCOMPLETE**; Items 2.7–2.11 remain unchanged.
