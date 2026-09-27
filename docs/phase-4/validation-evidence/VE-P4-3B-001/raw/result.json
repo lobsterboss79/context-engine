@@ -1,0 +1,29 @@
+{
+  "B1_absent_authority": "unresolved",
+  "B1_historical_current_task": "inapplicable",
+  "B1_historical_task": "applicable",
+  "B1_matching": "applicable",
+  "B1_scope_mismatch": "unresolved",
+  "B1_unapproved_state": "unresolved",
+  "B2_project_scope_after_restore": null,
+  "B2_project_scope_before_restore": null,
+  "B2_recovery_qualification": "historical-only independent re-establishment",
+  "B2_reload_authority": null,
+  "B2_reload_currentness": "unknown",
+  "B2_restored_authority": null,
+  "B2_restored_currentness": "unknown",
+  "B3_historical_governed_use": "inapplicable",
+  "B3_other_project_representations": [],
+  "B3_provenance_identity": [
+    "ws3b-provenance"
+  ],
+  "B4_authorized_audit": [
+    [
+      "governance-evaluated",
+      "controlled minimized outcome"
+    ]
+  ],
+  "B4_other_project_audit": [],
+  "B4_unauthorized_audit": "PermissionError",
+  "result": "PASS"
+}
