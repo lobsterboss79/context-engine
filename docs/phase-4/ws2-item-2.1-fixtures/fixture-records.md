@@ -10,7 +10,8 @@ real-project content.
 
 | Field | Value |
 | --- | --- |
-| Fixture-design execution baseline | `c9b39a3` — `Approve Gate 4A and authorize Phase 4 execution` |
+| Pre-preparation authorization / execution baseline | `c9b39a3` — `Approve Gate 4A and authorize Phase 4 execution`; it does not contain the materialized original F1–F5 artifacts. |
+| Original F1–F5 fixture / expected-result materialization baseline | `c7d17714` — `Prepare Phase 4 deterministic validation fixtures`; see [the provenance clarification](../original-fixture-family-provenance-clarification.md). |
 | Implementation-origin lineage | `IVB-P4-ORIGIN`, `9862497` — `Close Phase 3 v0.1 implementation` |
 | Governance authorization | Gate 4A PASS / Project Owner approved; Phase 4 execution authorized; WS2 Item 2.1 fixture architecture approved by Project Owner |
 | Input format basis | Each `bootstrap.toml` and `project.toml` uses the approved v0.1 explicit Bootstrap/configuration shape; Markdown files are synthetic local-Git/Markdown Source artifacts when execution is separately authorized. |

@@ -6,11 +6,12 @@ WS2 Item 2.1 fixture architecture. It is not validation evidence, a validation
 result, a finding, remediation, fresh-Consumer preflight, proving activity,
 Gate 4B approval, TD-14 reopening, scope change, or production-readiness claim.
 
-## Exact fixture-design baseline
+## Exact provenance baselines
 
 | Field | Record |
 | --- | --- |
-| Exact committed execution baseline | `c9b39a3e950225498e06e687e69fdf15e9f37235` — `Approve Gate 4A and authorize Phase 4 execution` |
+| Pre-preparation authorization / execution baseline | `c9b39a3e950225498e06e687e69fdf15e9f37235` — `Approve Gate 4A and authorize Phase 4 execution`. This is the clean committed baseline from which deterministic fixture preparation began; it does not contain the materialized original F1–F5 artifacts. |
+| Original F1–F5 fixture / expected-result materialization baseline | `c7d17714a3983335f8564aa9360739d9ec785410` — `Prepare Phase 4 deterministic validation fixtures`. This atomic commit introduced the controlled inputs, fixture records, expected-result register, and this preparation record before execution. See [the original-fixture-family provenance clarification](original-fixture-family-provenance-clarification.md). |
 | Gate 4A package lineage verified | `48df514` (`Complete Phase 4 validation governance package`) is an ancestor of `c9b39a3`. |
 | Immutable implementation-origin lineage | `IVB-P4-ORIGIN`: `9862497` (`Close Phase 3 v0.1 implementation`). |
 | Frozen synthetic input aggregate SHA-256 | `116b4e7b394a267f039271f43772ef68189315914e59c8e3cef978126dae1f83` over sorted per-file SHA-256 records for every fixture TOML and Source Markdown artifact. |

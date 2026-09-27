@@ -1,10 +1,14 @@
 # WS2 Item 2.1 — Frozen Expected-Result Records
 
 **Register status:** Pre-execution. Every record is `v1`, **governed for
-authorized execution**, and frozen at the WS2 Item 2.1 fixture-design baseline
-`c9b39a3`. This status is not PASS, FAIL, or INDETERMINATE; no execution has
-occurred. Revision requires a new version, governing rationale, and applicable
-approval—never overwriting this record to fit an observed result.
+authorized execution**, and frozen before execution. For the original F1–F5
+family, `c9b39a3` is the authorized pre-preparation execution baseline; the
+materialized fixture and expected-result records were atomically committed at
+`c7d17714`. See [the original-fixture-family provenance
+clarification](../original-fixture-family-provenance-clarification.md). This
+status is not PASS, FAIL, or INDETERMINATE; no execution has occurred. Revision
+requires a new version, governing rationale, and applicable approval—never
+overwriting this record to fit an observed result.
 
 **Shared governing/approval basis:** Project Owner-approved Phase 0–3 baseline;
 WS1 expected-result controls; Gate 4A PASS / Project Owner approval; Phase 4
