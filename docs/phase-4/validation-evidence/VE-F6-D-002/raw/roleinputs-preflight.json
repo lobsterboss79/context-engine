@@ -1,0 +1,15 @@
+{
+  "pipeline_executed": false,
+  "preflight": "pass",
+  "procedure": "local RoleInputs construction only",
+  "required_trigger": false,
+  "role_inputs": {
+    "basis": "FX-F6-D frozen task mapping establishes the known staging and safety-review information as useful Supporting Context, without treating it as proof of ASU adequacy.",
+    "consumer_capacity_limited": false,
+    "materially_improves_understanding_or_validation": true,
+    "omission_risks_improper_performance": false,
+    "omission_risks_incorrect_performance": false,
+    "rendering_limited": false
+  },
+  "supporting_trigger": true
+}

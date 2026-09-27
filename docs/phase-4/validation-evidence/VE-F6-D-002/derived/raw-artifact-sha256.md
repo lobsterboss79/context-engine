@@ -1,0 +1,11 @@
+83b2f06a1a317f9767264dabab2774878f85f8fc56bd401faa7a5a02cd855141  docs/phase-4/validation-evidence/VE-F6-D-002/raw/controlled-input-sha256.txt
+24b965be3b0186aad7cb15380ddd32dd8b2f63bd48d2727673aab4b23d50288b  docs/phase-4/validation-evidence/VE-F6-D-002/raw/f6-d-execution.py
+6aa8658146ce41ae27c63a9e7323ccd28cbf25825e5f05a07a7171072071ea8a  docs/phase-4/validation-evidence/VE-F6-D-002/raw/f6-d-roleinputs-preflight.py
+5ba2e3908641b250842cb5cfff7c21760a7278d53c045a764398522104d85654  docs/phase-4/validation-evidence/VE-F6-D-002/raw/f6-d-state.sqlite
+fce6af0999910f58e24959ad767de320baa9ba356871184a55efd6c300093d69  docs/phase-4/validation-evidence/VE-F6-D-002/raw/raw-result.json
+5a97fe3c6f3eb9736b5d5a60bbcaefaae643f430daabed9b9691112668ca3f59  docs/phase-4/validation-evidence/VE-F6-D-002/raw/rendering-chatgpt.md
+24310c7cc93948686f3b6aff95b5ca16b3e1d9792e88176917fa9b8cb25ae1ff  docs/phase-4/validation-evidence/VE-F6-D-002/raw/rendering-codex.md
+cf2c2e4fc28487a5e4d067eadf6d46e3f440b4d17d7d620060553039138b2e2d  docs/phase-4/validation-evidence/VE-F6-D-002/raw/rendering-human.md
+6da27f50af23c4488b9d076e7ce0dc5f17a309dc84fc8779c296706a74cc3e77  docs/phase-4/validation-evidence/VE-F6-D-002/raw/roleinputs-preflight.json
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  docs/phase-4/validation-evidence/VE-F6-D-002/raw/ve-f6-d-execution.stderr
+0c5a2f6cd7877e66fc56fe0efc293c17e4b412e905ac75243fb7b83f9c4f2ae1  docs/phase-4/validation-evidence/VE-F6-D-002/raw/ve-f6-d-execution.stdout
