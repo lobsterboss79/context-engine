@@ -1,0 +1,770 @@
+============================= test session starts ==============================
+platform linux -- Python 3.14.4, pytest-9.1.1, pluggy-1.6.0
+rootdir: /home/lobsterboss79/Projects/context-engine-worktrees/ws4-persistence-linux
+configfile: pyproject.toml
+collected 47 items
+
+tests/test_workstream_3.py E...EEEEEE                                    [ 21%]
+tests/test_workstream_4.py ...........EEEEE                              [ 55%]
+tests/test_workstream_8.py ..............E.E                             [ 91%]
+tests/test_workstream_10.py EEEE                                         [100%]
+
+==================================== ERRORS ====================================
+_ ERROR at setup of test_explicit_authorized_bootstrap_and_separate_configuration _
+
+    @pytest.fixture
+    def controlled_dir() -> Path:
+>       directory = Path(tempfile.mkdtemp(dir=Path.home() / "temp", prefix="context-engine-ws3-"))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_workstream_3.py:18: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+suffix = '', prefix = 'context-engine-ws3-'
+dir = PosixPath('/home/lobsterboss79/temp')
+
+    def mkdtemp(suffix=None, prefix=None, dir=None):
+        """User-callable function to create and return a unique temporary
+        directory.  The return value is the pathname of the directory.
+    
+        Arguments are as for mkstemp, except that the 'text' argument is
+        not accepted.
+    
+        The directory is readable, writable, and searchable only by the
+        creating user.
+    
+        Caller is responsible for deleting the directory when done with it.
+        """
+    
+        prefix, suffix, dir, output_type = _sanitize_params(prefix, suffix, dir)
+    
+        names = _get_candidate_names()
+        if output_type is bytes:
+            names = map(_os.fsencode, names)
+    
+        for seq in range(TMP_MAX):
+            name = next(names)
+            file = _os.path.join(dir, prefix + name + suffix)
+            _sys.audit("tempfile.mkdtemp", file)
+            try:
+>               _os.mkdir(file, 0o700)
+E               OSError: [Errno 30] Read-only file system: '/home/lobsterboss79/temp/context-engine-ws3-15z12hh8'
+
+/usr/lib/python3.14/tempfile.py:381: OSError
+_ ERROR at setup of test_bootstrap_rejects_malformed_unsupported_and_configuration_substitution _
+
+    @pytest.fixture
+    def controlled_dir() -> Path:
+>       directory = Path(tempfile.mkdtemp(dir=Path.home() / "temp", prefix="context-engine-ws3-"))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_workstream_3.py:18: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+suffix = '', prefix = 'context-engine-ws3-'
+dir = PosixPath('/home/lobsterboss79/temp')
+
+    def mkdtemp(suffix=None, prefix=None, dir=None):
+        """User-callable function to create and return a unique temporary
+        directory.  The return value is the pathname of the directory.
+    
+        Arguments are as for mkstemp, except that the 'text' argument is
+        not accepted.
+    
+        The directory is readable, writable, and searchable only by the
+        creating user.
+    
+        Caller is responsible for deleting the directory when done with it.
+        """
+    
+        prefix, suffix, dir, output_type = _sanitize_params(prefix, suffix, dir)
+    
+        names = _get_candidate_names()
+        if output_type is bytes:
+            names = map(_os.fsencode, names)
+    
+        for seq in range(TMP_MAX):
+            name = next(names)
+            file = _os.path.join(dir, prefix + name + suffix)
+            _sys.audit("tempfile.mkdtemp", file)
+            try:
+>               _os.mkdir(file, 0o700)
+E               OSError: [Errno 30] Read-only file system: '/home/lobsterboss79/temp/context-engine-ws3-jleuuv54'
+
+/usr/lib/python3.14/tempfile.py:381: OSError
+___ ERROR at setup of test_configuration_cannot_acquire_bootstrap_legitimacy ___
+
+    @pytest.fixture
+    def controlled_dir() -> Path:
+>       directory = Path(tempfile.mkdtemp(dir=Path.home() / "temp", prefix="context-engine-ws3-"))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_workstream_3.py:18: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+suffix = '', prefix = 'context-engine-ws3-'
+dir = PosixPath('/home/lobsterboss79/temp')
+
+    def mkdtemp(suffix=None, prefix=None, dir=None):
+        """User-callable function to create and return a unique temporary
+        directory.  The return value is the pathname of the directory.
+    
+        Arguments are as for mkstemp, except that the 'text' argument is
+        not accepted.
+    
+        The directory is readable, writable, and searchable only by the
+        creating user.
+    
+        Caller is responsible for deleting the directory when done with it.
+        """
+    
+        prefix, suffix, dir, output_type = _sanitize_params(prefix, suffix, dir)
+    
+        names = _get_candidate_names()
+        if output_type is bytes:
+            names = map(_os.fsencode, names)
+    
+        for seq in range(TMP_MAX):
+            name = next(names)
+            file = _os.path.join(dir, prefix + name + suffix)
+            _sys.audit("tempfile.mkdtemp", file)
+            try:
+>               _os.mkdir(file, 0o700)
+E               OSError: [Errno 30] Read-only file system: '/home/lobsterboss79/temp/context-engine-ws3-5sbkrg49'
+
+/usr/lib/python3.14/tempfile.py:381: OSError
+_ ERROR at setup of test_sqlite_initializes_and_restores_historical_evidence_without_elevation _
+
+    @pytest.fixture
+    def controlled_dir() -> Path:
+>       directory = Path(tempfile.mkdtemp(dir=Path.home() / "temp", prefix="context-engine-ws3-"))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_workstream_3.py:18: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+suffix = '', prefix = 'context-engine-ws3-'
+dir = PosixPath('/home/lobsterboss79/temp')
+
+    def mkdtemp(suffix=None, prefix=None, dir=None):
+        """User-callable function to create and return a unique temporary
+        directory.  The return value is the pathname of the directory.
+    
+        Arguments are as for mkstemp, except that the 'text' argument is
+        not accepted.
+    
+        The directory is readable, writable, and searchable only by the
+        creating user.
+    
+        Caller is responsible for deleting the directory when done with it.
+        """
+    
+        prefix, suffix, dir, output_type = _sanitize_params(prefix, suffix, dir)
+    
+        names = _get_candidate_names()
+        if output_type is bytes:
+            names = map(_os.fsencode, names)
+    
+        for seq in range(TMP_MAX):
+            name = next(names)
+            file = _os.path.join(dir, prefix + name + suffix)
+            _sys.audit("tempfile.mkdtemp", file)
+            try:
+>               _os.mkdir(file, 0o700)
+E               OSError: [Errno 30] Read-only file system: '/home/lobsterboss79/temp/context-engine-ws3-0_glggyl'
+
+/usr/lib/python3.14/tempfile.py:381: OSError
+_ ERROR at setup of test_sqlite_rejects_incompatible_schema_and_preserves_project_isolation _
+
+    @pytest.fixture
+    def controlled_dir() -> Path:
+>       directory = Path(tempfile.mkdtemp(dir=Path.home() / "temp", prefix="context-engine-ws3-"))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_workstream_3.py:18: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+suffix = '', prefix = 'context-engine-ws3-'
+dir = PosixPath('/home/lobsterboss79/temp')
+
+    def mkdtemp(suffix=None, prefix=None, dir=None):
+        """User-callable function to create and return a unique temporary
+        directory.  The return value is the pathname of the directory.
+    
+        Arguments are as for mkstemp, except that the 'text' argument is
+        not accepted.
+    
+        The directory is readable, writable, and searchable only by the
+        creating user.
+    
+        Caller is responsible for deleting the directory when done with it.
+        """
+    
+        prefix, suffix, dir, output_type = _sanitize_params(prefix, suffix, dir)
+    
+        names = _get_candidate_names()
+        if output_type is bytes:
+            names = map(_os.fsencode, names)
+    
+        for seq in range(TMP_MAX):
+            name = next(names)
+            file = _os.path.join(dir, prefix + name + suffix)
+            _sys.audit("tempfile.mkdtemp", file)
+            try:
+>               _os.mkdir(file, 0o700)
+E               OSError: [Errno 30] Read-only file system: '/home/lobsterboss79/temp/context-engine-ws3-q_947jyd'
+
+/usr/lib/python3.14/tempfile.py:381: OSError
+_ ERROR at setup of test_sqlite_transaction_rolls_back_duplicate_partial_state _
+
+    @pytest.fixture
+    def controlled_dir() -> Path:
+>       directory = Path(tempfile.mkdtemp(dir=Path.home() / "temp", prefix="context-engine-ws3-"))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_workstream_3.py:18: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+suffix = '', prefix = 'context-engine-ws3-'
+dir = PosixPath('/home/lobsterboss79/temp')
+
+    def mkdtemp(suffix=None, prefix=None, dir=None):
+        """User-callable function to create and return a unique temporary
+        directory.  The return value is the pathname of the directory.
+    
+        Arguments are as for mkstemp, except that the 'text' argument is
+        not accepted.
+    
+        The directory is readable, writable, and searchable only by the
+        creating user.
+    
+        Caller is responsible for deleting the directory when done with it.
+        """
+    
+        prefix, suffix, dir, output_type = _sanitize_params(prefix, suffix, dir)
+    
+        names = _get_candidate_names()
+        if output_type is bytes:
+            names = map(_os.fsencode, names)
+    
+        for seq in range(TMP_MAX):
+            name = next(names)
+            file = _os.path.join(dir, prefix + name + suffix)
+            _sys.audit("tempfile.mkdtemp", file)
+            try:
+>               _os.mkdir(file, 0o700)
+E               OSError: [Errno 30] Read-only file system: '/home/lobsterboss79/temp/context-engine-ws3-3p6r__ee'
+
+/usr/lib/python3.14/tempfile.py:381: OSError
+_ ERROR at setup of test_audit_is_durable_authorization_bound_and_secret_safe __
+
+    @pytest.fixture
+    def controlled_dir() -> Path:
+>       directory = Path(tempfile.mkdtemp(dir=Path.home() / "temp", prefix="context-engine-ws3-"))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_workstream_3.py:18: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+suffix = '', prefix = 'context-engine-ws3-'
+dir = PosixPath('/home/lobsterboss79/temp')
+
+    def mkdtemp(suffix=None, prefix=None, dir=None):
+        """User-callable function to create and return a unique temporary
+        directory.  The return value is the pathname of the directory.
+    
+        Arguments are as for mkstemp, except that the 'text' argument is
+        not accepted.
+    
+        The directory is readable, writable, and searchable only by the
+        creating user.
+    
+        Caller is responsible for deleting the directory when done with it.
+        """
+    
+        prefix, suffix, dir, output_type = _sanitize_params(prefix, suffix, dir)
+    
+        names = _get_candidate_names()
+        if output_type is bytes:
+            names = map(_os.fsencode, names)
+    
+        for seq in range(TMP_MAX):
+            name = next(names)
+            file = _os.path.join(dir, prefix + name + suffix)
+            _sys.audit("tempfile.mkdtemp", file)
+            try:
+>               _os.mkdir(file, 0o700)
+E               OSError: [Errno 30] Read-only file system: '/home/lobsterboss79/temp/context-engine-ws3-37ax6o8h'
+
+/usr/lib/python3.14/tempfile.py:381: OSError
+_ ERROR at setup of test_lifecycle_persists_and_restarts_with_project_isolation _
+
+    @pytest.fixture
+    def controlled_dir() -> Path:
+>       directory = Path(tempfile.mkdtemp(dir=Path.home() / "temp", prefix="context-engine-ws4-"))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_workstream_4.py:30: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+suffix = '', prefix = 'context-engine-ws4-'
+dir = PosixPath('/home/lobsterboss79/temp')
+
+    def mkdtemp(suffix=None, prefix=None, dir=None):
+        """User-callable function to create and return a unique temporary
+        directory.  The return value is the pathname of the directory.
+    
+        Arguments are as for mkstemp, except that the 'text' argument is
+        not accepted.
+    
+        The directory is readable, writable, and searchable only by the
+        creating user.
+    
+        Caller is responsible for deleting the directory when done with it.
+        """
+    
+        prefix, suffix, dir, output_type = _sanitize_params(prefix, suffix, dir)
+    
+        names = _get_candidate_names()
+        if output_type is bytes:
+            names = map(_os.fsencode, names)
+    
+        for seq in range(TMP_MAX):
+            name = next(names)
+            file = _os.path.join(dir, prefix + name + suffix)
+            _sys.audit("tempfile.mkdtemp", file)
+            try:
+>               _os.mkdir(file, 0o700)
+E               OSError: [Errno 30] Read-only file system: '/home/lobsterboss79/temp/context-engine-ws4-fuk6ypj6'
+
+/usr/lib/python3.14/tempfile.py:381: OSError
+_ ERROR at setup of test_source_registration_row_id_is_not_semantic_identity_or_cross_project_key _
+
+    @pytest.fixture
+    def controlled_dir() -> Path:
+>       directory = Path(tempfile.mkdtemp(dir=Path.home() / "temp", prefix="context-engine-ws4-"))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_workstream_4.py:30: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+suffix = '', prefix = 'context-engine-ws4-'
+dir = PosixPath('/home/lobsterboss79/temp')
+
+    def mkdtemp(suffix=None, prefix=None, dir=None):
+        """User-callable function to create and return a unique temporary
+        directory.  The return value is the pathname of the directory.
+    
+        Arguments are as for mkstemp, except that the 'text' argument is
+        not accepted.
+    
+        The directory is readable, writable, and searchable only by the
+        creating user.
+    
+        Caller is responsible for deleting the directory when done with it.
+        """
+    
+        prefix, suffix, dir, output_type = _sanitize_params(prefix, suffix, dir)
+    
+        names = _get_candidate_names()
+        if output_type is bytes:
+            names = map(_os.fsencode, names)
+    
+        for seq in range(TMP_MAX):
+            name = next(names)
+            file = _os.path.join(dir, prefix + name + suffix)
+            _sys.audit("tempfile.mkdtemp", file)
+            try:
+>               _os.mkdir(file, 0o700)
+E               OSError: [Errno 30] Read-only file system: '/home/lobsterboss79/temp/context-engine-ws4-p_ox0zte'
+
+/usr/lib/python3.14/tempfile.py:381: OSError
+_ ERROR at setup of test_lifecycle_schema_migrates_deterministically_from_version_one _
+
+    @pytest.fixture
+    def controlled_dir() -> Path:
+>       directory = Path(tempfile.mkdtemp(dir=Path.home() / "temp", prefix="context-engine-ws4-"))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_workstream_4.py:30: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+suffix = '', prefix = 'context-engine-ws4-'
+dir = PosixPath('/home/lobsterboss79/temp')
+
+    def mkdtemp(suffix=None, prefix=None, dir=None):
+        """User-callable function to create and return a unique temporary
+        directory.  The return value is the pathname of the directory.
+    
+        Arguments are as for mkstemp, except that the 'text' argument is
+        not accepted.
+    
+        The directory is readable, writable, and searchable only by the
+        creating user.
+    
+        Caller is responsible for deleting the directory when done with it.
+        """
+    
+        prefix, suffix, dir, output_type = _sanitize_params(prefix, suffix, dir)
+    
+        names = _get_candidate_names()
+        if output_type is bytes:
+            names = map(_os.fsencode, names)
+    
+        for seq in range(TMP_MAX):
+            name = next(names)
+            file = _os.path.join(dir, prefix + name + suffix)
+            _sys.audit("tempfile.mkdtemp", file)
+            try:
+>               _os.mkdir(file, 0o700)
+E               OSError: [Errno 30] Read-only file system: '/home/lobsterboss79/temp/context-engine-ws4-l4u50p93'
+
+/usr/lib/python3.14/tempfile.py:381: OSError
+_ ERROR at setup of test_duplicate_lifecycle_write_rolls_back_without_partial_state _
+
+    @pytest.fixture
+    def controlled_dir() -> Path:
+>       directory = Path(tempfile.mkdtemp(dir=Path.home() / "temp", prefix="context-engine-ws4-"))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_workstream_4.py:30: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+suffix = '', prefix = 'context-engine-ws4-'
+dir = PosixPath('/home/lobsterboss79/temp')
+
+    def mkdtemp(suffix=None, prefix=None, dir=None):
+        """User-callable function to create and return a unique temporary
+        directory.  The return value is the pathname of the directory.
+    
+        Arguments are as for mkstemp, except that the 'text' argument is
+        not accepted.
+    
+        The directory is readable, writable, and searchable only by the
+        creating user.
+    
+        Caller is responsible for deleting the directory when done with it.
+        """
+    
+        prefix, suffix, dir, output_type = _sanitize_params(prefix, suffix, dir)
+    
+        names = _get_candidate_names()
+        if output_type is bytes:
+            names = map(_os.fsencode, names)
+    
+        for seq in range(TMP_MAX):
+            name = next(names)
+            file = _os.path.join(dir, prefix + name + suffix)
+            _sys.audit("tempfile.mkdtemp", file)
+            try:
+>               _os.mkdir(file, 0o700)
+E               OSError: [Errno 30] Read-only file system: '/home/lobsterboss79/temp/context-engine-ws4-jlm8174b'
+
+/usr/lib/python3.14/tempfile.py:381: OSError
+______ ERROR at setup of test_incompatible_lifecycle_schema_fails_closed _______
+
+    @pytest.fixture
+    def controlled_dir() -> Path:
+>       directory = Path(tempfile.mkdtemp(dir=Path.home() / "temp", prefix="context-engine-ws4-"))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_workstream_4.py:30: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+suffix = '', prefix = 'context-engine-ws4-'
+dir = PosixPath('/home/lobsterboss79/temp')
+
+    def mkdtemp(suffix=None, prefix=None, dir=None):
+        """User-callable function to create and return a unique temporary
+        directory.  The return value is the pathname of the directory.
+    
+        Arguments are as for mkstemp, except that the 'text' argument is
+        not accepted.
+    
+        The directory is readable, writable, and searchable only by the
+        creating user.
+    
+        Caller is responsible for deleting the directory when done with it.
+        """
+    
+        prefix, suffix, dir, output_type = _sanitize_params(prefix, suffix, dir)
+    
+        names = _get_candidate_names()
+        if output_type is bytes:
+            names = map(_os.fsencode, names)
+    
+        for seq in range(TMP_MAX):
+            name = next(names)
+            file = _os.path.join(dir, prefix + name + suffix)
+            _sys.audit("tempfile.mkdtemp", file)
+            try:
+>               _os.mkdir(file, 0o700)
+E               OSError: [Errno 30] Read-only file system: '/home/lobsterboss79/temp/context-engine-ws4-tvk72aco'
+
+/usr/lib/python3.14/tempfile.py:381: OSError
+_ ERROR at setup of test_denied_construction_is_not_fake_empty_package_and_persistence_is_historical _
+
+    @pytest.fixture
+    def controlled_dir() -> Path:
+>       directory = Path(tempfile.mkdtemp(dir=Path.home() / "temp", prefix="context-engine-ws8-"))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_workstream_8.py:24: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+suffix = '', prefix = 'context-engine-ws8-'
+dir = PosixPath('/home/lobsterboss79/temp')
+
+    def mkdtemp(suffix=None, prefix=None, dir=None):
+        """User-callable function to create and return a unique temporary
+        directory.  The return value is the pathname of the directory.
+    
+        Arguments are as for mkstemp, except that the 'text' argument is
+        not accepted.
+    
+        The directory is readable, writable, and searchable only by the
+        creating user.
+    
+        Caller is responsible for deleting the directory when done with it.
+        """
+    
+        prefix, suffix, dir, output_type = _sanitize_params(prefix, suffix, dir)
+    
+        names = _get_candidate_names()
+        if output_type is bytes:
+            names = map(_os.fsencode, names)
+    
+        for seq in range(TMP_MAX):
+            name = next(names)
+            file = _os.path.join(dir, prefix + name + suffix)
+            _sys.audit("tempfile.mkdtemp", file)
+            try:
+>               _os.mkdir(file, 0o700)
+E               OSError: [Errno 30] Read-only file system: '/home/lobsterboss79/temp/context-engine-ws8-dz1_c_bt'
+
+/usr/lib/python3.14/tempfile.py:381: OSError
+_ ERROR at setup of test_package_construction_schema_migration_and_duplicate_retry_are_explicit _
+
+    @pytest.fixture
+    def controlled_dir() -> Path:
+>       directory = Path(tempfile.mkdtemp(dir=Path.home() / "temp", prefix="context-engine-ws8-"))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_workstream_8.py:24: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+suffix = '', prefix = 'context-engine-ws8-'
+dir = PosixPath('/home/lobsterboss79/temp')
+
+    def mkdtemp(suffix=None, prefix=None, dir=None):
+        """User-callable function to create and return a unique temporary
+        directory.  The return value is the pathname of the directory.
+    
+        Arguments are as for mkstemp, except that the 'text' argument is
+        not accepted.
+    
+        The directory is readable, writable, and searchable only by the
+        creating user.
+    
+        Caller is responsible for deleting the directory when done with it.
+        """
+    
+        prefix, suffix, dir, output_type = _sanitize_params(prefix, suffix, dir)
+    
+        names = _get_candidate_names()
+        if output_type is bytes:
+            names = map(_os.fsencode, names)
+    
+        for seq in range(TMP_MAX):
+            name = next(names)
+            file = _os.path.join(dir, prefix + name + suffix)
+            _sys.audit("tempfile.mkdtemp", file)
+            try:
+>               _os.mkdir(file, 0o700)
+E               OSError: [Errno 30] Read-only file system: '/home/lobsterboss79/temp/context-engine-ws8-k_9p_8z6'
+
+/usr/lib/python3.14/tempfile.py:381: OSError
+_ ERROR at setup of test_sqlite_backup_and_restore_preserve_durable_history_but_qualify_present_state _
+
+    @pytest.fixture
+    def controlled_dir() -> Path:
+>       directory = Path(tempfile.mkdtemp(dir=Path.home() / "temp", prefix="context-engine-ws10-"))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_workstream_10.py:26: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+suffix = '', prefix = 'context-engine-ws10-'
+dir = PosixPath('/home/lobsterboss79/temp')
+
+    def mkdtemp(suffix=None, prefix=None, dir=None):
+        """User-callable function to create and return a unique temporary
+        directory.  The return value is the pathname of the directory.
+    
+        Arguments are as for mkstemp, except that the 'text' argument is
+        not accepted.
+    
+        The directory is readable, writable, and searchable only by the
+        creating user.
+    
+        Caller is responsible for deleting the directory when done with it.
+        """
+    
+        prefix, suffix, dir, output_type = _sanitize_params(prefix, suffix, dir)
+    
+        names = _get_candidate_names()
+        if output_type is bytes:
+            names = map(_os.fsencode, names)
+    
+        for seq in range(TMP_MAX):
+            name = next(names)
+            file = _os.path.join(dir, prefix + name + suffix)
+            _sys.audit("tempfile.mkdtemp", file)
+            try:
+>               _os.mkdir(file, 0o700)
+E               OSError: [Errno 30] Read-only file system: '/home/lobsterboss79/temp/context-engine-ws10-yiv27b7q'
+
+/usr/lib/python3.14/tempfile.py:381: OSError
+_ ERROR at setup of test_backup_and_restore_fail_closed_for_authorization_secrets_and_invalid_files _
+
+    @pytest.fixture
+    def controlled_dir() -> Path:
+>       directory = Path(tempfile.mkdtemp(dir=Path.home() / "temp", prefix="context-engine-ws10-"))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_workstream_10.py:26: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+suffix = '', prefix = 'context-engine-ws10-'
+dir = PosixPath('/home/lobsterboss79/temp')
+
+    def mkdtemp(suffix=None, prefix=None, dir=None):
+        """User-callable function to create and return a unique temporary
+        directory.  The return value is the pathname of the directory.
+    
+        Arguments are as for mkstemp, except that the 'text' argument is
+        not accepted.
+    
+        The directory is readable, writable, and searchable only by the
+        creating user.
+    
+        Caller is responsible for deleting the directory when done with it.
+        """
+    
+        prefix, suffix, dir, output_type = _sanitize_params(prefix, suffix, dir)
+    
+        names = _get_candidate_names()
+        if output_type is bytes:
+            names = map(_os.fsencode, names)
+    
+        for seq in range(TMP_MAX):
+            name = next(names)
+            file = _os.path.join(dir, prefix + name + suffix)
+            _sys.audit("tempfile.mkdtemp", file)
+            try:
+>               _os.mkdir(file, 0o700)
+E               OSError: [Errno 30] Read-only file system: '/home/lobsterboss79/temp/context-engine-ws10-j1c7fad7'
+
+/usr/lib/python3.14/tempfile.py:381: OSError
+_ ERROR at setup of test_incompatible_backup_and_interrupted_restore_do_not_replace_valid_operational_state _
+
+    @pytest.fixture
+    def controlled_dir() -> Path:
+>       directory = Path(tempfile.mkdtemp(dir=Path.home() / "temp", prefix="context-engine-ws10-"))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_workstream_10.py:26: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+suffix = '', prefix = 'context-engine-ws10-'
+dir = PosixPath('/home/lobsterboss79/temp')
+
+    def mkdtemp(suffix=None, prefix=None, dir=None):
+        """User-callable function to create and return a unique temporary
+        directory.  The return value is the pathname of the directory.
+    
+        Arguments are as for mkstemp, except that the 'text' argument is
+        not accepted.
+    
+        The directory is readable, writable, and searchable only by the
+        creating user.
+    
+        Caller is responsible for deleting the directory when done with it.
+        """
+    
+        prefix, suffix, dir, output_type = _sanitize_params(prefix, suffix, dir)
+    
+        names = _get_candidate_names()
+        if output_type is bytes:
+            names = map(_os.fsencode, names)
+    
+        for seq in range(TMP_MAX):
+            name = next(names)
+            file = _os.path.join(dir, prefix + name + suffix)
+            _sys.audit("tempfile.mkdtemp", file)
+            try:
+>               _os.mkdir(file, 0o700)
+E               OSError: [Errno 30] Read-only file system: '/home/lobsterboss79/temp/context-engine-ws10-wktyfhsh'
+
+/usr/lib/python3.14/tempfile.py:381: OSError
+_ ERROR at setup of test_backup_metadata_cannot_substitute_for_authority_or_currentness _
+
+    @pytest.fixture
+    def controlled_dir() -> Path:
+>       directory = Path(tempfile.mkdtemp(dir=Path.home() / "temp", prefix="context-engine-ws10-"))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_workstream_10.py:26: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+suffix = '', prefix = 'context-engine-ws10-'
+dir = PosixPath('/home/lobsterboss79/temp')
+
+    def mkdtemp(suffix=None, prefix=None, dir=None):
+        """User-callable function to create and return a unique temporary
+        directory.  The return value is the pathname of the directory.
+    
+        Arguments are as for mkstemp, except that the 'text' argument is
+        not accepted.
+    
+        The directory is readable, writable, and searchable only by the
+        creating user.
+    
+        Caller is responsible for deleting the directory when done with it.
+        """
+    
+        prefix, suffix, dir, output_type = _sanitize_params(prefix, suffix, dir)
+    
+        names = _get_candidate_names()
+        if output_type is bytes:
+            names = map(_os.fsencode, names)
+    
+        for seq in range(TMP_MAX):
+            name = next(names)
+            file = _os.path.join(dir, prefix + name + suffix)
+            _sys.audit("tempfile.mkdtemp", file)
+            try:
+>               _os.mkdir(file, 0o700)
+E               OSError: [Errno 30] Read-only file system: '/home/lobsterboss79/temp/context-engine-ws10-upfnf_xj'
+
+/usr/lib/python3.14/tempfile.py:381: OSError
+=========================== short test summary info ============================
+ERROR tests/test_workstream_3.py::test_explicit_authorized_bootstrap_and_separate_configuration
+ERROR tests/test_workstream_3.py::test_bootstrap_rejects_malformed_unsupported_and_configuration_substitution
+ERROR tests/test_workstream_3.py::test_configuration_cannot_acquire_bootstrap_legitimacy
+ERROR tests/test_workstream_3.py::test_sqlite_initializes_and_restores_historical_evidence_without_elevation
+ERROR tests/test_workstream_3.py::test_sqlite_rejects_incompatible_schema_and_preserves_project_isolation
+ERROR tests/test_workstream_3.py::test_sqlite_transaction_rolls_back_duplicate_partial_state
+ERROR tests/test_workstream_3.py::test_audit_is_durable_authorization_bound_and_secret_safe
+ERROR tests/test_workstream_4.py::test_lifecycle_persists_and_restarts_with_project_isolation
+ERROR tests/test_workstream_4.py::test_source_registration_row_id_is_not_semantic_identity_or_cross_project_key
+ERROR tests/test_workstream_4.py::test_lifecycle_schema_migrates_deterministically_from_version_one
+ERROR tests/test_workstream_4.py::test_duplicate_lifecycle_write_rolls_back_without_partial_state
+ERROR tests/test_workstream_4.py::test_incompatible_lifecycle_schema_fails_closed
+ERROR tests/test_workstream_8.py::test_denied_construction_is_not_fake_empty_package_and_persistence_is_historical
+ERROR tests/test_workstream_8.py::test_package_construction_schema_migration_and_duplicate_retry_are_explicit
+ERROR tests/test_workstream_10.py::test_sqlite_backup_and_restore_preserve_durable_history_but_qualify_present_state
+ERROR tests/test_workstream_10.py::test_backup_and_restore_fail_closed_for_authorization_secrets_and_invalid_files
+ERROR tests/test_workstream_10.py::test_incompatible_backup_and_interrupted_restore_do_not_replace_valid_operational_state
+ERROR tests/test_workstream_10.py::test_backup_metadata_cannot_substitute_for_authority_or_currentness
+======================== 29 passed, 18 errors in 0.65s =========================

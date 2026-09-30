@@ -1,0 +1,13 @@
+{
+  "backup_integrity": "ok",
+  "caught_restore_error": "restore failed before operational state was replaced",
+  "recovery_qualification": false,
+  "scenario_state": "APPLICATION-LEVEL FAILURE / RECOVERY REQUIRED",
+  "staging_files": [],
+  "target_hash_after": "058fece4fdbb3b39a8257da95c1428da53d651b107e54b16456c20fd19daa9fa",
+  "target_hash_before": "058fece4fdbb3b39a8257da95c1428da53d651b107e54b16456c20fd19daa9fa",
+  "target_integrity": "ok",
+  "target_project_a_claim": null,
+  "target_project_b_claim": "historical claim-b",
+  "target_version": 5
+}
