@@ -1,0 +1,22 @@
+{
+  "audit": [
+    [
+      "rendering-rendered",
+      "controlled render outcome"
+    ]
+  ],
+  "construction": "record-a",
+  "copied_pre_recovery_target_hash": "058fece4fdbb3b39a8257da95c1428da53d651b107e54b16456c20fd19daa9fa",
+  "observation": "observation-a",
+  "predecessor_target_hash": "058fece4fdbb3b39a8257da95c1428da53d651b107e54b16456c20fd19daa9fa",
+  "qualification": "historical-only; currentness, Authority, Governance State, and present authorization require independent re-establishment",
+  "restored_authority_basis": null,
+  "restored_currentness": "unknown",
+  "scenario_state": "SUCCESSFUL PREDETERMINED RECOVERY SUCCESSOR",
+  "source_registration": "source-a",
+  "staging_files": [],
+  "target_integrity": "ok",
+  "target_project_a_claim": "historical claim-a",
+  "target_project_b_claim": false,
+  "target_version": 5
+}
