@@ -1,6 +1,7 @@
 """Controlled sufficiency, logical-package, coherence, and persistence tests."""
 from __future__ import annotations
 
+from contextlib import closing
 from pathlib import Path
 import shutil
 import sqlite3
@@ -149,9 +150,10 @@ def test_manifest_provenance_and_row_identity_boundary() -> None:
 
 def test_package_construction_schema_migration_and_duplicate_retry_are_explicit(controlled_dir: Path) -> None:
     database = controlled_dir / "version-three.sqlite"
-    with sqlite3.connect(database) as connection:
-        connection.execute("CREATE TABLE schema_version (version INTEGER NOT NULL)")
-        connection.execute("INSERT INTO schema_version VALUES (3)")
+    with closing(sqlite3.connect(database)) as connection:
+        with connection:
+            connection.execute("CREATE TABLE schema_version (version INTEGER NOT NULL)")
+            connection.execute("INSERT INTO schema_version VALUES (3)")
     store = SQLiteStateStore(database)
     store.initialize()
     decision = evaluate_sufficiency(SufficiencyInputs((item(),), universe()))
