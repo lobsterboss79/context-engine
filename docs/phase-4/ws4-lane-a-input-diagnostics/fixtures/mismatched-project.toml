@@ -1,0 +1,5 @@
+version = 1
+
+[project]
+identity = "different-project"
+governance_reference = "lane-a-governance"

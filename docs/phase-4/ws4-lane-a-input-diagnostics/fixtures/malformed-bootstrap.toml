@@ -1,0 +1,3 @@
+version = 1
+[bootstrap
+sentinel = "lane-a-secret-canary"
