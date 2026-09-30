@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "Z:\projects\context-engine-worktrees\ws4-input-diagnostics-win\docs\phase-4\ws4-lane-a-input-diagnostics\fixtures\run_lane_a.py", line 79, in <module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "Z:\projects\context-engine-worktrees\ws4-input-diagnostics-win\docs\phase-4\ws4-lane-a-input-diagnostics\fixtures\run_lane_a.py", line 50, in main
+    source_cases = {"absent": source_case("absent", Availability.ABSENT, False),
+                              ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "Z:\projects\context-engine-worktrees\ws4-input-diagnostics-win\docs\phase-4\ws4-lane-a-input-diagnostics\fixtures\run_lane_a.py", line 31, in source_case
+    request = type("Request", (), {"identity": SemanticIdentity("request-lane-a"), "project": SemanticIdentity("lane-a-project")})()
+                                               ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+TypeError: SemanticIdentity.__init__() missing 1 required positional argument: 'value'

@@ -1,0 +1,17 @@
+branch=phase4-ws4-input-diagnostics-win
+head=7843afaf41ce581a040f4458fda028f5b901a56d
+literal_lineage_checks=True
+fresh_namespace_before_creation=True
+fixtures_unchanged=True
+source_tests_shared_lane_bc_unchanged=True
+two_field_identity_static_check=True
+DIRECT_SEMANTICIDENTITY_CALLS=1; TWO_FIELD=YES
+windows=Microsoft Windows NT 10.0.22631.0
+venv=Z:\temp\context-engine-phase4-validation\Scripts\python.exe
+venv_integrity=True
+inventory=colorama==0.4.6;iniconfig==2.3.0;packaging==26.3;pip==26.2.1;pluggy==1.6.0;Pygments==2.21.0;pytest==9.1.1
+collection_capability=prior preserved PASS; 60 tests
+semantic_invocation=Z:\temp\context-engine-phase4-validation\Scripts\python.exe docs/phase-4/ws4-lane-a-input-diagnostics/fixtures/run_lane_a_004.py --output docs/phase-4/validation-evidence/VE-P4-4A-004/raw/result.json
+states=APPLICATION-LEVEL FAILURE;ABSENCE;UNAVAILABLE;PARTIAL EVIDENCE;SUCCESSFUL COMPLETION
+partial_criterion=attributable candidate Unknown partial qualification; selected item/manifest/rendered preservation; no Authority; no Sufficient manufacture; no top-level location requirement
+negative=semantic criterion violation is FAIL; evidence deficiency is INDETERMINATE

@@ -1,0 +1,718 @@
+E...EEEEEE...........EEEEE.........E...............E.E....EE             [100%]
+=================================== ERRORS ====================================
+_ ERROR at setup of test_explicit_authorized_bootstrap_and_separate_configuration _
+
+    @pytest.fixture
+    def controlled_dir() -> Path:
+>       directory = Path(tempfile.mkdtemp(dir=Path.home() / "temp", prefix="context-engine-ws3-"))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_workstream_3.py:18: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+suffix = '', prefix = 'context-engine-ws3-'
+dir = WindowsPath('C:/Users/talbo/temp')
+
+    def mkdtemp(suffix=None, prefix=None, dir=None):
+        """User-callable function to create and return a unique temporary
+        directory.  The return value is the pathname of the directory.
+    
+        Arguments are as for mkstemp, except that the 'text' argument is
+        not accepted.
+    
+        The directory is readable, writable, and searchable only by the
+        creating user.
+    
+        Caller is responsible for deleting the directory when done with it.
+        """
+    
+        prefix, suffix, dir, output_type = _sanitize_params(prefix, suffix, dir)
+    
+        names = _get_candidate_names()
+        if output_type is bytes:
+            names = map(_os.fsencode, names)
+    
+        for seq in range(TMP_MAX):
+            name = next(names)
+            file = _os.path.join(dir, prefix + name + suffix)
+            _sys.audit("tempfile.mkdtemp", file)
+            try:
+>               _os.mkdir(file, 0o700)
+E               FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\talbo\\temp\\context-engine-ws3-tojaf1an'
+
+C:\Python314\Lib\tempfile.py:381: FileNotFoundError
+_ ERROR at setup of test_bootstrap_rejects_malformed_unsupported_and_configuration_substitution _
+
+    @pytest.fixture
+    def controlled_dir() -> Path:
+>       directory = Path(tempfile.mkdtemp(dir=Path.home() / "temp", prefix="context-engine-ws3-"))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_workstream_3.py:18: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+suffix = '', prefix = 'context-engine-ws3-'
+dir = WindowsPath('C:/Users/talbo/temp')
+
+    def mkdtemp(suffix=None, prefix=None, dir=None):
+        """User-callable function to create and return a unique temporary
+        directory.  The return value is the pathname of the directory.
+    
+        Arguments are as for mkstemp, except that the 'text' argument is
+        not accepted.
+    
+        The directory is readable, writable, and searchable only by the
+        creating user.
+    
+        Caller is responsible for deleting the directory when done with it.
+        """
+    
+        prefix, suffix, dir, output_type = _sanitize_params(prefix, suffix, dir)
+    
+        names = _get_candidate_names()
+        if output_type is bytes:
+            names = map(_os.fsencode, names)
+    
+        for seq in range(TMP_MAX):
+            name = next(names)
+            file = _os.path.join(dir, prefix + name + suffix)
+            _sys.audit("tempfile.mkdtemp", file)
+            try:
+>               _os.mkdir(file, 0o700)
+E               FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\talbo\\temp\\context-engine-ws3-cq08wc9x'
+
+C:\Python314\Lib\tempfile.py:381: FileNotFoundError
+__ ERROR at setup of test_configuration_cannot_acquire_bootstrap_legitimacy ___
+
+    @pytest.fixture
+    def controlled_dir() -> Path:
+>       directory = Path(tempfile.mkdtemp(dir=Path.home() / "temp", prefix="context-engine-ws3-"))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_workstream_3.py:18: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+suffix = '', prefix = 'context-engine-ws3-'
+dir = WindowsPath('C:/Users/talbo/temp')
+
+    def mkdtemp(suffix=None, prefix=None, dir=None):
+        """User-callable function to create and return a unique temporary
+        directory.  The return value is the pathname of the directory.
+    
+        Arguments are as for mkstemp, except that the 'text' argument is
+        not accepted.
+    
+        The directory is readable, writable, and searchable only by the
+        creating user.
+    
+        Caller is responsible for deleting the directory when done with it.
+        """
+    
+        prefix, suffix, dir, output_type = _sanitize_params(prefix, suffix, dir)
+    
+        names = _get_candidate_names()
+        if output_type is bytes:
+            names = map(_os.fsencode, names)
+    
+        for seq in range(TMP_MAX):
+            name = next(names)
+            file = _os.path.join(dir, prefix + name + suffix)
+            _sys.audit("tempfile.mkdtemp", file)
+            try:
+>               _os.mkdir(file, 0o700)
+E               FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\talbo\\temp\\context-engine-ws3-ii2ggq51'
+
+C:\Python314\Lib\tempfile.py:381: FileNotFoundError
+_ ERROR at setup of test_sqlite_initializes_and_restores_historical_evidence_without_elevation _
+
+    @pytest.fixture
+    def controlled_dir() -> Path:
+>       directory = Path(tempfile.mkdtemp(dir=Path.home() / "temp", prefix="context-engine-ws3-"))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_workstream_3.py:18: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+suffix = '', prefix = 'context-engine-ws3-'
+dir = WindowsPath('C:/Users/talbo/temp')
+
+    def mkdtemp(suffix=None, prefix=None, dir=None):
+        """User-callable function to create and return a unique temporary
+        directory.  The return value is the pathname of the directory.
+    
+        Arguments are as for mkstemp, except that the 'text' argument is
+        not accepted.
+    
+        The directory is readable, writable, and searchable only by the
+        creating user.
+    
+        Caller is responsible for deleting the directory when done with it.
+        """
+    
+        prefix, suffix, dir, output_type = _sanitize_params(prefix, suffix, dir)
+    
+        names = _get_candidate_names()
+        if output_type is bytes:
+            names = map(_os.fsencode, names)
+    
+        for seq in range(TMP_MAX):
+            name = next(names)
+            file = _os.path.join(dir, prefix + name + suffix)
+            _sys.audit("tempfile.mkdtemp", file)
+            try:
+>               _os.mkdir(file, 0o700)
+E               FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\talbo\\temp\\context-engine-ws3-789ja1vl'
+
+C:\Python314\Lib\tempfile.py:381: FileNotFoundError
+_ ERROR at setup of test_sqlite_rejects_incompatible_schema_and_preserves_project_isolation _
+
+    @pytest.fixture
+    def controlled_dir() -> Path:
+>       directory = Path(tempfile.mkdtemp(dir=Path.home() / "temp", prefix="context-engine-ws3-"))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_workstream_3.py:18: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+suffix = '', prefix = 'context-engine-ws3-'
+dir = WindowsPath('C:/Users/talbo/temp')
+
+    def mkdtemp(suffix=None, prefix=None, dir=None):
+        """User-callable function to create and return a unique temporary
+        directory.  The return value is the pathname of the directory.
+    
+        Arguments are as for mkstemp, except that the 'text' argument is
+        not accepted.
+    
+        The directory is readable, writable, and searchable only by the
+        creating user.
+    
+        Caller is responsible for deleting the directory when done with it.
+        """
+    
+        prefix, suffix, dir, output_type = _sanitize_params(prefix, suffix, dir)
+    
+        names = _get_candidate_names()
+        if output_type is bytes:
+            names = map(_os.fsencode, names)
+    
+        for seq in range(TMP_MAX):
+            name = next(names)
+            file = _os.path.join(dir, prefix + name + suffix)
+            _sys.audit("tempfile.mkdtemp", file)
+            try:
+>               _os.mkdir(file, 0o700)
+E               FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\talbo\\temp\\context-engine-ws3-30vwania'
+
+C:\Python314\Lib\tempfile.py:381: FileNotFoundError
+_ ERROR at setup of test_sqlite_transaction_rolls_back_duplicate_partial_state _
+
+    @pytest.fixture
+    def controlled_dir() -> Path:
+>       directory = Path(tempfile.mkdtemp(dir=Path.home() / "temp", prefix="context-engine-ws3-"))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_workstream_3.py:18: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+suffix = '', prefix = 'context-engine-ws3-'
+dir = WindowsPath('C:/Users/talbo/temp')
+
+    def mkdtemp(suffix=None, prefix=None, dir=None):
+        """User-callable function to create and return a unique temporary
+        directory.  The return value is the pathname of the directory.
+    
+        Arguments are as for mkstemp, except that the 'text' argument is
+        not accepted.
+    
+        The directory is readable, writable, and searchable only by the
+        creating user.
+    
+        Caller is responsible for deleting the directory when done with it.
+        """
+    
+        prefix, suffix, dir, output_type = _sanitize_params(prefix, suffix, dir)
+    
+        names = _get_candidate_names()
+        if output_type is bytes:
+            names = map(_os.fsencode, names)
+    
+        for seq in range(TMP_MAX):
+            name = next(names)
+            file = _os.path.join(dir, prefix + name + suffix)
+            _sys.audit("tempfile.mkdtemp", file)
+            try:
+>               _os.mkdir(file, 0o700)
+E               FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\talbo\\temp\\context-engine-ws3-ja5v44zv'
+
+C:\Python314\Lib\tempfile.py:381: FileNotFoundError
+_ ERROR at setup of test_audit_is_durable_authorization_bound_and_secret_safe _
+
+    @pytest.fixture
+    def controlled_dir() -> Path:
+>       directory = Path(tempfile.mkdtemp(dir=Path.home() / "temp", prefix="context-engine-ws3-"))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_workstream_3.py:18: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+suffix = '', prefix = 'context-engine-ws3-'
+dir = WindowsPath('C:/Users/talbo/temp')
+
+    def mkdtemp(suffix=None, prefix=None, dir=None):
+        """User-callable function to create and return a unique temporary
+        directory.  The return value is the pathname of the directory.
+    
+        Arguments are as for mkstemp, except that the 'text' argument is
+        not accepted.
+    
+        The directory is readable, writable, and searchable only by the
+        creating user.
+    
+        Caller is responsible for deleting the directory when done with it.
+        """
+    
+        prefix, suffix, dir, output_type = _sanitize_params(prefix, suffix, dir)
+    
+        names = _get_candidate_names()
+        if output_type is bytes:
+            names = map(_os.fsencode, names)
+    
+        for seq in range(TMP_MAX):
+            name = next(names)
+            file = _os.path.join(dir, prefix + name + suffix)
+            _sys.audit("tempfile.mkdtemp", file)
+            try:
+>               _os.mkdir(file, 0o700)
+E               FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\talbo\\temp\\context-engine-ws3-6lhtu7r9'
+
+C:\Python314\Lib\tempfile.py:381: FileNotFoundError
+_ ERROR at setup of test_lifecycle_persists_and_restarts_with_project_isolation _
+
+    @pytest.fixture
+    def controlled_dir() -> Path:
+>       directory = Path(tempfile.mkdtemp(dir=Path.home() / "temp", prefix="context-engine-ws4-"))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_workstream_4.py:30: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+suffix = '', prefix = 'context-engine-ws4-'
+dir = WindowsPath('C:/Users/talbo/temp')
+
+    def mkdtemp(suffix=None, prefix=None, dir=None):
+        """User-callable function to create and return a unique temporary
+        directory.  The return value is the pathname of the directory.
+    
+        Arguments are as for mkstemp, except that the 'text' argument is
+        not accepted.
+    
+        The directory is readable, writable, and searchable only by the
+        creating user.
+    
+        Caller is responsible for deleting the directory when done with it.
+        """
+    
+        prefix, suffix, dir, output_type = _sanitize_params(prefix, suffix, dir)
+    
+        names = _get_candidate_names()
+        if output_type is bytes:
+            names = map(_os.fsencode, names)
+    
+        for seq in range(TMP_MAX):
+            name = next(names)
+            file = _os.path.join(dir, prefix + name + suffix)
+            _sys.audit("tempfile.mkdtemp", file)
+            try:
+>               _os.mkdir(file, 0o700)
+E               FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\talbo\\temp\\context-engine-ws4-8ggm12w6'
+
+C:\Python314\Lib\tempfile.py:381: FileNotFoundError
+_ ERROR at setup of test_source_registration_row_id_is_not_semantic_identity_or_cross_project_key _
+
+    @pytest.fixture
+    def controlled_dir() -> Path:
+>       directory = Path(tempfile.mkdtemp(dir=Path.home() / "temp", prefix="context-engine-ws4-"))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_workstream_4.py:30: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+suffix = '', prefix = 'context-engine-ws4-'
+dir = WindowsPath('C:/Users/talbo/temp')
+
+    def mkdtemp(suffix=None, prefix=None, dir=None):
+        """User-callable function to create and return a unique temporary
+        directory.  The return value is the pathname of the directory.
+    
+        Arguments are as for mkstemp, except that the 'text' argument is
+        not accepted.
+    
+        The directory is readable, writable, and searchable only by the
+        creating user.
+    
+        Caller is responsible for deleting the directory when done with it.
+        """
+    
+        prefix, suffix, dir, output_type = _sanitize_params(prefix, suffix, dir)
+    
+        names = _get_candidate_names()
+        if output_type is bytes:
+            names = map(_os.fsencode, names)
+    
+        for seq in range(TMP_MAX):
+            name = next(names)
+            file = _os.path.join(dir, prefix + name + suffix)
+            _sys.audit("tempfile.mkdtemp", file)
+            try:
+>               _os.mkdir(file, 0o700)
+E               FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\talbo\\temp\\context-engine-ws4-hmv4kifh'
+
+C:\Python314\Lib\tempfile.py:381: FileNotFoundError
+_ ERROR at setup of test_lifecycle_schema_migrates_deterministically_from_version_one _
+
+    @pytest.fixture
+    def controlled_dir() -> Path:
+>       directory = Path(tempfile.mkdtemp(dir=Path.home() / "temp", prefix="context-engine-ws4-"))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_workstream_4.py:30: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+suffix = '', prefix = 'context-engine-ws4-'
+dir = WindowsPath('C:/Users/talbo/temp')
+
+    def mkdtemp(suffix=None, prefix=None, dir=None):
+        """User-callable function to create and return a unique temporary
+        directory.  The return value is the pathname of the directory.
+    
+        Arguments are as for mkstemp, except that the 'text' argument is
+        not accepted.
+    
+        The directory is readable, writable, and searchable only by the
+        creating user.
+    
+        Caller is responsible for deleting the directory when done with it.
+        """
+    
+        prefix, suffix, dir, output_type = _sanitize_params(prefix, suffix, dir)
+    
+        names = _get_candidate_names()
+        if output_type is bytes:
+            names = map(_os.fsencode, names)
+    
+        for seq in range(TMP_MAX):
+            name = next(names)
+            file = _os.path.join(dir, prefix + name + suffix)
+            _sys.audit("tempfile.mkdtemp", file)
+            try:
+>               _os.mkdir(file, 0o700)
+E               FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\talbo\\temp\\context-engine-ws4-srqfj8sn'
+
+C:\Python314\Lib\tempfile.py:381: FileNotFoundError
+_ ERROR at setup of test_duplicate_lifecycle_write_rolls_back_without_partial_state _
+
+    @pytest.fixture
+    def controlled_dir() -> Path:
+>       directory = Path(tempfile.mkdtemp(dir=Path.home() / "temp", prefix="context-engine-ws4-"))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_workstream_4.py:30: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+suffix = '', prefix = 'context-engine-ws4-'
+dir = WindowsPath('C:/Users/talbo/temp')
+
+    def mkdtemp(suffix=None, prefix=None, dir=None):
+        """User-callable function to create and return a unique temporary
+        directory.  The return value is the pathname of the directory.
+    
+        Arguments are as for mkstemp, except that the 'text' argument is
+        not accepted.
+    
+        The directory is readable, writable, and searchable only by the
+        creating user.
+    
+        Caller is responsible for deleting the directory when done with it.
+        """
+    
+        prefix, suffix, dir, output_type = _sanitize_params(prefix, suffix, dir)
+    
+        names = _get_candidate_names()
+        if output_type is bytes:
+            names = map(_os.fsencode, names)
+    
+        for seq in range(TMP_MAX):
+            name = next(names)
+            file = _os.path.join(dir, prefix + name + suffix)
+            _sys.audit("tempfile.mkdtemp", file)
+            try:
+>               _os.mkdir(file, 0o700)
+E               FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\talbo\\temp\\context-engine-ws4-ph4hje5l'
+
+C:\Python314\Lib\tempfile.py:381: FileNotFoundError
+______ ERROR at setup of test_incompatible_lifecycle_schema_fails_closed ______
+
+    @pytest.fixture
+    def controlled_dir() -> Path:
+>       directory = Path(tempfile.mkdtemp(dir=Path.home() / "temp", prefix="context-engine-ws4-"))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_workstream_4.py:30: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+suffix = '', prefix = 'context-engine-ws4-'
+dir = WindowsPath('C:/Users/talbo/temp')
+
+    def mkdtemp(suffix=None, prefix=None, dir=None):
+        """User-callable function to create and return a unique temporary
+        directory.  The return value is the pathname of the directory.
+    
+        Arguments are as for mkstemp, except that the 'text' argument is
+        not accepted.
+    
+        The directory is readable, writable, and searchable only by the
+        creating user.
+    
+        Caller is responsible for deleting the directory when done with it.
+        """
+    
+        prefix, suffix, dir, output_type = _sanitize_params(prefix, suffix, dir)
+    
+        names = _get_candidate_names()
+        if output_type is bytes:
+            names = map(_os.fsencode, names)
+    
+        for seq in range(TMP_MAX):
+            name = next(names)
+            file = _os.path.join(dir, prefix + name + suffix)
+            _sys.audit("tempfile.mkdtemp", file)
+            try:
+>               _os.mkdir(file, 0o700)
+E               FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\talbo\\temp\\context-engine-ws4-f1ft1zye'
+
+C:\Python314\Lib\tempfile.py:381: FileNotFoundError
+_ ERROR at setup of test_persisted_evidence_order_is_semantic_not_sqlite_row_order _
+
+    @pytest.fixture
+    def controlled_dir() -> Path:
+>       directory = Path(tempfile.mkdtemp(dir=Path.home() / "temp", prefix="context-engine-ws6-"))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_workstream_6.py:29: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+suffix = '', prefix = 'context-engine-ws6-'
+dir = WindowsPath('C:/Users/talbo/temp')
+
+    def mkdtemp(suffix=None, prefix=None, dir=None):
+        """User-callable function to create and return a unique temporary
+        directory.  The return value is the pathname of the directory.
+    
+        Arguments are as for mkstemp, except that the 'text' argument is
+        not accepted.
+    
+        The directory is readable, writable, and searchable only by the
+        creating user.
+    
+        Caller is responsible for deleting the directory when done with it.
+        """
+    
+        prefix, suffix, dir, output_type = _sanitize_params(prefix, suffix, dir)
+    
+        names = _get_candidate_names()
+        if output_type is bytes:
+            names = map(_os.fsencode, names)
+    
+        for seq in range(TMP_MAX):
+            name = next(names)
+            file = _os.path.join(dir, prefix + name + suffix)
+            _sys.audit("tempfile.mkdtemp", file)
+            try:
+>               _os.mkdir(file, 0o700)
+E               FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\talbo\\temp\\context-engine-ws6-6zuivtcj'
+
+C:\Python314\Lib\tempfile.py:381: FileNotFoundError
+_ ERROR at setup of test_denied_construction_is_not_fake_empty_package_and_persistence_is_historical _
+
+    @pytest.fixture
+    def controlled_dir() -> Path:
+>       directory = Path(tempfile.mkdtemp(dir=Path.home() / "temp", prefix="context-engine-ws8-"))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_workstream_8.py:24: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+suffix = '', prefix = 'context-engine-ws8-'
+dir = WindowsPath('C:/Users/talbo/temp')
+
+    def mkdtemp(suffix=None, prefix=None, dir=None):
+        """User-callable function to create and return a unique temporary
+        directory.  The return value is the pathname of the directory.
+    
+        Arguments are as for mkstemp, except that the 'text' argument is
+        not accepted.
+    
+        The directory is readable, writable, and searchable only by the
+        creating user.
+    
+        Caller is responsible for deleting the directory when done with it.
+        """
+    
+        prefix, suffix, dir, output_type = _sanitize_params(prefix, suffix, dir)
+    
+        names = _get_candidate_names()
+        if output_type is bytes:
+            names = map(_os.fsencode, names)
+    
+        for seq in range(TMP_MAX):
+            name = next(names)
+            file = _os.path.join(dir, prefix + name + suffix)
+            _sys.audit("tempfile.mkdtemp", file)
+            try:
+>               _os.mkdir(file, 0o700)
+E               FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\talbo\\temp\\context-engine-ws8-iquqlmsx'
+
+C:\Python314\Lib\tempfile.py:381: FileNotFoundError
+_ ERROR at setup of test_package_construction_schema_migration_and_duplicate_retry_are_explicit _
+
+    @pytest.fixture
+    def controlled_dir() -> Path:
+>       directory = Path(tempfile.mkdtemp(dir=Path.home() / "temp", prefix="context-engine-ws8-"))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_workstream_8.py:24: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+suffix = '', prefix = 'context-engine-ws8-'
+dir = WindowsPath('C:/Users/talbo/temp')
+
+    def mkdtemp(suffix=None, prefix=None, dir=None):
+        """User-callable function to create and return a unique temporary
+        directory.  The return value is the pathname of the directory.
+    
+        Arguments are as for mkstemp, except that the 'text' argument is
+        not accepted.
+    
+        The directory is readable, writable, and searchable only by the
+        creating user.
+    
+        Caller is responsible for deleting the directory when done with it.
+        """
+    
+        prefix, suffix, dir, output_type = _sanitize_params(prefix, suffix, dir)
+    
+        names = _get_candidate_names()
+        if output_type is bytes:
+            names = map(_os.fsencode, names)
+    
+        for seq in range(TMP_MAX):
+            name = next(names)
+            file = _os.path.join(dir, prefix + name + suffix)
+            _sys.audit("tempfile.mkdtemp", file)
+            try:
+>               _os.mkdir(file, 0o700)
+E               FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\talbo\\temp\\context-engine-ws8-z35nppcd'
+
+C:\Python314\Lib\tempfile.py:381: FileNotFoundError
+_ ERROR at setup of test_controlled_full_application_composition_and_durable_audit _
+
+    @pytest.fixture
+    def controlled_dir() -> Path:
+>       directory = Path(tempfile.mkdtemp(dir=Path.home() / "temp", prefix="context-engine-ws9-"))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_workstream_9.py:34: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+suffix = '', prefix = 'context-engine-ws9-'
+dir = WindowsPath('C:/Users/talbo/temp')
+
+    def mkdtemp(suffix=None, prefix=None, dir=None):
+        """User-callable function to create and return a unique temporary
+        directory.  The return value is the pathname of the directory.
+    
+        Arguments are as for mkstemp, except that the 'text' argument is
+        not accepted.
+    
+        The directory is readable, writable, and searchable only by the
+        creating user.
+    
+        Caller is responsible for deleting the directory when done with it.
+        """
+    
+        prefix, suffix, dir, output_type = _sanitize_params(prefix, suffix, dir)
+    
+        names = _get_candidate_names()
+        if output_type is bytes:
+            names = map(_os.fsencode, names)
+    
+        for seq in range(TMP_MAX):
+            name = next(names)
+            file = _os.path.join(dir, prefix + name + suffix)
+            _sys.audit("tempfile.mkdtemp", file)
+            try:
+>               _os.mkdir(file, 0o700)
+E               FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\talbo\\temp\\context-engine-ws9-zgj84_1m'
+
+C:\Python314\Lib\tempfile.py:381: FileNotFoundError
+_ ERROR at setup of test_controlled_denied_and_insufficient_outcomes_do_not_fake_rendering _
+
+    @pytest.fixture
+    def controlled_dir() -> Path:
+>       directory = Path(tempfile.mkdtemp(dir=Path.home() / "temp", prefix="context-engine-ws9-"))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_workstream_9.py:34: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+suffix = '', prefix = 'context-engine-ws9-'
+dir = WindowsPath('C:/Users/talbo/temp')
+
+    def mkdtemp(suffix=None, prefix=None, dir=None):
+        """User-callable function to create and return a unique temporary
+        directory.  The return value is the pathname of the directory.
+    
+        Arguments are as for mkstemp, except that the 'text' argument is
+        not accepted.
+    
+        The directory is readable, writable, and searchable only by the
+        creating user.
+    
+        Caller is responsible for deleting the directory when done with it.
+        """
+    
+        prefix, suffix, dir, output_type = _sanitize_params(prefix, suffix, dir)
+    
+        names = _get_candidate_names()
+        if output_type is bytes:
+            names = map(_os.fsencode, names)
+    
+        for seq in range(TMP_MAX):
+            name = next(names)
+            file = _os.path.join(dir, prefix + name + suffix)
+            _sys.audit("tempfile.mkdtemp", file)
+            try:
+>               _os.mkdir(file, 0o700)
+E               FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\talbo\\temp\\context-engine-ws9-n5xbu8vc'
+
+C:\Python314\Lib\tempfile.py:381: FileNotFoundError
+=========================== short test summary info ===========================
+ERROR tests/test_workstream_3.py::test_explicit_authorized_bootstrap_and_separate_configuration
+ERROR tests/test_workstream_3.py::test_bootstrap_rejects_malformed_unsupported_and_configuration_substitution
+ERROR tests/test_workstream_3.py::test_configuration_cannot_acquire_bootstrap_legitimacy
+ERROR tests/test_workstream_3.py::test_sqlite_initializes_and_restores_historical_evidence_without_elevation
+ERROR tests/test_workstream_3.py::test_sqlite_rejects_incompatible_schema_and_preserves_project_isolation
+ERROR tests/test_workstream_3.py::test_sqlite_transaction_rolls_back_duplicate_partial_state
+ERROR tests/test_workstream_3.py::test_audit_is_durable_authorization_bound_and_secret_safe
+ERROR tests/test_workstream_4.py::test_lifecycle_persists_and_restarts_with_project_isolation
+ERROR tests/test_workstream_4.py::test_source_registration_row_id_is_not_semantic_identity_or_cross_project_key
+ERROR tests/test_workstream_4.py::test_lifecycle_schema_migrates_deterministically_from_version_one
+ERROR tests/test_workstream_4.py::test_duplicate_lifecycle_write_rolls_back_without_partial_state
+ERROR tests/test_workstream_4.py::test_incompatible_lifecycle_schema_fails_closed
+ERROR tests/test_workstream_6.py::test_persisted_evidence_order_is_semantic_not_sqlite_row_order
+ERROR tests/test_workstream_8.py::test_denied_construction_is_not_fake_empty_package_and_persistence_is_historical
+ERROR tests/test_workstream_8.py::test_package_construction_schema_migration_and_duplicate_retry_are_explicit
+ERROR tests/test_workstream_9.py::test_controlled_full_application_composition_and_durable_audit
+ERROR tests/test_workstream_9.py::test_controlled_denied_and_insufficient_outcomes_do_not_fake_rendering
+43 passed, 17 errors in 0.48s

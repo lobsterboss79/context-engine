@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+from contextlib import closing
 from pathlib import Path
 import shutil
 import sqlite3
@@ -118,15 +119,17 @@ def test_source_registration_row_id_is_not_semantic_identity_or_cross_project_ke
 
 def test_lifecycle_schema_migrates_deterministically_from_version_one(controlled_dir: Path) -> None:
     database = controlled_dir / "version-one.sqlite"
-    with sqlite3.connect(database) as connection:
-        connection.execute("CREATE TABLE schema_version (version INTEGER NOT NULL)")
-        connection.execute("INSERT INTO schema_version VALUES (1)")
-        connection.execute("CREATE TABLE evidence (row_id INTEGER PRIMARY KEY, project_identity TEXT NOT NULL, semantic_identity TEXT NOT NULL, historical_reference TEXT NOT NULL, UNIQUE(project_identity, semantic_identity))")
-        connection.execute("CREATE TABLE audit (row_id INTEGER PRIMARY KEY, project_identity TEXT NOT NULL, outcome TEXT NOT NULL, detail TEXT NOT NULL)")
+    with closing(sqlite3.connect(database)) as connection:
+        with connection:
+            connection.execute("CREATE TABLE schema_version (version INTEGER NOT NULL)")
+            connection.execute("INSERT INTO schema_version VALUES (1)")
+            connection.execute("CREATE TABLE evidence (row_id INTEGER PRIMARY KEY, project_identity TEXT NOT NULL, semantic_identity TEXT NOT NULL, historical_reference TEXT NOT NULL, UNIQUE(project_identity, semantic_identity))")
+            connection.execute("CREATE TABLE audit (row_id INTEGER PRIMARY KEY, project_identity TEXT NOT NULL, outcome TEXT NOT NULL, detail TEXT NOT NULL)")
     SQLiteStateStore(database).initialize()
-    with sqlite3.connect(database) as connection:
-        version = connection.execute("SELECT version FROM schema_version").fetchone()
-        table = connection.execute("SELECT name FROM sqlite_master WHERE type='table' AND name='source_registration'").fetchone()
+    with closing(sqlite3.connect(database)) as connection:
+        with connection:
+            version = connection.execute("SELECT version FROM schema_version").fetchone()
+            table = connection.execute("SELECT name FROM sqlite_master WHERE type='table' AND name='source_registration'").fetchone()
     assert version == (CURRENT_SCHEMA_VERSION,)
     assert table == ("source_registration",)
 
@@ -143,8 +146,9 @@ def test_duplicate_lifecycle_write_rolls_back_without_partial_state(controlled_d
 
 def test_incompatible_lifecycle_schema_fails_closed(controlled_dir: Path) -> None:
     database = controlled_dir / "incompatible.sqlite"
-    with sqlite3.connect(database) as connection:
-        connection.execute("CREATE TABLE schema_version (version INTEGER NOT NULL)")
-        connection.execute("INSERT INTO schema_version VALUES (99)")
+    with closing(sqlite3.connect(database)) as connection:
+        with connection:
+            connection.execute("CREATE TABLE schema_version (version INTEGER NOT NULL)")
+            connection.execute("INSERT INTO schema_version VALUES (99)")
     with pytest.raises(StateCompatibilityError):
         SQLiteStateStore(database).initialize()

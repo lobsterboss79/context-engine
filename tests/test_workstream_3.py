@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+from contextlib import closing
 from pathlib import Path
 import shutil
 import sqlite3
@@ -74,11 +75,21 @@ def test_sqlite_initializes_and_restores_historical_evidence_without_elevation(c
     assert restored.authority_basis is None
 
 
+def test_application_owned_sqlite_connection_is_released_after_operation(controlled_dir: Path) -> None:
+    database = controlled_dir / "released.sqlite"
+    store = SQLiteStateStore(database)
+    store.initialize()
+    store.save_evidence(PersistedEvidence("project-a", "claim-a", "historical observation"))
+    database.unlink()
+    assert not database.exists()
+
+
 def test_sqlite_rejects_incompatible_schema_and_preserves_project_isolation(controlled_dir: Path) -> None:
     database = controlled_dir / "state.sqlite"
-    with sqlite3.connect(database) as connection:
-        connection.execute("CREATE TABLE schema_version (version INTEGER NOT NULL)")
-        connection.execute("INSERT INTO schema_version VALUES (99)")
+    with closing(sqlite3.connect(database)) as connection:
+        with connection:
+            connection.execute("CREATE TABLE schema_version (version INTEGER NOT NULL)")
+            connection.execute("INSERT INTO schema_version VALUES (99)")
     with pytest.raises(StateCompatibilityError):
         SQLiteStateStore(database).initialize()
     database.unlink()

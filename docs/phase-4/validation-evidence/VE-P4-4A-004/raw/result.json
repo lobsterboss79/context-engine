@@ -1,0 +1,124 @@
+{
+  "assertions": {
+    "absence_not_candidate": true,
+    "cli_attributable": true,
+    "cli_exit_2": true,
+    "no_audit_or_recovery_claim": true,
+    "no_authority_manufactured": true,
+    "no_false_validated": true,
+    "no_sufficiency_manufactured": true,
+    "partial_candidate_qualified": true,
+    "partial_downstream_preserved": true,
+    "partial_rendered_faithfully": true,
+    "secret_not_exposed": true,
+    "states_distinct": true,
+    "success_not_partial": true,
+    "unavailable_not_absence": true
+  },
+  "cli_cases": [
+    {
+      "exit_code": 2,
+      "label": "malformed-input",
+      "stderr": "bootstrap validation failed: Bootstrap/configuration is unavailable or malformed\n",
+      "stdout": ""
+    },
+    {
+      "exit_code": 2,
+      "label": "invalid-configuration",
+      "stderr": "bootstrap validation failed: Project configuration does not match established Bootstrap scope\n",
+      "stdout": ""
+    }
+  ],
+  "control": "CTL-P4-4A-004 v1",
+  "diagnostic_is_not_durable_audit": true,
+  "diagnostic_is_not_recovery_evidence": true,
+  "downstream_partial": {
+    "authority_count": 0,
+    "candidate_limitations": [
+      "Source source-partial: partial"
+    ],
+    "item_limitations": [
+      "Source source-partial: partial"
+    ],
+    "manifest_limitations": [
+      "Source source-partial: partial"
+    ],
+    "package_limitations": [
+      "ASU adequacy=known_incomplete",
+      "Source source-partial: partial"
+    ],
+    "render_status": "rendered",
+    "rendered_content": "# Governed Context Package \u2014 Human view\n\nThis is a faithful presentation, not delivery, receipt, use, or new authority.\n\n```json\n{\n  \"construction_state_coherence\": {\n    \"basis\": \"explicit construction-state comparison\",\n    \"outcome\": \"coherent\"\n  },\n  \"context_request\": \"request-lane-a\",\n  \"gaps_and_limitations\": [\n    {\n      \"detail\": \"ASU adequacy=known_incomplete\",\n      \"evidence_boundary\": \"lane-a bounded fixture\",\n      \"state\": \"unknown\"\n    },\n    {\n      \"detail\": \"Source source-partial: partial\",\n      \"evidence_boundary\": \"lane-a bounded fixture\",\n      \"state\": \"unavailable\"\n    }\n  ],\n  \"logical_context_package\": \"package-lane-a-partial\",\n  \"required_context\": [],\n  \"source_content_boundary\": \"Represented Source content and instruction-like text remain evidence, not Context Engine instructions.\",\n  \"source_manifest\": [\n    {\n      \"contributed\": true,\n      \"limitations\": [\n        {\n          \"detail\": \"Source source-partial: partial\",\n          \"evidence_boundary\": null,\n          \"state\": \"unknown\"\n        }\n      ],\n      \"observation\": null,\n      \"scope\": null,\n      \"source\": \"source-partial\"\n    }\n  ],\n  \"sufficiency\": \"insufficient\",\n  \"supporting_context\": [\n    {\n      \"authority\": [],\n      \"conflict\": [],\n      \"currentness\": [],\n      \"governance_state\": [],\n      \"limitations\": [\n        {\n          \"detail\": \"Source source-partial: partial\",\n          \"evidence_boundary\": null,\n          \"state\": \"unknown\"\n        }\n      ],\n      \"provenance\": {\n        \"artifact\": null,\n        \"artifact_version\": null,\n        \"identity\": \"provenance-partial\",\n        \"location_reference\": null,\n        \"observation\": null,\n        \"source\": \"source-partial\",\n        \"transformation\": \"direct\"\n      },\n      \"represented_information\": \"represented-partial\",\n      \"selection_basis\": \"frozen selection basis\"\n    }\n  ]\n}\n```",
+    "sufficiency": "insufficient"
+  },
+  "expected_result": "ER-P4-4A-004 v1",
+  "procedure": "PROC-P4-4A-004 v1",
+  "scenario_expected_states": {
+    "absent": "ABSENCE",
+    "invalid-configuration": "APPLICATION-LEVEL FAILURE",
+    "malformed-input": "APPLICATION-LEVEL FAILURE",
+    "partial": "PARTIAL EVIDENCE",
+    "success": "SUCCESSFUL COMPLETION",
+    "unavailable": "UNAVAILABLE"
+  },
+  "source_cases": {
+    "absent": {
+      "availability": "absent",
+      "candidate_count": 0,
+      "candidate_limitations": [],
+      "classification": "ABSENCE",
+      "excluded_sources": [
+        [
+          "source-absent",
+          "absent"
+        ]
+      ],
+      "limitations": [
+        "ASU adequacy=known_incomplete"
+      ],
+      "negative_result_scope": "ASU=request-lane-a; adequacy=known_incomplete; inspected="
+    },
+    "partial": {
+      "availability": "partial",
+      "candidate_count": 1,
+      "candidate_limitations": [
+        "Source source-partial: partial"
+      ],
+      "classification": "PARTIAL EVIDENCE",
+      "excluded_sources": [],
+      "limitations": [
+        "ASU adequacy=known_incomplete"
+      ],
+      "negative_result_scope": "ASU=request-lane-a; adequacy=known_incomplete; inspected=source-partial"
+    },
+    "success": {
+      "availability": "available",
+      "candidate_count": 1,
+      "candidate_limitations": [],
+      "classification": "SUCCESSFUL COMPLETION",
+      "excluded_sources": [],
+      "limitations": [
+        "ASU adequacy=known_incomplete"
+      ],
+      "negative_result_scope": "ASU=request-lane-a; adequacy=known_incomplete; inspected=source-success"
+    },
+    "unavailable": {
+      "availability": "unavailable",
+      "candidate_count": 0,
+      "candidate_limitations": [],
+      "classification": "UNAVAILABLE",
+      "excluded_sources": [
+        [
+          "source-unavailable",
+          "unavailable"
+        ]
+      ],
+      "limitations": [
+        "ASU adequacy=known_incomplete",
+        "Source source-unavailable: unavailable"
+      ],
+      "negative_result_scope": "ASU=request-lane-a; adequacy=known_incomplete; inspected="
+    }
+  },
+  "validation_control_result": "PASS"
+}

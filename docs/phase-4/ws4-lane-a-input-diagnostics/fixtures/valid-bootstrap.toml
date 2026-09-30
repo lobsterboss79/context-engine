@@ -1,0 +1,7 @@
+version = 1
+
+[bootstrap]
+project = "lane-a-project"
+scope = "project"
+governance_basis = "lane-a-governance"
+project_configuration = "mismatched-project.toml"
