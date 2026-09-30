@@ -1,0 +1,256 @@
+{
+  "assertions": {
+    "backup_integrity_ok": true,
+    "backup_metadata_matches_validation": true,
+    "construction_remains_insufficient": true,
+    "failure_left_no_staging_file": true,
+    "failure_preserved_beta_semantics": true,
+    "failure_preserved_target_bytes": true,
+    "historical_currentness_unknown": true,
+    "no_authority_basis": true,
+    "project_beta_absent_after_restore": true,
+    "qualification_is_historical_only": true,
+    "qualification_matches_backup": true,
+    "restored_integrity_ok": true,
+    "source_restored_semantic_projection_matches": true,
+    "successor_left_no_staging_file": true,
+    "unauthorized_audit_denied": true
+  },
+  "backup_metadata": {
+    "backup_identity": "backup-p4-4c-001-alpha",
+    "created_at": "2026-09-30T16:22:50.831483+00:00",
+    "purpose": "Phase 4 WS4 Lane C controlled local recovery validation",
+    "retention_basis": "retain only in this VE-P4-4C-001 record; no scheduler, duration, or deletion policy selected",
+    "schema_version": 5
+  },
+  "control": "ER-P4-4C-001 v1",
+  "hashes": {
+    "backup-alpha.sqlite": "a197265f66b3f75a118b7d9fa58755f5765b905d448d23f749ad9c33d12fbf9c",
+    "predecessor-failed-target-beta.sqlite": "1a188272fd5c2aed4b7b789641e5e857a925eae1ec6790da98773e926a89be8d",
+    "source-alpha.sqlite": "ba1cc8abd23b6d6247564751ed139ac2433b91d4d1c6245550571fe6b5c612fa",
+    "target.sqlite": "bae5ca6be1364c82d1541502f2ace5502ef1773d59e10f4dafeb8af39c439ecd"
+  },
+  "integrity": {
+    "backup-alpha.sqlite": "ok",
+    "predecessor-failed-target-beta.sqlite": "ok",
+    "source-alpha.sqlite": "ok",
+    "target.sqlite": "ok"
+  },
+  "projections": {
+    "predecessor_beta": {
+      "artifacts": [],
+      "audit_authorized": [
+        [
+          "controlled-target",
+          "pre-existing Beta audit"
+        ]
+      ],
+      "constructions": [],
+      "evidence": [],
+      "observations": [],
+      "representations": [],
+      "sources": [
+        {
+          "availability": "available",
+          "locator": "fixtures/beta.md",
+          "project_identity": "project-beta",
+          "scope": "controlled-fixture",
+          "source_identity": "source-beta",
+          "source_type": "markdown"
+        }
+      ],
+      "transformations": []
+    },
+    "restored_alpha": {
+      "artifacts": [
+        {
+          "artifact_identity": "artifact-alpha",
+          "artifact_version_identity": "artifact-alpha-v1",
+          "locator": "fixtures/alpha.md",
+          "observation_identity": "observation-alpha",
+          "original_content": "historical alpha artifact",
+          "project_identity": "project-alpha",
+          "source_identity": "source-alpha"
+        }
+      ],
+      "audit_authorized": [
+        [
+          "controlled-construction",
+          "historical Alpha audit"
+        ]
+      ],
+      "constructions": [
+        {
+          "coherence": "coherent_with_qualification",
+          "evidence": "historical construction evidence",
+          "package_identity": "package-alpha",
+          "project_identity": "project-alpha",
+          "record_identity": "construction-alpha",
+          "request_identity": "request-alpha",
+          "status": "completed",
+          "sufficiency": "insufficient"
+        }
+      ],
+      "evidence": [
+        {
+          "authority_basis": null,
+          "currentness": "unknown",
+          "historical_reference": "historical Alpha evidence",
+          "project_identity": "project-alpha",
+          "semantic_identity": "claim-alpha"
+        }
+      ],
+      "observations": [
+        {
+          "evidence": "historical observation",
+          "observation_identity": "observation-alpha",
+          "observed_at": "2026-09-30T00:00:00+00:00",
+          "outcome": "observed",
+          "project_identity": "project-alpha",
+          "source_identity": "source-alpha"
+        }
+      ],
+      "representations": [
+        {
+          "artifact_version_identity": "artifact-alpha-v1",
+          "evidence": "historical provenance-bearing representation",
+          "location_reference": "line 1",
+          "project_identity": "project-alpha",
+          "provenance_identity": "provenance-alpha",
+          "representation_identity": "representation-alpha"
+        }
+      ],
+      "sources": [
+        {
+          "availability": "available",
+          "locator": "fixtures/alpha.md",
+          "project_identity": "project-alpha",
+          "scope": "controlled-fixture",
+          "source_identity": "source-alpha",
+          "source_type": "markdown"
+        }
+      ],
+      "transformations": [
+        {
+          "artifact_version_identity": "artifact-alpha-v1",
+          "configuration": "controlled-fixture",
+          "evidence": "historical transformation",
+          "outcome": "represented",
+          "parser": "markdown-it",
+          "project_identity": "project-alpha",
+          "transformation_identity": "transformation-alpha"
+        }
+      ]
+    },
+    "restored_beta": {
+      "artifacts": [],
+      "audit_authorized": [],
+      "constructions": [],
+      "evidence": [],
+      "observations": [],
+      "representations": [],
+      "sources": [],
+      "transformations": []
+    },
+    "source_alpha": {
+      "artifacts": [
+        {
+          "artifact_identity": "artifact-alpha",
+          "artifact_version_identity": "artifact-alpha-v1",
+          "locator": "fixtures/alpha.md",
+          "observation_identity": "observation-alpha",
+          "original_content": "historical alpha artifact",
+          "project_identity": "project-alpha",
+          "source_identity": "source-alpha"
+        }
+      ],
+      "audit_authorized": [
+        [
+          "controlled-construction",
+          "historical Alpha audit"
+        ]
+      ],
+      "constructions": [
+        {
+          "coherence": "coherent_with_qualification",
+          "evidence": "historical construction evidence",
+          "package_identity": "package-alpha",
+          "project_identity": "project-alpha",
+          "record_identity": "construction-alpha",
+          "request_identity": "request-alpha",
+          "status": "completed",
+          "sufficiency": "insufficient"
+        }
+      ],
+      "evidence": [
+        {
+          "authority_basis": null,
+          "currentness": "unknown",
+          "historical_reference": "historical Alpha evidence",
+          "project_identity": "project-alpha",
+          "semantic_identity": "claim-alpha"
+        }
+      ],
+      "observations": [
+        {
+          "evidence": "historical observation",
+          "observation_identity": "observation-alpha",
+          "observed_at": "2026-09-30T00:00:00+00:00",
+          "outcome": "observed",
+          "project_identity": "project-alpha",
+          "source_identity": "source-alpha"
+        }
+      ],
+      "representations": [
+        {
+          "artifact_version_identity": "artifact-alpha-v1",
+          "evidence": "historical provenance-bearing representation",
+          "location_reference": "line 1",
+          "project_identity": "project-alpha",
+          "provenance_identity": "provenance-alpha",
+          "representation_identity": "representation-alpha"
+        }
+      ],
+      "sources": [
+        {
+          "availability": "available",
+          "locator": "fixtures/alpha.md",
+          "project_identity": "project-alpha",
+          "scope": "controlled-fixture",
+          "source_identity": "source-alpha",
+          "source_type": "markdown"
+        }
+      ],
+      "transformations": [
+        {
+          "artifact_version_identity": "artifact-alpha-v1",
+          "configuration": "controlled-fixture",
+          "evidence": "historical transformation",
+          "outcome": "represented",
+          "parser": "markdown-it",
+          "project_identity": "project-alpha",
+          "transformation_identity": "transformation-alpha"
+        }
+      ]
+    }
+  },
+  "recovery_qualification": {
+    "backup_identity": "backup-p4-4c-001-alpha",
+    "qualification": "historical-only; currentness, Authority, Governance State, and present authorization require independent re-establishment",
+    "restored_at": "2026-09-30T16:22:50.877429+00:00"
+  },
+  "scenario": {
+    "predecessor": {
+      "exception_type": "RestoreError",
+      "message": "restore failed before operational state was replaced",
+      "scenario_state": "RECOVERY REQUIRED"
+    },
+    "successor": "RESTORED HISTORICAL-ONLY STATE"
+  },
+  "unauthorized_audit": {
+    "denied": true,
+    "exception_type": "PermissionError",
+    "message": "audit access is authorization-bound"
+  },
+  "validation_result": "PASS"
+}
