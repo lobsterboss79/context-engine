@@ -1,0 +1,14 @@
+branch=phase4-ws4-input-diagnostics-win
+baseline_ancestry=True
+predecessor_commit=False
+investigation_commit=False
+v1_unchanged=True
+source_tests_unchanged=True
+shared_unchanged=True
+lane_b_c_unchanged=True
+fresh_namespace_before_creation=True
+two_field_identity_static_check=True
+DIRECT_SEMANTICIDENTITY_CALLS=1; TWO_FIELD=YES
+Microsoft Windows NT 10.0.22631.0
+Python 3.14.7
+git version 2.53.0.windows.2
