@@ -1,5 +1,7 @@
 """Narrow SQLite EB-03 adapter; rows never define semantic identity."""
 from __future__ import annotations
+from collections.abc import Iterator
+from contextlib import contextmanager
 from dataclasses import dataclass
 from datetime import UTC, datetime
 from pathlib import Path
@@ -124,6 +126,18 @@ def _reject_secret(value: str) -> None:
     if any(marker in value.lower() for marker in ("secret=", "password=", "token=", "api_key=")):
         raise SecretValueError("secret values are excluded from durable state and audit")
 
+
+@contextmanager
+def _managed_sqlite_connection(database: str | Path, *, uri: bool = False) -> Iterator[sqlite3.Connection]:
+    """Commit or roll back one adapter-owned connection, then always release it."""
+    connection = sqlite3.connect(database, uri=uri)
+    try:
+        with connection:
+            yield connection
+    finally:
+        connection.close()
+
+
 class SQLiteStateStore:
     def __init__(self, database: Path) -> None:
         self._database = database
@@ -132,10 +146,21 @@ class SQLiteStateStore:
         connection = sqlite3.connect(self._database)
         connection.execute("PRAGMA foreign_keys = ON")
         return connection
+
+    @contextmanager
+    def _connection(self) -> Iterator[sqlite3.Connection]:
+        """Manage one operational connection without extending its native handle lifetime."""
+        connection = self._connect()
+        try:
+            with connection:
+                yield connection
+        finally:
+            connection.close()
+
     def initialize(self) -> None:
         """Initialize or deterministically advance the application-owned schema."""
 
-        with self._connect() as connection:
+        with self._connection() as connection:
             exists = connection.execute(
                 "SELECT name FROM sqlite_master WHERE type='table' AND name='schema_version'"
             ).fetchone()
@@ -255,10 +280,10 @@ class SQLiteStateStore:
 
     def save_evidence(self, evidence: PersistedEvidence) -> None:
         _reject_secret(evidence.historical_reference)
-        with self._connect() as connection:
+        with self._connection() as connection:
             connection.execute("INSERT INTO evidence(project_identity, semantic_identity, historical_reference) VALUES (?, ?, ?)", (evidence.project_identity, evidence.semantic_identity, evidence.historical_reference))
     def restore_evidence(self, project_identity: str, semantic_identity: str) -> PersistedEvidence | None:
-        with self._connect() as connection:
+        with self._connection() as connection:
             row = connection.execute("SELECT project_identity, semantic_identity, historical_reference FROM evidence WHERE project_identity=? AND semantic_identity=?", (project_identity, semantic_identity)).fetchone()
         return PersistedEvidence(*row) if row else None
 
@@ -271,7 +296,7 @@ class SQLiteStateStore:
 
         for value in (registration.source_identity, registration.scope, registration.locator or ""):
             _reject_secret(value)
-        with self._connect() as connection:
+        with self._connection() as connection:
             connection.execute(
                 "INSERT INTO source_registration(project_identity, source_identity, source_type, "
                 "scope, availability, locator) VALUES (?, ?, ?, ?, ?, ?)",
@@ -288,7 +313,7 @@ class SQLiteStateStore:
     def source_registrations_for_project(
         self, project_identity: str
     ) -> tuple[PersistedSourceRegistration, ...]:
-        with self._connect() as connection:
+        with self._connection() as connection:
             rows = connection.execute(
                 "SELECT project_identity, source_identity, source_type, scope, availability, locator "
                 "FROM source_registration WHERE project_identity=? ORDER BY source_identity",
@@ -298,12 +323,12 @@ class SQLiteStateStore:
 
     def write_audit(self, project_identity: str, outcome: str, detail: str) -> None:
         _reject_secret(detail)
-        with self._connect() as connection:
+        with self._connection() as connection:
             connection.execute("INSERT INTO audit(project_identity, outcome, detail) VALUES (?, ?, ?)", (project_identity, outcome, detail))
     def audit_for_project(self, project_identity: str, *, authorized: bool) -> tuple[tuple[str, str], ...]:
         if not authorized:
             raise PermissionError("audit access is authorization-bound")
-        with self._connect() as connection:
+        with self._connection() as connection:
             return tuple(
                 connection.execute(
                     "SELECT outcome, detail FROM audit WHERE project_identity=?", (project_identity,)
@@ -312,7 +337,7 @@ class SQLiteStateStore:
 
     def save_observation(self, observation: PersistedObservation) -> None:
         self._reject_evidence_values(observation.project_identity, observation.observation_identity, observation.source_identity, observation.evidence)
-        with self._connect() as connection:
+        with self._connection() as connection:
             connection.execute(
                 "INSERT INTO source_observation(project_identity, observation_identity, source_identity, observed_at, outcome, evidence) VALUES (?, ?, ?, ?, ?, ?)",
                 (observation.project_identity, observation.observation_identity, observation.source_identity, observation.observed_at, observation.outcome, observation.evidence),
@@ -320,7 +345,7 @@ class SQLiteStateStore:
 
     def save_artifact_evidence(self, artifact: PersistedArtifactEvidence) -> None:
         self._reject_evidence_values(artifact.project_identity, artifact.artifact_identity, artifact.artifact_version_identity, artifact.locator, artifact.original_content)
-        with self._connect() as connection:
+        with self._connection() as connection:
             connection.execute(
                 "INSERT INTO artifact_evidence(project_identity, artifact_identity, artifact_version_identity, source_identity, locator, original_content, observation_identity) VALUES (?, ?, ?, ?, ?, ?, ?)",
                 (artifact.project_identity, artifact.artifact_identity, artifact.artifact_version_identity, artifact.source_identity, artifact.locator, artifact.original_content, artifact.observation_identity),
@@ -328,7 +353,7 @@ class SQLiteStateStore:
 
     def save_transformation(self, transformation: PersistedTransformation) -> None:
         self._reject_evidence_values(transformation.project_identity, transformation.transformation_identity, transformation.evidence)
-        with self._connect() as connection:
+        with self._connection() as connection:
             connection.execute(
                 "INSERT INTO transformation_evidence(project_identity, transformation_identity, artifact_version_identity, parser, configuration, outcome, evidence) VALUES (?, ?, ?, ?, ?, ?, ?)",
                 (transformation.project_identity, transformation.transformation_identity, transformation.artifact_version_identity, transformation.parser, transformation.configuration, transformation.outcome, transformation.evidence),
@@ -336,7 +361,7 @@ class SQLiteStateStore:
 
     def save_representation(self, representation: PersistedRepresentation) -> None:
         self._reject_evidence_values(representation.project_identity, representation.representation_identity, representation.evidence)
-        with self._connect() as connection:
+        with self._connection() as connection:
             connection.execute(
                 "INSERT INTO representation_evidence(project_identity, representation_identity, artifact_version_identity, provenance_identity, location_reference, evidence) VALUES (?, ?, ?, ?, ?, ?)",
                 (representation.project_identity, representation.representation_identity, representation.artifact_version_identity, representation.provenance_identity, representation.location_reference, representation.evidence),
@@ -344,7 +369,7 @@ class SQLiteStateStore:
 
     def save_package_construction(self, record: PersistedPackageConstruction) -> None:
         self._reject_evidence_values(record.project_identity, record.record_identity, record.request_identity, record.evidence)
-        with self._connect() as connection:
+        with self._connection() as connection:
             connection.execute(
                 "INSERT INTO package_construction(project_identity, record_identity, request_identity, package_identity, status, sufficiency, coherence, evidence) VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
                 (record.project_identity, record.record_identity, record.request_identity, record.package_identity, record.status, record.sufficiency, record.coherence, record.evidence),
@@ -356,27 +381,27 @@ class SQLiteStateStore:
             _reject_secret(value)
 
     def observations_for_project(self, project_identity: str) -> tuple[PersistedObservation, ...]:
-        with self._connect() as connection:
+        with self._connection() as connection:
             rows = connection.execute("SELECT project_identity, observation_identity, source_identity, observed_at, outcome, evidence FROM source_observation WHERE project_identity=? ORDER BY observation_identity", (project_identity,)).fetchall()
         return tuple(PersistedObservation(*row) for row in rows)
 
     def artifact_evidence_for_project(self, project_identity: str) -> tuple[PersistedArtifactEvidence, ...]:
-        with self._connect() as connection:
+        with self._connection() as connection:
             rows = connection.execute("SELECT project_identity, artifact_identity, artifact_version_identity, source_identity, locator, original_content, observation_identity FROM artifact_evidence WHERE project_identity=? ORDER BY artifact_version_identity", (project_identity,)).fetchall()
         return tuple(PersistedArtifactEvidence(*row) for row in rows)
 
     def transformations_for_project(self, project_identity: str) -> tuple[PersistedTransformation, ...]:
-        with self._connect() as connection:
+        with self._connection() as connection:
             rows = connection.execute("SELECT project_identity, transformation_identity, artifact_version_identity, parser, configuration, outcome, evidence FROM transformation_evidence WHERE project_identity=? ORDER BY transformation_identity", (project_identity,)).fetchall()
         return tuple(PersistedTransformation(*row) for row in rows)
 
     def representations_for_project(self, project_identity: str) -> tuple[PersistedRepresentation, ...]:
-        with self._connect() as connection:
+        with self._connection() as connection:
             rows = connection.execute("SELECT project_identity, representation_identity, artifact_version_identity, provenance_identity, location_reference, evidence FROM representation_evidence WHERE project_identity=? ORDER BY representation_identity", (project_identity,)).fetchall()
         return tuple(PersistedRepresentation(*row) for row in rows)
 
     def package_constructions_for_project(self, project_identity: str) -> tuple[PersistedPackageConstruction, ...]:
-        with self._connect() as connection:
+        with self._connection() as connection:
             rows = connection.execute("SELECT project_identity, record_identity, request_identity, package_identity, status, sufficiency, coherence, evidence FROM package_construction WHERE project_identity=? ORDER BY record_identity", (project_identity,)).fetchall()
         return tuple(PersistedPackageConstruction(*row) for row in rows)
 
@@ -415,7 +440,7 @@ class SQLiteStateStore:
         # Schema/readiness is checked before any destination is created.
         self._validate_operational_database()
         try:
-            with self._connect() as source, sqlite3.connect(destination) as target:
+            with self._connection() as source, _managed_sqlite_connection(destination) as target:
                 source.backup(target)
                 target.execute(
                     "CREATE TABLE context_engine_backup_metadata (backup_identity TEXT NOT NULL, "
@@ -441,7 +466,7 @@ class SQLiteStateStore:
 
     def _validate_operational_database(self) -> None:
         try:
-            with self._connect() as connection:
+            with self._connection() as connection:
                 if connection.execute("PRAGMA integrity_check").fetchone()[0] != "ok":
                     raise StateCompatibilityError("operational database failed integrity check")
                 if self._schema_version(connection) != CURRENT_SCHEMA_VERSION:
@@ -455,7 +480,7 @@ class SQLiteStateStore:
         if not backup.is_file():
             raise BackupValidationError("backup is unavailable")
         try:
-            with sqlite3.connect(f"file:{backup}?mode=ro", uri=True) as connection:
+            with _managed_sqlite_connection(f"file:{backup}?mode=ro", uri=True) as connection:
                 integrity = connection.execute("PRAGMA integrity_check").fetchone()
                 if integrity is None or integrity[0] != "ok":
                     raise BackupValidationError("backup integrity check failed")
@@ -501,14 +526,14 @@ class SQLiteStateStore:
         staging = Path(staging_name)
         qualification = RecoveryQualification(metadata.backup_identity, datetime.now(UTC).isoformat())
         try:
-            with sqlite3.connect(f"file:{backup}?mode=ro", uri=True) as source, sqlite3.connect(staging) as target:
+            with _managed_sqlite_connection(f"file:{backup}?mode=ro", uri=True) as source, _managed_sqlite_connection(staging) as target:
                 source.backup(target)
                 target.execute(
                     "INSERT INTO recovery_qualification(backup_identity, restored_at, qualification) VALUES (?, ?, ?)",
                     (qualification.backup_identity, qualification.restored_at, qualification.qualification),
                 )
             self.validate_backup(staging)
-            with sqlite3.connect(staging) as check:
+            with _managed_sqlite_connection(staging) as check:
                 if check.execute("PRAGMA integrity_check").fetchone()[0] != "ok":
                     raise BackupValidationError("staged restore integrity check failed")
             os.replace(staging, self._database)
@@ -520,7 +545,7 @@ class SQLiteStateStore:
     def recovery_qualification(self) -> RecoveryQualification | None:
         """Return the latest restore qualification without claiming currentness."""
         try:
-            with self._connect() as connection:
+            with self._connection() as connection:
                 row = connection.execute(
                     "SELECT backup_identity, restored_at, qualification FROM recovery_qualification "
                     "ORDER BY row_id DESC LIMIT 1"
