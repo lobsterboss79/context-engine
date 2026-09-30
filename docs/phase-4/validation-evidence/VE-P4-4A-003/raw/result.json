@@ -1,0 +1,95 @@
+{
+  "assertions": {
+    "absence_not_candidate": true,
+    "cli_attributable": true,
+    "cli_exit_2": true,
+    "no_audit_or_recovery_claim": true,
+    "no_false_validated": true,
+    "partial_preserved": false,
+    "secret_not_exposed": true,
+    "states_distinct": true,
+    "success_complete": true,
+    "unavailable_not_absence": true
+  },
+  "cli_cases": [
+    {
+      "exit_code": 2,
+      "label": "malformed-input",
+      "stderr": "bootstrap validation failed: Bootstrap/configuration is unavailable or malformed\n",
+      "stdout": ""
+    },
+    {
+      "exit_code": 2,
+      "label": "invalid-configuration",
+      "stderr": "bootstrap validation failed: Project configuration does not match established Bootstrap scope\n",
+      "stdout": ""
+    }
+  ],
+  "control": "CTL-P4-4A-002 v1",
+  "diagnostic_is_not_durable_audit": true,
+  "diagnostic_is_not_recovery_evidence": true,
+  "expected_result": "ER-P4-4A-002 v1",
+  "procedure": "PROC-P4-4A-002 v1",
+  "scenario_expected_states": {
+    "absent": "ABSENCE",
+    "invalid-configuration": "APPLICATION-LEVEL FAILURE",
+    "malformed-input": "APPLICATION-LEVEL FAILURE",
+    "partial": "PARTIAL EVIDENCE",
+    "success": "SUCCESSFUL COMPLETION",
+    "unavailable": "UNAVAILABLE"
+  },
+  "source_cases": {
+    "absent": {
+      "availability": "absent",
+      "candidate_count": 0,
+      "classification": "ABSENCE",
+      "excluded_sources": [
+        [
+          "source-absent",
+          "absent"
+        ]
+      ],
+      "limitations": [
+        "ASU adequacy=known_incomplete"
+      ],
+      "negative_result_scope": "ASU=request-lane-a; adequacy=known_incomplete; inspected="
+    },
+    "partial": {
+      "availability": "partial",
+      "candidate_count": 1,
+      "classification": "PARTIAL EVIDENCE",
+      "excluded_sources": [],
+      "limitations": [
+        "ASU adequacy=known_incomplete"
+      ],
+      "negative_result_scope": "ASU=request-lane-a; adequacy=known_incomplete; inspected=source-partial"
+    },
+    "success": {
+      "availability": "available",
+      "candidate_count": 1,
+      "classification": "SUCCESSFUL COMPLETION",
+      "excluded_sources": [],
+      "limitations": [
+        "ASU adequacy=known_incomplete"
+      ],
+      "negative_result_scope": "ASU=request-lane-a; adequacy=known_incomplete; inspected=source-success"
+    },
+    "unavailable": {
+      "availability": "unavailable",
+      "candidate_count": 0,
+      "classification": "UNAVAILABLE",
+      "excluded_sources": [
+        [
+          "source-unavailable",
+          "unavailable"
+        ]
+      ],
+      "limitations": [
+        "ASU adequacy=known_incomplete",
+        "Source source-unavailable: unavailable"
+      ],
+      "negative_result_scope": "ASU=request-lane-a; adequacy=known_incomplete; inspected="
+    }
+  },
+  "validation_control_result": "FAIL"
+}
