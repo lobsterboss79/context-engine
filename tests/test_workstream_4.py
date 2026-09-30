@@ -146,8 +146,9 @@ def test_duplicate_lifecycle_write_rolls_back_without_partial_state(controlled_d
 
 def test_incompatible_lifecycle_schema_fails_closed(controlled_dir: Path) -> None:
     database = controlled_dir / "incompatible.sqlite"
-    with sqlite3.connect(database) as connection:
-        connection.execute("CREATE TABLE schema_version (version INTEGER NOT NULL)")
-        connection.execute("INSERT INTO schema_version VALUES (99)")
+    with closing(sqlite3.connect(database)) as connection:
+        with connection:
+            connection.execute("CREATE TABLE schema_version (version INTEGER NOT NULL)")
+            connection.execute("INSERT INTO schema_version VALUES (99)")
     with pytest.raises(StateCompatibilityError):
         SQLiteStateStore(database).initialize()

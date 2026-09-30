@@ -20,3 +20,19 @@
 The finding does not assert that every observed Windows lock was application
 caused, that tests/SQLite/Windows are defective, or that VE-P4-4A-004 semantic
 validation failed. H3 is not triggered.
+
+## Additive closure record
+
+| Field | Project Owner approved closure value |
+| --- | --- |
+| Closure date | 2026-09-30 |
+| Status/lifecycle | **CLOSED — PROJECT OWNER APPROVED** |
+| Original finding/scope | Application-owned SQLiteStateStore connections lacked deterministic close/release semantics; test-owned connections were expressly outside the product Finding scope. |
+| Remediation | Private managed application connection contexts preserve transaction commit/rollback and call close in finally across operational, backup, validation, restore, and staged-check paths. |
+| Focused validation | Lifecycle, incompatible-schema migration, and persistence paths passed after remediation; residual test-owned lifetimes were separately corrected without application-semantic change. |
+| Final regression evidence | Frozen Windows WS3/WS4/WS6/WS8/WS9 regression continuation v4: **61 passed, 0 failed, 0 errors, 0 skipped**. |
+| Closure basis | No evidence remains of application-owned SQLite handle retention within the validated scope. |
+
+This closure is additive. The original Finding, its mixed-handle qualification,
+all investigations, remediation records, and earlier partial/indeterminate
+regression attempts remain preserved above and in their respective records.
