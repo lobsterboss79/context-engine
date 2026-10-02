@@ -1,24 +1,24 @@
 # WS5 Exact-Run Freshness Package
 
-**Status:** **STOPPED BEFORE WS5.1 — NO RESERVABLE FRESH CONSUMER CAPABILITY AVAILABLE IN THIS EXECUTION ENVIRONMENT.**
+**Status:** **WS5.1–WS5.3 COMPLETE / PASS FOR `CE-P4-WS5-CONSUMER-001`; WS5.4 NOT TRIGGERED; WS5.5 NOT YET COMPLETE.**
 
-The Owner authorized full WS5. No obligation has been executed because this
-environment cannot identify, reserve, or preflight an actual unprimed Consumer.
-The current project-aware agent/session is not fresh, and no simulated Consumer
-may substitute.
+The Project Owner executed WS5.1 and WS5.2 through the approved manual
+Owner-mediated fresh ChatGPT mechanism. The current project-aware Codex
+agent/session remains contaminated and was not used as a Consumer; no
+simulated Consumer may substitute.
 
 The future [WS6A authorization package](../ws6a-authorization-package.md)
 records the frozen inputs required for the retained Owner checkpoint; it is not
-ready while WS5 remains unexecuted.
+ready while WS5.5 and its WS6A-specific frozen inputs remain incomplete.
 
 | ID | State |
 | --- | --- |
-| 5.1 | NOT EXECUTED — stop before candidate identification/reservation. |
-| 5.2 | NOT EXECUTED — depends on 5.1. |
-| 5.3 | NOT EXECUTED — no actual preflight evidence. |
-| 5.4 | NOT EXECUTED — no candidate result to handle. |
-| 5.5 | NOT EXECUTED — no exact run exists to freeze. |
+| 5.1 | PASS — protected reservation established for `CE-P4-WS5-CONSUMER-001`. |
+| 5.2 | PASS — actual no-message contamination preflight completed for that exact reservation. |
+| 5.3 | PASS — raw Owner return preserved and freshness classified PASS. |
+| 5.4 | NOT TRIGGERED — no unsuitable/invalid Consumer condition observed; discard/restart control remains frozen. |
+| 5.5 | INDETERMINATE — exact permitted Sources/Consumer inputs, proving protocol, and success/failure evidence requirements have not been frozen; see [assessment](ws5.5-permitted-inputs-protocol-assessment.md). |
 
-No Consumer was reserved, exposed, preflighted, or asked to perform a task.
-No WS6A/WS6B evidence or result exists. This is not PASS, FAIL,
-INDETERMINATE, or INVALID RUN because no WS5 attempt reached a Consumer.
+The preserved [Owner return and classification](CE-P4-WS5-CONSUMER-001-owner-return-and-classification.md)
+records the exact reservation/preflight evidence. The Consumer has not been
+exposed to any proving task or material. No WS6A/WS6B evidence or result exists.
