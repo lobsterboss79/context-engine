@@ -302,7 +302,7 @@ Phase 3 may be presented for closure only when all of the following are evidence
 
 ## Future proving and validation boundary
 
-The Company AI Roadmap external proving exercise and Context Engine dogfooding exercise remain designed future work, not Phase 3 checklist completion tasks. They require separately authorized execution and a genuinely fresh Consumer with the approved contamination preflight: no material Project knowledge via memory, Project context, connected Sources/files, prior sessions, manual briefing, or hidden channels. A contaminated or unverifiable Consumer makes the run invalid and requires discard/restart clean.
+The amended I10/WS6A external proving exercise and Context Engine dogfooding exercise remain designed future work, not Phase 3 checklist completion tasks. The effective external-Project criterion is [AM-P4-I10-WS6A-001](../docs/phase-4/proving/ws5/i10-ws6a-project-neutral-amendment.md). They require separately authorized execution and a genuinely fresh Consumer with the approved contamination preflight: no material Project knowledge via memory, Project context, connected Sources/files, prior sessions, manual briefing, or hidden channels. A contaminated or unverifiable Consumer makes the run invalid and requires discard/restart clean.
 
 Phase 3 implementation validation answers: **“Did we correctly implement the approved v0.1 design?”** Phase 4 validation/integration and future proving answer different questions. Phase 3 completion does not establish external proving success, dogfooding success, Phase 4 completion, production readiness beyond actually validated evidence, authorization for AI-assisted discovery, automated Consumer action, or broader project scope.
 

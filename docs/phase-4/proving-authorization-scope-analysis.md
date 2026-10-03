@@ -5,6 +5,13 @@
 This analysis does not authorize or execute proving, reserve/expose a Consumer,
 begin WS5, or change any governed state.
 
+**Amendment note (effective after this historical analysis):**
+[AM-P4-I10-WS6A-001](proving/ws5/i10-ws6a-project-neutral-amendment.md)
+supersedes the future named Company AI Roadmap target with a separately
+Owner-selected qualifying real external Project.  The Company AI Roadmap
+references below preserve the pre-amendment analysis and do not authorize a
+Project, Consumer, or run.
+
 ## Baseline and governing definition
 
 | Item | Record |
