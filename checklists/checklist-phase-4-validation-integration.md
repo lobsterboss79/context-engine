@@ -175,6 +175,12 @@ Phase 4 does not silently add LLM discovery, embeddings, semantic search, vector
 
 ### WS6A — Company AI Roadmap External Proving
 
+**Effective target criterion:** The historical heading preserves the original
+named baseline.  For future WS6A work, the proving Project is instead governed
+by [AM-P4-I10-WS6A-001](../docs/phase-4/proving/ws5/i10-ws6a-project-neutral-amendment.md): one separately Owner-selected qualifying real, independently
+maintained, non-synthetic Project other than Context Engine.  WS6A remains not
+authorized for execution.
+
 **Purpose:** Determine whether v0.1 can provide governed useful context to a genuinely fresh Consumer for a real project other than Context Engine.
 
 - [ ] 6A.1 [PROVE] Confirm the exact run’s freshness PASS and frozen protocol, controlled Sources, permitted inputs, task, success/failure criteria, and independent evaluation arrangement.
