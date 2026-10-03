@@ -1,0 +1,13 @@
+# Frozen Task — I10-DTS-CONTINUATION-BRIEF-v1
+
+Using only the governed context supplied in the accompanying Context Engine
+rendering, prepare a concise continuation brief for the Day Trading System.
+State the Project's purpose; current phase/state; governing decisions and
+current authorization boundary; constraints and known gaps; what information
+is current versus historical or superseded; material provenance/authority; and
+the next legitimate work boundary. Distinguish established information from
+uncertainty, limitation, and insufficiency. Do not trade, make an investment
+recommendation, deploy capital, access external market data, invent Phase 3
+implementation, or make an unapproved architecture or governance decision. If
+the supplied context cannot establish a requested point, say so rather than
+infer it.
