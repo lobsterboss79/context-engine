@@ -26,7 +26,7 @@ class RestoreError(RuntimeError):
     """Raised when controlled recovery cannot safely replace its target."""
 
 
-CURRENT_SCHEMA_VERSION = 5
+CURRENT_SCHEMA_VERSION = 6
 
 @dataclass(frozen=True)
 class PersistedEvidence:
@@ -87,6 +87,22 @@ class PersistedRepresentation:
     representation_identity: str
     artifact_version_identity: str
     provenance_identity: str
+    location_reference: str
+    evidence: str
+
+
+@dataclass(frozen=True)
+class PersistedSemanticRecord:
+    project_identity: str
+    record_identity: str
+    version: str
+    record_sha256: str
+    claim_identity: str
+    source_identity: str
+    artifact_locator: str
+    source_revision: str
+    source_sha256: str
+    observation_identity: str
     location_reference: str
     evidence: str
 
@@ -185,6 +201,9 @@ class SQLiteStateStore:
                 elif version == 4:
                     self._migrate_four_to_five(connection)
                     version = 5
+                elif version == 5:
+                    self._migrate_five_to_six(connection)
+                    version = 6
                 else:
                     raise StateCompatibilityError("unsupported or malformed schema version")
 
@@ -277,6 +296,18 @@ class SQLiteStateStore:
             "backup_identity TEXT NOT NULL, restored_at TEXT NOT NULL, qualification TEXT NOT NULL)"
         )
         connection.execute("UPDATE schema_version SET version = 5")
+
+    @staticmethod
+    def _migrate_five_to_six(connection: sqlite3.Connection) -> None:
+        connection.execute(
+            "CREATE TABLE semantic_record_evidence (row_id INTEGER PRIMARY KEY, "
+            "project_identity TEXT NOT NULL, record_identity TEXT NOT NULL, version TEXT NOT NULL, "
+            "record_sha256 TEXT NOT NULL, claim_identity TEXT NOT NULL, source_identity TEXT NOT NULL, "
+            "artifact_locator TEXT NOT NULL, source_revision TEXT NOT NULL, source_sha256 TEXT NOT NULL, "
+            "observation_identity TEXT NOT NULL, location_reference TEXT NOT NULL, evidence TEXT NOT NULL, "
+            "UNIQUE(project_identity, record_identity, version, record_sha256))"
+        )
+        connection.execute("UPDATE schema_version SET version = 6")
 
     def save_evidence(self, evidence: PersistedEvidence) -> None:
         _reject_secret(evidence.historical_reference)
@@ -399,6 +430,23 @@ class SQLiteStateStore:
         with self._connection() as connection:
             rows = connection.execute("SELECT project_identity, representation_identity, artifact_version_identity, provenance_identity, location_reference, evidence FROM representation_evidence WHERE project_identity=? ORDER BY representation_identity", (project_identity,)).fetchall()
         return tuple(PersistedRepresentation(*row) for row in rows)
+
+    def save_semantic_record(self, record: PersistedSemanticRecord) -> None:
+        _reject_secret(record.evidence)
+        with self._connection() as connection:
+            connection.execute(
+                "INSERT OR IGNORE INTO semantic_record_evidence "
+                "(project_identity, record_identity, version, record_sha256, claim_identity, source_identity, artifact_locator, source_revision, source_sha256, observation_identity, location_reference, evidence) "
+                "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", tuple(record.__dict__.values())
+            )
+
+    def semantic_records_for_project(self, project_identity: str) -> tuple[PersistedSemanticRecord, ...]:
+        with self._connection() as connection:
+            rows = connection.execute(
+                "SELECT project_identity, record_identity, version, record_sha256, claim_identity, source_identity, artifact_locator, source_revision, source_sha256, observation_identity, location_reference, evidence "
+                "FROM semantic_record_evidence WHERE project_identity = ? ORDER BY record_identity, version, record_sha256", (project_identity,)
+            ).fetchall()
+        return tuple(PersistedSemanticRecord(*row) for row in rows)
 
     def package_constructions_for_project(self, project_identity: str) -> tuple[PersistedPackageConstruction, ...]:
         with self._connection() as connection:
