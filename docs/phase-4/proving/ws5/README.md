@@ -1,6 +1,6 @@
 # WS5 Exact-Run Freshness Package
 
-**Status:** **WS5.1–WS5.3 COMPLETE / PASS FOR `CE-P4-WS5-CONSUMER-001`; WS5.4 NOT TRIGGERED; WS5.5 NOT YET COMPLETE.**
+**Status:** **HISTORICAL WS5.1–WS5.3 PASS FOR `CE-P4-WS5-CONSUMER-001`; THAT RESERVATION IS NOW INVALID / DISCARD-RESTART BECAUSE CONTINUITY WAS LOST; WS5.5 NOT YET COMPLETE.**
 
 The Project Owner executed WS5.1 and WS5.2 through the approved manual
 Owner-mediated fresh ChatGPT mechanism. The current project-aware Codex
@@ -22,3 +22,14 @@ ready while WS5.5 and its WS6A-specific frozen inputs remain incomplete.
 The preserved [Owner return and classification](CE-P4-WS5-CONSUMER-001-owner-return-and-classification.md)
 records the exact reservation/preflight evidence. The Consumer has not been
 exposed to any proving task or material. No WS6A/WS6B evidence or result exists.
+
+## Subsequent reservation-continuity event
+
+The later accidental closure did not contaminate the Consumer or rewrite its
+historical WS5.1–WS5.3 PASS evidence.  It did, however, make the exact
+reservation unavailable and its continuity no longer attributable for future
+delivery.  The additive [reservation-continuity disposition](CE-P4-WS5-CONSUMER-001-reservation-continuity-disposition.md)
+therefore marks `CE-P4-WS5-CONSUMER-001` **INVALID RESERVATION — DISCARD /
+RESTART**; it may not be used for WS6A.  Any later Consumer requires separate
+Owner authorization and a new reservation identity through the same frozen
+WS5.1/WS5.2 procedure.
