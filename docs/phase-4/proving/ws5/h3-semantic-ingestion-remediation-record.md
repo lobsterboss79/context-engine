@@ -1,7 +1,8 @@
 # H3 Semantic-Ingestion Remediation Record
 
 **ID:** `H3-P4-SEMANTIC-INGESTION-001`  
-**Status:** **IMPLEMENTED — VALIDATED — PROJECT OWNER REMEDIATION REVIEW REQUIRED**  
+**Status:** **CLOSED — PROJECT OWNER APPROVED**
+
 **Authority:** Project Owner H3 remediation authorization for the semantic
 package-construction proving prerequisite.
 
@@ -48,11 +49,82 @@ reconfirmed the frozen selected revision and all eight Markdown Sources.
 External-project semantic-record authoring remains a later Owner-governed
 boundary.
 
-## Proving return boundary
+## Project Owner closure decision
 
-The Owner must review remediation validation, determine closure, decide whether
-the selected Project can be re-frozen at a real maintained semantic-record
-revision/scope, and separately authorize any semantic-record authoring and a
-new successor (`WS5.5-S-WS6A-003` conventionally). The predecessor and
-successors 001/002 remain immutable adverse lineage. DVL-P4-001, TD-14, Gate
-4B, Gate 4C, and production-readiness states are unchanged.
+The Project Owner reviewed the implementation and validation evidence and
+accepted this product-capability remediation as complete:
+
+`H3-P4-SEMANTIC-INGESTION-001 — CLOSED — PROJECT OWNER APPROVED`
+
+The accepted capability is production-supported governed semantic-record
+ingestion terminating at the existing `Claim` / `RepresentedInformation` seam.
+The existing Claim schema, downstream discovery through WS9, and all established
+governance boundaries remain unchanged.  The accepted evidence is:
+
+- strict deterministic JSON semantic-record validation with complete Project,
+  Source, revision/hash, observation, Artifact, block, line, and provenance
+  bindings;
+- no arbitrary Markdown/prose extraction, LLM/model dependency, automatic
+  authority/currentness inference, or task-specific semantic synthesis;
+- append-only Project-scoped semantic-record persistence through the existing
+  SQLite pattern; and
+- inert Source/semantic-record evidence handling, explicit
+  authority/currentness bases, focused-validation PASS, full regression PASS
+  (**110 passed**), and read-only reconfirmation of the frozen Day Trading
+  System revision and all eight frozen Markdown Sources.
+
+No Day Trading System semantic record, final-proving Claim, package, rendering,
+Consumer interaction, or external-project modification was created by this
+remediation.  H3 closure accepts the implemented product capability only; it
+does not authorize any external-project authoring, successor, Consumer,
+proving, Gate 4C, or readiness action.
+
+## Preserved external-project limitation and next Owner decision
+
+The frozen selected Day Trading System revision
+`653858dd9197f528ef0b323800d42892c7cfbf57` contains no real maintained
+governed semantic records/sidecars.  It therefore cannot exercise the accepted
+semantic-ingestion capability for full I10 proving.  This material limitation
+remains open even though the H3 product remediation is closed.
+
+The exact next governed boundary is a separate Project Owner decision whether
+to authorize **Day Trading System source-owner semantic-record authoring**.  If
+authorized, that decision must define the source-owner/authoring authority,
+the maintained Project-artifact location, record identities/versions, the
+approved JSON record contract, and the exact bindings to the selected Markdown
+Artifact(s), Source identities, observations, revisions/hashes, blocks, and
+lines.  It must prohibit task-specific/evaluator-answer material, expected
+answers, rubrics, and proving-only fixtures.
+
+The records should live as source-owner-maintained artifacts inside the Day
+Trading System repository, versioned with the Markdown evidence to which they
+are bound.  The accepted production capability supports JSON records, but no
+specific Day Trading System directory/path is currently governed or frozen;
+the authoring decision must establish it rather than infer one.  Creating those
+artifacts necessarily creates a new legitimate Day Trading System revision.
+
+The eight frozen Markdown Sources remain the Source basis unless a later Owner
+decision changes that basis.  Semantic records are governed semantic inputs
+linked to those registered Source Artifacts, not additional registered Sources
+by default; their later registration/allowlisting and observation must be
+explicitly frozen without silently adding a ninth Source.
+
+Only after source-owner authoring and a new revision exist may the Owner
+separately authorize evaluation of the new revision/scope against the external
+Project eligibility/proving requirements and, if appropriate,
+`WS5.5-S-WS6A-003`.  That later successor does not repair or overwrite the
+immutable WS5.5 predecessor, `WS5.5-S-WS6A-001`, or
+`WS5.5-S-WS6A-002`, all **INDETERMINATE — STOP AND PRESERVE** (with the two
+successors partially frozen as previously recorded).
+
+`CE-P4-WS5-CONSUMER-001` remains **INVALID RESERVATION — DISCARD / RESTART
+(RESERVATION CONTINUITY LOST / UNAVAILABLE; NOT CONTAMINATED)**; its historical
+WS5.1–WS5.3 evidence is preserved and it may never be used for WS6A.
+`CE-P4-WS5-CONSUMER-002` is not created, reserved, or preflighted, and no
+control Consumer exists.
+
+`DVL-P4-001` remains **ACTIVE / ACCEPTED / DEFERRED**; TD-14 remains **TRIGGER
+NOT MET / CLOSED / NOT REOPENED**; Gate 4B remains **PASS — PROJECT OWNER
+APPROVED**.  WS5 remains **NOT COMPLETE**; WS6A and WS6B remain **NOT
+AUTHORIZED**; Gate 4C remains **NOT APPROVED**; and production readiness remains
+**NOT ESTABLISHED**.
