@@ -4,11 +4,15 @@ from collections.abc import Iterator
 from contextlib import contextmanager
 from dataclasses import dataclass
 from datetime import UTC, datetime
+import hashlib
+import json
 from pathlib import Path
 import os
 import sqlite3
 import tempfile
 import uuid
+
+from context_engine.application.semantic_lifecycle import SemanticRecordLifecycleKind
 
 class StateCompatibilityError(RuntimeError):
     """Raised when an application-owned schema cannot be safely used."""
@@ -26,7 +30,7 @@ class RestoreError(RuntimeError):
     """Raised when controlled recovery cannot safely replace its target."""
 
 
-CURRENT_SCHEMA_VERSION = 6
+CURRENT_SCHEMA_VERSION = 7
 
 @dataclass(frozen=True)
 class PersistedEvidence:
@@ -105,6 +109,35 @@ class PersistedSemanticRecord:
     observation_identity: str
     location_reference: str
     evidence: str
+
+
+@dataclass(frozen=True)
+class PersistedSemanticRecordSupersession:
+    """One immutable, Project-scoped semantic-record lifecycle edge."""
+
+    project_identity: str
+    relation_identity: str
+    version: str
+    relation_sha256: str
+    predecessor_record_identity: str
+    predecessor_version: str
+    predecessor_record_sha256: str
+    successor_record_identity: str
+    successor_version: str
+    successor_record_sha256: str
+    kind: str
+    creation_basis: str
+    evidence: str
+
+
+def semantic_record_supersession_sha256(record: PersistedSemanticRecordSupersession) -> str:
+    """Return the deterministic hash of immutable lifecycle relation content."""
+    payload = {
+        key: value for key, value in record.__dict__.items()
+        if key != "relation_sha256"
+    }
+    encoded = json.dumps(payload, sort_keys=True, separators=(",", ":")).encode("utf-8")
+    return hashlib.sha256(encoded).hexdigest()
 
 
 @dataclass(frozen=True)
@@ -204,6 +237,9 @@ class SQLiteStateStore:
                 elif version == 5:
                     self._migrate_five_to_six(connection)
                     version = 6
+                elif version == 6:
+                    self._migrate_six_to_seven(connection)
+                    version = 7
                 else:
                     raise StateCompatibilityError("unsupported or malformed schema version")
 
@@ -308,6 +344,28 @@ class SQLiteStateStore:
             "UNIQUE(project_identity, record_identity, version, record_sha256))"
         )
         connection.execute("UPDATE schema_version SET version = 6")
+
+    @staticmethod
+    def _migrate_six_to_seven(connection: sqlite3.Connection) -> None:
+        """Add immutable semantic-record predecessor/successor evidence only."""
+        connection.execute(
+            "CREATE TABLE semantic_record_supersession (row_id INTEGER PRIMARY KEY, "
+            "project_identity TEXT NOT NULL, relation_identity TEXT NOT NULL, version TEXT NOT NULL, "
+            "relation_sha256 TEXT NOT NULL, predecessor_record_identity TEXT NOT NULL, "
+            "predecessor_version TEXT NOT NULL, predecessor_record_sha256 TEXT NOT NULL, "
+            "successor_record_identity TEXT NOT NULL, successor_version TEXT NOT NULL, "
+            "successor_record_sha256 TEXT NOT NULL, kind TEXT NOT NULL, creation_basis TEXT NOT NULL, "
+            "evidence TEXT NOT NULL, "
+            "UNIQUE(project_identity, relation_identity, version), "
+            "UNIQUE(project_identity, relation_identity, version, relation_sha256), "
+            "UNIQUE(project_identity, predecessor_record_identity, predecessor_version, predecessor_record_sha256), "
+            "UNIQUE(project_identity, successor_record_identity, successor_version, successor_record_sha256), "
+            "FOREIGN KEY(project_identity, predecessor_record_identity, predecessor_version, predecessor_record_sha256) "
+            "REFERENCES semantic_record_evidence(project_identity, record_identity, version, record_sha256), "
+            "FOREIGN KEY(project_identity, successor_record_identity, successor_version, successor_record_sha256) "
+            "REFERENCES semantic_record_evidence(project_identity, record_identity, version, record_sha256))"
+        )
+        connection.execute("UPDATE schema_version SET version = 7")
 
     def save_evidence(self, evidence: PersistedEvidence) -> None:
         _reject_secret(evidence.historical_reference)
@@ -432,13 +490,35 @@ class SQLiteStateStore:
         return tuple(PersistedRepresentation(*row) for row in rows)
 
     def save_semantic_record(self, record: PersistedSemanticRecord) -> None:
-        _reject_secret(record.evidence)
+        self._validate_semantic_record(record)
         with self._connection() as connection:
-            connection.execute(
-                "INSERT OR IGNORE INTO semantic_record_evidence "
-                "(project_identity, record_identity, version, record_sha256, claim_identity, source_identity, artifact_locator, source_revision, source_sha256, observation_identity, location_reference, evidence) "
-                "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", tuple(record.__dict__.values())
-            )
+            self._save_semantic_record(connection, record)
+
+    @staticmethod
+    def _is_sha256(value: str) -> bool:
+        return len(value) == 64 and all(character in "0123456789abcdef" for character in value)
+
+    def _validate_semantic_record(self, record: PersistedSemanticRecord) -> None:
+        self._reject_evidence_values(
+            record.project_identity, record.record_identity, record.version,
+            record.claim_identity, record.evidence,
+        )
+        if not self._is_sha256(record.record_sha256) or not self._is_sha256(record.source_sha256):
+            raise ValueError("semantic-record hashes must be lowercase SHA-256 values")
+
+    def _save_semantic_record(self, connection: sqlite3.Connection, record: PersistedSemanticRecord) -> None:
+        conflict = connection.execute(
+            "SELECT record_sha256 FROM semantic_record_evidence "
+            "WHERE project_identity=? AND record_identity=? AND version=?",
+            (record.project_identity, record.record_identity, record.version),
+        ).fetchone()
+        if conflict is not None and conflict[0] != record.record_sha256:
+            raise ValueError("semantic-record identity/version hash conflict")
+        connection.execute(
+            "INSERT OR IGNORE INTO semantic_record_evidence "
+            "(project_identity, record_identity, version, record_sha256, claim_identity, source_identity, artifact_locator, source_revision, source_sha256, observation_identity, location_reference, evidence) "
+            "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", tuple(record.__dict__.values())
+        )
 
     def semantic_records_for_project(self, project_identity: str) -> tuple[PersistedSemanticRecord, ...]:
         with self._connection() as connection:
@@ -447,6 +527,142 @@ class SQLiteStateStore:
                 "FROM semantic_record_evidence WHERE project_identity = ? ORDER BY record_identity, version, record_sha256", (project_identity,)
             ).fetchall()
         return tuple(PersistedSemanticRecord(*row) for row in rows)
+
+    def save_semantic_record_successor(
+        self, successor: PersistedSemanticRecord, relation: PersistedSemanticRecordSupersession
+    ) -> None:
+        """Atomically persist one validated successor and its immutable edge."""
+        self._validate_semantic_record(successor)
+        self._validate_semantic_record_supersession(relation)
+        if (
+            relation.project_identity != successor.project_identity
+            or (relation.successor_record_identity, relation.successor_version, relation.successor_record_sha256)
+            != (successor.record_identity, successor.version, successor.record_sha256)
+        ):
+            raise ValueError("semantic-record successor relation does not name supplied successor")
+        with self._connection() as connection:
+            predecessor = connection.execute(
+                "SELECT project_identity, record_identity, version, record_sha256, claim_identity, source_identity, artifact_locator, source_revision, source_sha256, observation_identity, location_reference, evidence "
+                "FROM semantic_record_evidence WHERE project_identity=? AND record_identity=? AND version=? AND record_sha256=?",
+                (relation.project_identity, relation.predecessor_record_identity, relation.predecessor_version, relation.predecessor_record_sha256),
+            ).fetchone()
+            if predecessor is None:
+                raise ValueError("semantic-record successor predecessor is missing")
+            self._validate_persisted_successor(PersistedSemanticRecord(*predecessor), successor, relation.kind)
+            existing = connection.execute(
+                "SELECT relation_sha256 FROM semantic_record_supersession "
+                "WHERE project_identity=? AND relation_identity=? AND version=?",
+                (relation.project_identity, relation.relation_identity, relation.version),
+            ).fetchone()
+            if existing is not None:
+                if existing[0] != relation.relation_sha256:
+                    raise ValueError("semantic-record lifecycle relation identity/version hash conflict")
+                return
+            self._save_semantic_record(connection, successor)
+            try:
+                connection.execute(
+                    "INSERT INTO semantic_record_supersession "
+                    "(project_identity, relation_identity, version, relation_sha256, predecessor_record_identity, predecessor_version, predecessor_record_sha256, successor_record_identity, successor_version, successor_record_sha256, kind, creation_basis, evidence) "
+                    "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
+                    tuple(relation.__dict__.values()),
+                )
+            except sqlite3.IntegrityError as error:
+                raise ValueError("semantic-record lifecycle relation conflicts or has invalid endpoints") from error
+
+    def _validate_semantic_record_supersession(self, relation: PersistedSemanticRecordSupersession) -> None:
+        self._reject_evidence_values(relation.project_identity, relation.relation_identity, relation.version, relation.creation_basis, relation.evidence)
+        if not self._is_sha256(relation.relation_sha256) or not self._is_sha256(relation.predecessor_record_sha256) or not self._is_sha256(relation.successor_record_sha256):
+            raise ValueError("semantic-record lifecycle hashes must be lowercase SHA-256 values")
+        if relation.relation_sha256 != semantic_record_supersession_sha256(relation):
+            raise ValueError("semantic-record lifecycle relation hash mismatch")
+        try:
+            SemanticRecordLifecycleKind(relation.kind)
+        except ValueError as error:
+            raise ValueError("semantic-record lifecycle kind is invalid") from error
+        if (
+            relation.predecessor_record_identity,
+            relation.predecessor_version,
+            relation.predecessor_record_sha256,
+        ) == (
+            relation.successor_record_identity,
+            relation.successor_version,
+            relation.successor_record_sha256,
+        ):
+            raise ValueError("semantic-record lifecycle cannot self-supersede")
+
+    @staticmethod
+    def _validate_persisted_successor(
+        predecessor: PersistedSemanticRecord, successor: PersistedSemanticRecord, kind: str
+    ) -> None:
+        lifecycle_kind = SemanticRecordLifecycleKind(kind)
+        if lifecycle_kind is SemanticRecordLifecycleKind.PROVENANCE_CORRECTION:
+            if predecessor.claim_identity != successor.claim_identity:
+                raise ValueError("provenance correction Claim identity mismatch")
+            if (
+                predecessor.source_identity, predecessor.artifact_locator,
+                predecessor.source_revision, predecessor.source_sha256,
+            ) != (
+                successor.source_identity, successor.artifact_locator,
+                successor.source_revision, successor.source_sha256,
+            ):
+                raise ValueError("provenance correction Source binding mismatch")
+        elif lifecycle_kind is SemanticRecordLifecycleKind.SEMANTIC_REVISION:
+            if predecessor.claim_identity == successor.claim_identity:
+                raise ValueError("semantic revision requires a new Claim identity")
+        elif lifecycle_kind is SemanticRecordLifecycleKind.SOURCE_REVISION_TRANSITION:
+            if (
+                predecessor.source_identity, predecessor.source_revision, predecessor.source_sha256,
+            ) == (
+                successor.source_identity, successor.source_revision, successor.source_sha256,
+            ):
+                raise ValueError("source revision transition requires changed Source revision/hash")
+
+    def semantic_record_supersessions_for_project(
+        self, project_identity: str
+    ) -> tuple[PersistedSemanticRecordSupersession, ...]:
+        with self._connection() as connection:
+            rows = connection.execute(
+                "SELECT project_identity, relation_identity, version, relation_sha256, predecessor_record_identity, predecessor_version, predecessor_record_sha256, successor_record_identity, successor_version, successor_record_sha256, kind, creation_basis, evidence "
+                "FROM semantic_record_supersession WHERE project_identity=? "
+                "ORDER BY relation_identity, version, relation_sha256", (project_identity,)
+            ).fetchall()
+        return tuple(PersistedSemanticRecordSupersession(*row) for row in rows)
+
+    def active_semantic_records_for_project(self, project_identity: str) -> tuple[PersistedSemanticRecord, ...]:
+        """Return only unambiguous terminal records; malformed lineage fails closed."""
+        records = self.semantic_records_for_project(project_identity)
+        relations = self.semantic_record_supersessions_for_project(project_identity)
+        by_instance = {(row.record_identity, row.version, row.record_sha256): row for row in records}
+        if len(by_instance) != len(records):
+            raise ValueError("semantic-record persistence contains duplicate instances")
+        logical = {(row.record_identity, row.version) for row in records}
+        if len(logical) != len(records):
+            raise ValueError("semantic-record persistence contains identity/version ambiguity")
+        successors: dict[tuple[str, str, str], tuple[str, str, str]] = {}
+        predecessors: set[tuple[str, str, str]] = set()
+        for relation in relations:
+            self._validate_semantic_record_supersession(relation)
+            predecessor_key = (relation.predecessor_record_identity, relation.predecessor_version, relation.predecessor_record_sha256)
+            successor_key = (relation.successor_record_identity, relation.successor_version, relation.successor_record_sha256)
+            if predecessor_key not in by_instance or successor_key not in by_instance:
+                raise ValueError("semantic-record lifecycle has missing endpoint")
+            self._validate_persisted_successor(by_instance[predecessor_key], by_instance[successor_key], relation.kind)
+            if predecessor_key in successors or successor_key in predecessors:
+                raise ValueError("semantic-record lifecycle is ambiguous")
+            successors[predecessor_key] = successor_key
+            predecessors.add(successor_key)
+        for origin in successors:
+            seen: set[tuple[str, str, str]] = set()
+            current = origin
+            while current in successors:
+                if current in seen:
+                    raise ValueError("semantic-record lifecycle contains a cycle")
+                seen.add(current)
+                current = successors[current]
+        active = tuple(row for key, row in sorted(by_instance.items()) if key not in successors)
+        if len({row.record_identity for row in active}) != len(active):
+            raise ValueError("semantic-record lifecycle has ambiguous active versions")
+        return active
 
     def package_constructions_for_project(self, project_identity: str) -> tuple[PersistedPackageConstruction, ...]:
         with self._connection() as connection:

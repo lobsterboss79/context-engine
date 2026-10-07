@@ -111,5 +111,5 @@ def test_backup_metadata_cannot_substitute_for_authority_or_currentness(controll
     backup = controlled_dir / "backup.sqlite"
     store.create_backup(backup, operator_authorized=True, purpose="test", retention_basis="test")
     metadata = SQLiteStateStore.validate_backup(backup)
-    assert metadata.schema_version == 6
+    assert metadata.schema_version == 7
     assert not hasattr(metadata, "authority") and not hasattr(metadata, "currentness")
