@@ -241,7 +241,7 @@ def test_backup_restore_preserves_lifecycle_and_active_resolution(tmp_path) -> N
 def semantic_record(identity: str, version: str, claim: str, *, revision: str = "rev-1") -> SemanticRecord:
     return SemanticRecord(
         identity, version, claim, "assertion", "source", "project", "docs/source.md",
-        revision, digest("a"), "observation", 1, 3, 3, "source-owner",
+        revision, digest("a"), "observation", 1, 3, 3, "source-owner", assertion_content="assertion content",
     )
 
 
@@ -253,6 +253,9 @@ def test_content_lifecycle_validation_preserves_assertion_rules() -> None:
     wrong = semantic_record("record", "v2", "other")
     with pytest.raises(SemanticRecordLifecycleError, match="Claim"):
         validate_semantic_record_successor(first, wrong, SemanticRecordLifecycleKind.PROVENANCE_CORRECTION)
+    changed_content = SemanticRecord(**(first.__dict__ | {"version": "v2-content", "assertion_content": "changed"}))
+    with pytest.raises(SemanticRecordLifecycleError, match="assertion content"):
+        validate_semantic_record_successor(first, changed_content, SemanticRecordLifecycleKind.PROVENANCE_CORRECTION)
     validate_semantic_record_successor(first, wrong, SemanticRecordLifecycleKind.SEMANTIC_REVISION)
     changed_source = semantic_record("record", "v3", "other", revision="rev-2")
     validate_semantic_record_successor(first, changed_source, SemanticRecordLifecycleKind.SOURCE_REVISION_TRANSITION)

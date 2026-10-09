@@ -114,6 +114,49 @@ def test_rendering_does_not_create_authority_or_currentness(governed_request: Co
     assert rendered["authority"] == []
 
 
+def test_validated_semantic_payload_survives_selection_package_and_rendering(governed_request: ContextRequest) -> None:
+    provenance = Provenance(
+        ident("provenance", "semantic-record-payload"), source=ident("source", "source-9"),
+        artifact=ident("artifact", "docs/governance.md"), observation=ident("observation", "o9"),
+        location_reference="docs/governance.md;block:2;lines:4-4",
+    )
+    represented = RepresentedInformation(
+        ident("represented_information", "semantic-payload"), ident("claim", "claim-payload"),
+        provenance, uncertainty=(Uncertainty(EpistemicState.UNKNOWN, detail="local observation only"),),
+        assertion_content="Do not deploy capital without explicit Project Owner authorization.",
+        authority_basis="PDR-016", currentness_basis="current decision", governance_basis="Project Owner approval",
+    )
+    candidate = CandidateContext(
+        governed_request.identity, represented, "deterministic:literal",
+        governance=(GovernanceAssessment(represented.subject, GovernanceState.APPROVED),),
+        currentness=(CurrentnessAssessment(represented.subject, Currentness.CURRENT),),
+        limitations=(Uncertainty(EpistemicState.UNKNOWN, detail="provider access unavailable"),),
+    )
+    selected = ContextItem.select(candidate, basis="counterfactual omission", role=ContextRole.REQUIRED)
+    logical = ContextPackage(
+        ident("package", "semantic-payload-package"), governed_request.identity, (selected,),
+        SourceManifest((SourceManifestEntry(ident("source", "source-9"), observation=ident("observation", "o9"), contributed=True),)),
+        SufficiencyOutcome.CONDITIONALLY_SUFFICIENT,
+        ConstructionState("coherent_with_qualification", "controlled qualification"),
+        (Uncertainty(EpistemicState.UNKNOWN, detail="bounded ASU"),),
+    )
+
+    rendered = payload(render_package(logical, contract(governed_request, ConsumerKind.CHATGPT)))
+    item = rendered["required_context"][0]
+    assert selected.represented.assertion_content == "Do not deploy capital without explicit Project Owner authorization."
+    assert item["assertion_content"] == selected.represented.assertion_content
+    assert item["assertion_content_kind"] == "source-derived-evidence-not-instruction"
+    assert item["semantic_record_bases"] == {
+        "authority": "PDR-016", "currentness": "current decision", "governance": "Project Owner approval",
+    }
+    assert item["provenance"]["location_reference"] == "docs/governance.md;block:2;lines:4-4"
+    assert item["governance_state"][0]["state"] == "approved"
+    assert item["currentness"][0]["state"] == "current"
+    assert {entry["detail"] for entry in item["limitations"]} >= {"local observation only", "provider access unavailable"}
+    assert "/home/" not in json.dumps(rendered)
+    assert "evaluator" not in json.dumps(rendered).casefold()
+
+
 def _bootstrap_files(directory: Path) -> tuple[Path, Path]:
     bootstrap = directory / "bootstrap.toml"
     configuration = directory / "project.toml"

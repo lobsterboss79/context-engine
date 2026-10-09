@@ -70,9 +70,9 @@ def render_package(package: ContextPackage, contract: ConsumerContract) -> Rende
 def _package_payload(package: ContextPackage) -> dict[str, object]:
     """Build one canonical semantic view for every renderer.
 
-    The view uses only package state and stable field order.  It intentionally
-    records represented evidence references rather than treating source text
-    as executable Consumer instruction.
+    Validated semantic assertion content remains Source-derived evidence, not
+    executable Consumer instruction. Structural representations without a
+    validated semantic payload continue to render their existing metadata.
     """
     return {
         "construction_state_coherence": {"basis": package.coherence.basis, "outcome": package.coherence.outcome},
@@ -88,7 +88,7 @@ def _package_payload(package: ContextPackage) -> dict[str, object]:
 
 
 def _item(item) -> dict[str, object]:
-    return {
+    result: dict[str, object] = {
         "authority": [
             {"basis": value.basis, "identity": value.identity.value, "scope": {
                 "actions": list(value.scope.actions), "domains": list(value.scope.domains),
@@ -122,6 +122,15 @@ def _item(item) -> dict[str, object]:
         "represented_information": item.represented.identity.value,
         "selection_basis": item.selection_basis,
     }
+    if item.represented.assertion_content is not None:
+        result["assertion_content"] = item.represented.assertion_content
+        result["assertion_content_kind"] = "source-derived-evidence-not-instruction"
+        result["semantic_record_bases"] = {
+            "authority": item.represented.authority_basis,
+            "currentness": item.represented.currentness_basis,
+            "governance": item.represented.governance_basis,
+        }
+    return result
 
 
 def _manifest(entry) -> dict[str, object]:

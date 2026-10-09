@@ -35,6 +35,8 @@ def validate_semantic_record_successor(
             raise SemanticRecordLifecycleError("provenance correction Claim identity mismatch")
         if predecessor.assertion_reference != successor.assertion_reference:
             raise SemanticRecordLifecycleError("provenance correction assertion mismatch")
+        if predecessor.assertion_content != successor.assertion_content:
+            raise SemanticRecordLifecycleError("provenance correction assertion content mismatch")
         if (
             predecessor.source_identity,
             predecessor.artifact_locator,

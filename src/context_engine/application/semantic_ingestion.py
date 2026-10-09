@@ -43,6 +43,7 @@ class SemanticRecord:
     authority_basis: str | None = None
     currentness_basis: str | None = None
     governance_basis: str | None = None
+    assertion_content: str | None = None
 
 
 @dataclass(frozen=True)
@@ -96,11 +97,18 @@ def ingest_semantic_record(
         transformation_reference=f"semantic-record={record.identity};version={record.version};sha256={record_sha256}",
         limitations=tuple(Uncertainty(EpistemicState.UNKNOWN, detail=value) for value in record.limitations),
     )
-    claim = Claim(SemanticIdentity("claim", record.claim_identity), record.assertion_reference, provenance)
+    if not record.assertion_content:
+        raise SemanticRecordError("semantic record assertion content is required")
+    claim = Claim(
+        SemanticIdentity("claim", record.claim_identity), record.assertion_reference,
+        provenance, record.assertion_content,
+    )
     represented = RepresentedInformation(
         SemanticIdentity("represented_information", f"semantic-record:{record.identity}:{record.version}"),
         claim.identity, provenance, tuple(Classification(value) for value in record.classifications),
         tuple(Uncertainty(EpistemicState.UNKNOWN, detail=value) for value in record.limitations),
+        claim.assertion_content, record.authority_basis, record.currentness_basis,
+        record.governance_basis,
     )
     return IngestedSemanticRecord(record, record_sha256, claim, represented)
 
@@ -108,7 +116,7 @@ def ingest_semantic_record(
 def _record_from_mapping(data: object) -> SemanticRecord:
     if not isinstance(data, dict):
         raise SemanticRecordError("semantic record must be an object")
-    required = ("identity", "version", "claim_identity", "assertion_reference", "source_identity", "project_identity", "artifact_locator", "source_revision", "source_sha256", "observation_identity", "block_ordinal", "authoring_process")
+    required = ("identity", "version", "claim_identity", "assertion_reference", "assertion", "source_identity", "project_identity", "artifact_locator", "source_revision", "source_sha256", "observation_identity", "block_ordinal", "authoring_process")
     if any(not isinstance(data.get(key), str) or not data[key] for key in required if key != "block_ordinal") or not isinstance(data.get("block_ordinal"), int):
         raise SemanticRecordError("semantic record required fields are missing")
     def strings(name: str) -> tuple[str, ...]:
@@ -120,7 +128,8 @@ def _record_from_mapping(data: object) -> SemanticRecord:
         if data.get(name) is not None and not isinstance(data.get(name), int):
             raise SemanticRecordError(f"semantic record {name} must be integer or null")
     return SemanticRecord(
-        **{key: data[key] for key in required}, line_start=data.get("line_start"), line_end=data.get("line_end"),
+        **{key: data[key] for key in required if key != "assertion"}, line_start=data.get("line_start"), line_end=data.get("line_end"),
         classifications=strings("classifications"), limitations=strings("limitations"),
         authority_basis=data.get("authority_basis"), currentness_basis=data.get("currentness_basis"), governance_basis=data.get("governance_basis"),
+        assertion_content=data["assertion"],
     )

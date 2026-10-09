@@ -123,6 +123,7 @@ class Claim:
     identity: SemanticIdentity
     assertion_reference: str
     provenance: Provenance
+    assertion_content: str | None = None
 
 
 @dataclass(frozen=True)
@@ -305,6 +306,13 @@ class RepresentedInformation:
     provenance: Provenance
     classifications: tuple[Classification, ...] = ()
     uncertainty: tuple[Uncertainty, ...] = ()
+    # Immutable, source-owner-supplied semantic content where an approved
+    # semantic-record ingestion path has validated it. Structural Markdown
+    # representation intentionally leaves this absent.
+    assertion_content: str | None = None
+    authority_basis: str | None = None
+    currentness_basis: str | None = None
+    governance_basis: str | None = None
 
 
 @dataclass(frozen=True)
