@@ -1,13 +1,13 @@
 # Phase 4 Proving Foundation
 
-**Status:** **MATERIALIZED — WS5 EXECUTION AWAITS A RESERVABLE FRESH CONSUMER.**
+**Status:** **MATERIALIZED — WS5 REMAINS INCOMPLETE; NO USABLE CONSUMER EXISTS.**
 
 This main-owned foundation controls the sequential proving program. It is
 closure-first and reference-oriented. It does not authorize WS6A/WS6B execution,
 Gate 4C, or production readiness.
 
-The original Company AI Roadmap target is preserved historically.  The effective
-future I10/WS6A target criterion is [AM-P4-I10-WS6A-001](ws5/i10-ws6a-project-neutral-amendment.md); no Project has yet been selected.
+The original Company AI Roadmap target is preserved historically. The effective
+future I10/WS6A target criterion is [AM-P4-I10-WS6A-001](ws5/i10-ws6a-project-neutral-amendment.md). The Owner-selected Project is Day Trading System and its effective proving revision is recorded in [P4-I10-EFFECTIVE-REVISION-001](ws5/day-trading-system-effective-revision-selection.md); this does not authorize preparation or execution.
 
 The program has exactly 15 obligations: WS5 (5), WS6A (5), WS6B (5). Sequence:
 foundation -> WS5 -> WS6A -> WS6A evaluation -> WS6B -> WS6B evaluation ->
