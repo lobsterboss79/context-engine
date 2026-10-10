@@ -14,6 +14,7 @@ The Project Owner has final authority for material decisions. ChatGPT analyzes, 
 
 ## Documentation
 
+- [`context-engine render` CLI usage](docs/cli-render.md)
 - [Phase 0 governing decisions](docs/phase-0/project-definition-governance.md)
 - [Project roadmap](docs/roadmap.md)
 - [Phase 0 exit checklist](checklists/checklist-phase-0-project-definition-governance.md)
