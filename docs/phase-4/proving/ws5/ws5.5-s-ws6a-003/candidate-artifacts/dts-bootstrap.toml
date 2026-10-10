@@ -1,0 +1,7 @@
+version = 1
+
+[bootstrap]
+project = "day-trading-system"
+scope = "authorized-eight-governed-project-markdown"
+governance_basis = "P4-I10-EFFECTIVE-REVISION-001; Project Owner A1 candidate-configuration preparation only; no package construction, Consumer disclosure, successor creation, or WS6A authority."
+project_configuration = "dts-project.toml"

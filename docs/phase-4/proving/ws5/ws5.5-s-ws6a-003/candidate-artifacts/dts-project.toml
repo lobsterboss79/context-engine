@@ -1,0 +1,5 @@
+version = 1
+
+[project]
+identity = "day-trading-system"
+governance_reference = "P4-I10-EFFECTIVE-REVISION-001; Project Owner A1 candidate configuration only; successor-003 remains historical/frozen and WS6A is not authorized."
