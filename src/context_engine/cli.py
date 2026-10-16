@@ -14,7 +14,13 @@ from context_engine.application.readiness import ReadinessReport, assess_readine
 from context_engine.application.bootstrap import GovernanceEstablishmentError, establish_bootstrap, load_project_configuration
 from context_engine.application.cli_render_inputs import CliRenderInputError, load_governed_render_inputs
 from context_engine.application.local_context import LocalContextError, format_local_context_markdown, prepare_local_context
-from context_engine.application.source_evidence import SourceEvidenceError, format_source_evidence_markdown, retrieve_source_evidence
+from context_engine.application.source_evidence import (
+    SourceEvidenceError,
+    format_source_evidence_markdown,
+    format_source_evidence_metadata_markdown,
+    inspect_source_evidence,
+    retrieve_source_evidence,
+)
 from context_engine.application.orchestration import run_governed_render
 from context_engine.adapters.environment import HostPrerequisiteProbe
 
@@ -58,7 +64,9 @@ def build_parser() -> argparse.ArgumentParser:
     evidence = subparsers.add_parser("evidence", help="retrieve one bounded observed Markdown Source range")
     evidence.add_argument("--project", required=True, help="explicit local Git repository root")
     evidence.add_argument("--artifact", required=True, help="repository-relative Markdown artifact path")
-    evidence.add_argument("--lines", required=True, help="inclusive positive Source line range: start:end")
+    evidence_request = evidence.add_mutually_exclusive_group(required=True)
+    evidence_request.add_argument("--lines", help="inclusive positive Source line range: start:end")
+    evidence_request.add_argument("--info", action="store_true", help="observe bounded-request metadata without returning Source text")
     evidence.add_argument("--authorize-local-inspection", action="store_true", help="explicitly authorize this local read-only repository observation")
     evidence.add_argument("--format", choices=("json", "markdown"), default="json", help="observed Source-evidence presentation format")
     evidence.add_argument("--output", help="optional new report destination; defaults to stdout")
@@ -102,7 +110,7 @@ def main(argv: Sequence[str] | None = None) -> int:
         return _run_context(Path(args.project), args.task, args.authorize_local_inspection,
                             Path(args.output) if args.output else None, args.format)
     if args.operation == "evidence":
-        return _run_evidence(Path(args.project), args.artifact, args.lines, args.authorize_local_inspection,
+        return _run_evidence(Path(args.project), args.artifact, args.lines, args.info, args.authorize_local_inspection,
                              Path(args.output) if args.output else None, args.format)
     if args.operation != "readiness":
         return 2
@@ -172,22 +180,29 @@ def _run_context(
 def _run_evidence(
     project: Path,
     artifact: str,
-    line_range: str,
+    line_range: str | None,
+    metadata_only: bool,
     inspection_authorized: bool,
     output_reference: Path | None,
     output_format: str,
 ) -> int:
     """Retrieve one bounded observed Source range without semantic interpretation."""
     try:
-        report = retrieve_source_evidence(project, artifact, line_range, inspection_authorized=inspection_authorized)
-        content = json.dumps(report.payload(), indent=2, sort_keys=True) + "\n" if output_format == "json" else format_source_evidence_markdown(report)
+        if metadata_only:
+            report = inspect_source_evidence(project, artifact, inspection_authorized=inspection_authorized)
+            content = json.dumps(report.payload(), indent=2, sort_keys=True) + "\n" if output_format == "json" else format_source_evidence_metadata_markdown(report)
+        else:
+            assert line_range is not None
+            report = retrieve_source_evidence(project, artifact, line_range, inspection_authorized=inspection_authorized)
+            content = json.dumps(report.payload(), indent=2, sort_keys=True) + "\n" if output_format == "json" else format_source_evidence_markdown(report)
         if output_reference is None:
             print(content, end="")
         else:
             _write_new_utf8(output_reference, content)
-            print(json.dumps({"output": str(output_reference), "status": report.status,
-                              "returned_line_start": report.returned_line_start,
-                              "returned_line_end": report.returned_line_end}, sort_keys=True))
+            summary = {"output": str(output_reference), "status": report.status}
+            if not metadata_only:
+                summary.update({"returned_line_start": report.returned_line_start, "returned_line_end": report.returned_line_end})
+            print(json.dumps(summary, sort_keys=True))
     except (SourceEvidenceError, OSError, ValueError) as error:
         print("evidence failed: " + str(error), file=sys.stderr)
         return 2

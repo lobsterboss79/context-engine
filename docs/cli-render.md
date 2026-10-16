@@ -158,3 +158,18 @@ repository boundary fails rather than truncating. Only repository-relative
 `.md` or `.markdown` files are eligible; absolute paths, traversal, symlink
 escapes, and non-Markdown files are rejected. Output is atomic and never
 overwrites an existing file.
+
+Use `--info` instead of `--lines` to inspect the same authorized Markdown
+Source before retrieving text. It reports the observed Git revision,
+working-tree state, full Source SHA-256, exact UTF-8 byte and line counts, the
+existing retrieval limits, and the largest valid inclusive range beginning at
+line 1 under both limits. It returns no Source text and remains observed,
+unverified metadata only.
+
+```bash
+context-engine evidence \
+  --project ~/Projects/wealth-operating-system \
+  --artifact checklists/checklist-phase-2-application-architecture-technology-selection.md \
+  --authorize-local-inspection \
+  --info
+```

@@ -542,3 +542,75 @@ def test_evidence_enforces_byte_bound_and_atomic_no_overwrite(tmp_path: Path, ca
     output.write_text("preserve", encoding="utf-8")
     assert cli.main(["evidence", "--project", str(repo), "--artifact", "README.md", "--lines", "1:1", "--authorize-local-inspection", "--output", str(output)]) == 2
     assert output.read_text(encoding="utf-8") == "preserve"
+
+
+def test_evidence_info_reports_exact_metadata_and_initial_range_without_source_text(tmp_path: Path, capsys) -> None:
+    repo = _local_repository(tmp_path)
+    content = "first\r\nsecond €\r\nthird"
+    _commit_file(repo, "docs/evidence.md", content)
+    head = subprocess.check_output(("git", "-C", str(repo), "rev-parse", "HEAD"), text=True).strip()
+    arguments = ["evidence", "--project", str(repo), "--artifact", "docs/evidence.md", "--authorize-local-inspection", "--info"]
+    assert cli.main(arguments) == 0
+    payload = json.loads(capsys.readouterr().out)
+    assert payload["status"] == "observed_source_metadata"
+    assert payload["source_sha256"] == hashlib.sha256(content.encode("utf-8")).hexdigest()
+    assert payload["source_bytes"] == len(content.encode("utf-8"))
+    assert payload["source_lines"] == 3
+    assert payload["largest_valid_initial_range"] == {
+        "line_start": 1, "line_end": 3, "line_count": 3, "content_bytes": len(content.encode("utf-8")),
+    }
+    assert payload["maximum_retrieval_lines"] == 200
+    assert payload["maximum_retrieval_content_bytes"] == 16_384
+    assert payload["repository"]["head"] == head
+    assert "content" not in payload
+    assert "first" not in json.dumps(payload)
+
+    first, second = tmp_path / "metadata-one.md", tmp_path / "metadata-two.md"
+    assert cli.main([*arguments, "--format", "markdown", "--output", str(first)]) == 0
+    assert cli.main([*arguments, "--format", "markdown", "--output", str(second)]) == 0
+    assert first.read_bytes() == second.read_bytes()
+    assert "# Observed Source Metadata" in first.read_text(encoding="utf-8")
+    assert "first" not in first.read_text(encoding="utf-8")
+    preserved = tmp_path / "preserved.json"
+    preserved.write_text("preserve", encoding="utf-8")
+    assert cli.main([*arguments, "--output", str(preserved)]) == 2
+    assert preserved.read_text(encoding="utf-8") == "preserve"
+
+
+def test_evidence_info_respects_line_and_byte_limits_and_empty_sources(tmp_path: Path, capsys) -> None:
+    repo = _local_repository(tmp_path)
+    _commit_file(repo, "two-hundred.md", "".join("x\n" for _ in range(200)))
+    _commit_file(repo, "many.md", "".join("x\n" for _ in range(201)))
+    _commit_file(repo, "exact.md", "x" * 16_384)
+    _commit_file(repo, "oversized-first-line.md", "x" * 16_385)
+    _commit_file(repo, "empty.md", "")
+    base = ["evidence", "--project", str(repo), "--authorize-local-inspection", "--info"]
+
+    for artifact, end, bytes_ in (("two-hundred.md", 200, 400), ("many.md", 200, 400), ("exact.md", 1, 16_384)):
+        assert cli.main([*base, "--artifact", artifact]) == 0
+        metadata = json.loads(capsys.readouterr().out)
+        assert metadata["largest_valid_initial_range"]["line_end"] == end
+        assert metadata["largest_valid_initial_range"]["content_bytes"] == bytes_
+    assert cli.main([*base, "--artifact", "oversized-first-line.md"]) == 0
+    assert json.loads(capsys.readouterr().out)["largest_valid_initial_range"] is None
+    assert cli.main([*base, "--artifact", "empty.md"]) == 0
+    empty = json.loads(capsys.readouterr().out)
+    assert empty["source_lines"] == 0
+    assert empty["largest_valid_initial_range"] is None
+
+
+def test_evidence_info_uses_existing_security_boundaries_and_lines_remain_required(tmp_path: Path, capsys) -> None:
+    repo = _local_repository(tmp_path)
+    _commit_file(repo, "source.md", "one\n")
+    outside = tmp_path / "outside.md"
+    outside.write_text("outside\n", encoding="utf-8")
+    (repo / "escape.md").symlink_to(outside)
+    base = ["evidence", "--project", str(repo), "--authorize-local-inspection", "--info"]
+    assert cli.main([*base, "--artifact", "../outside.md"]) == 2
+    assert cli.main([*base, "--artifact", "notes.txt"]) == 2
+    assert cli.main([*base, "--artifact", "escape.md"]) == 2
+    assert cli.main(["evidence", "--project", str(repo), "--artifact", "source.md", "--info"]) == 2
+    with pytest.raises(SystemExit):
+        cli.main(["evidence", "--project", str(repo), "--artifact", "source.md", "--authorize-local-inspection"])
+    with pytest.raises(SystemExit):
+        cli.main(["evidence", "--project", str(repo), "--artifact", "source.md", "--lines", "1:1", "--info", "--authorize-local-inspection"])
