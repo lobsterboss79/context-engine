@@ -8,7 +8,7 @@ from pathlib import Path
 import pytest
 
 from context_engine import cli
-from context_engine.application.local_context import _markdown_candidates
+from context_engine.application.local_context import LocalContextReport, _markdown_candidates, format_local_context_markdown
 from context_engine.application.readiness import ReadinessReport
 from context_engine.ports.environment import PrerequisiteCheck
 
@@ -209,6 +209,59 @@ def test_context_writes_deterministic_qualified_markdown_candidates(tmp_path: Pa
     assert "applicability" in " ".join(one["limitations"])
 
 
+def test_context_markdown_briefing_preserves_json_default_and_evidence_boundaries(tmp_path: Path, capsys) -> None:
+    repo = _local_repository(tmp_path)
+    arguments = ["context", "--project", str(repo), "--task", "Continue Phase 3 implementation", "--authorize-local-inspection"]
+    assert cli.main(arguments) == 0
+    assert json.loads(capsys.readouterr().out)["status"] == "candidate_context"
+
+    markdown = tmp_path / "briefing.md"
+    assert cli.main([*arguments, "--format", "markdown", "--output", str(markdown)]) == 0
+    briefing = markdown.read_text(encoding="utf-8")
+    assert "# Candidate Context Briefing" in briefing
+    assert "## Provenance-Verified Evidence" in briefing
+    assert "No semantic assertion was reused" in briefing
+    assert "## Relevant Markdown Candidates" in briefing
+    assert "Source: `README.md`, lines 1–1" in briefing
+    assert "unverified Markdown candidate; inert structural data only" in briefing
+    assert "## Limitations" in briefing
+    assert "Discovery: 2 total match(es); 2 returned; 0 excluded" in briefing
+
+
+def test_markdown_briefing_fences_source_content_and_is_deterministic() -> None:
+    report = LocalContextReport(
+        "candidate_context", "# task", {"root": "/repo", "head": "head"}, (),
+        ({"semantic_record": "record:v1", "provenance": "safe.md", "source_revision": "historic",
+          "assertion_content": "# source heading\n[link](https://example.invalid)\n```",},),
+        ({"artifact": "candidate.md", "line_start": 2, "line_end": 4, "matched_terms": ("task",),
+          "content": "# injected heading\n[link](https://example.invalid)\n```",},),
+        {"total_matches": 1, "returned_candidates": 1, "excluded_by_limit": 0,
+         "distinct_source_documents": 1, "truncated": False, "candidate_limit": 64},
+        ("no authority established",),
+    )
+    first = format_local_context_markdown(report)
+    assert first == format_local_context_markdown(report)
+    assert "``````\n# source heading" in first
+    assert "``````\n# injected heading" in first
+    assert "### Candidate 1" in first
+
+
+def test_context_markdown_briefing_empty_candidates_and_never_overwrites(tmp_path: Path, capsys) -> None:
+    repo = _local_repository(tmp_path)
+    destination = tmp_path / "briefing.md"
+    assert cli.main(["context", "--project", str(repo), "--task", "absent", "--authorize-local-inspection",
+                     "--format", "markdown", "--output", str(destination)]) == 0
+    assert "No task-matching Markdown candidates were returned." in destination.read_text(encoding="utf-8")
+    assert cli.main(["context", "--project", str(repo), "--task", "absent", "--authorize-local-inspection",
+                     "--format", "markdown", "--output", str(destination)]) == 2
+    assert "already exists" in capsys.readouterr().err
+
+
+def test_context_rejects_unknown_output_format() -> None:
+    with pytest.raises(SystemExit):
+        cli.main(["context", "--project", "/repo", "--task", "task", "--format", "plain"])
+
+
 def test_context_rejects_non_root_and_never_overwrites_output(tmp_path: Path, capsys) -> None:
     repo = _local_repository(tmp_path)
     assert cli.main(["context", "--project", str(repo / "README.md"), "--task", "phase", "--authorize-local-inspection"]) == 2
@@ -263,6 +316,13 @@ def test_context_reuses_only_current_validated_semantic_record_with_provenance(t
     assert evidence[0]["source_revision"] == head
     assert evidence[0]["source_sha256"] == hashlib.sha256(artifact.read_bytes()).hexdigest()
     assert evidence[0]["semantic_record"] == "record-cli:v2"
+    briefing = tmp_path / "context.md"
+    assert cli.main(["context", "--project", str(repo), "--task", "semantic", "--authorize-local-inspection",
+                     "--format", "markdown", "--output", str(briefing)]) == 0
+    briefing_content = briefing.read_text(encoding="utf-8")
+    assert "### Semantic assertion 1" in briefing_content
+    assert "Source: `semantic-source.md`; bound revision: `" + head + "`" in briefing_content
+    assert "not a currentness or authority conclusion" in briefing_content
     invalid_relation = json.loads((lifecycle / "v1-to-v2.json").read_text()) | {"relation_sha256": "0" * 64}
     (lifecycle / "v1-to-v2.json").write_text(json.dumps(invalid_relation), encoding="utf-8")
     invalid_output = tmp_path / "invalid-lifecycle.json"

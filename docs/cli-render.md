@@ -103,6 +103,25 @@ verified.
 The optional output is created atomically and cannot overwrite a file; omit it
 to print the JSON report to standard output.
 
+JSON is the default machine-readable output.  For a presentation-only Markdown
+briefing of the same already-prepared report, select `--format markdown`:
+
+```bash
+context-engine context \
+  --project ~/Projects/day-trading-system \
+  --task "Help me continue Phase 3 implementation" \
+  --authorize-local-inspection \
+  --format markdown \
+  --output ./candidate-context.md
+```
+
+The Markdown briefing preserves the ordered candidate set and separates
+provenance-verified semantic evidence from unverified Markdown candidates. It
+includes Source path/line references, bound revisions for semantic evidence,
+diagnostics, and existing limitations. Source text is rendered as inert data;
+the briefing is not a governed Context Package and does not add authority or
+task-relative governance conclusions.
+
 `discovery_diagnostics` records the total Markdown block matches before the
 fixed 64-candidate limit, the returned and excluded counts, the number of
 returned Source documents, and whether truncation occurred. These are

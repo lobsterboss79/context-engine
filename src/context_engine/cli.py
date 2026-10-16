@@ -13,7 +13,7 @@ from pathlib import Path
 from context_engine.application.readiness import ReadinessReport, assess_readiness
 from context_engine.application.bootstrap import GovernanceEstablishmentError, establish_bootstrap, load_project_configuration
 from context_engine.application.cli_render_inputs import CliRenderInputError, load_governed_render_inputs
-from context_engine.application.local_context import LocalContextError, prepare_local_context
+from context_engine.application.local_context import LocalContextError, format_local_context_markdown, prepare_local_context
 from context_engine.application.orchestration import run_governed_render
 from context_engine.adapters.environment import HostPrerequisiteProbe
 
@@ -52,7 +52,8 @@ def build_parser() -> argparse.ArgumentParser:
     context.add_argument("--project", required=True, help="explicit local Git repository root")
     context.add_argument("--task", required=True, help="task description used only for deterministic literal candidate matching")
     context.add_argument("--authorize-local-inspection", action="store_true", help="explicitly authorize this local read-only repository observation")
-    context.add_argument("--output", help="optional new JSON report destination; defaults to stdout")
+    context.add_argument("--format", choices=("json", "markdown"), default="json", help="candidate-context presentation format")
+    context.add_argument("--output", help="optional new report destination; defaults to stdout")
     return parser
 
 
@@ -91,7 +92,7 @@ def main(argv: Sequence[str] | None = None) -> int:
         return _run_render(Path(args.input), Path(args.output))
     if args.operation == "context":
         return _run_context(Path(args.project), args.task, args.authorize_local_inspection,
-                            Path(args.output) if args.output else None)
+                            Path(args.output) if args.output else None, args.format)
     if args.operation != "readiness":
         return 2
 
@@ -126,14 +127,24 @@ def _run_render(input_reference: Path, output_reference: Path) -> int:
     return 0
 
 
-def _run_context(project: Path, task: str, inspection_authorized: bool, output_reference: Path | None) -> int:
+def _run_context(
+    project: Path,
+    task: str,
+    inspection_authorized: bool,
+    output_reference: Path | None,
+    output_format: str,
+) -> int:
     """Prepare a local candidate report without invoking governed rendering."""
     if not inspection_authorized:
         print("context failed: local inspection authorization is required", file=sys.stderr)
         return 2
     try:
         report = prepare_local_context(project, task, inspection_authorized=True)
-        content = json.dumps(report.payload(), indent=2, sort_keys=True) + "\n"
+        content = (
+            json.dumps(report.payload(), indent=2, sort_keys=True) + "\n"
+            if output_format == "json"
+            else format_local_context_markdown(report)
+        )
         if output_reference is None:
             print(content, end="")
         else:

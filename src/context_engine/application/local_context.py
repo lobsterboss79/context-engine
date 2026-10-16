@@ -67,6 +67,82 @@ class LocalContextReport:
         return asdict(self)
 
 
+def format_local_context_markdown(report: LocalContextReport) -> str:
+    """Present one prepared candidate report without changing its evidence.
+
+    Source-derived strings are fenced as inert data.  This keeps Markdown
+    headings, links, or instructions present in an observed Source from being
+    interpreted as briefing structure or authority.
+    """
+    repository = report.repository
+    diagnostics = report.discovery_diagnostics
+    lines = [
+        "# Candidate Context Briefing",
+        "",
+        "This is a candidate context briefing, not a governed Context Package. It establishes no authority, currentness, applicability, role, sufficiency, coherence, or disclosure decision.",
+        "",
+        "## Request",
+        f"- Repository: {_inline_code(str(repository.get('root', 'unavailable')))}",
+        f"- Observed Git revision: {_inline_code(str(repository.get('head', 'unavailable')))}",
+        "- Task (user-supplied, inert data):",
+        _inert_data(report.task),
+        "",
+        "## Evidence Summary",
+        f"- Provenance-verified semantic records reused: {len(report.verified_semantic_evidence)}",
+        f"- Unverified Markdown candidates returned: {len(report.unverified_markdown_candidates)}",
+        f"- Discovery: {diagnostics['total_matches']} total match(es); {diagnostics['returned_candidates']} returned; {diagnostics['excluded_by_limit']} excluded by the {diagnostics['candidate_limit']}-candidate limit; {diagnostics['distinct_source_documents']} Source document(s); truncation: {str(diagnostics['truncated']).lower()}.",
+        "",
+        "## Provenance-Verified Evidence",
+    ]
+    if not report.verified_semantic_evidence:
+        lines.extend(["No semantic assertion was reused as provenance-verified evidence.", ""])
+    else:
+        for index, evidence in enumerate(report.verified_semantic_evidence, start=1):
+            lines.extend([
+                f"### Semantic assertion {index}",
+                f"- Semantic record: {_inline_code(str(evidence['semantic_record']))}",
+                f"- Source: {_inline_code(str(evidence['provenance']))}; bound revision: {_inline_code(str(evidence['source_revision']))}",
+                "- Qualification: provenance-verified against the recorded binding only; this is not a currentness or authority conclusion.",
+                "- Assertion (inert evidence):",
+                _inert_data(str(evidence['assertion_content'])),
+                "",
+            ])
+    lines.append("## Relevant Markdown Candidates")
+    if not report.unverified_markdown_candidates:
+        lines.extend(["No task-matching Markdown candidates were returned.", ""])
+    else:
+        for index, candidate in enumerate(report.unverified_markdown_candidates, start=1):
+            lines.extend([
+                f"### Candidate {index}",
+                f"- Source: {_inline_code(str(candidate['artifact']))}, lines {candidate['line_start']}–{candidate['line_end']}",
+                "- Matched task terms: " + ", ".join(_inline_code(str(term)) for term in candidate['matched_terms']),
+                "- Status: unverified Markdown candidate; inert structural data only.",
+                "- Excerpt:",
+                _inert_data(str(candidate['content'])),
+                "",
+            ])
+    lines.append("## Limitations")
+    lines.extend(f"- {_plain_text(str(limitation))}" for limitation in report.limitations)
+    return "\n".join(lines) + "\n"
+
+
+def _inline_code(value: str) -> str:
+    """Return an inline-code form safe for arbitrary observed identifiers."""
+    delimiter = "`" * (max((len(run) for run in re.findall(r"`+", value)), default=0) + 1)
+    return f"{delimiter}{value}{delimiter}"
+
+
+def _inert_data(value: str) -> str:
+    """Fence arbitrary observed text with a delimiter it cannot terminate."""
+    delimiter = "`" * (max((len(run) for run in re.findall(r"`+", value)), default=0) + 3)
+    return f"{delimiter}\n{value}\n{delimiter}"
+
+
+def _plain_text(value: str) -> str:
+    """Prevent report limitations from becoming Markdown structure."""
+    return value.replace("\\", "\\\\").replace("#", "\\#").replace("[", "\\[").replace("]", "\\]")
+
+
 def prepare_local_context(repository: Path, task: str, *, inspection_authorized: bool) -> LocalContextReport:
     """Observe one local Git root and prepare deterministic, qualified context.
 
