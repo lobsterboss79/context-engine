@@ -102,3 +102,9 @@ remain an explicit limitation and their assertions are not presented as
 verified.
 The optional output is created atomically and cannot overwrite a file; omit it
 to print the JSON report to standard output.
+
+`discovery_diagnostics` records the total Markdown block matches before the
+fixed 64-candidate limit, the returned and excluded counts, the number of
+returned Source documents, and whether truncation occurred. These are
+descriptive diagnostics only: they do not alter ordering, selection, or
+governance status.

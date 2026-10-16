@@ -5,7 +5,10 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
+import pytest
+
 from context_engine import cli
+from context_engine.application.local_context import _markdown_candidates
 from context_engine.application.readiness import ReadinessReport
 from context_engine.ports.environment import PrerequisiteCheck
 
@@ -196,6 +199,11 @@ def test_context_writes_deterministic_qualified_markdown_candidates(tmp_path: Pa
     assert one["status"] == "candidate_context"
     assert one["unverified_markdown_candidates"] == two["unverified_markdown_candidates"]
     assert one["verified_semantic_evidence"] == []
+    assert one["discovery_diagnostics"] == two["discovery_diagnostics"]
+    assert one["discovery_diagnostics"] == {
+        "total_matches": 2, "returned_candidates": 2, "excluded_by_limit": 0,
+        "distinct_source_documents": 1, "truncated": False, "candidate_limit": 64,
+    }
     candidate = one["unverified_markdown_candidates"][0]
     assert candidate["content_status"] == "unverified_markdown_structure_inert_data"
     assert "applicability" in " ".join(one["limitations"])
@@ -285,3 +293,20 @@ def test_context_rejects_semantic_record_when_bound_source_bytes_change(tmp_path
     payload = json.loads(output.read_text())
     assert payload["verified_semantic_evidence"] == []
     assert any("bound Source hash" in value for value in payload["limitations"])
+
+
+@pytest.mark.parametrize(
+    ("count", "returned", "excluded", "truncated"),
+    ((3, 3, 0, False), (64, 64, 0, False), (66, 64, 2, True)),
+)
+def test_markdown_candidate_diagnostics_preserve_order_and_limit(
+    tmp_path: Path, count: int, returned: int, excluded: int, truncated: bool,
+) -> None:
+    for index in range(count):
+        (tmp_path / f"document-{index:03}.md").write_text("# Document\n\nneedle\n", encoding="utf-8")
+    discovery = _markdown_candidates(tmp_path, ("needle",))
+    assert discovery.diagnostics() == {
+        "total_matches": count, "returned_candidates": returned, "excluded_by_limit": excluded,
+        "distinct_source_documents": returned, "truncated": truncated, "candidate_limit": 64,
+    }
+    assert [item["artifact"] for item in discovery.candidates] == [f"document-{index:03}.md" for index in range(returned)]

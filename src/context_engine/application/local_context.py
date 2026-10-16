@@ -32,6 +32,25 @@ class LocalContextError(ValueError):
 
 
 @dataclass(frozen=True)
+class MarkdownCandidateDiscovery:
+    """The existing ordered candidate slice plus non-governing diagnostics."""
+
+    candidates: tuple[dict[str, object], ...]
+    total_matches: int
+
+    def diagnostics(self) -> dict[str, int | bool]:
+        returned = len(self.candidates)
+        return {
+            "total_matches": self.total_matches,
+            "returned_candidates": returned,
+            "excluded_by_limit": self.total_matches - returned,
+            "distinct_source_documents": len({str(item["artifact"]) for item in self.candidates}),
+            "truncated": self.total_matches > returned,
+            "candidate_limit": MAX_CANDIDATES,
+        }
+
+
+@dataclass(frozen=True)
 class LocalContextReport:
     """Serializable candidate output, explicitly not a governed package."""
 
@@ -41,6 +60,7 @@ class LocalContextReport:
     task_terms: tuple[str, ...]
     verified_semantic_evidence: tuple[dict[str, object], ...]
     unverified_markdown_candidates: tuple[dict[str, object], ...]
+    discovery_diagnostics: dict[str, int | bool]
     limitations: tuple[str, ...]
 
     def payload(self) -> dict[str, object]:
@@ -75,7 +95,7 @@ def prepare_local_context(repository: Path, task: str, *, inspection_authorized:
         limitations.append("no semantic assertion was reused as verified current evidence")
     return LocalContextReport(
         "candidate_context", task, _repository_payload(observation), terms,
-        tuple(verified), tuple(markdown), tuple(sorted(set(limitations))),
+        tuple(verified), markdown.candidates, markdown.diagnostics(), tuple(sorted(set(limitations))),
     )
 
 
@@ -85,7 +105,7 @@ def _task_terms(task: str) -> tuple[str, ...]:
     return tuple(sorted({term.casefold() for term in _TERM.findall(task) if len(term) > 1 and term.casefold() not in _NON_DISCOVERY_TERMS}))
 
 
-def _markdown_candidates(root: Path, terms: tuple[str, ...]) -> list[dict[str, object]]:
+def _markdown_candidates(root: Path, terms: tuple[str, ...]) -> MarkdownCandidateDiscovery:
     result: list[dict[str, object]] = []
     for path in sorted(root.rglob("*"), key=lambda item: item.as_posix()):
         if ".git" in path.parts or not path.is_file() or path.suffix.casefold() not in {".md", ".markdown"}:
@@ -117,7 +137,7 @@ def _markdown_candidates(root: Path, terms: tuple[str, ...]) -> list[dict[str, o
                 "content_status": "unverified_markdown_structure_inert_data",
             })
     result.sort(key=lambda item: (-len(item["matched_terms"]), str(item["artifact"]), int(item["block_ordinal"])))
-    return result[:MAX_CANDIDATES]
+    return MarkdownCandidateDiscovery(tuple(result[:MAX_CANDIDATES]), len(result))
 
 
 def _verified_semantic_records(root: Path, observation: GitObservation) -> tuple[list[dict[str, object]], list[str]]:
