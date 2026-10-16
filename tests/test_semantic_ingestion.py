@@ -40,7 +40,7 @@ def test_ingests_explicit_source_bound_claim() -> None:
     assert "block:1;lines:3-3" in result.claim.provenance.location_reference
 
 
-@pytest.mark.parametrize("field,value", [("source_revision", "wrong"), ("block_ordinal", 99), ("line_start", 2)])
+@pytest.mark.parametrize("field,value", [("source_revision", "wrong"), ("observation_identity", "wrong"), ("block_ordinal", 99), ("line_start", 2)])
 def test_rejects_invalid_source_binding(field: str, value: object) -> None:
     source, transformation, record = prepared()
     changed = record.__dict__ | {field: value}

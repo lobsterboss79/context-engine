@@ -74,3 +74,31 @@ The CLI can render that scenario when an operator supplies an exact, separately
 governed v1 document containing its already-resolved semantic evidence and
 explicit applicability/role decisions; it does not convert Markdown records or
 infer the runtime object graph.
+
+# `context-engine context`
+
+`context` is a separate local convenience boundary. It observes an explicitly
+authorized local Git repository, transforms Markdown into inert structural
+evidence, and writes a deterministic **candidate-context report**. It does not
+construct a governed Context Package or infer authorization, applicability,
+roles, currentness, supersession, sufficiency, or Consumer disclosure.
+
+```bash
+context-engine context \
+  --project ~/Projects/day-trading-system \
+  --task "Help me continue Phase 3 implementation" \
+  --authorize-local-inspection \
+  --output ./candidate-context.json
+```
+
+The repository path must be the local Git root. Markdown candidates are
+literal task-term matches and are labelled unverified inert data. If the
+repository has `docs/project/semantic-records`, the command attempts existing
+semantic-record ingestion only when a record's bound Source hash and Source
+block match the observed checkout and its declared provenance validates.
+An unchanged artifact may retain a historical record revision; that is reported
+as bound evidence, not a currentness conclusion. Records that do not validate
+remain an explicit limitation and their assertions are not presented as
+verified.
+The optional output is created atomically and cannot overwrite a file; omit it
+to print the JSON report to standard output.

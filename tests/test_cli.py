@@ -165,3 +165,123 @@ def test_bootstrap_validate_remains_available(tmp_path: Path, capsys) -> None:
         "--project-configuration", str(tmp_path / "project.toml"),
     ]) == 0
     assert json.loads(capsys.readouterr().out)["status"] == "validated"
+
+
+def _local_repository(directory: Path) -> Path:
+    repo = directory / "candidate-repository"
+    repo.mkdir()
+    import subprocess
+    for arguments in (("init",), ("config", "user.email", "test@example.invalid"), ("config", "user.name", "Test")):
+        subprocess.run(("git", "-C", str(repo), *arguments), check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    (repo / "README.md").write_text("# Phase 3\n\nContinue implementation safely.\n", encoding="utf-8")
+    (repo / "notes.md").write_text("# Other\n\nUnrelated text.\n", encoding="utf-8")
+    subprocess.run(("git", "-C", str(repo), "add", "."), check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    subprocess.run(("git", "-C", str(repo), "commit", "-m", "fixture"), check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    return repo
+
+
+def test_context_requires_explicit_local_authorization(tmp_path: Path, capsys) -> None:
+    repo = _local_repository(tmp_path)
+    assert cli.main(["context", "--project", str(repo), "--task", "continue phase 3"]) == 2
+    assert "authorization is required" in capsys.readouterr().err
+
+
+def test_context_writes_deterministic_qualified_markdown_candidates(tmp_path: Path, capsys) -> None:
+    repo = _local_repository(tmp_path)
+    first, second = tmp_path / "first.json", tmp_path / "second.json"
+    arguments = ["context", "--project", str(repo), "--task", "Continue Phase 3 implementation", "--authorize-local-inspection"]
+    assert cli.main([*arguments, "--output", str(first)]) == 0
+    assert cli.main([*arguments, "--output", str(second)]) == 0
+    one, two = json.loads(first.read_text()), json.loads(second.read_text())
+    assert one["status"] == "candidate_context"
+    assert one["unverified_markdown_candidates"] == two["unverified_markdown_candidates"]
+    assert one["verified_semantic_evidence"] == []
+    candidate = one["unverified_markdown_candidates"][0]
+    assert candidate["content_status"] == "unverified_markdown_structure_inert_data"
+    assert "applicability" in " ".join(one["limitations"])
+
+
+def test_context_rejects_non_root_and_never_overwrites_output(tmp_path: Path, capsys) -> None:
+    repo = _local_repository(tmp_path)
+    assert cli.main(["context", "--project", str(repo / "README.md"), "--task", "phase", "--authorize-local-inspection"]) == 2
+    assert "repository" in capsys.readouterr().err
+    output = tmp_path / "existing.json"
+    output.write_text("preserve", encoding="utf-8")
+    assert cli.main(["context", "--project", str(repo), "--task", "phase", "--authorize-local-inspection", "--output", str(output)]) == 2
+    assert output.read_text(encoding="utf-8") == "preserve"
+
+
+def test_context_reuses_only_current_validated_semantic_record_with_provenance(tmp_path: Path, capsys) -> None:
+    repo = _local_repository(tmp_path)
+    import hashlib
+    import subprocess
+    artifact = repo / "semantic-source.md"
+    artifact.write_text("Semantic context.\n", encoding="utf-8")
+    subprocess.run(("git", "-C", str(repo), "add", "semantic-source.md"), check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    subprocess.run(("git", "-C", str(repo), "commit", "-m", "semantic source"), check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    head = subprocess.run(("git", "-C", str(repo), "rev-parse", "HEAD"), check=True, stdout=subprocess.PIPE).stdout.decode().strip()
+    records = repo / "docs" / "project" / "semantic-records"
+    records.mkdir(parents=True)
+    record = {
+        "identity": "record-cli", "version": "v1", "claim_identity": "claim-cli", "assertion_reference": "assertion-cli",
+        "assertion": "Validated semantic assertion.", "source_identity": "source-cli", "project_identity": "candidate-repository",
+        "artifact_locator": "semantic-source.md", "source_revision": head,
+        "source_sha256": hashlib.sha256(artifact.read_bytes()).hexdigest(), "observation_identity": "observation-cli",
+        "block_ordinal": 0, "line_start": 1, "line_end": 1, "authoring_process": "fixture",
+    }
+    v1 = records / "record-v1.json"
+    v2 = records / "record-v2.json"
+    v1.write_text(json.dumps(record), encoding="utf-8")
+    v2_record = record | {"version": "v2", "line_start": 1, "line_end": 1}
+    v2.write_text(json.dumps(v2_record), encoding="utf-8")
+    from context_engine.adapters.sqlite_state import PersistedSemanticRecordSupersession, semantic_record_supersession_sha256
+    v1_hash = hashlib.sha256(v1.read_bytes()).hexdigest()
+    v2_hash = hashlib.sha256(v2.read_bytes()).hexdigest()
+    relation = PersistedSemanticRecordSupersession("candidate-repository", "record-v1-to-v2", "v1", "pending", "record-cli", "v1", v1_hash, "record-cli", "v2", v2_hash,
+                                                   "provenance_correction", "fixture", "fixture")
+    relation = PersistedSemanticRecordSupersession(**(relation.__dict__ | {"relation_sha256": semantic_record_supersession_sha256(relation)}))
+    lifecycle = records / "lifecycle"
+    lifecycle.mkdir()
+    (lifecycle / "v1-to-v2.json").write_text(json.dumps(relation.__dict__, sort_keys=True, separators=(",", ":")), encoding="utf-8")
+    (repo / "notes.md").write_text("# Other\n\nLater unrelated change.\n", encoding="utf-8")
+    subprocess.run(("git", "-C", str(repo), "add", "notes.md"), check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    subprocess.run(("git", "-C", str(repo), "commit", "-m", "later unrelated change"), check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    output = tmp_path / "context.json"
+    assert cli.main(["context", "--project", str(repo), "--task", "semantic", "--authorize-local-inspection", "--output", str(output)]) == 0
+    evidence = json.loads(output.read_text())["verified_semantic_evidence"]
+    assert evidence[0]["assertion_content"] == "Validated semantic assertion."
+    assert evidence[0]["content_status"] == "validated_semantic_record_evidence_bound_to_recorded_revision_not_currentness_or_authority"
+    assert evidence[0]["provenance"] == "semantic-source.md"
+    assert evidence[0]["source_revision"] == head
+    assert evidence[0]["source_sha256"] == hashlib.sha256(artifact.read_bytes()).hexdigest()
+    assert evidence[0]["semantic_record"] == "record-cli:v2"
+    invalid_relation = json.loads((lifecycle / "v1-to-v2.json").read_text()) | {"relation_sha256": "0" * 64}
+    (lifecycle / "v1-to-v2.json").write_text(json.dumps(invalid_relation), encoding="utf-8")
+    invalid_output = tmp_path / "invalid-lifecycle.json"
+    assert cli.main(["context", "--project", str(repo), "--task", "semantic", "--authorize-local-inspection", "--output", str(invalid_output)]) == 0
+    invalid_payload = json.loads(invalid_output.read_text())
+    assert invalid_payload["verified_semantic_evidence"] == []
+    assert any("lifecycle relation" in value for value in invalid_payload["limitations"])
+
+
+def test_context_rejects_semantic_record_when_bound_source_bytes_change(tmp_path: Path) -> None:
+    repo = _local_repository(tmp_path)
+    import hashlib
+    import subprocess
+    artifact = repo / "semantic-source.md"
+    artifact.write_text("Original semantic context.\n", encoding="utf-8")
+    subprocess.run(("git", "-C", str(repo), "add", "semantic-source.md"), check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    subprocess.run(("git", "-C", str(repo), "commit", "-m", "semantic source"), check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    head = subprocess.check_output(("git", "-C", str(repo), "rev-parse", "HEAD"), text=True).strip()
+    records = repo / "docs" / "project" / "semantic-records"
+    records.mkdir(parents=True)
+    (records / "record.json").write_text(json.dumps({"identity": "record", "version": "v1", "claim_identity": "claim", "assertion_reference": "assertion",
+        "assertion": "Bound assertion.", "source_identity": "source", "project_identity": "candidate-repository", "artifact_locator": "semantic-source.md",
+        "source_revision": head, "source_sha256": hashlib.sha256(artifact.read_bytes()).hexdigest(), "observation_identity": "observation", "block_ordinal": 0,
+        "line_start": 1, "line_end": 1, "authoring_process": "fixture"}), encoding="utf-8")
+    artifact.write_text("Changed semantic context.\n", encoding="utf-8")
+    output = tmp_path / "context.json"
+    assert cli.main(["context", "--project", str(repo), "--task", "semantic", "--authorize-local-inspection", "--output", str(output)]) == 0
+    payload = json.loads(output.read_text())
+    assert payload["verified_semantic_evidence"] == []
+    assert any("bound Source hash" in value for value in payload["limitations"])
