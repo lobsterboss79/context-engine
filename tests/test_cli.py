@@ -8,6 +8,7 @@ from pathlib import Path
 import pytest
 
 from context_engine import cli
+from context_engine.application import local_context
 from context_engine.application.local_context import LocalContextReport, _markdown_candidates, format_local_context_markdown
 from context_engine.application.readiness import ReadinessReport
 from context_engine.ports.environment import PrerequisiteCheck
@@ -370,3 +371,90 @@ def test_markdown_candidate_diagnostics_preserve_order_and_limit(
         "distinct_source_documents": returned, "truncated": truncated, "candidate_limit": 64,
     }
     assert [item["artifact"] for item in discovery.candidates] == [f"document-{index:03}.md" for index in range(returned)]
+
+
+def _selected_heading_candidate(directory: Path, content: str, *, task: str = "target") -> dict[str, object]:
+    (directory / "document.md").write_text(content, encoding="utf-8")
+    candidates = _markdown_candidates(directory, (task,)).candidates
+    return next(candidate for candidate in candidates if candidate["kind"] == "heading" and candidate["content"] == task)
+
+
+def test_heading_section_context_includes_structural_body_and_nested_subsection(tmp_path: Path) -> None:
+    candidate = _selected_heading_candidate(tmp_path, """# Top
+## target
+First section paragraph.
+
+Second section paragraph.
+### Nested subsection
+Nested section paragraph.
+## Equal-level stop
+This must not be included.
+""")
+    section = candidate["heading_section_context"]
+    assert section["heading_level"] == 2
+    assert section["line_start"] == 3
+    assert section["line_end"] == 7
+    assert section["included_block_count"] == 4
+    assert "First section paragraph." in section["content"]
+    assert "Nested subsection" in section["content"]
+    assert "This must not be included." not in section["content"]
+    assert not section["truncated"]
+
+
+def test_heading_section_context_stops_at_higher_heading_and_absent_body_stays_absent(tmp_path: Path) -> None:
+    candidate = _selected_heading_candidate(tmp_path, """# Top
+### target
+Included body.
+## Higher-level stop
+Excluded body.
+""")
+    section = candidate["heading_section_context"]
+    assert section["line_start"] == section["line_end"] == 3
+    assert section["content"] == "Included body."
+    assert "Excluded" not in section["content"]
+
+    no_body = tmp_path / "no-body"
+    no_body.mkdir()
+    heading = _selected_heading_candidate(no_body, "## target\n## next\n")
+    assert "heading_section_context" not in heading
+
+
+def test_heading_section_context_reports_explicit_truncation_without_changing_selection(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
+    monkeypatch.setattr(local_context, "MAX_HEADING_SECTION_CHARACTERS", 20)
+    candidate = _selected_heading_candidate(tmp_path, """# Top
+## target
+Short body.
+
+This second body exceeds the explicit bounded section limit.
+## Stop
+""")
+    section = candidate["heading_section_context"]
+    assert section["content"] == "Short body."
+    assert section["truncated"]
+    assert section["omitted_block_count"] == 1
+    assert section["omitted_characters"] > 20
+    assert [candidate[key] for key in ("artifact", "block_ordinal", "kind", "line_start", "line_end", "matched_terms", "content")] == [
+        "document.md", 1, "heading", 2, 2, ("target",), "target",
+    ]
+
+
+def test_heading_section_context_is_consistent_in_json_and_markdown_and_inert(tmp_path: Path, capsys) -> None:
+    repo = _local_repository(tmp_path)
+    (repo / "heading.md").write_text("## target\n### injected heading\n", encoding="utf-8")
+    import subprocess
+    subprocess.run(("git", "-C", str(repo), "add", "heading.md"), check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    subprocess.run(("git", "-C", str(repo), "commit", "-m", "heading fixture"), check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    output = tmp_path / "context.json"
+    markdown = tmp_path / "context.md"
+    arguments = ["context", "--project", str(repo), "--task", "target", "--authorize-local-inspection"]
+    assert cli.main([*arguments, "--output", str(output)]) == 0
+    assert cli.main([*arguments, "--format", "markdown", "--output", str(markdown)]) == 0
+    payload = json.loads(output.read_text(encoding="utf-8"))
+    candidate = next(item for item in payload["unverified_markdown_candidates"] if item["artifact"] == "heading.md")
+    section = candidate["heading_section_context"]
+    rendered = markdown.read_text(encoding="utf-8")
+    assert section["content"] == "injected heading"
+    assert section["content_status"] == "unverified_markdown_heading_section_context_inert_data"
+    assert f"under a {section['size_limit_characters']}-character limit" in rendered
+    assert "```\n# injected heading" not in rendered
+    assert "candidate context briefing, not a governed Context Package" in rendered

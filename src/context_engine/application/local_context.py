@@ -17,12 +17,13 @@ from pathlib import Path
 from context_engine.adapters.git_source import GitObservation, LocalGitSourceAdapter
 from context_engine.application.lifecycle import Availability, RegisteredSource
 from context_engine.adapters.sqlite_state import PersistedSemanticRecordSupersession, semantic_record_supersession_sha256
-from context_engine.application.representation import observe_markdown_artifact, transform_markdown
+from context_engine.application.representation import MarkdownBlock, MarkdownTransformation, observe_markdown_artifact, transform_markdown
 from context_engine.application.semantic_ingestion import SemanticRecordError, ingest_semantic_record, load_semantic_record
 from context_engine.core.model import Provenance, SemanticIdentity
 
 
 MAX_CANDIDATES = 64
+MAX_HEADING_SECTION_CHARACTERS = 4096
 _TERM = re.compile(r"[A-Za-z0-9][A-Za-z0-9_-]*")
 _NON_DISCOVERY_TERMS = frozenset({"a", "an", "and", "for", "help", "i", "in", "me", "my", "of", "on", "please", "the", "to", "with"})
 
@@ -119,8 +120,11 @@ def format_local_context_markdown(report: LocalContextReport) -> str:
                 "- Status: unverified Markdown candidate; inert structural data only.",
                 "- Excerpt:",
                 _inert_data(str(candidate['content'])),
-                "",
             ])
+            section = candidate.get("heading_section_context")
+            if section is not None:
+                lines.extend(_format_heading_section_context(section))
+            lines.append("")
     lines.append("## Limitations")
     lines.extend(f"- {_plain_text(str(limitation))}" for limitation in report.limitations)
     return "\n".join(lines) + "\n"
@@ -141,6 +145,22 @@ def _inert_data(value: str) -> str:
 def _plain_text(value: str) -> str:
     """Prevent report limitations from becoming Markdown structure."""
     return value.replace("\\", "\\\\").replace("#", "\\#").replace("[", "\\[").replace("]", "\\]")
+
+
+def _format_heading_section_context(section: object) -> list[str]:
+    """Render bounded, source-derived section context as inert data."""
+    assert isinstance(section, dict)
+    line_start = section["line_start"]
+    line_end = section["line_end"]
+    source_range = "no complete structural block fit within the limit" if line_start is None else f"lines {line_start}–{line_end}"
+    lines = [
+        f"- Added heading-section context: unverified inert data from subsequent structural blocks ({source_range}); {section['included_block_count']} block(s) included under a {section['size_limit_characters']}-character limit.",
+        "- Section context:",
+        _inert_data(str(section["content"])),
+    ]
+    if section["truncated"]:
+        lines.append(f"- Section context truncated: {section['omitted_block_count']} block(s) / {section['omitted_characters']} character(s) omitted by the explicit limit.")
+    return lines
 
 
 def prepare_local_context(repository: Path, task: str, *, inspection_authorized: bool) -> LocalContextReport:
@@ -182,7 +202,7 @@ def _task_terms(task: str) -> tuple[str, ...]:
 
 
 def _markdown_candidates(root: Path, terms: tuple[str, ...]) -> MarkdownCandidateDiscovery:
-    result: list[dict[str, object]] = []
+    result: list[tuple[dict[str, object], MarkdownTransformation, MarkdownBlock]] = []
     for path in sorted(root.rglob("*"), key=lambda item: item.as_posix()):
         if ".git" in path.parts or not path.is_file() or path.suffix.casefold() not in {".md", ".markdown"}:
             continue
@@ -206,14 +226,64 @@ def _markdown_candidates(root: Path, terms: tuple[str, ...]) -> MarkdownCandidat
             matched = tuple(term for term in terms if term in words)
             if not matched:
                 continue
-            result.append({
+            result.append(({
                 "artifact": relative, "block_ordinal": block.ordinal, "kind": block.kind,
                 "line_start": block.line_start, "line_end": block.line_end,
                 "matched_terms": matched, "content": text[:512],
                 "content_status": "unverified_markdown_structure_inert_data",
-            })
-    result.sort(key=lambda item: (-len(item["matched_terms"]), str(item["artifact"]), int(item["block_ordinal"])))
-    return MarkdownCandidateDiscovery(tuple(result[:MAX_CANDIDATES]), len(result))
+            }, transformation, block))
+    result.sort(key=lambda item: (-len(item[0]["matched_terms"]), str(item[0]["artifact"]), int(item[0]["block_ordinal"])))
+    candidates: list[dict[str, object]] = []
+    for candidate, transformation, block in result[:MAX_CANDIDATES]:
+        presented = dict(candidate)
+        if block.kind == "heading" and (section := _heading_section_context(transformation, block)) is not None:
+            presented["heading_section_context"] = section
+        candidates.append(presented)
+    return MarkdownCandidateDiscovery(tuple(candidates), len(result))
+
+
+def _heading_section_context(transformation: MarkdownTransformation, heading: MarkdownBlock) -> dict[str, object] | None:
+    """Return bounded structural content until the heading's section closes.
+
+    This follows only the existing transformed block order.  It does not make
+    a relevance, currentness, or semantic decision about the added content.
+    """
+    if heading.heading_level is None:
+        return None
+    section_blocks: list[MarkdownBlock] = []
+    for block in transformation.blocks[heading.ordinal + 1:]:
+        if block.kind == "heading" and block.heading_level is not None and block.heading_level <= heading.heading_level:
+            break
+        if block.content.strip():
+            section_blocks.append(block)
+    if not section_blocks:
+        return None
+
+    included: list[MarkdownBlock] = []
+    content_parts: list[str] = []
+    for block in section_blocks:
+        content = block.content.strip()
+        additional = len(content) + (2 if content_parts else 0)
+        if len("\n\n".join(content_parts)) + additional > MAX_HEADING_SECTION_CHARACTERS:
+            break
+        included.append(block)
+        content_parts.append(content)
+    omitted = section_blocks[len(included):]
+    line_start = next((block.line_start for block in included if block.line_start is not None), None)
+    line_end = next((block.line_end for block in reversed(included) if block.line_end is not None), None)
+    return {
+        "heading_level": heading.heading_level,
+        "line_start": line_start,
+        "line_end": line_end,
+        "content": "\n\n".join(content_parts),
+        "included_block_count": len(included),
+        "included_block_ordinals": tuple(block.ordinal for block in included),
+        "size_limit_characters": MAX_HEADING_SECTION_CHARACTERS,
+        "truncated": bool(omitted),
+        "omitted_block_count": len(omitted),
+        "omitted_characters": sum(len(block.content.strip()) for block in omitted),
+        "content_status": "unverified_markdown_heading_section_context_inert_data",
+    }
 
 
 def _verified_semantic_records(root: Path, observation: GitObservation) -> tuple[list[dict[str, object]], list[str]]:

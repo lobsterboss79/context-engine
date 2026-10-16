@@ -74,6 +74,7 @@ class MarkdownBlock:
     line_end: int | None
     parent_heading: int | None
     links: tuple[str, ...] = ()
+    heading_level: int | None = None
 
 
 @dataclass(frozen=True)
@@ -106,20 +107,21 @@ def transform_markdown(
             parent = heading_stack[-1][1] if heading_stack else None
             kind = "raw_html" if token.type == "html_block" else token.type.removesuffix("_open")
             content, links = "", ()
+            heading_level: int | None = None
             if token.type in {"fence", "code_block", "html_block"}:
                 content = token.content
             if token.type == "heading_open":
-                level = int(token.tag[1:])
-                while heading_stack and heading_stack[-1][0] >= level:
+                heading_level = int(token.tag[1:])
+                while heading_stack and heading_stack[-1][0] >= heading_level:
                     heading_stack.pop()
                 parent = heading_stack[-1][1] if heading_stack else None
-                heading_stack.append((level, len(blocks)))
-            blocks.append(MarkdownBlock(len(blocks), kind, content, line_start, line_end, parent, links))
+                heading_stack.append((heading_level, len(blocks)))
+            blocks.append(MarkdownBlock(len(blocks), kind, content, line_start, line_end, parent, links, heading_level))
         elif token.type == "inline" and blocks:
             links = tuple(child.attrGet("href") for child in token.children or () if child.type == "link_open" and child.attrGet("href"))
             prior = blocks[-1]
             if prior.kind in {"heading", "paragraph"}:
-                blocks[-1] = MarkdownBlock(prior.ordinal, prior.kind, token.content, prior.line_start, prior.line_end, prior.parent_heading, links)
+                blocks[-1] = MarkdownBlock(prior.ordinal, prior.kind, token.content, prior.line_start, prior.line_end, prior.parent_heading, links, prior.heading_level)
     artifact = Artifact(artifact_identity, source_identity, (source_locator,))
     version = ArtifactVersion(artifact_version_identity, artifact_identity, native_state_reference, observation_provenance)
     return MarkdownTransformation(artifact, version, original_markdown, markdown_it.__version__, PARSER_CONFIGURATION, tuple(blocks))

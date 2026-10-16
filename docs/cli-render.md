@@ -122,6 +122,13 @@ diagnostics, and existing limitations. Source text is rendered as inert data;
 the briefing is not a governed Context Package and does not add authority or
 task-relative governance conclusions.
 
+When an already returned candidate is a Markdown heading, the report also
+includes bounded, unverified inert context from that heading's structural
+section. The section ends before the next heading at the same or a higher
+level, is capped at 4,096 characters without partial structural blocks, and
+reports its Source line range and any omitted blocks. This presentation-only
+enrichment does not affect matching, ranking, candidate count, or selection.
+
 `discovery_diagnostics` records the total Markdown block matches before the
 fixed 64-candidate limit, the returned and excluded counts, the number of
 returned Source documents, and whether truncation occurred. These are
