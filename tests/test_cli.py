@@ -3,7 +3,9 @@
 from __future__ import annotations
 
 import json
+import hashlib
 from pathlib import Path
+import subprocess
 
 import pytest
 
@@ -458,3 +460,85 @@ def test_heading_section_context_is_consistent_in_json_and_markdown_and_inert(tm
     assert f"under a {section['size_limit_characters']}-character limit" in rendered
     assert "```\n# injected heading" not in rendered
     assert "candidate context briefing, not a governed Context Package" in rendered
+
+
+def _commit_file(repository: Path, relative: str, content: str) -> None:
+    path = repository / relative
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(content, encoding="utf-8")
+    subprocess.run(("git", "-C", str(repository), "add", relative), check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    subprocess.run(("git", "-C", str(repository), "commit", "-m", "evidence fixture"), check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+
+
+def test_evidence_retrieves_exact_inclusive_range_with_provenance_and_deterministic_formats(tmp_path: Path, capsys) -> None:
+    repo = _local_repository(tmp_path)
+    content = "first line\n# inert heading\nthird line\n"
+    _commit_file(repo, "docs/evidence.md", content)
+    head = subprocess.check_output(("git", "-C", str(repo), "rev-parse", "HEAD"), text=True).strip()
+    arguments = ["evidence", "--project", str(repo), "--artifact", "docs/evidence.md", "--lines", "2:3", "--authorize-local-inspection"]
+    assert cli.main(arguments) == 0
+    payload = json.loads(capsys.readouterr().out)
+    assert payload["content"] == "# inert heading\nthird line\n"
+    assert payload["requested_line_start"] == payload["returned_line_start"] == 2
+    assert payload["requested_line_end"] == payload["returned_line_end"] == 3
+    assert payload["source_sha256"] == hashlib.sha256(content.encode("utf-8")).hexdigest()
+    assert payload["repository"]["head"] == head
+    assert payload["repository"]["working_tree_clean"] is True
+    assert payload["source_evidence_classification"] == "observed_unverified_markdown_source_evidence_inert_data"
+
+    first, second = tmp_path / "first.md", tmp_path / "second.md"
+    assert cli.main([*arguments, "--format", "markdown", "--output", str(first)]) == 0
+    assert cli.main([*arguments, "--format", "markdown", "--output", str(second)]) == 0
+    rendered = first.read_text(encoding="utf-8")
+    assert first.read_bytes() == second.read_bytes()
+    assert "# Observed Source Evidence" in rendered
+    assert "```\n# inert heading" in rendered
+    assert "unverified Source evidence" in rendered
+
+
+def test_evidence_reports_dirty_tree_and_requires_authorization(tmp_path: Path, capsys) -> None:
+    repo = _local_repository(tmp_path)
+    _commit_file(repo, "source.md", "one\n")
+    arguments = ["evidence", "--project", str(repo), "--artifact", "source.md", "--lines", "1:1"]
+    assert cli.main(arguments) == 2
+    assert "authorization" in capsys.readouterr().err
+    (repo / "source.md").write_text("dirty\n", encoding="utf-8")
+    assert cli.main([*arguments, "--authorize-local-inspection"]) == 0
+    assert json.loads(capsys.readouterr().out)["repository"]["working_tree_clean"] is False
+    assert cli.main(["evidence", "--project", str(repo / "source.md"), "--artifact", "source.md", "--lines", "1:1", "--authorize-local-inspection"]) == 2
+
+
+@pytest.mark.parametrize("artifact", ("/tmp/outside.md", "../outside.md", "notes.txt"))
+def test_evidence_rejects_unsafe_or_non_markdown_artifacts(tmp_path: Path, capsys, artifact: str) -> None:
+    repo = _local_repository(tmp_path)
+    assert cli.main(["evidence", "--project", str(repo), "--artifact", artifact, "--lines", "1:1", "--authorize-local-inspection"]) == 2
+    assert "evidence failed" in capsys.readouterr().err
+
+
+def test_evidence_rejects_symlink_escape_and_invalid_bounded_ranges(tmp_path: Path, capsys) -> None:
+    repo = _local_repository(tmp_path)
+    _commit_file(repo, "source.md", "one\ntwo\nthree\n")
+    outside = tmp_path / "outside.md"
+    outside.write_text("outside\n", encoding="utf-8")
+    (repo / "escape.md").symlink_to(outside)
+    base = ["evidence", "--project", str(repo), "--authorize-local-inspection"]
+    assert cli.main([*base, "--artifact", "escape.md", "--lines", "1:1"]) == 2
+    assert cli.main([*base, "--artifact", "source.md", "--lines", "0:1"]) == 2
+    assert cli.main([*base, "--artifact", "source.md", "--lines", "2:1"]) == 2
+    assert cli.main([*base, "--artifact", "source.md", "--lines", "1-2"]) == 2
+    assert cli.main([*base, "--artifact", "source.md", "--lines", "1:201"]) == 2
+    assert cli.main([*base, "--artifact", "source.md", "--lines", "3:4"]) == 2
+    _commit_file(repo, "empty.md", "")
+    assert cli.main([*base, "--artifact", "empty.md", "--lines", "1:1"]) == 2
+
+
+def test_evidence_enforces_byte_bound_and_atomic_no_overwrite(tmp_path: Path, capsys) -> None:
+    repo = _local_repository(tmp_path)
+    _commit_file(repo, "large.md", "x" * 16_385)
+    arguments = ["evidence", "--project", str(repo), "--artifact", "large.md", "--lines", "1:1", "--authorize-local-inspection"]
+    assert cli.main(arguments) == 2
+    assert "16384-byte" in capsys.readouterr().err
+    output = tmp_path / "preserve.json"
+    output.write_text("preserve", encoding="utf-8")
+    assert cli.main(["evidence", "--project", str(repo), "--artifact", "README.md", "--lines", "1:1", "--authorize-local-inspection", "--output", str(output)]) == 2
+    assert output.read_text(encoding="utf-8") == "preserve"

@@ -134,3 +134,27 @@ fixed 64-candidate limit, the returned and excluded counts, the number of
 returned Source documents, and whether truncation occurred. These are
 descriptive diagnostics only: they do not alter ordering, selection, or
 governance status.
+
+# `context-engine evidence`
+
+`evidence` retrieves one exact, bounded line range from a repository-relative
+Markdown Source in an explicitly authorized local Git repository. It reports
+the observed HEAD, working-tree state, complete Source SHA-256, and range
+metadata, but returns unverified inert Source evidence only.
+
+```bash
+context-engine evidence \
+  --project ~/Projects/wealth-operating-system \
+  --artifact checklists/checklist-phase-2-application-architecture-technology-selection.md \
+  --lines 100:188 \
+  --authorize-local-inspection \
+  --format markdown \
+  --output ~/temp/wos-checklist-evidence.md
+```
+
+JSON is the default. The line range is inclusive and must contain at most 200
+lines and 16,384 UTF-8 content bytes; a request beyond EOF, the limits, or a
+repository boundary fails rather than truncating. Only repository-relative
+`.md` or `.markdown` files are eligible; absolute paths, traversal, symlink
+escapes, and non-Markdown files are rejected. Output is atomic and never
+overwrites an existing file.
